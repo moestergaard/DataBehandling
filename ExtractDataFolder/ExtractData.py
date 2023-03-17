@@ -2,38 +2,40 @@ import numpy as np
 from sklearn import svm
 
 def main():
-    filename = 'WifiData2303141637Modified.txt'
     locations = ["Kontor", "Stue", "Køkken"]
+
+    bigDataSetSVM(locations)
+    smallDataSetTestedAgainstBigDataSetSVM(locations)
     # changeDataFile(filename)
+    
+
+def smallDataSetTestedAgainstBigDataSetSVM(locations):
+    filename = 'WifiData2-2303172344.txt'
+    filenameTest = 'WifiData2303141637Modified.txt'
+
+    distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
+    distinctBSSIDTest, dataPointsTest = extractDistinctBSSIDAndNumberOfDataPoints(filenameTest)
+
+    for i in range(0, len(distinctBSSID)):
+        if not distinctBSSIDTest.__contains__(distinctBSSID[i]):
+            distinctBSSIDTest.append(distinctBSSID[i])
+
+    trainingSamples, trainingLabels = extractDataCombined(filename, distinctBSSIDTest, dataPoints, locations)
+
+    testSamples, testLabels = extractDataCombined(filenameTest, distinctBSSIDTest, dataPointsTest, locations)
+
+    predictionSVM = calculationsSVM(trainingSamples, trainingLabels, testSamples)
+    accuracySVM(testLabels, predictionSVM, locations)
+
+
+def bigDataSetSVM(locations):
+    filename = 'WifiData2303141637Modified.txt'
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
     trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples = extractData(filename, distinctBSSID, dataPoints, locations)
 
     predictionSVM = calculationsSVM(trainingSamples, labelsTrainingSamples, testSamples)
     accuracySVM(labelsTestSamples, predictionSVM, locations)
 
-def changeDataFile(filename):
-    bssid = ""
-    resultlevel = ""
-
-    with open(filename) as f:
-        while True:
-            line = f.readline()
-            if not line:
-                break
-            if line.__contains__("Scanning"):
-                print("**************")
-                print()
-            if line.__contains__("BSSID"):
-                bssid = line.strip()
-            elif line.__contains__("ResultLevel"):
-                resultlevel = line.strip()
-            elif line.__contains__("Frequency"):
-                bssid += "+"
-                bssid += line.split(": ")[1].split()[0]
-                print(bssid)
-                print(resultlevel)
-                print(line.strip())
-            else: print(line.strip())
 
 #
 # Makes an array consisting of the distinct BSSID.
@@ -75,10 +77,10 @@ def extractData(filename, distinctBSSID, samples, locations):
     numberOfTrainingSamples = samples - numberOfTestSamples
 
     trainingSamples = np.zeros((numberOfTrainingSamples, numberOfFeatures))
-    labelsTrainingSamples = np.zeros((numberOfTrainingSamples, 1))
+    labelsTrainingSamples = np.zeros((numberOfTrainingSamples, ))
     
     testSamples = np.zeros((numberOfTestSamples, numberOfFeatures))
-    labelsTestSamples = np.zeros((numberOfTestSamples, 1))
+    labelsTestSamples = np.zeros((numberOfTestSamples, ))
 
     twentyPercentTestData = 4
     indexTestSample = -1
@@ -96,31 +98,51 @@ def extractData(filename, distinctBSSID, samples, locations):
                 twentyPercentTestData = np.mod(twentyPercentTestData + 1, 5)
             if line.__contains__("BSSID"):
                 currentBSSID = line.split(": ")[1].split()
-            if  twentyPercentTestData == 4:
-                if line.__contains__("Scanning"):
+            if line.__contains__("Scanning"):
                     location = line.split(": ")[1].strip()
                     for i in range(0, len(locations)):
                         if locations[i].__eq__(location):
-                            indexTestSample += 1
-                            labelsTestSamples[indexTestSample] = i
-                
-                if line.__contains__("ResultLevel"):
-                    resultLevel = line.split(": ")[1].split()
+                            if twentyPercentTestData == 4:
+                                indexTestSample += 1
+                                labelsTestSamples[indexTestSample] = i
+                            else:
+                                indexTrainingSample += 1
+                                labelsTrainingSamples[indexTrainingSample] = i
+            if line.__contains__("ResultLevel"):
+                resultLevel = line.split(": ")[1].split()
+                if twentyPercentTestData == 4:
                     testSamples = changeMatrice(testSamples, indexTestSample, distinctBSSID, currentBSSID[0], resultLevel[0])
-                    
-            else:
-                if line.__contains__("Scanning"):
+                else: trainingSamples = changeMatrice(trainingSamples, indexTrainingSample, distinctBSSID, currentBSSID[0], resultLevel[0])
+
+    return trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples
+
+def extractDataCombined(filename, distinctBSSID, numberOfSamples, locations):
+
+    samples = np.zeros((numberOfSamples, len(distinctBSSID)))
+    labels = np.zeros((numberOfSamples, ))
+    
+    index = 0
+
+    currentBSSID = ""
+
+    with open(filename) as f:
+        while True:
+            line = f.readline()
+            if not line:
+                break
+            if line.__contains__("********"): 
+                index += 1
+            if line.__contains__("BSSID"):
+                currentBSSID = line.split(": ")[1].split()
+            if line.__contains__("Scanning"):
                     location = line.split(": ")[1].strip()
                     for i in range(0, len(locations)):
-                        if locations[i].__eq__(location):
-                            indexTrainingSample += 1
-                            labelsTrainingSamples[indexTrainingSample] = i
+                        if locations[i].__eq__(location): labels[index] = i
+            if line.__contains__("ResultLevel"):
+                resultLevel = line.split(": ")[1].split()
+                samples = changeMatrice(samples, index, distinctBSSID, currentBSSID[0], resultLevel[0])
 
-                if line.__contains__("ResultLevel"):
-                    resultLevel = line.split(": ")[1].split()
-                    trainingSamples = changeMatrice(trainingSamples, indexTrainingSample, distinctBSSID, currentBSSID[0], resultLevel[0])
-                        
-    return trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples
+    return samples, labels
 
 def changeMatrice(matrice, index, distinctBSSID, currentBSSID, resultLevel):
     for i in range(0, len(distinctBSSID)):
@@ -129,7 +151,7 @@ def changeMatrice(matrice, index, distinctBSSID, currentBSSID, resultLevel):
             return matrice    
 
 def calculationsSVM(trainingSamples, labelsTrainingSamples, testSamples):
-    clf = svm.SVC()
+    clf = svm.SVC(C = 1, cache_size = 1000, class_weight='balanced')
     clf.fit(trainingSamples, labelsTrainingSamples)
     prediction = clf.predict(testSamples)
 
@@ -146,9 +168,6 @@ def accuracySVM(labelsTestSamples, predictionSVM, locations):
     shouldBeLivingRoomPredictsOffice = 0
     shouldBeOfficePredictsKitchen = 0
     shouldBeOfficePredictsLivingRoom = 0
-
-    print("længden af labels test: ", len(labelsTestSamples))
-    print("længden af prædiktioner: ", len(predictionSVM))
 
     for i in range(0, len(labelsTestSamples)):
         if labelsTestSamples[i] == predictionSVM[i]:
@@ -186,6 +205,29 @@ def accuracySVM(labelsTestSamples, predictionSVM, locations):
     print()
     print("********************************************************************************************")
 
+def changeDataFile(filename):
+    bssid = ""
+    resultlevel = ""
+
+    with open(filename) as f:
+        while True:
+            line = f.readline()
+            if not line:
+                break
+            if line.__contains__("Scanning"):
+                print("**************")
+                print()
+            if line.__contains__("BSSID"):
+                bssid = line.strip()
+            elif line.__contains__("ResultLevel"):
+                resultlevel = line.strip()
+            elif line.__contains__("Frequency"):
+                bssid += "+"
+                bssid += line.split(": ")[1].split()[0]
+                print(bssid)
+                print(resultlevel)
+                print(line.strip())
+            else: print(line.strip())
 
 if __name__ == '__main__':
     main()
