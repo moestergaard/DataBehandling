@@ -1,0 +1,8582 @@
+WIFI DATA
+
+
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -58
+Frequency: 2452
+Timestamp: 813679239
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -68
+Frequency: 5280
+Timestamp: 809380122
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -69
+Frequency: 5280
+Timestamp: 809375925
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -71
+Frequency: 2412
+Timestamp: 806862311
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -78
+Frequency: 2457
+Timestamp: 808078901
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -80
+Frequency: 2462
+Timestamp: 808270606
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -84
+Frequency: 2432
+Timestamp: 807301792
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -85
+Frequency: 5260
+Timestamp: 809214489
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -57
+Frequency: 2452
+Timestamp: 820539678
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -66
+Frequency: 2412
+Timestamp: 813965314
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -72
+Frequency: 2457
+Timestamp: 815302124
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -72
+Frequency: 2462
+Timestamp: 815404801
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 816367113
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -73
+Frequency: 5280
+Timestamp: 816341899
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -79
+Frequency: 5260
+Timestamp: 816162759
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -57
+Frequency: 2452
+Timestamp: 827400686
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -66
+Frequency: 2412
+Timestamp: 820814580
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -66
+Frequency: 2462
+Timestamp: 822061451
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -70
+Frequency: 5280
+Timestamp: 823224373
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -70
+Frequency: 5280
+Timestamp: 823202730
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -79
+Frequency: 5260
+Timestamp: 823052205
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -87
+Frequency: 5540
+Timestamp: 824127170
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -57
+Frequency: 2452
+Timestamp: 834466568
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -66
+Frequency: 2412
+Timestamp: 827636350
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -67
+Frequency: 2457
+Timestamp: 829001336
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -69
+Frequency: 5280
+Timestamp: 830166098
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -70
+Frequency: 5280
+Timestamp: 830172068
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -72
+Frequency: 2462
+Timestamp: 829090698
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -79
+Frequency: 5260
+Timestamp: 830002573
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -87
+Frequency: 5540
+Timestamp: 831192834
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -61
+Frequency: 2452
+Timestamp: 841022059
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -65
+Frequency: 2432
+Timestamp: 835129969
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -66
+Frequency: 2457
+Timestamp: 835783011
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -67
+Frequency: 2412
+Timestamp: 834755202
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -69
+Frequency: 5280
+Timestamp: 836924356
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -71
+Frequency: 5280
+Timestamp: 836945612
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -72
+Frequency: 2462
+Timestamp: 835876833
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -80
+Frequency: 5260
+Timestamp: 836762578
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -87
+Frequency: 5540
+Timestamp: 838053411
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -63
+Frequency: 2452
+Timestamp: 847983106
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -69
+Frequency: 2412
+Timestamp: 841508917
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 843991535
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 843989988
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -78
+Frequency: 2462
+Timestamp: 842848977
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -78
+Frequency: 5260
+Timestamp: 843825632
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -81
+Frequency: 2412
+Timestamp: 841512846
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 841518815
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -86
+Frequency: 2432
+Timestamp: 841929636
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -87
+Frequency: 2462
+Timestamp: 842821005
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -88
+Frequency: 2412
+Timestamp: 841493247
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 841993818
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:2a
+ResultLevel: -89
+Frequency: 2462
+Timestamp: 842839402
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -90
+Frequency: 5540
+Timestamp: 845016892
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b2
+ResultLevel: -90
+Frequency: 5200
+Timestamp: 843456760
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -91
+Frequency: 5180
+Timestamp: 843340995
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -93
+Frequency: 5180
+Timestamp: 843302769
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -57
+Frequency: 2452
+Timestamp: 855768536
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -69
+Frequency: 2412
+Timestamp: 848261518
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -74
+Frequency: 2457
+Timestamp: 849705309
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 851179289
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 851158018
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -76
+Frequency: 2462
+Timestamp: 849853249
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -82
+Frequency: 2432
+Timestamp: 848882967
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -86
+Frequency: 5180
+Timestamp: 850314007
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -87
+Frequency: 5260
+Timestamp: 850993714
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -88
+Frequency: 2412
+Timestamp: 848265343
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 849867087
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -88
+Frequency: 5180
+Timestamp: 850314403
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 849044000
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 849071677
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -89
+Frequency: 5540
+Timestamp: 852287474
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -90
+Frequency: 2412
+Timestamp: 848269184
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -57
+Frequency: 2452
+Timestamp: 862728558
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -66
+Frequency: 2412
+Timestamp: 856111254
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 858761016
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 858736901
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -78
+Frequency: 2457
+Timestamp: 857464655
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -79
+Frequency: 2462
+Timestamp: 857589129
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -83
+Frequency: 2412
+Timestamp: 856123047
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -87
+Frequency: 5260
+Timestamp: 858571245
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 856866940
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 856871300
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -88
+Frequency: 5180
+Timestamp: 857968009
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -88
+Frequency: 5180
+Timestamp: 857987620
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 856847841
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -89
+Frequency: 2437
+Timestamp: 856838662
+
+
+SSID: Fibernet-IA00302634
+BSSID: 00:1e:80:78:f3:f8
+ResultLevel: -89
+Frequency: 2412
+Timestamp: 856099431
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -90
+Frequency: 5540
+Timestamp: 859661105
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -60
+Frequency: 2452
+Timestamp: 869896867
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -66
+Frequency: 2412
+Timestamp: 863022438
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -73
+Frequency: 5280
+Timestamp: 866027575
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -73
+Frequency: 5280
+Timestamp: 866007193
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -76
+Frequency: 2457
+Timestamp: 864551016
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -79
+Frequency: 2432
+Timestamp: 863707420
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -83
+Frequency: 2412
+Timestamp: 863020208
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -87
+Frequency: 5260
+Timestamp: 865842089
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -87
+Frequency: 2462
+Timestamp: 864749705
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -89
+Frequency: 5180
+Timestamp: 865267333
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -90
+Frequency: 5180
+Timestamp: 865267566
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -91
+Frequency: 5540
+Timestamp: 866931142
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -60
+Frequency: 2452
+Timestamp: 877167355
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -68
+Frequency: 2412
+Timestamp: 870399274
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -71
+Frequency: 5280
+Timestamp: 872867006
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 872891753
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -78
+Frequency: 2462
+Timestamp: 871781220
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -78
+Frequency: 2432
+Timestamp: 870997678
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -79
+Frequency: 2457
+Timestamp: 871600769
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 870416030
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -86
+Frequency: 2462
+Timestamp: 871809075
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -87
+Frequency: 5260
+Timestamp: 872702868
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -87
+Frequency: 5180
+Timestamp: 872217161
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -88
+Frequency: 2412
+Timestamp: 870426921
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -88
+Frequency: 5180
+Timestamp: 872218270
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 871184722
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 871180903
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -90
+Frequency: 5540
+Timestamp: 873894260
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -60
+Frequency: 2452
+Timestamp: 883926012
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -67
+Frequency: 2412
+Timestamp: 877516235
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 879953885
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 879932622
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -77
+Frequency: 2462
+Timestamp: 878895465
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -78
+Frequency: 2457
+Timestamp: 878766560
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -81
+Frequency: 2432
+Timestamp: 878080389
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -84
+Frequency: 2412
+Timestamp: 877551244
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -84
+Frequency: 2412
+Timestamp: 877537908
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -84
+Frequency: 2437
+Timestamp: 878248453
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -87
+Frequency: 5260
+Timestamp: 879748659
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -87
+Frequency: 5180
+Timestamp: 879251783
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -88
+Frequency: 5180
+Timestamp: 879252574
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -89
+Frequency: 5540
+Timestamp: 880857836
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -60
+Frequency: 2452
+Timestamp: 890889327
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -69
+Frequency: 2412
+Timestamp: 884393327
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 886610519
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 886588790
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 885522487
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -78
+Frequency: 2457
+Timestamp: 885423553
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -80
+Frequency: 2432
+Timestamp: 884795164
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -81
+Frequency: 2412
+Timestamp: 884404641
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -86
+Frequency: 2412
+Timestamp: 884376677
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 884937801
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -87
+Frequency: 5260
+Timestamp: 886424886
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -87
+Frequency: 2412
+Timestamp: 884387136
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -87
+Frequency: 5180
+Timestamp: 885938345
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 884918747
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 885535921
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 884913640
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -89
+Frequency: 5540
+Timestamp: 887616088
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -89
+Frequency: 5180
+Timestamp: 885939734
+
+
+SSID: Fibernet-IA00302634
+BSSID: 00:1e:80:78:f3:f8
+ResultLevel: -90
+Frequency: 2412
+Timestamp: 884362007
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b2
+ResultLevel: -92
+Frequency: 5200
+Timestamp: 886037025
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -60
+Frequency: 2452
+Timestamp: 897955061
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -68
+Frequency: 2412
+Timestamp: 891169040
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 893552067
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -73
+Frequency: 5280
+Timestamp: 893573265
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -76
+Frequency: 2462
+Timestamp: 892410890
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -78
+Frequency: 2457
+Timestamp: 892283284
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -80
+Frequency: 2432
+Timestamp: 891695342
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -83
+Frequency: 2412
+Timestamp: 891172820
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -83
+Frequency: 2412
+Timestamp: 891150078
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -85
+Frequency: 2437
+Timestamp: 891842891
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -87
+Frequency: 5260
+Timestamp: 893388104
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 891865409
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -88
+Frequency: 5180
+Timestamp: 892697897
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:2a
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 892401595
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -89
+Frequency: 5540
+Timestamp: 894579984
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -89
+Frequency: 5180
+Timestamp: 892696964
+
+
+SSID: bgxbs3mz
+BSSID: 24:7f:20:01:20:56
+ResultLevel: -89
+Frequency: 2447
+Timestamp: 892102208
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b2
+ResultLevel: -93
+Frequency: 5200
+Timestamp: 892871937
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -59
+Frequency: 2452
+Timestamp: 904917521
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -61
+Frequency: 2457
+Timestamp: 899553167
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -67
+Frequency: 2412
+Timestamp: 898225505
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -71
+Frequency: 5280
+Timestamp: 900720463
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 900741996
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 899642672
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -78
+Frequency: 2432
+Timestamp: 898791387
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -82
+Frequency: 2412
+Timestamp: 898228509
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 898948047
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -87
+Frequency: 5260
+Timestamp: 900556069
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -88
+Frequency: 2412
+Timestamp: 898251922
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 899657629
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -88
+Frequency: 5180
+Timestamp: 899968886
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -88
+Frequency: 5180
+Timestamp: 899969653
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 898955246
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 898917828
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -92
+Frequency: 5540
+Timestamp: 901748667
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -59
+Frequency: 2452
+Timestamp: 911778737
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -67
+Frequency: 2412
+Timestamp: 905177313
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 907709766
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 907683332
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -76
+Frequency: 2457
+Timestamp: 906427687
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -76
+Frequency: 2462
+Timestamp: 906615936
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -82
+Frequency: 2432
+Timestamp: 905774777
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -84
+Frequency: 2412
+Timestamp: 905207377
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -86
+Frequency: 2412
+Timestamp: 905185489
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -87
+Frequency: 5260
+Timestamp: 907519426
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 905933030
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -88
+Frequency: 2412
+Timestamp: 905212967
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -88
+Frequency: 5180
+Timestamp: 906930321
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 905908024
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -89
+Frequency: 2462
+Timestamp: 906619315
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -89
+Frequency: 5180
+Timestamp: 906931290
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -90
+Frequency: 5540
+Timestamp: 908710908
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b2
+ResultLevel: -92
+Frequency: 5200
+Timestamp: 907105515
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -59
+Frequency: 2452
+Timestamp: 918741827
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -66
+Frequency: 2412
+Timestamp: 912274638
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 914667739
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 914646639
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -77
+Frequency: 2462
+Timestamp: 913465721
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -79
+Frequency: 2457
+Timestamp: 913402523
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -84
+Frequency: 2432
+Timestamp: 912750972
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -84
+Frequency: 2412
+Timestamp: 912269259
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -87
+Frequency: 2412
+Timestamp: 912277582
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -87
+Frequency: 5180
+Timestamp: 913869350
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 912887463
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -88
+Frequency: 5260
+Timestamp: 914462516
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -88
+Frequency: 5180
+Timestamp: 913868640
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -89
+Frequency: 5540
+Timestamp: 915572355
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -89
+Frequency: 2462
+Timestamp: 913486923
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -59
+Frequency: 2452
+Timestamp: 925808102
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -68
+Frequency: 2412
+Timestamp: 919032450
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -71
+Frequency: 5280
+Timestamp: 921507308
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -73
+Frequency: 5280
+Timestamp: 921508822
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -77
+Frequency: 2462
+Timestamp: 920518936
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -78
+Frequency: 2457
+Timestamp: 920344129
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -82
+Frequency: 2432
+Timestamp: 919725138
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -86
+Frequency: 5260
+Timestamp: 921343419
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -86
+Frequency: 2462
+Timestamp: 920542859
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -87
+Frequency: 2412
+Timestamp: 919035441
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -87
+Frequency: 5180
+Timestamp: 920861211
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -89
+Frequency: 5540
+Timestamp: 922535143
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -89
+Frequency: 5180
+Timestamp: 920861793
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -89
+Frequency: 2437
+Timestamp: 919853046
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -59
+Frequency: 2452
+Timestamp: 932770693
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -66
+Frequency: 2412
+Timestamp: 926085129
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -71
+Frequency: 5280
+Timestamp: 928572899
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 928598828
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -77
+Frequency: 2462
+Timestamp: 927432800
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -79
+Frequency: 2457
+Timestamp: 927301208
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -80
+Frequency: 2432
+Timestamp: 926572886
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -82
+Frequency: 2412
+Timestamp: 926103551
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -84
+Frequency: 2412
+Timestamp: 926118351
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -87
+Frequency: 2462
+Timestamp: 927418938
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -88
+Frequency: 5260
+Timestamp: 928409087
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -88
+Frequency: 5180
+Timestamp: 927891715
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 926698179
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 926708963
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 926679651
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:2a
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 927422384
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -89
+Frequency: 5540
+Timestamp: 929603095
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -89
+Frequency: 5180
+Timestamp: 927889906
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -89
+Frequency: 2437
+Timestamp: 926716370
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b2
+ResultLevel: -92
+Frequency: 5200
+Timestamp: 927995316
+
+
+SSID:
+BSSID: 52:e0:39:70:e3:b2
+ResultLevel: -92
+Frequency: 5200
+Timestamp: 928007778
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -58
+Frequency: 2452
+Timestamp: 939632766
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -67
+Frequency: 2412
+Timestamp: 933031286
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -73
+Frequency: 5280
+Timestamp: 935454875
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -73
+Frequency: 5280
+Timestamp: 935433939
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -76
+Frequency: 2462
+Timestamp: 934369251
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -78
+Frequency: 2457
+Timestamp: 934152221
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -83
+Frequency: 2432
+Timestamp: 933562316
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -84
+Frequency: 2412
+Timestamp: 933054469
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 933057101
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 933683594
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -87
+Frequency: 5260
+Timestamp: 935270277
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 933638583
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -88
+Frequency: 5540
+Timestamp: 936461857
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -88
+Frequency: 5180
+Timestamp: 934680747
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -88
+Frequency: 5180
+Timestamp: 934681929
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 933674767
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -89
+Frequency: 2412
+Timestamp: 933069652
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -89
+Frequency: 2462
+Timestamp: 934335852
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -59
+Frequency: 2452
+Timestamp: 946697935
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -65
+Frequency: 2412
+Timestamp: 939911815
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -66
+Frequency: 2462
+Timestamp: 941330939
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -70
+Frequency: 2457
+Timestamp: 941131378
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -77
+Frequency: 5280
+Timestamp: 942397167
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -78
+Frequency: 5280
+Timestamp: 942418140
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -84
+Frequency: 5260
+Timestamp: 942233551
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -84
+Frequency: 2437
+Timestamp: 940702292
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -86
+Frequency: 5540
+Timestamp: 943425314
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 940679410
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -87
+Frequency: 2412
+Timestamp: 939905777
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 940675336
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 940708594
+
+
+SSID: HomeBox-3AE0_2.4G
+BSSID: 44:e9:dd:92:3a:e6
+ResultLevel: -87
+Frequency: 2412
+Timestamp: 939923565
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 941334658
+
+
+SSID: BIFROST
+BSSID: b8:d9:4d:64:54:d3
+ResultLevel: -88
+Frequency: 2412
+Timestamp: 939915315
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -89
+Frequency: 5180
+Timestamp: 941645287
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -91
+Frequency: 5180
+Timestamp: 941646329
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -60
+Frequency: 2452
+Timestamp: 953148569
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -65
+Frequency: 2412
+Timestamp: 947042350
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -69
+Frequency: 2457
+Timestamp: 948213226
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -77
+Frequency: 2462
+Timestamp: 948285539
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -79
+Frequency: 5280
+Timestamp: 949279252
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -79
+Frequency: 5280
+Timestamp: 949257830
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -80
+Frequency: 2432
+Timestamp: 947597074
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -85
+Frequency: 5260
+Timestamp: 949176701
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -85
+Frequency: 2437
+Timestamp: 947688479
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -86
+Frequency: 2462
+Timestamp: 948288821
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 947682443
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 947671437
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -88
+Frequency: 5540
+Timestamp: 950286170
+
+
+SSID: BIFROST
+BSSID: b8:d9:4d:64:54:d3
+ResultLevel: -88
+Frequency: 2412
+Timestamp: 947046163
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -89
+Frequency: 5180
+Timestamp: 948609147
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -91
+Frequency: 5180
+Timestamp: 948608778
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b2
+ResultLevel: -91
+Frequency: 5200
+Timestamp: 948760498
+
+
+SSID: ADpKTvsM_5GHz
+BSSID: b8:d9:4d:67:05:77
+ResultLevel: -92
+Frequency: 5540
+Timestamp: 950263523
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -61
+Frequency: 2452
+Timestamp: 960009508
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -62
+Frequency: 2412
+Timestamp: 953603272
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -70
+Frequency: 2457
+Timestamp: 954850489
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -78
+Frequency: 2462
+Timestamp: 954977857
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -80
+Frequency: 5280
+Timestamp: 956139938
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -80
+Frequency: 5280
+Timestamp: 956119154
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -84
+Frequency: 5260
+Timestamp: 955954926
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -85
+Frequency: 2432
+Timestamp: 954060846
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -85
+Frequency: 2437
+Timestamp: 954153565
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -87
+Frequency: 2462
+Timestamp: 954971724
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 954131857
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 954129866
+
+
+SSID: Fibernet-IA00302634
+BSSID: 00:1e:80:78:f3:f8
+ResultLevel: -87
+Frequency: 2412
+Timestamp: 953585053
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -88
+Frequency: 5540
+Timestamp: 957045002
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b2
+ResultLevel: -89
+Frequency: 5200
+Timestamp: 955641889
+
+
+SSID: WiFimodem-7077
+BSSID: 44:ad:b1:2c:70:7c
+ResultLevel: -89
+Frequency: 2412
+Timestamp: 953576396
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -90
+Frequency: 5180
+Timestamp: 955482295
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -90
+Frequency: 5180
+Timestamp: 955482757
+
+
+SSID: ADpKTvsM_5GHz
+BSSID: b8:d9:4d:67:05:77
+ResultLevel: -93
+Frequency: 5540
+Timestamp: 957022624
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -61
+Frequency: 2452
+Timestamp: 966665695
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -63
+Frequency: 2412
+Timestamp: 960479408
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -69
+Frequency: 2457
+Timestamp: 961507621
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -80
+Frequency: 2462
+Timestamp: 961599595
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -80
+Frequency: 5280
+Timestamp: 962488914
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -80
+Frequency: 5280
+Timestamp: 962468154
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -83
+Frequency: 2432
+Timestamp: 960918710
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -86
+Frequency: 5260
+Timestamp: 962387191
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -86
+Frequency: 2412
+Timestamp: 960483362
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -86
+Frequency: 2462
+Timestamp: 961603496
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -87
+Frequency: 5540
+Timestamp: 963598139
+
+
+SSID: HomeBox-3AE0_2.4G
+BSSID: 44:e9:dd:92:3a:e6
+ResultLevel: -87
+Frequency: 2412
+Timestamp: 960474582
+
+
+SSID: Fibernet-IA00302634
+BSSID: 00:1e:80:78:f3:f8
+ResultLevel: -87
+Frequency: 2412
+Timestamp: 960445921
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -89
+Frequency: 5180
+Timestamp: 961940298
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -91
+Frequency: 5180
+Timestamp: 961939593
+
+
+SSID: ADpKTvsM_5GHz
+BSSID: b8:d9:4d:67:05:77
+ResultLevel: -93
+Frequency: 5540
+Timestamp: 963576140
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -60
+Frequency: 2452
+Timestamp: 973423622
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -64
+Frequency: 2412
+Timestamp: 967037540
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -69
+Frequency: 2457
+Timestamp: 968181660
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -80
+Frequency: 2462
+Timestamp: 968253325
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -80
+Frequency: 5280
+Timestamp: 969451927
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -80
+Frequency: 5280
+Timestamp: 969430968
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -84
+Frequency: 5260
+Timestamp: 969267688
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -85
+Frequency: 2437
+Timestamp: 967778521
+
+
+SSID: HomeBox-3AE0_2.4G
+BSSID: 44:e9:dd:92:3a:e6
+ResultLevel: -86
+Frequency: 2412
+Timestamp: 967042002
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -87
+Frequency: 2432
+Timestamp: 967521864
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -87
+Frequency: 5540
+Timestamp: 970459330
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 968249735
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 967773862
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 967763525
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -89
+Frequency: 5180
+Timestamp: 968792806
+
+
+SSID: BIFROST
+BSSID: 00:1d:73:8e:ec:4a
+ResultLevel: -90
+Frequency: 2472
+Timestamp: 968657126
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -91
+Frequency: 5180
+Timestamp: 968792075
+
+
+SSID: ADpKTvsM_5GHz
+BSSID: b8:d9:4d:67:05:77
+ResultLevel: -93
+Frequency: 5540
+Timestamp: 970437259
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -60
+Frequency: 2452
+Timestamp: 980899081
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -65
+Frequency: 2412
+Timestamp: 974021413
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -69
+Frequency: 2457
+Timestamp: 975346757
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -80
+Frequency: 2432
+Timestamp: 974629811
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -80
+Frequency: 5280
+Timestamp: 976620174
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -80
+Frequency: 5280
+Timestamp: 976598656
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -84
+Frequency: 5260
+Timestamp: 976415521
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -85
+Frequency: 2437
+Timestamp: 974737678
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -86
+Frequency: 2412
+Timestamp: 974006546
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 974734122
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 974719240
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -88
+Frequency: 5540
+Timestamp: 977627453
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -88
+Frequency: 2412
+Timestamp: 974015987
+
+
+SSID: DIRECT-reC48x Series
+BSSID: 86:25:19:77:df:e2
+ResultLevel: -89
+Frequency: 2467
+Timestamp: 975689792
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -90
+Frequency: 5180
+Timestamp: 975962529
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -90
+Frequency: 5180
+Timestamp: 975963259
+
+
+SSID: ADpKTvsM_5GHz
+BSSID: b8:d9:4d:67:05:77
+ResultLevel: -92
+Frequency: 5540
+Timestamp: 977605103
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -60
+Frequency: 2452
+Timestamp: 988067527
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -65
+Frequency: 2412
+Timestamp: 981192354
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -69
+Frequency: 2457
+Timestamp: 982483506
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -79
+Frequency: 2462
+Timestamp: 982615747
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -81
+Frequency: 5280
+Timestamp: 983890670
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -81
+Frequency: 5280
+Timestamp: 983869206
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -84
+Frequency: 5260
+Timestamp: 983686280
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -84
+Frequency: 2437
+Timestamp: 981983598
+
+
+SSID: HomeBox-3AE0_2.4G
+BSSID: 44:e9:dd:92:3a:e6
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 981207834
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -86
+Frequency: 2432
+Timestamp: 981799757
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -86
+Frequency: 5540
+Timestamp: 984897973
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 981942757
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -87
+Frequency: 2462
+Timestamp: 982619897
+
+
+SSID: BIFROST
+BSSID: b8:d9:4d:64:54:d3
+ResultLevel: -87
+Frequency: 2412
+Timestamp: 981204019
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 981977959
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 981939229
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -89
+Frequency: 5180
+Timestamp: 983083689
+
+
+SSID: DIRECT-reC48x Series
+BSSID: 86:25:19:77:df:e2
+ResultLevel: -89
+Frequency: 2467
+Timestamp: 982798299
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -91
+Frequency: 5180
+Timestamp: 983084442
+
+
+SSID: ADpKTvsM_5GHz
+BSSID: b8:d9:4d:67:05:77
+ResultLevel: -93
+Frequency: 5540
+Timestamp: 984876164
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -61
+Frequency: 2452
+Timestamp: 994415864
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -65
+Frequency: 2412
+Timestamp: 988333786
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -69
+Frequency: 2457
+Timestamp: 989460651
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -78
+Frequency: 2462
+Timestamp: 989653769
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -79
+Frequency: 2432
+Timestamp: 988829156
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -80
+Frequency: 5280
+Timestamp: 990648938
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -80
+Frequency: 5280
+Timestamp: 990627557
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -84
+Frequency: 5260
+Timestamp: 990464560
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -86
+Frequency: 5540
+Timestamp: 991554171
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 988963217
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 988970481
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 989657572
+
+
+SSID: BIFROST
+BSSID: b8:d9:4d:64:54:d3
+ResultLevel: -88
+Frequency: 2412
+Timestamp: 988327519
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -91
+Frequency: 5180
+Timestamp: 989978705
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -92
+Frequency: 5180
+Timestamp: 989976703
+
+
+SSID: ADpKTvsM_5GHz
+BSSID: b8:d9:4d:67:05:77
+ResultLevel: -93
+Frequency: 5540
+Timestamp: 991531829
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -60
+Frequency: 2452
+Timestamp: 1001276732
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -65
+Frequency: 2412
+Timestamp: 994703124
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -69
+Frequency: 2457
+Timestamp: 995808756
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -74
+Frequency: 2437
+Timestamp: 995328534
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -79
+Frequency: 5280
+Timestamp: 996874396
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -80
+Frequency: 5280
+Timestamp: 996895551
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -83
+Frequency: 5260
+Timestamp: 996710935
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 994689875
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -86
+Frequency: 5540
+Timestamp: 997903548
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 995301932
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -88
+Frequency: 2432
+Timestamp: 995181838
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 995297613
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 995317897
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -90
+Frequency: 5180
+Timestamp: 996294756
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -91
+Frequency: 5180
+Timestamp: 996294022
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -60
+Frequency: 2452
+Timestamp: 1008342264
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -63
+Frequency: 2412
+Timestamp: 1001570071
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -79
+Frequency: 2462
+Timestamp: 1002881553
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -80
+Frequency: 5280
+Timestamp: 1004165705
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -80
+Frequency: 5280
+Timestamp: 1004144426
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -85
+Frequency: 5260
+Timestamp: 1003981517
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -86
+Frequency: 2412
+Timestamp: 1001552421
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -87
+Frequency: 5540
+Timestamp: 1005173674
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -90
+Frequency: 5180
+Timestamp: 1003363868
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -90
+Frequency: 5180
+Timestamp: 1003364621
+
+
+SSID: BIFROST
+BSSID: 00:1d:73:8e:ec:4a
+ResultLevel: -91
+Frequency: 2472
+Timestamp: 1003200600
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -60
+Frequency: 2452
+Timestamp: 1014896319
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -64
+Frequency: 2412
+Timestamp: 1008707944
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -71
+Frequency: 2457
+Timestamp: 1009718017
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -77
+Frequency: 2462
+Timestamp: 1009854051
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -78
+Frequency: 2432
+Timestamp: 1009154523
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -79
+Frequency: 5280
+Timestamp: 1010802381
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -80
+Frequency: 5280
+Timestamp: 1010821824
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -84
+Frequency: 5260
+Timestamp: 1010638477
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -86
+Frequency: 5540
+Timestamp: 1011829799
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -87
+Frequency: 2412
+Timestamp: 1008718681
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -87
+Frequency: 2462
+Timestamp: 1009857588
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -87
+Frequency: 2412
+Timestamp: 1008702519
+
+
+SSID: Fibernet-IA00302634
+BSSID: 00:1e:80:78:f3:f8
+ResultLevel: -89
+Frequency: 2412
+Timestamp: 1008677014
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -90
+Frequency: 5180
+Timestamp: 1010236074
+
+
+SSID:
+BSSID: 52:e0:39:70:e3:b2
+ResultLevel: -90
+Frequency: 5200
+Timestamp: 1010338256
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -91
+Frequency: 5180
+Timestamp: 1010235337
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b2
+ResultLevel: -91
+Frequency: 5200
+Timestamp: 1010332770
+
+
+SSID: ADpKTvsM_5GHz
+BSSID: b8:d9:4d:67:05:77
+ResultLevel: -94
+Frequency: 5540
+Timestamp: 1011807907
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -60
+Frequency: 2452
+Timestamp: 1021347864
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -64
+Frequency: 2412
+Timestamp: 1015176443
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -69
+Frequency: 2457
+Timestamp: 1016079905
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -79
+Frequency: 2462
+Timestamp: 1016212775
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -80
+Frequency: 5280
+Timestamp: 1017150931
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -80
+Frequency: 5280
+Timestamp: 1017149437
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -82
+Frequency: 2432
+Timestamp: 1015595114
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -84
+Frequency: 5260
+Timestamp: 1016986657
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 1015170119
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -86
+Frequency: 2462
+Timestamp: 1016175535
+
+
+SSID: BIFROST
+BSSID: b8:d9:4d:64:54:d3
+ResultLevel: -86
+Frequency: 2412
+Timestamp: 1015180568
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -87
+Frequency: 5540
+Timestamp: 1018076417
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1015681701
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -90
+Frequency: 5180
+Timestamp: 1016500444
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b2
+ResultLevel: -90
+Frequency: 5200
+Timestamp: 1016596917
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -91
+Frequency: 5180
+Timestamp: 1016499162
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -61
+Frequency: 2452
+Timestamp: 1028310537
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -63
+Frequency: 2412
+Timestamp: 1021643459
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -70
+Frequency: 2457
+Timestamp: 1022837021
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -78
+Frequency: 2462
+Timestamp: 1022934359
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -79
+Frequency: 5280
+Timestamp: 1024010460
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -80
+Frequency: 5280
+Timestamp: 1024031637
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -84
+Frequency: 2432
+Timestamp: 1022156868
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -84
+Frequency: 5260
+Timestamp: 1023847723
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -87
+Frequency: 5540
+Timestamp: 1025039484
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -87
+Frequency: 2462
+Timestamp: 1022968184
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1022255408
+
+
+SSID: DIRECT-reC48x Series
+BSSID: 86:25:19:77:df:e2
+ResultLevel: -88
+Frequency: 2467
+Timestamp: 1023148003
+
+
+SSID: BIFROST
+BSSID: 00:1d:73:8e:ec:4a
+ResultLevel: -89
+Frequency: 2472
+Timestamp: 1023249452
+
+
+SSID:
+BSSID: 52:e0:39:70:e3:b2
+ResultLevel: -89
+Frequency: 5200
+Timestamp: 1023445935
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -90
+Frequency: 5180
+Timestamp: 1023354692
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -91
+Frequency: 5180
+Timestamp: 1023361131
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b2
+ResultLevel: -91
+Frequency: 5200
+Timestamp: 1023432581
+
+
+SSID: ADpKTvsM_5GHz
+BSSID: b8:d9:4d:67:05:77
+ResultLevel: -93
+Frequency: 5540
+Timestamp: 1025017706
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -61
+Frequency: 2452
+Timestamp: 1034659555
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -65
+Frequency: 2412
+Timestamp: 1028587952
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -67
+Frequency: 2437
+Timestamp: 1029196872
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -68
+Frequency: 5280
+Timestamp: 1030789784
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -69
+Frequency: 5280
+Timestamp: 1030768543
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -77
+Frequency: 5260
+Timestamp: 1030606088
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -79
+Frequency: 2462
+Timestamp: 1029795481
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -80
+Frequency: 2432
+Timestamp: 1029072442
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -85
+Frequency: 5540
+Timestamp: 1031719118
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -87
+Frequency: 2462
+Timestamp: 1029792649
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -87
+Frequency: 2412
+Timestamp: 1028580760
+
+
+SSID: Fibernet-IA00302634
+BSSID: 00:1e:80:78:f3:f8
+ResultLevel: -88
+Frequency: 2412
+Timestamp: 1028542839
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -89
+Frequency: 2412
+Timestamp: 1028577012
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:61
+ResultLevel: -90
+Frequency: 5180
+Timestamp: 1030112190
+
+
+SSID: PrettyFlyforaWiFi
+BSSID: e2:24:c8:36:d8:65
+ResultLevel: -90
+Frequency: 5180
+Timestamp: 1030119793
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -61
+Frequency: 2452
+Timestamp: 1041520694
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -66
+Frequency: 2412
+Timestamp: 1035027584
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -74
+Frequency: 2457
+Timestamp: 1036182911
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1036250719
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -79
+Frequency: 5280
+Timestamp: 1037322268
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -80
+Frequency: 5260
+Timestamp: 1037159591
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -81
+Frequency: 5280
+Timestamp: 1037343559
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -83
+Frequency: 2412
+Timestamp: 1035042459
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -83
+Frequency: 2412
+Timestamp: 1035011468
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -85
+Frequency: 2462
+Timestamp: 1036268589
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -86
+Frequency: 2432
+Timestamp: 1035554970
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 1035632589
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1035670442
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -87
+Frequency: 2412
+Timestamp: 1035023234
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -89
+Frequency: 2437
+Timestamp: 1035644221
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:2a
+ResultLevel: -89
+Frequency: 2462
+Timestamp: 1036274587
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -91
+Frequency: 5540
+Timestamp: 1038352219
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b2
+ResultLevel: -91
+Frequency: 5200
+Timestamp: 1036768738
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:73
+ResultLevel: -91
+Frequency: 5180
+Timestamp: 1036650118
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -60
+Frequency: 2452
+Timestamp: 1048688867
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -67
+Frequency: 2412
+Timestamp: 1041786307
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -72
+Frequency: 2457
+Timestamp: 1043139361
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -72
+Frequency: 2412
+Timestamp: 1041794355
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 1044387865
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -75
+Frequency: 2462
+Timestamp: 1043221330
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1044410411
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -79
+Frequency: 5260
+Timestamp: 1044228620
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -85
+Frequency: 2432
+Timestamp: 1042397344
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 1041776482
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1042520786
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1042524458
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -89
+Frequency: 2462
+Timestamp: 1043248252
+
+
+SSID: HomeBox-3AE0_2.4G
+BSSID: 44:e9:dd:92:3a:e6
+ResultLevel: -89
+Frequency: 2412
+Timestamp: 1041780658
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -92
+Frequency: 5540
+Timestamp: 1045417615
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -61
+Frequency: 2452
+Timestamp: 1055549388
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -69
+Frequency: 2412
+Timestamp: 1048949837
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -72
+Frequency: 2457
+Timestamp: 1049994631
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -73
+Frequency: 5280
+Timestamp: 1051146493
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 1051167496
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -76
+Frequency: 2462
+Timestamp: 1050111500
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -78
+Frequency: 5260
+Timestamp: 1050983746
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -79
+Frequency: 2412
+Timestamp: 1048962909
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -85
+Frequency: 2432
+Timestamp: 1049396263
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 1048908641
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -86
+Frequency: 2462
+Timestamp: 1050099759
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 1049561790
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -91
+Frequency: 5540
+Timestamp: 1052278977
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -60
+Frequency: 2452
+Timestamp: 1062102945
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -70
+Frequency: 2412
+Timestamp: 1055836349
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -72
+Frequency: 2457
+Timestamp: 1056849819
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -73
+Frequency: 5280
+Timestamp: 1058028297
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 1058007399
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -77
+Frequency: 2462
+Timestamp: 1056941450
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -79
+Frequency: 5260
+Timestamp: 1057844712
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -85
+Frequency: 2432
+Timestamp: 1056315630
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 1055841801
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -85
+Frequency: 2462
+Timestamp: 1056944937
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 1055818370
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -85
+Frequency: 2437
+Timestamp: 1056437379
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 1056416609
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1056441061
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:2a
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 1056959564
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -90
+Frequency: 5540
+Timestamp: 1059036991
+
+
+SSID: HomeBox-3AE0_2.4G
+BSSID: 44:e9:dd:92:3a:e6
+ResultLevel: -90
+Frequency: 2412
+Timestamp: 1055809427
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:73
+ResultLevel: -91
+Frequency: 5180
+Timestamp: 1057232099
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -60
+Frequency: 2452
+Timestamp: 1068861041
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -70
+Frequency: 2412
+Timestamp: 1062381993
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -71
+Frequency: 2457
+Timestamp: 1063468170
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -73
+Frequency: 5280
+Timestamp: 1064765869
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -75
+Frequency: 2462
+Timestamp: 1063586387
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1064787040
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -79
+Frequency: 5260
+Timestamp: 1064603437
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -81
+Frequency: 2412
+Timestamp: 1062390495
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -84
+Frequency: 2412
+Timestamp: 1062386493
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -86
+Frequency: 2462
+Timestamp: 1063606871
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:2a
+ResultLevel: -86
+Frequency: 2462
+Timestamp: 1063616144
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -92
+Frequency: 5540
+Timestamp: 1065796104
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -60
+Frequency: 2452
+Timestamp: 1075210617
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -70
+Frequency: 2412
+Timestamp: 1069159139
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -73
+Frequency: 2457
+Timestamp: 1070049546
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 1071218282
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 1071216772
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -76
+Frequency: 2462
+Timestamp: 1070158403
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -80
+Frequency: 5260
+Timestamp: 1071054526
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -80
+Frequency: 2412
+Timestamp: 1069166610
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -81
+Frequency: 2412
+Timestamp: 1069177318
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -84
+Frequency: 2432
+Timestamp: 1069548769
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1069658422
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1069651615
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -93
+Frequency: 5540
+Timestamp: 1072349611
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -59
+Frequency: 2452
+Timestamp: 1082071087
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -69
+Frequency: 2412
+Timestamp: 1075713004
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -72
+Frequency: 2457
+Timestamp: 1076897543
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1077006079
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1077996539
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1077975144
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -79
+Frequency: 2412
+Timestamp: 1075714886
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -80
+Frequency: 5260
+Timestamp: 1077813113
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -84
+Frequency: 2432
+Timestamp: 1076225050
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -85
+Frequency: 2462
+Timestamp: 1077026346
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 1075706771
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1076309317
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1076317756
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1076312860
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:2a
+ResultLevel: -90
+Frequency: 2462
+Timestamp: 1077030504
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -91
+Frequency: 5540
+Timestamp: 1079005506
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -59
+Frequency: 2452
+Timestamp: 1088830170
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -69
+Frequency: 2412
+Timestamp: 1082362068
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -72
+Frequency: 2457
+Timestamp: 1083588143
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -73
+Frequency: 5280
+Timestamp: 1084959760
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1083764511
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1084938452
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -79
+Frequency: 5260
+Timestamp: 1084780825
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -86
+Frequency: 2432
+Timestamp: 1082952470
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 1083129128
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -87
+Frequency: 2462
+Timestamp: 1083760907
+
+
+SSID: bgxbs3mz
+BSSID: 24:7f:20:01:20:56
+ResultLevel: -87
+Frequency: 2447
+Timestamp: 1083386777
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1083134680
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:73
+ResultLevel: -91
+Frequency: 5180
+Timestamp: 1084163751
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -93
+Frequency: 5540
+Timestamp: 1085968814
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -61
+Frequency: 2452
+Timestamp: 1095997484
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -61
+Frequency: 2412
+Timestamp: 1089325618
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -72
+Frequency: 2457
+Timestamp: 1090612197
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1090838735
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 1091820721
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 1091799586
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -79
+Frequency: 5260
+Timestamp: 1091637207
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -85
+Frequency: 2432
+Timestamp: 1089937940
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -85
+Frequency: 2462
+Timestamp: 1090831387
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 1090004824
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1090037511
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:73
+ResultLevel: -91
+Frequency: 5180
+Timestamp: 1091229738
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -92
+Frequency: 5540
+Timestamp: 1092829897
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -61
+Frequency: 2452
+Timestamp: 1102755965
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -67
+Frequency: 2412
+Timestamp: 1096276175
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -71
+Frequency: 2457
+Timestamp: 1097391075
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1097509088
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 1098681355
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 1098660077
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -80
+Frequency: 5260
+Timestamp: 1098498166
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 1096284556
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 1096290774
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -85
+Frequency: 2437
+Timestamp: 1096868773
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -86
+Frequency: 2432
+Timestamp: 1096771862
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1096879743
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 1097505332
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -88
+Frequency: 2412
+Timestamp: 1096264717
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -94
+Frequency: 5540
+Timestamp: 1099588977
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1109616536
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -71
+Frequency: 2457
+Timestamp: 1104269572
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1104364396
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 1105439778
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 1105418760
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -80
+Frequency: 5260
+Timestamp: 1105256997
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -80
+Frequency: 2412
+Timestamp: 1103048529
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -85
+Frequency: 2432
+Timestamp: 1103625322
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -87
+Frequency: 2462
+Timestamp: 1104368270
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1103845278
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1103821674
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -93
+Frequency: 5540
+Timestamp: 1106449106
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1116477708
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -68
+Frequency: 2412
+Timestamp: 1109968230
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -71
+Frequency: 2457
+Timestamp: 1111006624
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1111213583
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 1112381806
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1112403225
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -80
+Frequency: 5260
+Timestamp: 1112219842
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -80
+Frequency: 2412
+Timestamp: 1109947304
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -81
+Frequency: 2412
+Timestamp: 1109964618
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -86
+Frequency: 2432
+Timestamp: 1110422998
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 1110521269
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1110484322
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -89
+Frequency: 2462
+Timestamp: 1111193564
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -93
+Frequency: 5540
+Timestamp: 1113310890
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1123031184
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -68
+Frequency: 2412
+Timestamp: 1116726523
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -73
+Frequency: 2457
+Timestamp: 1117794011
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 1119037813
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1119059102
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -76
+Frequency: 2462
+Timestamp: 1117861106
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -79
+Frequency: 2412
+Timestamp: 1116749476
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -80
+Frequency: 5260
+Timestamp: 1118876112
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -84
+Frequency: 2412
+Timestamp: 1116737283
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -87
+Frequency: 2432
+Timestamp: 1117166397
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1117258488
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1117305175
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -89
+Frequency: 2412
+Timestamp: 1116721303
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -93
+Frequency: 5540
+Timestamp: 1120174462
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1130096793
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -68
+Frequency: 2412
+Timestamp: 1123600529
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -71
+Frequency: 2457
+Timestamp: 1124861022
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1125036421
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1126022289
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1126001512
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -79
+Frequency: 5260
+Timestamp: 1125839668
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -82
+Frequency: 2412
+Timestamp: 1123604422
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -84
+Frequency: 2437
+Timestamp: 1124239164
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -85
+Frequency: 2462
+Timestamp: 1125046584
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 1124243730
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -89
+Frequency: 2412
+Timestamp: 1123580456
+
+
+SSID: bgxbs3mz
+BSSID: 24:7f:20:01:20:56
+ResultLevel: -89
+Frequency: 2447
+Timestamp: 1124633158
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -91
+Frequency: 5540
+Timestamp: 1127032302
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1136855134
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -70
+Frequency: 2457
+Timestamp: 1131593938
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1131702504
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1132759503
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -76
+Frequency: 5280
+Timestamp: 1132780901
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -80
+Frequency: 5260
+Timestamp: 1132598180
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -82
+Frequency: 2412
+Timestamp: 1130396462
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -82
+Frequency: 2412
+Timestamp: 1130409470
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -83
+Frequency: 2437
+Timestamp: 1131076411
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -84
+Frequency: 2412
+Timestamp: 1130346943
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -86
+Frequency: 2462
+Timestamp: 1131707736
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -87
+Frequency: 2432
+Timestamp: 1130862654
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1131085629
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -89
+Frequency: 2412
+Timestamp: 1130354359
+
+
+SSID: HomeBox-3AE0_2.4G
+BSSID: 44:e9:dd:92:3a:e6
+ResultLevel: -89
+Frequency: 2412
+Timestamp: 1130357348
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -94
+Frequency: 5540
+Timestamp: 1133688261
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1143717189
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -64
+Frequency: 2462
+Timestamp: 1138494173
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -68
+Frequency: 2412
+Timestamp: 1137201373
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -75
+Frequency: 2457
+Timestamp: 1138352843
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1139641225
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1139620776
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -78
+Frequency: 5260
+Timestamp: 1139459099
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -84
+Frequency: 2412
+Timestamp: 1137210914
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 1137207413
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -85
+Frequency: 2437
+Timestamp: 1137825967
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -86
+Frequency: 2432
+Timestamp: 1137661499
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -87
+Frequency: 2462
+Timestamp: 1138497785
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1137802733
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:73
+ResultLevel: -91
+Frequency: 5180
+Timestamp: 1138947915
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -92
+Frequency: 5540
+Timestamp: 1140549429
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1150679207
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -67
+Frequency: 2412
+Timestamp: 1144068663
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -72
+Frequency: 2457
+Timestamp: 1145440288
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -72
+Frequency: 2462
+Timestamp: 1145615746
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1146707318
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1146686046
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -79
+Frequency: 5260
+Timestamp: 1146524626
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -83
+Frequency: 2412
+Timestamp: 1144067292
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -86
+Frequency: 2432
+Timestamp: 1144704199
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -86
+Frequency: 2462
+Timestamp: 1145626498
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 1144819842
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1144815474
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -89
+Frequency: 2437
+Timestamp: 1144825795
+
+
+**************
+
+Scanning: Kontor
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -61
+Frequency: 2457
+Timestamp: 1152260983
+
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1157539833
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -69
+Frequency: 2462
+Timestamp: 1152456796
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 1153568088
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 1153546859
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -78
+Frequency: 2412
+Timestamp: 1151154289
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -80
+Frequency: 5260
+Timestamp: 1153385435
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -82
+Frequency: 2412
+Timestamp: 1151146749
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -85
+Frequency: 2432
+Timestamp: 1151685262
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -87
+Frequency: 2462
+Timestamp: 1152451126
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1151787065
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1151776348
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -88
+Frequency: 2412
+Timestamp: 1151136913
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -91
+Frequency: 5540
+Timestamp: 1154578235
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1164093981
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -68
+Frequency: 2412
+Timestamp: 1157803055
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -71
+Frequency: 2457
+Timestamp: 1158831523
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 1160202866
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1160224077
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -76
+Frequency: 2462
+Timestamp: 1158993576
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -80
+Frequency: 5260
+Timestamp: 1160041574
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -80
+Frequency: 2412
+Timestamp: 1157815880
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -84
+Frequency: 2432
+Timestamp: 1158313840
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -84
+Frequency: 2412
+Timestamp: 1157810660
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1158424773
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 1159024011
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1158419527
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -92
+Frequency: 5540
+Timestamp: 1161234778
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1171262051
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -69
+Frequency: 2412
+Timestamp: 1164751184
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -71
+Frequency: 2457
+Timestamp: 1165805246
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1166001391
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1167084939
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1167063674
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -79
+Frequency: 5260
+Timestamp: 1166902407
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -79
+Frequency: 2412
+Timestamp: 1164755843
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -80
+Frequency: 2412
+Timestamp: 1164731497
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 1165309481
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 1165289306
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -87
+Frequency: 2432
+Timestamp: 1165171106
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 1166004268
+
+
+SSID: bgxbs3mz
+BSSID: 24:7f:20:01:20:56
+ResultLevel: -90
+Frequency: 2447
+Timestamp: 1165575492
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -94
+Frequency: 5540
+Timestamp: 1168095100
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1178122842
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -69
+Frequency: 2412
+Timestamp: 1171524000
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -71
+Frequency: 2457
+Timestamp: 1172658878
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1172782206
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -76
+Frequency: 5280
+Timestamp: 1173924566
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -77
+Frequency: 5280
+Timestamp: 1173945680
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -80
+Frequency: 5260
+Timestamp: 1173763306
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -83
+Frequency: 2432
+Timestamp: 1171969141
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -83
+Frequency: 2412
+Timestamp: 1171527857
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -84
+Frequency: 2412
+Timestamp: 1171545414
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 1172148245
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1172137344
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 1172802441
+
+
+SSID: HomeBox-3AE0_2.4G
+BSSID: 44:e9:dd:92:3a:e6
+ResultLevel: -89
+Frequency: 2412
+Timestamp: 1171533629
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -92
+Frequency: 5540
+Timestamp: 1174956203
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1184676753
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -67
+Frequency: 2412
+Timestamp: 1178410381
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -71
+Frequency: 2457
+Timestamp: 1179519578
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1179607537
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1180704353
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1180683337
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -76
+Frequency: 2412
+Timestamp: 1178406653
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -79
+Frequency: 2412
+Timestamp: 1178392013
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -80
+Frequency: 5260
+Timestamp: 1180604428
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -82
+Frequency: 2432
+Timestamp: 1179004151
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 1179094408
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 1179603995
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1179098004
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -89
+Frequency: 2437
+Timestamp: 1179117479
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -92
+Frequency: 5540
+Timestamp: 1181714802
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1191537535
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -62
+Frequency: 2457
+Timestamp: 1186194206
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -67
+Frequency: 2412
+Timestamp: 1185142745
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -76
+Frequency: 2462
+Timestamp: 1186260838
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -76
+Frequency: 5280
+Timestamp: 1187462741
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -76
+Frequency: 5280
+Timestamp: 1187441623
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -76
+Frequency: 2412
+Timestamp: 1185173587
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -79
+Frequency: 5260
+Timestamp: 1187280420
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -83
+Frequency: 2412
+Timestamp: 1185146247
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -84
+Frequency: 2432
+Timestamp: 1185683279
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -86
+Frequency: 2462
+Timestamp: 1186285304
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 1185789953
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1185780802
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -88
+Frequency: 2412
+Timestamp: 1185137301
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1198501375
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -67
+Frequency: 2412
+Timestamp: 1191820405
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -72
+Frequency: 2457
+Timestamp: 1193094790
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1193298014
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1194404686
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -76
+Frequency: 5280
+Timestamp: 1194426093
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -78
+Frequency: 2412
+Timestamp: 1191824078
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -79
+Frequency: 5260
+Timestamp: 1194243776
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -84
+Frequency: 2432
+Timestamp: 1192337702
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 1192529328
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1192509631
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1192503874
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:73
+ResultLevel: -91
+Frequency: 5180
+Timestamp: 1193732063
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -92
+Frequency: 5540
+Timestamp: 1195436578
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -63
+Frequency: 2452
+Timestamp: 1205463847
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -67
+Frequency: 2412
+Timestamp: 1198962886
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -69
+Frequency: 2457
+Timestamp: 1200224655
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1200288738
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1201286685
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -76
+Frequency: 5280
+Timestamp: 1201265473
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -79
+Frequency: 5260
+Timestamp: 1201104550
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -84
+Frequency: 2412
+Timestamp: 1198983613
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 1198970525
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -86
+Frequency: 2432
+Timestamp: 1199581738
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -86
+Frequency: 2462
+Timestamp: 1200304141
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 1199712442
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -94
+Frequency: 5540
+Timestamp: 1202399787
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1212324922
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -68
+Frequency: 2412
+Timestamp: 1205839694
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -70
+Frequency: 2457
+Timestamp: 1207093066
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -73
+Frequency: 2462
+Timestamp: 1207173394
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -76
+Frequency: 5280
+Timestamp: 1208454911
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -76
+Frequency: 5280
+Timestamp: 1208433551
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -79
+Frequency: 2412
+Timestamp: 1205843453
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -80
+Frequency: 5260
+Timestamp: 1208272762
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -84
+Frequency: 2432
+Timestamp: 1206378396
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 1205799771
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -85
+Frequency: 2437
+Timestamp: 1206559632
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -87
+Frequency: 2462
+Timestamp: 1207169849
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1206524919
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:2a
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 1207181648
+
+
+SSID: HomeBox-3AE0_2.4G
+BSSID: 44:e9:dd:92:3a:e6
+ResultLevel: -90
+Frequency: 2412
+Timestamp: 1205826533
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -95
+Frequency: 5540
+Timestamp: 1209465626
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1218777868
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -67
+Frequency: 2412
+Timestamp: 1212609210
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -72
+Frequency: 2457
+Timestamp: 1213632637
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1213714600
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -76
+Frequency: 5280
+Timestamp: 1214701390
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -76
+Frequency: 5280
+Timestamp: 1214680282
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -80
+Frequency: 5260
+Timestamp: 1214519259
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -80
+Frequency: 2412
+Timestamp: 1212613133
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -84
+Frequency: 2432
+Timestamp: 1213091631
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -86
+Frequency: 2412
+Timestamp: 1212616340
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1213220294
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1213188000
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -89
+Frequency: 2462
+Timestamp: 1213735664
+
+
+SSID: bgxbs3mz
+BSSID: 24:7f:20:01:20:56
+ResultLevel: -89
+Frequency: 2447
+Timestamp: 1213437315
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -93
+Frequency: 5540
+Timestamp: 1215614471
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -61
+Frequency: 2452
+Timestamp: 1225943480
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -68
+Frequency: 2412
+Timestamp: 1219076927
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -70
+Frequency: 2457
+Timestamp: 1220478035
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -75
+Frequency: 2462
+Timestamp: 1220592385
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1221540784
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -76
+Frequency: 5280
+Timestamp: 1221562013
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -79
+Frequency: 5260
+Timestamp: 1221380311
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -80
+Frequency: 2412
+Timestamp: 1219072960
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -86
+Frequency: 2432
+Timestamp: 1219713791
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -86
+Frequency: 2462
+Timestamp: 1220595299
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -86
+Frequency: 2412
+Timestamp: 1219089924
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 1219881618
+
+
+SSID: bgxbs3mz
+BSSID: 24:7f:20:01:20:56
+ResultLevel: -87
+Frequency: 2447
+Timestamp: 1220198042
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1219886397
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -88
+Frequency: 2412
+Timestamp: 1219086319
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -92
+Frequency: 5540
+Timestamp: 1222573107
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -61
+Frequency: 2452
+Timestamp: 1232804527
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -68
+Frequency: 2412
+Timestamp: 1226230291
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -71
+Frequency: 2457
+Timestamp: 1227262999
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1227350772
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1228525388
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1228504040
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -79
+Frequency: 5260
+Timestamp: 1228343452
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -82
+Frequency: 2412
+Timestamp: 1226213868
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -83
+Frequency: 2412
+Timestamp: 1226236836
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -87
+Frequency: 2432
+Timestamp: 1226742103
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -89
+Frequency: 2462
+Timestamp: 1227354402
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -90
+Frequency: 2412
+Timestamp: 1226217967
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -91
+Frequency: 5540
+Timestamp: 1229640700
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1239562869
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -63
+Frequency: 2412
+Timestamp: 1233084858
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -68
+Frequency: 2412
+Timestamp: 1233067478
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -72
+Frequency: 2457
+Timestamp: 1234190421
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -75
+Frequency: 2462
+Timestamp: 1234381198
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1235488509
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -76
+Frequency: 5280
+Timestamp: 1235467305
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -80
+Frequency: 5260
+Timestamp: 1235285056
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -85
+Frequency: 2432
+Timestamp: 1233512346
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 1233051260
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -87
+Frequency: 2462
+Timestamp: 1234398218
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1233610776
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -89
+Frequency: 2437
+Timestamp: 1233590632
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:2a
+ResultLevel: -89
+Frequency: 2462
+Timestamp: 1234402261
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -92
+Frequency: 5540
+Timestamp: 1236499659
+
+
+**************
+
+Scanning: Kontor
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -61
+Frequency: 2457
+Timestamp: 1241177503
+
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1246730910
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -66
+Frequency: 2412
+Timestamp: 1240031775
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1241248593
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1242430592
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -76
+Frequency: 5280
+Timestamp: 1242452481
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -79
+Frequency: 5260
+Timestamp: 1242270245
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -80
+Frequency: 2412
+Timestamp: 1240027719
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -83
+Frequency: 2412
+Timestamp: 1240010995
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -84
+Frequency: 2432
+Timestamp: 1240523855
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1240741111
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 1241256310
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1240745756
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -94
+Frequency: 5540
+Timestamp: 1243565525
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1253387156
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -67
+Frequency: 2412
+Timestamp: 1247008339
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -69
+Frequency: 2457
+Timestamp: 1248108579
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1248224894
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 1249312645
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -74
+Frequency: 5280
+Timestamp: 1249291372
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -79
+Frequency: 5260
+Timestamp: 1249131086
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -81
+Frequency: 2412
+Timestamp: 1247010855
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -85
+Frequency: 2432
+Timestamp: 1247519710
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 1246989885
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1247630838
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -89
+Frequency: 2462
+Timestamp: 1248251275
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -92
+Frequency: 5540
+Timestamp: 1250221582
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -63
+Frequency: 2452
+Timestamp: 1260350987
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -68
+Frequency: 2412
+Timestamp: 1253672784
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -71
+Frequency: 2457
+Timestamp: 1254854794
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -75
+Frequency: 2462
+Timestamp: 1255085488
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1256275916
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1256254750
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -80
+Frequency: 5260
+Timestamp: 1256094673
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -80
+Frequency: 2412
+Timestamp: 1253669259
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -84
+Frequency: 2412
+Timestamp: 1253679352
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -86
+Frequency: 2432
+Timestamp: 1254263346
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 1254391368
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1254387870
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 1255089092
+
+
+SSID: bgxbs3mz
+BSSID: 24:7f:20:01:20:56
+ResultLevel: -89
+Frequency: 2447
+Timestamp: 1254663480
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -93
+Frequency: 5540
+Timestamp: 1257287871
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1267519062
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -73
+Frequency: 2462
+Timestamp: 1262069916
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1263320601
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -76
+Frequency: 5280
+Timestamp: 1263341659
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -79
+Frequency: 5260
+Timestamp: 1263160122
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -82
+Frequency: 2412
+Timestamp: 1260824837
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -84
+Frequency: 2412
+Timestamp: 1260831420
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -86
+Frequency: 2432
+Timestamp: 1261258785
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 1261441515
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -87
+Frequency: 2462
+Timestamp: 1262075744
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1261411989
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -88
+Frequency: 2412
+Timestamp: 1260822732
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1261421133
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -92
+Frequency: 5540
+Timestamp: 1264353155
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -61
+Frequency: 2452
+Timestamp: 1274482363
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -70
+Frequency: 2412
+Timestamp: 1267802243
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -73
+Frequency: 2457
+Timestamp: 1269014043
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1269193709
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1270283622
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -76
+Frequency: 5280
+Timestamp: 1270304754
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -80
+Frequency: 5260
+Timestamp: 1270123303
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -80
+Frequency: 2412
+Timestamp: 1267806215
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -84
+Frequency: 2412
+Timestamp: 1267811264
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -85
+Frequency: 2432
+Timestamp: 1268329729
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -87
+Frequency: 2462
+Timestamp: 1269217419
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -87
+Frequency: 2437
+Timestamp: 1268465743
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1268489041
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -90
+Frequency: 2412
+Timestamp: 1267790455
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1281341978
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -67
+Frequency: 2412
+Timestamp: 1274850742
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -70
+Frequency: 2457
+Timestamp: 1275874579
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1276001194
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1277043420
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1277041877
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -79
+Frequency: 5260
+Timestamp: 1276881802
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -84
+Frequency: 2412
+Timestamp: 1274862911
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -85
+Frequency: 2432
+Timestamp: 1275394337
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 1274858528
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 1275476052
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -87
+Frequency: 2462
+Timestamp: 1275965704
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1275492461
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:2a
+ResultLevel: -89
+Frequency: 2462
+Timestamp: 1275995128
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -93
+Frequency: 5540
+Timestamp: 1278075242
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -62
+Frequency: 2452
+Timestamp: 1287895588
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -67
+Frequency: 2412
+Timestamp: 1281673402
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -69
+Frequency: 2457
+Timestamp: 1282757325
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1282945956
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1283923958
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -75
+Frequency: 5280
+Timestamp: 1283902803
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -80
+Frequency: 5260
+Timestamp: 1283742649
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -81
+Frequency: 2412
+Timestamp: 1281695566
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -84
+Frequency: 2432
+Timestamp: 1282108253
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -84
+Frequency: 2412
+Timestamp: 1281703168
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -86
+Frequency: 2437
+Timestamp: 1282330178
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 1282910570
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1282322348
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -93
+Frequency: 5540
+Timestamp: 1284837924
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -61
+Frequency: 2452
+Timestamp: 1294961111
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -67
+Frequency: 2412
+Timestamp: 1288292378
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -72
+Frequency: 2457
+Timestamp: 1289373935
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -74
+Frequency: 2462
+Timestamp: 1289497962
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -76
+Frequency: 5280
+Timestamp: 1290765086
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -76
+Frequency: 5280
+Timestamp: 1290763694
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -77
+Frequency: 2462
+Timestamp: 1289503284
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -80
+Frequency: 5260
+Timestamp: 1290604760
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -81
+Frequency: 2412
+Timestamp: 1288271305
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 1288290865
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -85
+Frequency: 2437
+Timestamp: 1288800916
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:2a
+ResultLevel: -86
+Frequency: 2462
+Timestamp: 1289512002
+
+
+SSID: bgxbs3mz
+BSSID: 24:7f:20:01:20:56
+ResultLevel: -86
+Frequency: 2447
+Timestamp: 1289058450
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -87
+Frequency: 2432
+Timestamp: 1288705941
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1288773968
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:73
+ResultLevel: -91
+Frequency: 5180
+Timestamp: 1289988576
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -92
+Frequency: 5540
+Timestamp: 1291694583
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -58
+Frequency: 2452
+Timestamp: 1301822431
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -66
+Frequency: 2412
+Timestamp: 1295235229
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -70
+Frequency: 5280
+Timestamp: 1297543411
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -70
+Frequency: 5280
+Timestamp: 1297521998
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -76
+Frequency: 5260
+Timestamp: 1297362229
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -79
+Frequency: 2412
+Timestamp: 1295241499
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -81
+Frequency: 2462
+Timestamp: 1296467901
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -81
+Frequency: 2432
+Timestamp: 1295839131
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -84
+Frequency: 2412
+Timestamp: 1295252420
+
+
+SSID: CableBox-0936
+BSSID: a4:08:f5:1f:09:3b
+ResultLevel: -84
+Frequency: 2437
+Timestamp: 1295955690
+
+
+SSID: y4zav6s4
+BSSID: f4:6b:ef:d6:86:14
+ResultLevel: -85
+Frequency: 2437
+Timestamp: 1295934458
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 1296484304
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1295950880
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -90
+Frequency: 5540
+Timestamp: 1298657673
+
+
+SSID: ADpKTvsM_5GHz
+BSSID: b8:d9:4d:67:05:77
+ResultLevel: -92
+Frequency: 5540
+Timestamp: 1298635701
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -57
+Frequency: 2452
+Timestamp: 1308683657
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -62
+Frequency: 2412
+Timestamp: 1302190475
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -70
+Frequency: 2457
+Timestamp: 1303212703
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -71
+Frequency: 5280
+Timestamp: 1304485266
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 1304506595
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -76
+Frequency: 5260
+Timestamp: 1304325341
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -81
+Frequency: 2412
+Timestamp: 1302175222
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -83
+Frequency: 2412
+Timestamp: 1302197571
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -86
+Frequency: 2462
+Timestamp: 1303379441
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -86
+Frequency: 2432
+Timestamp: 1302589962
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -87
+Frequency: 2462
+Timestamp: 1303433834
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -87
+Frequency: 2412
+Timestamp: 1302185232
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -89
+Frequency: 5540
+Timestamp: 1305519045
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -59
+Frequency: 2452
+Timestamp: 1315339527
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -61
+Frequency: 2412
+Timestamp: 1308957276
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -68
+Frequency: 2457
+Timestamp: 1310149274
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -71
+Frequency: 5280
+Timestamp: 1311347558
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -71
+Frequency: 5280
+Timestamp: 1311346063
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -76
+Frequency: 5260
+Timestamp: 1311186458
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -80
+Frequency: 2412
+Timestamp: 1308964366
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -83
+Frequency: 2412
+Timestamp: 1308968817
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -85
+Frequency: 2462
+Timestamp: 1310304076
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -85
+Frequency: 2432
+Timestamp: 1309566108
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -88
+Frequency: 2412
+Timestamp: 1308950227
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -90
+Frequency: 5540
+Timestamp: 1312379589
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b2
+ResultLevel: -92
+Frequency: 5200
+Timestamp: 1310670400
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -59
+Frequency: 2452
+Timestamp: 1322610543
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -61
+Frequency: 2412
+Timestamp: 1315729986
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -70
+Frequency: 2457
+Timestamp: 1316940835
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 1318228444
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 1318207104
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -77
+Frequency: 5260
+Timestamp: 1318028430
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -84
+Frequency: 2462
+Timestamp: 1317062670
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -86
+Frequency: 2432
+Timestamp: 1316322026
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -89
+Frequency: 5540
+Timestamp: 1319240621
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -59
+Frequency: 2452
+Timestamp: 1329368547
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -62
+Frequency: 2412
+Timestamp: 1322872923
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -69
+Frequency: 2457
+Timestamp: 1324013893
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -70
+Frequency: 5280
+Timestamp: 1325272522
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -71
+Frequency: 2462
+Timestamp: 1324135313
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -71
+Frequency: 5280
+Timestamp: 1325274189
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -76
+Frequency: 5260
+Timestamp: 1325093061
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -82
+Frequency: 2412
+Timestamp: 1322866244
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -86
+Frequency: 2412
+Timestamp: 1322856520
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -88
+Frequency: 2432
+Timestamp: 1323415131
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -88
+Frequency: 2412
+Timestamp: 1322847821
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1323510552
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:2a
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 1324123527
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -89
+Frequency: 2462
+Timestamp: 1324097592
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -90
+Frequency: 5540
+Timestamp: 1326306323
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -59
+Frequency: 2452
+Timestamp: 1336434482
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -61
+Frequency: 2412
+Timestamp: 1329857298
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -68
+Frequency: 2457
+Timestamp: 1331098837
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -71
+Frequency: 5280
+Timestamp: 1332440984
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 1332442049
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -76
+Frequency: 5260
+Timestamp: 1332281674
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -80
+Frequency: 2412
+Timestamp: 1329853580
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -84
+Frequency: 2412
+Timestamp: 1329864062
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -85
+Frequency: 2462
+Timestamp: 1331264791
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -87
+Frequency: 2432
+Timestamp: 1330372155
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 1331279268
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -88
+Frequency: 2412
+Timestamp: 1329844162
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -89
+Frequency: 5540
+Timestamp: 1333372036
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -89
+Frequency: 2437
+Timestamp: 1330564091
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -89
+Frequency: 2437
+Timestamp: 1330573984
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -59
+Frequency: 2452
+Timestamp: 1343499255
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -62
+Frequency: 2412
+Timestamp: 1336900788
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -69
+Frequency: 2457
+Timestamp: 1337993806
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 1339220545
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 1339199077
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -77
+Frequency: 5260
+Timestamp: 1339040854
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -82
+Frequency: 2462
+Timestamp: 1338152248
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -85
+Frequency: 2432
+Timestamp: 1337404673
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 1336911785
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 1336904493
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -87
+Frequency: 2462
+Timestamp: 1338155817
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -87
+Frequency: 2412
+Timestamp: 1336894617
+
+
+SSID: WiFimodemDF8F
+BSSID: 30:93:bc:af:88:e8
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1337529560
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -89
+Frequency: 2437
+Timestamp: 1337527488
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -90
+Frequency: 5540
+Timestamp: 1340233060
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b2
+ResultLevel: -92
+Frequency: 5200
+Timestamp: 1338741966
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -58
+Frequency: 2452
+Timestamp: 1350462854
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -62
+Frequency: 2412
+Timestamp: 1343873548
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -69
+Frequency: 2457
+Timestamp: 1345108616
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -73
+Frequency: 2462
+Timestamp: 1345205462
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -73
+Frequency: 5280
+Timestamp: 1346285704
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -73
+Frequency: 5280
+Timestamp: 1346264444
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -77
+Frequency: 5260
+Timestamp: 1346105126
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -82
+Frequency: 2412
+Timestamp: 1343829434
+
+
+SSID: ADpKTvsM
+BSSID: b8:d9:4d:67:05:76
+ResultLevel: -85
+Frequency: 2412
+Timestamp: 1343864583
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -87
+Frequency: 2432
+Timestamp: 1344506333
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -88
+Frequency: 2462
+Timestamp: 1345191922
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -88
+Frequency: 2437
+Timestamp: 1344600414
+
+
+SSID: tornebakkepigen
+BSSID: 28:9e:fc:08:d3:9a
+ResultLevel: -89
+Frequency: 2412
+Timestamp: 1343833063
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -90
+Frequency: 5540
+Timestamp: 1347298582
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b2
+ResultLevel: -90
+Frequency: 5200
+Timestamp: 1345718291
+
+
+**************
+
+Scanning: Kontor
+
+SSID: DetLilleHus
+BSSID: f0:87:56:19:1a:11
+ResultLevel: -58
+Frequency: 2452
+Timestamp: 1357119128
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1c
+ResultLevel: -62
+Frequency: 2412
+Timestamp: 1350737284
+
+
+SSID: Zyxel_E3B1
+BSSID: 50:e0:39:70:e3:b1
+ResultLevel: -69
+Frequency: 2457
+Timestamp: 1351815971
+
+
+SSID:
+BSSID: f2:87:56:99:1a:11
+ResultLevel: -71
+Frequency: 5280
+Timestamp: 1353023086
+
+
+SSID: DetLilleHus_5G
+BSSID: f0:87:56:19:1a:12
+ResultLevel: -72
+Frequency: 5280
+Timestamp: 1353044541
+
+
+SSID: WiFimodem-0117
+BSSID: 30:93:bc:b0:01:1d
+ResultLevel: -77
+Frequency: 5260
+Timestamp: 1352863722
+
+
+SSID: Waoo4920_FDKF
+BSSID: 88:41:fc:c6:40:72
+ResultLevel: -80
+Frequency: 2412
+Timestamp: 1350748155
+
+
+SSID: CableBox-0395
+BSSID: d8:d7:75:ed:03:9a
+ResultLevel: -83
+Frequency: 2462
+Timestamp: 1351951161
+
+
+SSID: PrettyFlyforaWiFi_2.4
+BSSID: e2:24:c8:36:d8:5d
+ResultLevel: -85
+Frequency: 2432
+Timestamp: 1351238609
+
+
+SSID: WiFimodem-06CE
+BSSID: 6c:ba:b8:ee:06:d3
+ResultLevel: -87
+Frequency: 2462
+Timestamp: 1351974329
+
+
+SSID: ayh6djja_5GHz
+BSSID: d8:d7:75:ed:03:9b
+ResultLevel: -89
+Frequency: 5540
+Timestamp: 1354057010
+
+
+SSID: WifiD0A0
+BSSID: b0:bb:e5:ff:d0:a6
+ResultLevel: -89
+Frequency: 2437
+Timestamp: 1351329692
+
+

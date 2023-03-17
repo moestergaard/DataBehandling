@@ -5,14 +5,14 @@ from ExtractData import extractDistinctBSSIDAndNumberOfDataPoints, extractData
 class TestExample1(unittest.TestCase):
    
     def testExtractDistinctBSSIDAndNumberOfDataPoints(self):
-        filename = 'WifiData2303141637Modified.txt' 
+        filename = 'WifiData2303131303Modified.txt' 
         distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
 
-        self.assertEqual(62, len(distinctBSSID))
-        self.assertEqual(7070, dataPoints)
+        self.assertEqual(35, len(distinctBSSID))
+        self.assertEqual(338, dataPoints)
 
     def testExtractData(self):
-        filename = 'WifiData2303141637Modified.txt' 
+        filename = 'WifiData2303131303Modified.txt' 
         distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
 
         trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples = extractData(filename, distinctBSSID, dataPoints)
