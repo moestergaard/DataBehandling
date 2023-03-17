@@ -12,6 +12,9 @@ def main():
     accuracySVM(labelsTestSamples, predictionSVM, locations)
 
 def changeDataFile(filename):
+    bssid = ""
+    resultlevel = ""
+
     with open(filename) as f:
         while True:
             line = f.readline()
@@ -20,7 +23,18 @@ def changeDataFile(filename):
             if line.__contains__("Scanning"):
                 print("**************")
                 print()
-            print(line.strip())
+            if line.__contains__("BSSID"):
+                bssid = line.strip()
+            elif line.__contains__("ResultLevel"):
+                resultlevel = line.strip()
+            elif line.__contains__("Frequency"):
+                bssid += "+"
+                bssid += line.split(": ")[1].split()[0]
+                print(bssid)
+                print(resultlevel)
+                print(line.strip())
+            else: print(line.strip())
+
 #
 # Makes an array consisting of the distinct BSSID.
 #
@@ -133,6 +147,9 @@ def accuracySVM(labelsTestSamples, predictionSVM, locations):
     shouldBeOfficePredictsKitchen = 0
     shouldBeOfficePredictsLivingRoom = 0
 
+    print("længden af labels test: ", len(labelsTestSamples))
+    print("længden af prædiktioner: ", len(predictionSVM))
+
     for i in range(0, len(labelsTestSamples)):
         if labelsTestSamples[i] == predictionSVM[i]:
             correct += 1
@@ -141,7 +158,7 @@ def accuracySVM(labelsTestSamples, predictionSVM, locations):
             if labelsTestSamples[i] == 2:
                 if predictionSVM[i] == 0: shouldBeKitchenPredictsOffice += 1
                 else: shouldBeKitchenPredictsLivingRoom += 1
-            if labelsTestSamples[i] == 1:
+            elif labelsTestSamples[i] == 1:
                 if predictionSVM[i] == 0: shouldBeLivingRoomPredictsOffice += 1
                 else: shouldBeLivingRoomPredictsKitchen += 1
             else: 
