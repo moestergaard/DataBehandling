@@ -16,16 +16,32 @@ def smallDataSetTestedAgainstBigDataSetSVM(locations):
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
     distinctBSSIDTest, dataPointsTest = extractDistinctBSSIDAndNumberOfDataPoints(filenameTest)
 
-    for i in range(0, len(distinctBSSID)):
-        if not distinctBSSIDTest.__contains__(distinctBSSID[i]):
-            distinctBSSIDTest.append(distinctBSSID[i])
+    
 
-    trainingSamples, trainingLabels = extractDataCombined(filename, distinctBSSIDTest, dataPoints, locations)
+    trainingSamples, trainingLabels = extractDataCombined(filename, distinctBSSID, dataPoints, locations)
 
     testSamples, testLabels = extractDataCombined(filenameTest, distinctBSSIDTest, dataPointsTest, locations)
 
+    #
+    # Removes all new BSSID that were not present at origianl syncronising
+    #
+    for i in range(0, len(distinctBSSIDTest)):
+        for i in range(0, len(distinctBSSIDTest)):
+            if not distinctBSSID.__contains__(distinctBSSIDTest[i]):
+                testSamples = np.delete(testSamples, i, 1)
+                distinctBSSIDTest.remove(distinctBSSIDTest[i])
+                break
+
+    #
+    # Add rows of zeroes to testSample for all BSSID from syncroized data not present in tests
+    #
+    for i in range(0, len(distinctBSSID)):
+        if not distinctBSSIDTest.__contains__(distinctBSSID[i]):
+            distinctBSSIDTest.append(distinctBSSID[i])
+            testSamples = np.append(testSamples, np.zeros((testSamples.shape[0],1)), 1)
+                
     predictionSVM = calculationsSVM(trainingSamples, trainingLabels, testSamples)
-    accuracySVM(testLabels, predictionSVM, locations)
+    accuracySVM(testLabels, predictionSVM)
 
 
 def bigDataSetSVM(locations):
@@ -34,7 +50,7 @@ def bigDataSetSVM(locations):
     trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples = extractData(filename, distinctBSSID, dataPoints, locations)
 
     predictionSVM = calculationsSVM(trainingSamples, labelsTrainingSamples, testSamples)
-    accuracySVM(labelsTestSamples, predictionSVM, locations)
+    accuracySVM(labelsTestSamples, predictionSVM)
 
 
 #
@@ -158,7 +174,7 @@ def calculationsSVM(trainingSamples, labelsTrainingSamples, testSamples):
     return prediction
 
     
-def accuracySVM(labelsTestSamples, predictionSVM, locations):
+def accuracySVM(labelsTestSamples, predictionSVM):
     correct = 0
     wrong = 0
 
@@ -196,12 +212,12 @@ def accuracySVM(labelsTestSamples, predictionSVM, locations):
     print("Details for the wrong predictions")
     print()
     print("Wrong predicitions in total: ", wrong)
-    print("Should be office but predicted kitchen %d corresponds to %1.3f percentage of wrongs." % (shouldBeOfficePredictsKitchen, shouldBeOfficePredictsKitchen/wrong*100))
-    print("Should be office but predicted living room %d corresponds to %1.3f percentage of wrongs." % (shouldBeOfficePredictsLivingRoom, shouldBeOfficePredictsLivingRoom/wrong*100))
-    print("Should be kitchen but predicted office %d corresponds to %1.3f percentage of wrongs." % (shouldBeKitchenPredictsOffice, shouldBeKitchenPredictsOffice/wrong*100))
-    print("Should be kitchen but predicted living room %d corresponds to %1.3f percentage of wrongs." % (shouldBeKitchenPredictsLivingRoom, shouldBeKitchenPredictsLivingRoom/wrong*100))
-    print("Should be living room but predicted office %d corresponds to %1.3f percentage of wrongs." % (shouldBeLivingRoomPredictsOffice, shouldBeLivingRoomPredictsOffice/wrong*100))
-    print("Should be living room but predicted kitchen %d corresponds to %1.3f percentage of wrongs." % (shouldBeLivingRoomPredictsKitchen, shouldBeLivingRoomPredictsKitchen/wrong*100))
+    print("Should be office but predicted kitchen %d corresponds to %2.2f percentage of wrongs." % (shouldBeOfficePredictsKitchen, shouldBeOfficePredictsKitchen/wrong*100))
+    print("Should be office but predicted living room %d corresponds to %2.2f percentage of wrongs." % (shouldBeOfficePredictsLivingRoom, shouldBeOfficePredictsLivingRoom/wrong*100))
+    print("Should be kitchen but predicted office %d corresponds to %2.2f percentage of wrongs." % (shouldBeKitchenPredictsOffice, shouldBeKitchenPredictsOffice/wrong*100))
+    print("Should be kitchen but predicted living room %d corresponds to %2.2f percentage of wrongs." % (shouldBeKitchenPredictsLivingRoom, shouldBeKitchenPredictsLivingRoom/wrong*100))
+    print("Should be living room but predicted office %d corresponds to %2.2f percentage of wrongs." % (shouldBeLivingRoomPredictsOffice, shouldBeLivingRoomPredictsOffice/wrong*100))
+    print("Should be living room but predicted kitchen %d corresponds to %2.2f percentage of wrongs." % (shouldBeLivingRoomPredictsKitchen, shouldBeLivingRoomPredictsKitchen/wrong*100))
     print()
     print("********************************************************************************************")
 
