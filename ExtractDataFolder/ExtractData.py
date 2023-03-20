@@ -3,11 +3,73 @@ from sklearn import svm
 
 def main():
     locations = ["Kontor", "Stue", "Køkken"]
+    groundFloor = ["Stue, Køkken"]
+    firstFloor = ["Kontor"]
 
     bigDataSetSVM(locations)
     smallDataSetTestedAgainstBigDataSetSVM(locations)
+
+    bigDataSetSVMSeparateFloors(groundFloor, firstFloor, locations)
+    smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations)
+    
     # changeDataFile(filename)
     
+def bigDataSetSVMSeparateFloors(groundFloor, firstFloor, locations):
+    filename = 'WifiData2303141637Modified.txt'
+    distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
+
+    trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples = extractData(filename, distinctBSSID, dataPoints, locations)
+    trainingSamplesFloors, trainingSamplesGroundFloor, labelsTrainingFloors, labelsTrainingGroundFloor, testSamplesFloors, testSamplesGroundFloor, labelsTestFloors,labelsTestGroundFloor = extractDataSeparateFloors(trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples)
+
+    predictionSVM = calculationsSVM(trainingSamplesFloors, labelsTrainingFloors, testSamplesFloors)
+    print("*** BigDataSetSVMSeparateFloors ***")
+    accuracySVM(labelsTestFloors, predictionSVM)
+
+    predictionSVM = calculationsSVM(trainingSamplesGroundFloor, labelsTrainingGroundFloor, testSamplesGroundFloor)
+    print("*** BigDataSetSVMSeparateFloors Ground Floor ***")
+    accuracySVM(labelsTestGroundFloor, predictionSVM)
+
+def smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations):
+    filename = 'WifiData2-2303172344.txt'
+    filenameTest = 'WifiData2303141637Modified.txt'
+
+    distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
+    distinctBSSIDTest, dataPointsTest = extractDistinctBSSIDAndNumberOfDataPoints(filenameTest)
+
+    
+
+    trainingSamples, trainingLabels = extractDataCombined(filename, distinctBSSID, dataPoints, locations)
+    
+    testSamples, testLabels = extractDataCombined(filenameTest, distinctBSSIDTest, dataPointsTest, locations)
+
+    #
+    # Removes all new BSSID that were not present at origianl syncronising
+    #
+    for i in range(0, len(distinctBSSIDTest)):
+        for i in range(0, len(distinctBSSIDTest)):
+            if not distinctBSSID.__contains__(distinctBSSIDTest[i]):
+                testSamples = np.delete(testSamples, i, 1)
+                distinctBSSIDTest.remove(distinctBSSIDTest[i])
+                break
+
+    #
+    # Add rows of zeroes to testSample for all BSSID from syncroized data not present in tests
+    #
+    for i in range(0, len(distinctBSSID)):
+        if not distinctBSSIDTest.__contains__(distinctBSSID[i]):
+            distinctBSSIDTest.append(distinctBSSID[i])
+            testSamples = np.append(testSamples, np.zeros((testSamples.shape[0],1)), 1)
+
+    trainingSamplesFloors, trainingSamplesGroundFloor, labelsTrainingFloors, labelsTrainingGroundFloor, testSamplesFloors, testSamplesGroundFloor, labelsTestFloors,labelsTestGroundFloor = extractDataSeparateFloors(trainingSamples, trainingLabels, testSamples, testLabels)
+                
+    predictionSVM = calculationsSVM(trainingSamplesFloors, labelsTrainingFloors, testSamplesFloors)
+    print("*** SmallDataSetTestedAgainstBigDataSetSVMSeparateFloors ***")
+    accuracySVM(labelsTestFloors, predictionSVM)
+
+    predictionSVM = calculationsSVM(trainingSamplesGroundFloor, labelsTrainingGroundFloor, testSamplesGroundFloor)
+    print("*** SmallDataSetTestedAgainstBigDataSetSVMSeparateFloors Ground Floor ***")
+    accuracySVM(labelsTestGroundFloor, predictionSVM)
+
 
 def smallDataSetTestedAgainstBigDataSetSVM(locations):
     filename = 'WifiData2-2303172344.txt'
@@ -41,6 +103,8 @@ def smallDataSetTestedAgainstBigDataSetSVM(locations):
             testSamples = np.append(testSamples, np.zeros((testSamples.shape[0],1)), 1)
                 
     predictionSVM = calculationsSVM(trainingSamples, trainingLabels, testSamples)
+
+    print("*** SmallDataSetTestedAgainstBigDataSetSVM ***")
     accuracySVM(testLabels, predictionSVM)
 
 
@@ -50,6 +114,7 @@ def bigDataSetSVM(locations):
     trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples = extractData(filename, distinctBSSID, dataPoints, locations)
 
     predictionSVM = calculationsSVM(trainingSamples, labelsTrainingSamples, testSamples)
+    print("*** BigDataSetSVM ***")
     accuracySVM(labelsTestSamples, predictionSVM)
 
 
@@ -132,6 +197,43 @@ def extractData(filename, distinctBSSID, samples, locations):
 
     return trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples
 
+def extractDataSeparateFloors(trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples):
+
+    trainingSamplesFloors = np.zeros((0, trainingSamples.shape[1]))
+    trainingSamplesGroundFloor = np.zeros((0, trainingSamples.shape[1]))
+    labelsTrainingFloors = np.zeros((0, ))
+    labelsTrainingGroundFloor = np.zeros((0, ))
+
+    testSamplesFloors = np.zeros((0, testSamples.shape[1]))
+    testSamplesGroundFloor = np.zeros((0, testSamples.shape[1]))
+    labelsTestFloors = np.zeros((0, ))
+    labelsTestGroundFloor = np.zeros((0, ))
+
+    for i in range(0, trainingSamples.shape[0]):
+        trainingSamplesFloors = np.vstack((trainingSamplesFloors, trainingSamples[i]))
+        if labelsTrainingSamples[i] == 0:
+            labelsTrainingFloors = np.append(labelsTrainingFloors, labelsTrainingSamples[i])
+        else:
+            trainingSamplesGroundFloor = np.vstack((trainingSamplesGroundFloor, trainingSamples[i]))
+            labelsTrainingGroundFloor = np.append(labelsTrainingGroundFloor, labelsTrainingSamples[i])
+
+            labelsTrainingFloors = np.append(labelsTrainingFloors, 1)
+
+
+    for i in range(0, testSamples.shape[0]):
+        testSamplesFloors = np.vstack((testSamplesFloors, testSamples[i]))
+        if labelsTestSamples[i] == 0:
+            labelsTestFloors = np.append(labelsTestFloors, labelsTestSamples[i])
+        else:
+            testSamplesGroundFloor = np.vstack((testSamplesGroundFloor, testSamples[i]))
+            labelsTestGroundFloor = np.append(labelsTestGroundFloor, labelsTestSamples[i])
+
+            labelsTestFloors = np.append(labelsTestFloors, 1)
+
+
+
+    return trainingSamplesFloors, trainingSamplesGroundFloor, labelsTrainingFloors, labelsTrainingGroundFloor, testSamplesFloors, testSamplesGroundFloor, labelsTestFloors,labelsTestGroundFloor
+
 def extractDataCombined(filename, distinctBSSID, numberOfSamples, locations):
 
     samples = np.zeros((numberOfSamples, len(distinctBSSID)))
@@ -167,6 +269,9 @@ def changeMatrice(matrice, index, distinctBSSID, currentBSSID, resultLevel):
             return matrice    
 
 def calculationsSVM(trainingSamples, labelsTrainingSamples, testSamples):
+    #clf = svm.SVC(kernel='poly', degree=3, C=1)
+    #clf = svm.SVC(kernel='rbf', gamma=0.5, C=0.1)
+    
     clf = svm.SVC(C = 1, cache_size = 1000, class_weight='balanced')
     clf.fit(trainingSamples, labelsTrainingSamples)
     prediction = clf.predict(testSamples)
