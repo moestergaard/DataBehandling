@@ -8,10 +8,10 @@ def main():
     firstFloor = ["Kontor"]
 
     bigDataSetSVM(locations) #changed to small data set
-    # smallDataSetTestedAgainstBigDataSetSVM(locations)
+    smallDataSetTestedAgainstBigDataSetSVM(locations)
 
-    # bigDataSetSVMSeparateFloors(groundFloor, firstFloor, locations)
-    # smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations)
+    bigDataSetSVMSeparateFloors(groundFloor, firstFloor, locations)
+    smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations)
     
     # changeDataFile(filename)
     
@@ -22,13 +22,13 @@ def bigDataSetSVMSeparateFloors(groundFloor, firstFloor, locations):
     trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples = extractData(filename, distinctBSSID, dataPoints, locations)
     trainingSamplesFloors, trainingSamplesGroundFloor, labelsTrainingFloors, labelsTrainingGroundFloor, testSamplesFloors, testSamplesGroundFloor, labelsTestFloors,labelsTestGroundFloor = extractDataSeparateFloors(trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples)
 
-    predictionSVM = calculationsNN(trainingSamplesFloors, labelsTrainingFloors, testSamplesFloors)
-    print("*** BigDataSetSVMSeparateFloors ***")
-    accuracyNN(labelsTestFloors, predictionSVM)
+    wh, bh, wo, bo, error_cost = calculationsNN(trainingSamplesFloors, labelsTrainingFloors, testSamplesFloors)
+    print("*** BigDataSetSeparateFloors ***")
+    accuracyNN(testSamplesFloors, labelsTestFloors, wh, bh, wo, bo, error_cost)
 
-    predictionSVM = calculationsNN(trainingSamplesGroundFloor, labelsTrainingGroundFloor, testSamplesGroundFloor)
-    print("*** BigDataSetSVMSeparateFloors Ground Floor ***")
-    accuracyNN(labelsTestGroundFloor, predictionSVM)
+    wh, bh, wo, bo, error_cost = calculationsNN(trainingSamplesGroundFloor, labelsTrainingGroundFloor, testSamplesGroundFloor)
+    print("*** BigDataSetSeparateFloors Ground Floor ***")
+    accuracyNN(testSamplesGroundFloor, labelsTestGroundFloor, wh, bh, wo, bo, error_cost)
 
 def smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations):
     filename = 'WifiData2-2303172344.txt'
@@ -63,13 +63,13 @@ def smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations):
 
     trainingSamplesFloors, trainingSamplesGroundFloor, labelsTrainingFloors, labelsTrainingGroundFloor, testSamplesFloors, testSamplesGroundFloor, labelsTestFloors,labelsTestGroundFloor = extractDataSeparateFloors(trainingSamples, trainingLabels, testSamples, testLabels)
                 
-    predictionSVM = calculationsNN(trainingSamplesFloors, labelsTrainingFloors, testSamplesFloors)
-    print("*** SmallDataSetTestedAgainstBigDataSetSVMSeparateFloors ***")
-    accuracyNN(labelsTestFloors, predictionSVM)
+    wh, bh, wo, bo, error_cost = calculationsNN(trainingSamplesFloors, labelsTrainingFloors, testSamplesFloors)
+    print("*** SmallDataSetTestedAgainstBigDataSetSeparateFloors ***")
+    accuracyNN(testSamplesFloors, labelsTestFloors, wh, bh, wo, bo, error_cost)
 
-    predictionSVM = calculationsNN(trainingSamplesGroundFloor, labelsTrainingGroundFloor, testSamplesGroundFloor)
-    print("*** SmallDataSetTestedAgainstBigDataSetSVMSeparateFloors Ground Floor ***")
-    accuracyNN(labelsTestGroundFloor, predictionSVM)
+    wh, bh, wo, bo, error_cost = calculationsNN(trainingSamplesGroundFloor, labelsTrainingGroundFloor, testSamplesGroundFloor)
+    print("*** SmallDataSetTestedAgainstBigDataSetSeparateFloors Ground Floor ***")
+    accuracyNN(testSamplesGroundFloor, labelsTestGroundFloor, wh, bh, wo, bo, error_cost)
 
 
 def smallDataSetTestedAgainstBigDataSetSVM(locations):
@@ -103,10 +103,10 @@ def smallDataSetTestedAgainstBigDataSetSVM(locations):
             distinctBSSIDTest.append(distinctBSSID[i])
             testSamples = np.append(testSamples, np.zeros((testSamples.shape[0],1)), 1)
                 
-    predictionSVM = calculationsNN(trainingSamples, trainingLabels, testSamples)
+    wh, bh, wo, bo, error_cost = calculationsNN(trainingSamples, trainingLabels, testSamples)
 
     print("*** SmallDataSetTestedAgainstBigDataSetSVM ***")
-    accuracyNN(testLabels, predictionSVM)
+    accuracyNN(testSamples, testLabels, wh, bh, wo, bo, error_cost)
 
 
 def bigDataSetSVM(locations):
@@ -115,9 +115,9 @@ def bigDataSetSVM(locations):
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
     trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples = extractData(filename, distinctBSSID, dataPoints, locations)
 
-    predictionSVM = calculationsNN(trainingSamples, labelsTrainingSamples, testSamples)
-    print("*** BigDataSetSVM ***")
-    accuracyNN(labelsTestSamples, predictionSVM)
+    wh, bh, wo, bo, error_cost = calculationsNN(trainingSamples, labelsTrainingSamples, testSamples)
+    print("*** BigDataSet ***")
+    accuracyNN(testSamples, labelsTestSamples, wh, bh, wo, bo, error_cost)
 
 if __name__ == '__main__':
     main()

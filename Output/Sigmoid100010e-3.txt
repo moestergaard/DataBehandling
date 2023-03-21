@@ -1,0 +1,132 @@
+*** BigDataSet ***
+
+ [12597.895761325557, 533805.0881635515, 861661.6716050105, 497136.41460844025, 438276.9738606623]
+
+********************************************************************************************
+
+RESULT NEURAL NETWORK
+
+Overall accuracy NN is 32.46 percentage of 1414 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  955
+Should be office but predicted kitchen 0 corresponds to 0.00 percentage of wrongs.
+Should be office but predicted living room 0 corresponds to 0.00 percentage of wrongs.
+Should be kitchen but predicted office 396 corresponds to 41.47 percentage of wrongs.
+Should be kitchen but predicted living room 0 corresponds to 0.00 percentage of wrongs.
+Should be living room but predicted office 559 corresponds to 58.53 percentage of wrongs.
+Should be living room but predicted kitchen 0 corresponds to 0.00 percentage of wrongs.
+
+********************************************************************************************
+*** SmallDataSetTestedAgainstBigDataSetSVM ***
+
+ [381.4740772712387, 38.80342968846548, 32.84479250471019, 31.76035734441532, 30.262511245638674]
+
+********************************************************************************************
+
+RESULT NEURAL NETWORK
+
+Overall accuracy NN is 39.99 percentage of 7070 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  4243
+Should be office but predicted kitchen 1183 corresponds to 27.88 percentage of wrongs.
+Should be office but predicted living room 459 corresponds to 10.82 percentage of wrongs.
+Should be kitchen but predicted office 565 corresponds to 13.32 percentage of wrongs.
+Should be kitchen but predicted living room 828 corresponds to 19.51 percentage of wrongs.
+Should be living room but predicted office 499 corresponds to 11.76 percentage of wrongs.
+Should be living room but predicted kitchen 709 corresponds to 16.71 percentage of wrongs.
+
+********************************************************************************************
+*** BigDataSetSeparateFloors ***
+
+ [17513.624041023846, 817697.2428773826, 123584.98624862215, 306298.888344094, 671711.7048751975]
+
+********************************************************************************************
+
+RESULT NEURAL NETWORK
+
+Overall accuracy NN is 32.46 percentage of 1414 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  955
+Should be office but predicted kitchen 0 corresponds to 0.00 percentage of wrongs.
+Should be office but predicted living room 0 corresponds to 0.00 percentage of wrongs.
+Should be kitchen but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be kitchen but predicted living room 0 corresponds to 0.00 percentage of wrongs.
+Should be living room but predicted office 955 corresponds to 100.00 percentage of wrongs.
+Should be living room but predicted kitchen 0 corresponds to 0.00 percentage of wrongs.
+
+********************************************************************************************
+*** BigDataSetSeparateFloors Ground Floor ***
+
+ [8295.687233497956, 13872.47819197255, 188371.74452872114, 389856.55500160647, 342467.4081924919]
+
+********************************************************************************************
+
+RESULT NEURAL NETWORK
+
+Overall accuracy NN is 41.47 percentage of 955 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  559
+Should be office but predicted kitchen 0 corresponds to 0.00 percentage of wrongs.
+Should be office but predicted living room 0 corresponds to 0.00 percentage of wrongs.
+Should be kitchen but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be kitchen but predicted living room 0 corresponds to 0.00 percentage of wrongs.
+Should be living room but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be living room but predicted kitchen 559 corresponds to 100.00 percentage of wrongs.
+
+********************************************************************************************
+*** SmallDataSetTestedAgainstBigDataSetSeparateFloors ***
+
+ [628.9989885710561, 24.211571333557984, 19.438179937689082, 17.536088677032343, 16.977279058874505]
+
+********************************************************************************************
+
+RESULT NEURAL NETWORK
+
+Overall accuracy NN is 67.86 percentage of 7070 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  2272
+Should be office but predicted kitchen 0 corresponds to 0.00 percentage of wrongs.
+Should be office but predicted living room 1832 corresponds to 80.63 percentage of wrongs.
+Should be kitchen but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be kitchen but predicted living room 0 corresponds to 0.00 percentage of wrongs.
+Should be living room but predicted office 440 corresponds to 19.37 percentage of wrongs.
+Should be living room but predicted kitchen 0 corresponds to 0.00 percentage of wrongs.
+
+********************************************************************************************
+*** SmallDataSetTestedAgainstBigDataSetSeparateFloors Ground Floor ***
+
+ [369.6877573807417, 22.70717209076531, 21.167839099627646, 21.012816368300182, 24.642040736199966]
+
+********************************************************************************************
+
+RESULT NEURAL NETWORK
+
+Overall accuracy NN is 55.01 percentage of 4781 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  2151
+Should be office but predicted kitchen 0 corresponds to 0.00 percentage of wrongs.
+Should be office but predicted living room 0 corresponds to 0.00 percentage of wrongs.
+Should be kitchen but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be kitchen but predicted living room 479 corresponds to 22.27 percentage of wrongs.
+Should be living room but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be living room but predicted kitchen 1672 corresponds to 77.73 percentage of wrongs.
+
+********************************************************************************************

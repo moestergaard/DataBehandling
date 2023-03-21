@@ -39,18 +39,19 @@ def calculationsNN(trainingSamples, labelsTrainingSamples, testSamples):
 
     ########## Phase 1
 
-        # dcost_dzo = ao - one_hot_labels
-        # dzo_dwo = ah
+        dcost_dzo = softmax(zo) - one_hot_labels
+        dzo_dwo = zh
 
-        # dcost_wo = np.dot(dzo_dwo.T, dcost_dzo)
+        dcost_wo = np.dot(dzo_dwo.T, dcost_dzo)
 
-        # dcost_bo = dcost_dzo
+        dcost_bo = dcost_dzo
 
     ########## Phases 2
 
-        # dzo_dah = wo
-        # dcost_dah = np.dot(dcost_dzo , dzo_dah.T)
+        dzo_dzh = wo
+        dcost_dzh = np.dot(dcost_dzo , dzo_dzh.T)
         # dah_dzh = 1
+        
         dzh_dwh = trainingSamples
         dcost_wh = np.dot(dzh_dwh.T, dah_dzh)
 
