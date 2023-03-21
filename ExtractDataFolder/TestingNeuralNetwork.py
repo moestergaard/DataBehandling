@@ -110,8 +110,8 @@ def smallDataSetTestedAgainstBigDataSetSVM(locations):
 
 
 def bigDataSetSVM(locations):
-    # filename = 'WifiData2303141637Modified.txt'
-    filename = 'WifiData2-2303172344.txt'
+    filename = 'WifiData2303141637Modified.txt'
+    #filename = 'WifiData2-2303172344.txt'
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
     trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples = extractData(filename, distinctBSSID, dataPoints, locations)
 

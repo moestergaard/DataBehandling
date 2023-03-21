@@ -24,35 +24,35 @@ def calculationsNN(trainingSamples, labelsTrainingSamples, testSamples):
 
     error_cost = []
 
-    for epoch in range(5000):
+    for epoch in range(5):
     ############# feedforward
 
-        # Phase 1
+        # Phase 1           Fra input lag til hidden lag
         zh = np.dot(trainingSamples, wh) + bh
-        ah = sigmoid(zh)
+        # ah = zh
 
-        # Phase 2
-        zo = np.dot(ah, wo) + bo
-        ao = softmax(zo)
+        # # Phase 2         Fra hidden lag til output lag - bemærk, at softmax ikke beregnes, da det er medtaget i loss function
+        zo = np.dot(zh, wo) + bo
+        # ao = softmax(zo)
 
     ########## Back Propagation
 
     ########## Phase 1
 
-        dcost_dzo = ao - one_hot_labels
-        dzo_dwo = ah
+        # dcost_dzo = ao - one_hot_labels
+        # dzo_dwo = ah
 
-        dcost_wo = np.dot(dzo_dwo.T, dcost_dzo)
+        # dcost_wo = np.dot(dzo_dwo.T, dcost_dzo)
 
-        dcost_bo = dcost_dzo
+        # dcost_bo = dcost_dzo
 
     ########## Phases 2
 
-        dzo_dah = wo
-        dcost_dah = np.dot(dcost_dzo , dzo_dah.T)
-        dah_dzh = sigmoid_der(zh)
+        # dzo_dah = wo
+        # dcost_dah = np.dot(dcost_dzo , dzo_dah.T)
+        # dah_dzh = 1
         dzh_dwh = trainingSamples
-        dcost_wh = np.dot(dzh_dwh.T, dah_dzh * dcost_dah)
+        dcost_wh = np.dot(dzh_dwh.T, dah_dzh)
 
         dcost_bh = dcost_dah * dah_dzh
 
@@ -61,13 +61,13 @@ def calculationsNN(trainingSamples, labelsTrainingSamples, testSamples):
         wh -= lr * dcost_wh
         bh -= lr * dcost_bh.sum(axis=0)
 
-        wo -= lr * dcost_wo
-        bo -= lr * dcost_bo.sum(axis=0)
+        #wo -= lr * dcost_wo
+        #bo -= lr * dcost_bo.sum(axis=0)
 
         if epoch % 200 == 0:
             # print('ao: ', ao)
-            
             loss = -(np.sum(one_hot_labels * zo - one_hot_labels * np.sum(zo)))
+            
             # loss = np.sum(-one_hot_labels * np.log(ao))
             print('Loss function value: ', loss)
             error_cost.append(loss)
