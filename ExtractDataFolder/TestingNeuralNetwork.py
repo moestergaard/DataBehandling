@@ -12,7 +12,7 @@ def main():
     filename10Minute = "10MinuteDataSet.txt"
     filenameNoSpeakers = "NoSpeakers.txt"
 
-    # DataSet(locations, filenameBigDataSet)
+    DataSet(locations, filenameBigDataSet)
     # DataSet(locations, filename5Minute)
     # DataSet(locations, filename10Minute)
     
@@ -21,8 +21,8 @@ def main():
     # smallDataSetTestedAgainstBigDataSet(locations, filenameBigDataSet, filename10Minute)
     
     smallDataSetTestedAgainstBigDataSet(locations, filenameBigDataSet, filenameNoSpeakers)
-    smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filenameNoSpeakers)
-    smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filenameNoSpeakers)
+    # smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filenameNoSpeakers)
+    # smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filenameNoSpeakers)
 
     # bigDataSetSVMSeparateFloors(groundFloor, firstFloor, locations)
     # smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations)
@@ -88,6 +88,13 @@ def smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations, filename, fi
 def smallDataSetTestedAgainstBigDataSet(locations, filename, filenameTest):
 
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
+    print("************")
+    
+    distin = ""
+    for i in range(len(distinctBSSID)):
+        distin += "\"" + distinctBSSID[i] + "\", "
+    print(distin)
+    print("************")
     distinctBSSIDTest, dataPointsTest = extractDistinctBSSIDAndNumberOfDataPoints(filenameTest)
 
     

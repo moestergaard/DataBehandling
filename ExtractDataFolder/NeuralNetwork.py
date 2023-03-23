@@ -10,7 +10,7 @@ def calculationsNN(trainingSamples, labelsTrainingSamples, testSamples):
 
     instances = trainingSamples.shape[0]
     attributes = trainingSamples.shape[1]
-    hidden_nodes = 15
+    hidden_nodes = 4
     output_labels = 3
 
     # wh = np.random.randint(-1, 1, size=(attributes,hidden_nodes), dtype=np.float64)
@@ -31,7 +31,7 @@ def calculationsNN(trainingSamples, labelsTrainingSamples, testSamples):
     wo_list = []
     bo_list = []
 
-    for epoch in range(5000):
+    for epoch in range(500):
     ############# feedforward
 
         # Phase 1
@@ -128,6 +128,10 @@ def accuracyNN(testSamples, labelsTestSamples, wh, bh, wo, bo, error_cost_list, 
     percentageSure = []
 
     zh = np.dot(testSamples, wh) + bh
+    print("shape of test samples: ", testSamples.shape)
+    print("shape of zh: ", wh.shape)
+    print("shape of bh: ", bh.shape)
+    print("shape of zh: ", zh.shape)
     ah = sigmoid(zh)
 
     z0 = np.dot(ah, wo) + bo
@@ -200,10 +204,14 @@ def printAccuracy(labelsTestSamples, predictedLabels, wh, bh, wo, bo, error_cost
     print()
     print("RESULT NEURAL NETWORK")
     print()
-    # print("bh: ", bh)
-    # print("wh: ", wh)
-    # print("bo: ", bo)
-    # print("wo: ", wo)
+    print("bh: \n", bh)
+    print()
+    print("wh: \n", wh)
+    print()
+    print("bo: \n", bo)
+    print()
+    print("wo: \n", wo)
+    print()
     print("error cost: ", error_cost)
     print()
     print("The 25-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 25)*100))
