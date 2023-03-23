@@ -1,0 +1,110 @@
+
+********************************************************************************************
+
+BigDataSet.txt
+
+
+RESULT SUPPORT VECTOR MACHINE
+
+Overall accuracy SVM is 97.10 percentage of 1414 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  41
+Should be office but predicted kitchen 6 corresponds to 14.63 percentage of wrongs.
+Should be office but predicted living room 1 corresponds to 2.44 percentage of wrongs.
+Should be kitchen but predicted office 1 corresponds to 2.44 percentage of wrongs.
+Should be kitchen but predicted living room 14 corresponds to 34.15 percentage of wrongs.
+Should be living room but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be living room but predicted kitchen 19 corresponds to 46.34 percentage of wrongs.
+
+********************************************************************************************
+
+********************************************************************************************
+
+5MinuteDataSet.txt
+
+
+RESULT SUPPORT VECTOR MACHINE
+
+Overall accuracy SVM is 90.32 percentage of 31 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  3
+Should be office but predicted kitchen 1 corresponds to 33.33 percentage of wrongs.
+Should be office but predicted living room 0 corresponds to 0.00 percentage of wrongs.
+Should be kitchen but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be kitchen but predicted living room 1 corresponds to 33.33 percentage of wrongs.
+Should be living room but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be living room but predicted kitchen 1 corresponds to 33.33 percentage of wrongs.
+
+********************************************************************************************
+
+********************************************************************************************
+
+10MinuteDataSet.txt
+
+
+RESULT SUPPORT VECTOR MACHINE
+
+Overall accuracy SVM is 84.13 percentage of 63 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  10
+Should be office but predicted kitchen 3 corresponds to 30.00 percentage of wrongs.
+Should be office but predicted living room 0 corresponds to 0.00 percentage of wrongs.
+Should be kitchen but predicted office 1 corresponds to 10.00 percentage of wrongs.
+Should be kitchen but predicted living room 2 corresponds to 20.00 percentage of wrongs.
+Should be living room but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be living room but predicted kitchen 4 corresponds to 40.00 percentage of wrongs.
+
+********************************************************************************************
+
+********************************************************************************************
+
+5MinuteDataSet.txt tested against BigDataSet.txt
+
+
+RESULT SUPPORT VECTOR MACHINE
+
+Overall accuracy SVM is 59.42 percentage of 7070 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  2869
+Should be office but predicted kitchen 1243 corresponds to 43.33 percentage of wrongs.
+Should be office but predicted living room 257 corresponds to 8.96 percentage of wrongs.
+Should be kitchen but predicted office 33 corresponds to 1.15 percentage of wrongs.
+Should be kitchen but predicted living room 284 corresponds to 9.90 percentage of wrongs.
+Should be living room but predicted office 15 corresponds to 0.52 percentage of wrongs.
+Should be living room but predicted kitchen 1037 corresponds to 36.14 percentage of wrongs.
+
+********************************************************************************************
+
+********************************************************************************************
+
+10MinuteDataSet.txt tested against BigDataSet.txt
+
+
+RESULT SUPPORT VECTOR MACHINE
+
+Overall accuracy SVM is 51.90 percentage of 7070 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  3401
+Should be office but predicted kitchen 638 corresponds to 18.76 percentage of wrongs.
+Should be office but predicted living room 597 corresponds to 17.55 percentage of wrongs.
+Should be kitchen but predicted office 96 corresponds to 2.82 percentage of wrongs.
+Should be kitchen but predicted living room 135 corresponds to 3.97 percentage of wrongs.
+Should be living room but predicted office 231 corresponds to 6.79 percentage of wrongs.
+Should be living room but predicted kitchen 1704 corresponds to 50.10 percentage of wrongs.
+
+********************************************************************************************

@@ -8,11 +8,19 @@ def main():
     groundFloor = ["Stue, Køkken"]
     firstFloor = ["Kontor"]
 
-    bigDataSetSVM(locations)
-    smallDataSetTestedAgainstBigDataSetSVM(locations)
+    filenameBigDataSet = "BigDataSet.txt"
+    filename5Minute = "5MinuteDataSet.txt"
+    filename10Minute = "10MinuteDataSet.txt"
 
-    bigDataSetSVMSeparateFloors(groundFloor, firstFloor, locations)
-    smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations)
+    DataSet(locations, filenameBigDataSet)
+    DataSet(locations, filename5Minute)
+    DataSet(locations, filename10Minute)
+    
+    smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filenameBigDataSet)
+    smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filenameBigDataSet)
+    
+    # bigDataSetSVMSeparateFloors(groundFloor, firstFloor, locations)
+    # smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations)
     
     # changeDataFile(filename)
     
@@ -73,9 +81,7 @@ def smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations):
     accuracySVM(labelsTestGroundFloor, predictionSVM)
 
 
-def smallDataSetTestedAgainstBigDataSetSVM(locations):
-    filename = 'WifiData2-2303172344.txt'
-    filenameTest = 'WifiData2303141637Modified.txt'
+def smallDataSetTestedAgainstBigDataSet(locations, filename, filenameTest):
 
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
     distinctBSSIDTest, dataPointsTest = extractDistinctBSSIDAndNumberOfDataPoints(filenameTest)
@@ -106,17 +112,25 @@ def smallDataSetTestedAgainstBigDataSetSVM(locations):
                 
     predictionSVM = calculationsSVM(trainingSamples, trainingLabels, testSamples)
 
-    print("*** SmallDataSetTestedAgainstBigDataSetSVM ***")
+    print()
+    print("********************************************************************************************")
+    print()
+    print(f"{filename} tested against {filenameTest}")
+    
     accuracySVM(testLabels, predictionSVM)
 
 
-def bigDataSetSVM(locations):
-    filename = 'WifiData2303141637Modified.txt'
+def DataSet(locations, filename):
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
     trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples = extractData(filename, distinctBSSID, dataPoints, locations)
 
     predictionSVM = calculationsSVM(trainingSamples, labelsTrainingSamples, testSamples)
-    print("*** BigDataSetSVM ***")
+    
+    print()
+    print("********************************************************************************************")
+    print()
+    print(filename)
+
     accuracySVM(labelsTestSamples, predictionSVM)
 
 if __name__ == '__main__':

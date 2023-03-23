@@ -23,21 +23,26 @@ def calculationsNN(trainingSamples, labelsTrainingSamples, testSamples):
     # wo = np.random.randint(-1,1, size=(hidden_nodes,output_labels), dtype = np.float64)
     wo = np.random.randn(hidden_nodes,output_labels)
     bo = np.random.randn(output_labels)
-    lr = 10e-5
+    lr = 10e-4
 
     error_cost = []
+    wh_list = []
+    bh_list = []
+    wo_list = []
+    bo_list = []
 
-    for epoch in range(1000):
+    for epoch in range(5000):
     ############# feedforward
 
         # Phase 1
         zh = np.dot(trainingSamples, wh) + bh
         ah = sigmoid(zh)
+        # ah = zh
 
         # Phase 2
         zo = np.dot(ah, wo) + bo
         ao = softmax(zo)
-        #ao = zo
+        # ao = zo
 
     ########## Back Propagation
 
@@ -55,6 +60,18 @@ def calculationsNN(trainingSamples, labelsTrainingSamples, testSamples):
         dzo_dah = wo
         dcost_dah = np.dot(dcost_dzo , dzo_dah.T)
         dah_dzh = sigmoid_der(zh)
+        # print()
+        # print()
+        # print(zh.shape)
+        # print()
+        # print()
+        # dah_dzh = np.ones((zh.shape[0], zh.shape[1]))
+        # print(dah_dzh.shape)
+        # print(dah_dzh)
+        # print()
+        # print()
+        # print()
+        # dah_dzh = 1
         dzh_dwh = trainingSamples
         dcost_wh = np.dot(dzh_dwh.T, dah_dzh * dcost_dah)
 
@@ -67,7 +84,9 @@ def calculationsNN(trainingSamples, labelsTrainingSamples, testSamples):
 
         wo -= lr * dcost_wo
         bo -= lr * dcost_bo.sum(axis=0)
-
+        # print('bos ændring: ', lr * dcost_bo.sum(axis=0))
+        # print('den nye bo: ', bo)
+        
         if epoch % 200 == 0:
             # print('ao: ', ao)
             
@@ -75,13 +94,38 @@ def calculationsNN(trainingSamples, labelsTrainingSamples, testSamples):
             loss = np.sum(-one_hot_labels * np.log(ao))
             # print('Loss function value: ', loss)
             error_cost.append(loss)
+            wh_list.append(wh.copy())
+            bh_list.append(bh.copy())
+            wo_list.append(wo.copy())
+            bo_list.append(bo.copy())
+            
+            # print('bo hver gang der bliver appendes: ', bo)
+        
+        
 
     # print('one_hot_labels: ', one_hot_labels)
     # print('ao: ', ao)
-    return wh, bh, wo, bo, error_cost
+    i = np.argmin(error_cost)
+    
+    # print('i: ', i)
+    # print('Error Cost: ', error_cost[i])
+    # print('Error Cost: ', error_cost[len(error_cost)-1])
+    # # print('wh_i: ', wh_list[i])
+    # # print('wh:', wh)
+    # print('bh_i: ', bh_list[i])
+    # print('bh:', bh)
+    # # print('wo_i: ', wo_list[i])
+    # # print('wo:', wo)
+    # print('bo_i: ', bo_list[i])
+    # print('bo:', bo)
+    # print('bo listen: ', bo_list)
+    
+    #return wh, bh, wo, bo, error_cost, error_cost[len(error_cost)-1]
+    return wh_list[i], bh_list[i], wo_list[i], bo_list[i], error_cost, error_cost[i]
 
-def accuracyNN(testSamples, labelsTestSamples, wh, bh, wo, bo, error_cost):
+def accuracyNN(testSamples, labelsTestSamples, wh, bh, wo, bo, error_cost_list, error_cost):
     predictedLabels = []
+    percentageSure = []
 
     zh = np.dot(testSamples, wh) + bh
     ah = sigmoid(zh)
@@ -91,10 +135,12 @@ def accuracyNN(testSamples, labelsTestSamples, wh, bh, wo, bo, error_cost):
 
     for i in range(len(ah)):
         predictedLabels.append(np.argmax(ah[i]))
+        # if predictedLabels[i] == labelsTestSamples[i]:
+        percentageSure.append(np.max(ah[i]))
 
-    print("\n", error_cost)
+    print("\n", error_cost_list)
 
-    printAccuracy(labelsTestSamples, predictedLabels)
+    printAccuracy(labelsTestSamples, predictedLabels, wh, bh, wo, bo, error_cost, percentageSure)
 
     # correct = 0
 
@@ -122,7 +168,7 @@ def sigmoid_der(x):
 #     e_x = np.exp(x - np.max(x))
 #     return e_x / e_x.sum(axis=0)
 
-def printAccuracy(labelsTestSamples, predictedLabels):
+def printAccuracy(labelsTestSamples, predictedLabels, wh, bh, wo, bo, error_cost, percentageSure):
     correct = 0
     wrong = 0
 
@@ -144,15 +190,25 @@ def printAccuracy(labelsTestSamples, predictedLabels):
             elif labelsTestSamples[i] == 1:
                 if predictedLabels[i] == 0: shouldBeLivingRoomPredictsOffice += 1
                 else: shouldBeLivingRoomPredictsKitchen += 1
-            else: 
+            elif labelsTestSamples[i] == 0:
                 if predictedLabels[i] == 1: shouldBeOfficePredictsLivingRoom += 1
                 else: shouldBeOfficePredictsKitchen += 1
+                
 
     accuracy = correct/len(labelsTestSamples)
     print()
-    print("********************************************************************************************")
     print()
     print("RESULT NEURAL NETWORK")
+    print()
+    # print("bh: ", bh)
+    # print("wh: ", wh)
+    # print("bo: ", bo)
+    # print("wo: ", wo)
+    print("error cost: ", error_cost)
+    print()
+    print("The 25-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 25)*100))
+    print("The 50-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 50)*100))
+    print("The 75-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 75)*100))
     print()
     print("Overall accuracy NN is %2.2f percentage of %d tested data points." % (accuracy*100, len(labelsTestSamples)))
     print()

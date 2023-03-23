@@ -1,0 +1,140 @@
+
+********************************************************************************************
+
+BigDataSet.txt
+
+ [12597.895761325557, 1203.0375173640166, 905.8018495460952, 934.379932961341, 738.8438035662202, 791.3616479765566, 732.4265600442958, 669.0165861176738, 689.7816696431764, 677.9893385317786, 701.620961065296, 667.1474504190925, 565.7995305569494, 603.3381661991241, 546.2169503917303, 564.8017305296423, 548.9888060609552, 559.612621816466, 549.311128003925, 500.35097259648603, 522.9572699115266, 503.63530680948065, 600.8183656951204, 818.1857041765927, 851.3557083347687]
+
+
+RESULT NEURAL NETWORK
+
+error cost:  851.3557083347687
+
+The 25-fractile of the percentage sure is 0.94
+
+Overall accuracy NN is 94.48 percentage of 1414 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  78
+Should be office but predicted kitchen 2 corresponds to 2.56 percentage of wrongs.
+Should be office but predicted living room 2 corresponds to 2.56 percentage of wrongs.
+Should be kitchen but predicted office 14 corresponds to 17.95 percentage of wrongs.
+Should be kitchen but predicted living room 24 corresponds to 30.77 percentage of wrongs.
+Should be living room but predicted office 11 corresponds to 14.10 percentage of wrongs.
+Should be living room but predicted kitchen 25 corresponds to 32.05 percentage of wrongs.
+
+********************************************************************************************
+
+********************************************************************************************
+
+5MinuteDataSet.txt
+
+ [295.06271745605017, 47.24510231272427, 38.562481715571934, 35.84184913409173, 34.35355055870838, 33.313664460141084, 32.17860687347862, 31.503099649273263, 30.94176902762384, 30.464135705441414, 30.04928646032582, 29.683232087157023, 29.35612393774117, 29.036354120093577, 28.727958806549978, 28.487404953888053, 28.266787802652935, 28.06272822671596, 27.872949879554845, 27.695633923909888, 27.529326991730766, 27.37284026506409, 27.22516596250873, 27.08477818500763, 26.542307098237465]
+
+
+RESULT NEURAL NETWORK
+
+error cost:  26.542307098237465
+
+The 25-fractile of the percentage sure is 0.65
+
+Overall accuracy NN is 67.74 percentage of 31 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  10
+Should be office but predicted kitchen 1 corresponds to 10.00 percentage of wrongs.
+Should be office but predicted living room 1 corresponds to 10.00 percentage of wrongs.
+Should be kitchen but predicted office 3 corresponds to 30.00 percentage of wrongs.
+Should be kitchen but predicted living room 3 corresponds to 30.00 percentage of wrongs.
+Should be living room but predicted office 1 corresponds to 10.00 percentage of wrongs.
+Should be living room but predicted kitchen 1 corresponds to 10.00 percentage of wrongs.
+
+********************************************************************************************
+
+********************************************************************************************
+
+10MinuteDataSet.txt
+
+ [389.82013767602336, 117.8283848071626, 106.90842754132221, 102.8798023082892, 100.0709501108627, 98.19965603549971, 96.83451038037302, 96.54002727192196, 96.26446641401843, 95.93151148953396, 95.84271546293436, 95.74490916669296, 95.66968401158181, 95.60079316870906, 92.95474674515077, 93.90549838990324, 93.677061855289, 93.28674564320329, 93.09920170484716, 92.86267757290774, 92.75225711492644, 92.66107562598128, 92.4787715953017, 92.2175901501015, 92.14930097945467]
+
+
+RESULT NEURAL NETWORK
+
+error cost:  92.14930097945467
+
+The 25-fractile of the percentage sure is 0.69
+
+Overall accuracy NN is 68.25 percentage of 63 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  20
+Should be office but predicted kitchen 4 corresponds to 20.00 percentage of wrongs.
+Should be office but predicted living room 2 corresponds to 10.00 percentage of wrongs.
+Should be kitchen but predicted office 3 corresponds to 15.00 percentage of wrongs.
+Should be kitchen but predicted living room 7 corresponds to 35.00 percentage of wrongs.
+Should be living room but predicted office 1 corresponds to 5.00 percentage of wrongs.
+Should be living room but predicted kitchen 3 corresponds to 15.00 percentage of wrongs.
+
+********************************************************************************************
+
+********************************************************************************************
+
+5MinuteDataSet.txt tested against BigDataSet.txt
+
+ [381.4740772712387, 53.7572639709954, 47.58594917221272, 44.0688183654781, 42.19668536042538, 40.98746228582489, 40.08339087999829, 39.36521662284569, 38.77449743905987, 38.2748314230053, 37.83963191441857, 37.44337169151448, 37.10717572507828, 36.822512242706864, 36.00771449223734, 35.74824438877469, 35.52317330118968, 35.324176236164554, 35.14621056665363, 34.98568453004869, 34.83989376585978, 34.706736986763005, 34.58454260910037, 34.47195479189324, 34.36785547173113]
+
+
+RESULT NEURAL NETWORK
+
+error cost:  34.36785547173113
+
+The 25-fractile of the percentage sure is 0.69
+
+Overall accuracy NN is 35.47 percentage of 7070 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  4562
+Should be office but predicted kitchen 1154 corresponds to 25.30 percentage of wrongs.
+Should be office but predicted living room 446 corresponds to 9.78 percentage of wrongs.
+Should be kitchen but predicted office 675 corresponds to 14.80 percentage of wrongs.
+Should be kitchen but predicted living room 771 corresponds to 16.90 percentage of wrongs.
+Should be living room but predicted office 534 corresponds to 11.71 percentage of wrongs.
+Should be living room but predicted kitchen 982 corresponds to 21.53 percentage of wrongs.
+
+********************************************************************************************
+
+********************************************************************************************
+
+10MinuteDataSet.txt tested against BigDataSet.txt
+
+ [491.8440997886492, 160.8868731407358, 150.32721893556362, 147.01793333902387, 144.4204592277753, 142.03892670168193, 139.5312246506282, 121.30658432555909, 112.01510539595365, 109.25636168283346, 107.97236547593434, 107.54607392927286, 106.99358311229963, 105.44633172300908, 102.6137113783461, 99.04173202896501, 98.11571363047013, 96.58103740073136, 94.51042387204288, 92.94435931455206, 92.67583909246865, 92.53215739451201, 92.13308659467477, 89.94360204276016, 89.79172301034262]
+
+
+RESULT NEURAL NETWORK
+
+error cost:  89.79172301034262
+
+The 25-fractile of the percentage sure is 0.66
+
+Overall accuracy NN is 27.51 percentage of 7070 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  5125
+Should be office but predicted kitchen 825 corresponds to 16.10 percentage of wrongs.
+Should be office but predicted living room 891 corresponds to 17.39 percentage of wrongs.
+Should be kitchen but predicted office 715 corresponds to 13.95 percentage of wrongs.
+Should be kitchen but predicted living room 263 corresponds to 5.13 percentage of wrongs.
+Should be living room but predicted office 907 corresponds to 17.70 percentage of wrongs.
+Should be living room but predicted kitchen 1524 corresponds to 29.74 percentage of wrongs.
+
+********************************************************************************************

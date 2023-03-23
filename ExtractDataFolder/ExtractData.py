@@ -152,8 +152,8 @@ def changeMatrice(matrice, index, distinctBSSID, currentBSSID, resultLevel):
 
 
 def changeDataFile(filename):
-    bssid = ""
-    resultlevel = ""
+    # bssid = ""
+    # resultlevel = ""
 
     with open(filename) as f:
         while True:
@@ -163,14 +163,16 @@ def changeDataFile(filename):
             if line.__contains__("Scanning"):
                 print("**************")
                 print()
-            if line.__contains__("BSSID"):
-                bssid = line.strip()
-            elif line.__contains__("ResultLevel"):
-                resultlevel = line.strip()
-            elif line.__contains__("Frequency"):
-                bssid += "+"
-                bssid += line.split(": ")[1].split()[0]
-                print(bssid)
-                print(resultlevel)
-                print(line.strip())
+            if line.__contains__("SignalLevel"):
+                ()
+            # if line.__contains__("BSSID"):
+            #     bssid = line.strip()
+            # elif line.__contains__("ResultLevel"):
+            #     resultlevel = line.strip()
+            # elif line.__contains__("Frequency"):
+            #     bssid += "+"
+            #     bssid += line.split(": ")[1].split()[0]
+            #     print(bssid)
+            #     print(resultlevel)
+            #     print(line.strip())
             else: print(line.strip())

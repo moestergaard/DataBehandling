@@ -3,20 +3,35 @@ from ExtractData import changeDataFile, extractDistinctBSSIDAndNumberOfDataPoint
 from NeuralNetwork import calculationsNN, accuracyNN
 
 def main():
-    locations = ["Kontor", "Stue", "Køkken"]
+    locations = ["Kontor", "Stue", "Køkken", "Entre"]
     groundFloor = ["Stue, Køkken"]
     firstFloor = ["Kontor"]
+    
+    filenameBigDataSet = "BigDataSet.txt"
+    filename5Minute = "5MinuteDataSet.txt"
+    filename10Minute = "10MinuteDataSet.txt"
+    filenameNoSpeakers = "NoSpeakers.txt"
 
-    bigDataSetSVM(locations) #changed to small data set
-    smallDataSetTestedAgainstBigDataSetSVM(locations)
+    # DataSet(locations, filenameBigDataSet)
+    # DataSet(locations, filename5Minute)
+    # DataSet(locations, filename10Minute)
+    
+    # smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filenameBigDataSet)
+    # smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filenameBigDataSet)
+    # smallDataSetTestedAgainstBigDataSet(locations, filenameBigDataSet, filename10Minute)
+    
+    smallDataSetTestedAgainstBigDataSet(locations, filenameBigDataSet, filenameNoSpeakers)
+    smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filenameNoSpeakers)
+    smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filenameNoSpeakers)
 
-    bigDataSetSVMSeparateFloors(groundFloor, firstFloor, locations)
-    smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations)
+    # bigDataSetSVMSeparateFloors(groundFloor, firstFloor, locations)
+    # smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations)
+    
+    # filename = "WifiData2303222123.txt"
     
     # changeDataFile(filename)
     
-def bigDataSetSVMSeparateFloors(groundFloor, firstFloor, locations):
-    filename = 'WifiData2303141637Modified.txt'
+def bigDataSetSVMSeparateFloors(groundFloor, firstFloor, locations, filename):
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
 
     trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples = extractData(filename, distinctBSSID, dataPoints, locations)
@@ -30,9 +45,7 @@ def bigDataSetSVMSeparateFloors(groundFloor, firstFloor, locations):
     print("*** BigDataSetSeparateFloors Ground Floor ***")
     accuracyNN(testSamplesGroundFloor, labelsTestGroundFloor, wh, bh, wo, bo, error_cost)
 
-def smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations):
-    filename = 'WifiData2-2303172344.txt'
-    filenameTest = 'WifiData2303141637Modified.txt'
+def smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations, filename, filenameTest):
 
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
     distinctBSSIDTest, dataPointsTest = extractDistinctBSSIDAndNumberOfDataPoints(filenameTest)
@@ -72,9 +85,7 @@ def smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations):
     accuracyNN(testSamplesGroundFloor, labelsTestGroundFloor, wh, bh, wo, bo, error_cost)
 
 
-def smallDataSetTestedAgainstBigDataSetSVM(locations):
-    filename = 'WifiData2-2303172344.txt'
-    filenameTest = 'WifiData2303141637Modified.txt'
+def smallDataSetTestedAgainstBigDataSet(locations, filename, filenameTest):
 
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
     distinctBSSIDTest, dataPointsTest = extractDistinctBSSIDAndNumberOfDataPoints(filenameTest)
@@ -82,8 +93,10 @@ def smallDataSetTestedAgainstBigDataSetSVM(locations):
     
 
     trainingSamples, trainingLabels = extractDataCombined(filename, distinctBSSID, dataPoints, locations)
+    print("labels training: ", trainingLabels)
 
     testSamples, testLabels = extractDataCombined(filenameTest, distinctBSSIDTest, dataPointsTest, locations)
+    print("labels test: ", testLabels)
 
     #
     # Removes all new BSSID that were not present at origianl syncronising
@@ -103,21 +116,29 @@ def smallDataSetTestedAgainstBigDataSetSVM(locations):
             distinctBSSIDTest.append(distinctBSSID[i])
             testSamples = np.append(testSamples, np.zeros((testSamples.shape[0],1)), 1)
                 
-    wh, bh, wo, bo, error_cost = calculationsNN(trainingSamples, trainingLabels, testSamples)
+    wh, bh, wo, bo, error_cost_list, error_cost = calculationsNN(trainingSamples, trainingLabels, testSamples)
 
-    print("*** SmallDataSetTestedAgainstBigDataSetSVM ***")
-    accuracyNN(testSamples, testLabels, wh, bh, wo, bo, error_cost)
+    print()
+    print("********************************************************************************************")
+    print()
+    print(f"{filename} tested against {filenameTest}")
+    
+    accuracyNN(testSamples, testLabels, wh, bh, wo, bo, error_cost_list, error_cost)
 
 
-def bigDataSetSVM(locations):
-    filename = 'WifiData2303141637Modified.txt'
-    #filename = 'WifiData2-2303172344.txt'
+def DataSet(locations, filename):
+    
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
     trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples = extractData(filename, distinctBSSID, dataPoints, locations)
 
-    wh, bh, wo, bo, error_cost = calculationsNN(trainingSamples, labelsTrainingSamples, testSamples)
-    print("*** BigDataSet ***")
-    accuracyNN(testSamples, labelsTestSamples, wh, bh, wo, bo, error_cost)
+    wh, bh, wo, bo, error_cost_list, error_cost = calculationsNN(trainingSamples, labelsTrainingSamples, testSamples)
+    
+    print()
+    print("********************************************************************************************")
+    print()
+    print(filename)
+    
+    accuracyNN(testSamples, labelsTestSamples, wh, bh, wo, bo, error_cost_list, error_cost)
 
 if __name__ == '__main__':
     main()

@@ -1,0 +1,38 @@
+labels training:  [2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2.
+ 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2. 2.
+ 2. 2. 2. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+labels test:  [3. 3. 3. 3. 3. 3. 3. 3. 3. 3. 3. 3. 3. 3. 3. 3. 3.]
+
+********************************************************************************************
+
+5MinuteDataSet.txt tested against NoSpeakers.txt
+
+ [381.4740772712387, 53.7572639709954, 47.58594917221272, 44.0688183654781, 42.19668536042538, 40.98746228582489, 40.08339087999829, 39.36521662284569, 38.77449743905987, 38.2748314230053, 37.83963191441857, 37.44337169151448, 37.10717572507828, 36.822512242706864, 36.00771449223734, 35.74824438877469, 35.52317330118968, 35.324176236164554, 35.14621056665363, 34.98568453004869, 34.83989376585978, 34.706736986763005, 34.58454260910037, 34.47195479189324, 34.36785547173113]
+
+
+RESULT NEURAL NETWORK
+
+error cost:  34.36785547173113
+
+The 25-fractile of the percentage sure is 60.26
+The 50-fractile of the percentage sure is 79.21
+The 75-fractile of the percentage sure is 92.16
+
+Overall accuracy NN is 0.00 percentage of 17 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  17
+Should be office but predicted kitchen 0 corresponds to 0.00 percentage of wrongs.
+Should be office but predicted living room 0 corresponds to 0.00 percentage of wrongs.
+Should be kitchen but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be kitchen but predicted living room 0 corresponds to 0.00 percentage of wrongs.
+Should be living room but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be living room but predicted kitchen 0 corresponds to 0.00 percentage of wrongs.
+
+********************************************************************************************

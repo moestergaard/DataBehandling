@@ -39,7 +39,6 @@ def accuracySVM(labelsTestSamples, predictionSVM):
 
     accuracy = correct/len(labelsTestSamples)
     print()
-    print("********************************************************************************************")
     print()
     print("RESULT SUPPORT VECTOR MACHINE")
     print()
