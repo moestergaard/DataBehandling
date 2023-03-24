@@ -11,16 +11,19 @@ def main():
     filename5Minute = "5MinuteDataSet.txt"
     filename10Minute = "10MinuteDataSet.txt"
     filenameNoSpeakers = "NoSpeakers.txt"
+    filenameUpdated = "WifiData230324.txt"
 
-    DataSet(locations, filenameBigDataSet)
-    # DataSet(locations, filename5Minute)
-    # DataSet(locations, filename10Minute)
+    DataSet(locations, filename5Minute)
+    DataSet(locations, filename10Minute)
+    DataSet(locations, filenameUpdated)
+
     
-    # smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filenameBigDataSet)
-    # smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filenameBigDataSet)
-    # smallDataSetTestedAgainstBigDataSet(locations, filenameBigDataSet, filename10Minute)
+    smallDataSetTestedAgainstBigDataSet(locations, filenameUpdated, filenameBigDataSet)
+    smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filenameBigDataSet)
+    smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filenameBigDataSet)
+    smallDataSetTestedAgainstBigDataSet(locations, filenameBigDataSet, filename10Minute)
     
-    smallDataSetTestedAgainstBigDataSet(locations, filenameBigDataSet, filenameNoSpeakers)
+    # smallDataSetTestedAgainstBigDataSet(locations, filenameBigDataSet, filenameNoSpeakers)
     # smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filenameNoSpeakers)
     # smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filenameNoSpeakers)
 
@@ -88,22 +91,22 @@ def smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations, filename, fi
 def smallDataSetTestedAgainstBigDataSet(locations, filename, filenameTest):
 
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
-    print("************")
+    # print("************")
     
     distin = ""
     for i in range(len(distinctBSSID)):
         distin += "\"" + distinctBSSID[i] + "\", "
     print(distin)
     print("************")
-    distinctBSSIDTest, dataPointsTest = extractDistinctBSSIDAndNumberOfDataPoints(filenameTest)
+    distinctBSSIDTest, dataPointsTest = extractDistinctBSSIDAndNumberOfDataPoints(filenameTest, distinctBSSID)
 
     
 
     trainingSamples, trainingLabels = extractDataCombined(filename, distinctBSSID, dataPoints, locations)
-    print("labels training: ", trainingLabels)
+    # print("labels training: ", trainingLabels)
 
     testSamples, testLabels = extractDataCombined(filenameTest, distinctBSSIDTest, dataPointsTest, locations)
-    print("labels test: ", testLabels)
+    # print("labels test: ", testLabels)
 
     #
     # Removes all new BSSID that were not present at origianl syncronising
@@ -138,6 +141,11 @@ def DataSet(locations, filename):
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
     trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples = extractData(filename, distinctBSSID, dataPoints, locations)
 
+    print("Training Samples: ", trainingSamples)
+    print("Labels Training Samples: ", labelsTrainingSamples)
+    print("Test Samples: ", testSamples)
+    print("Labels Test Samples: ", labelsTestSamples)
+    
     wh, bh, wo, bo, error_cost_list, error_cost = calculationsNN(trainingSamples, labelsTrainingSamples, testSamples)
     
     print()

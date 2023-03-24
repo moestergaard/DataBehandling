@@ -5,6 +5,9 @@ def calculationsSVM(trainingSamples, labelsTrainingSamples, testSamples):
     #clf = svm.SVC(kernel='rbf', gamma=0.5, C=0.1)
     
     clf = svm.SVC(C = 1, cache_size = 1000, class_weight='balanced')
+    print("Training SVM", clf)
+    print("Training samples: ", trainingSamples)
+    print("Test samples: ", labelsTrainingSamples)
     clf.fit(trainingSamples, labelsTrainingSamples)
     prediction = clf.predict(testSamples)
 

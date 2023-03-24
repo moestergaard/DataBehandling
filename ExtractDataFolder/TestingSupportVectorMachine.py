@@ -11,11 +11,15 @@ def main():
     filenameBigDataSet = "BigDataSet.txt"
     filename5Minute = "5MinuteDataSet.txt"
     filename10Minute = "10MinuteDataSet.txt"
+    filenameUpdated = "WifiData230324.txt"
 
+    DataSet(locations, filenameUpdated)
     DataSet(locations, filenameBigDataSet)
     DataSet(locations, filename5Minute)
     DataSet(locations, filename10Minute)
     
+    smallDataSetTestedAgainstBigDataSet(locations, filenameUpdated, filename5Minute)
+    smallDataSetTestedAgainstBigDataSet(locations, filenameUpdated, filename10Minute)
     smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filenameBigDataSet)
     smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filenameBigDataSet)
     
@@ -84,7 +88,7 @@ def smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations):
 def smallDataSetTestedAgainstBigDataSet(locations, filename, filenameTest):
 
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
-    distinctBSSIDTest, dataPointsTest = extractDistinctBSSIDAndNumberOfDataPoints(filenameTest)
+    distinctBSSIDTest, dataPointsTest = extractDistinctBSSIDAndNumberOfDataPoints(filenameTest, distinctBSSID)
 
     
 

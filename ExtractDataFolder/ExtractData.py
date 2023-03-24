@@ -3,8 +3,12 @@ import numpy as np
 #
 # Makes an array consisting of the distinct BSSID.
 #
-def extractDistinctBSSIDAndNumberOfDataPoints(filename):
-    distinctBSSID = []
+def extractDistinctBSSIDAndNumberOfDataPoints(filename, distinctBSSIDTraining = []):
+    print("distinctbssidtraining: ", len(distinctBSSIDTraining))
+    if(distinctBSSIDTraining != []):
+        distinctBSSID = [0] * len(distinctBSSIDTraining)
+    else: distinctBSSID = []
+    print("distinctbssid: ", len(distinctBSSID))
     dataPoints = 0
 
     with open(filename) as f:
@@ -17,7 +21,11 @@ def extractDistinctBSSIDAndNumberOfDataPoints(filename):
 
                 alreadyIncludedInDistinctBSSID = distinctBSSID.__contains__(bssid)
                 if not alreadyIncludedInDistinctBSSID:
-                    distinctBSSID.append(bssid)
+                    if(distinctBSSIDTraining != []):
+                        for i in range(0, len(distinctBSSIDTraining)):
+                            if bssid.__eq__(distinctBSSIDTraining[i]):
+                                distinctBSSID[i] = bssid
+                    else: distinctBSSID.append(bssid)
             if line.__contains__("Scanning"):
                 dataPoints += 1
 
