@@ -1,0 +1,63 @@
+
+********************************************************************************************
+
+15MinuteDataSet(1845-2045).txt
+
+
+RESULT NEURAL NETWORK
+
+
+error cost:  201.4079329411677
+
+The 25-fractile of the percentage sure is 71.34
+The 50-fractile of the percentage sure is 74.57
+The 75-fractile of the percentage sure is 88.81
+The 95-fractile of the percentage sure is 92.65
+The 99-fractile of the percentage sure is 97.03
+
+Overall accuracy NN is 78.02 percentage of 91 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  20
+Should be office but predicted kitchen 1 corresponds to 5.00 percentage of wrongs.
+Should be office but predicted living room 1 corresponds to 5.00 percentage of wrongs.
+Should be kitchen but predicted office 2 corresponds to 10.00 percentage of wrongs.
+Should be kitchen but predicted living room 4 corresponds to 20.00 percentage of wrongs.
+Should be living room but predicted office 1 corresponds to 5.00 percentage of wrongs.
+Should be living room but predicted kitchen 11 corresponds to 55.00 percentage of wrongs.
+
+********************************************************************************************
+************
+
+********************************************************************************************
+
+15MinuteDataSet(1845-2045).txt tested against BigDataSet.txt
+
+
+RESULT NEURAL NETWORK
+
+
+error cost:  180.04155647052022
+
+The 25-fractile of the percentage sure is 72.36
+The 50-fractile of the percentage sure is 89.17
+The 75-fractile of the percentage sure is 91.80
+The 95-fractile of the percentage sure is 95.54
+The 99-fractile of the percentage sure is 98.15
+
+Overall accuracy NN is 57.19 percentage of 7070 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  3027
+Should be office but predicted kitchen 835 corresponds to 27.59 percentage of wrongs.
+Should be office but predicted living room 254 corresponds to 8.39 percentage of wrongs.
+Should be kitchen but predicted office 76 corresponds to 2.51 percentage of wrongs.
+Should be kitchen but predicted living room 1064 corresponds to 35.15 percentage of wrongs.
+Should be living room but predicted office 90 corresponds to 2.97 percentage of wrongs.
+Should be living room but predicted kitchen 708 corresponds to 23.39 percentage of wrongs.
+
+********************************************************************************************

@@ -12,16 +12,23 @@ def main():
     filename5Minute = "5MinuteDataSet.txt"
     filename10Minute = "10MinuteDataSet.txt"
     filenameUpdated = "WifiData230324.txt"
+    filename15Minute = "15MinuteDataSet(1845-2045).txt"
 
-    DataSet(locations, filenameUpdated)
-    DataSet(locations, filenameBigDataSet)
-    DataSet(locations, filename5Minute)
-    DataSet(locations, filename10Minute)
+    # DataSet(locations, filenameUpdated)
+    # DataSet(locations, filenameBigDataSet)
+    # DataSet(locations, filename5Minute)
+    # DataSet(locations, filename10Minute)
+    DataSet(locations, filename15Minute)
     
-    smallDataSetTestedAgainstBigDataSet(locations, filenameUpdated, filename5Minute)
-    smallDataSetTestedAgainstBigDataSet(locations, filenameUpdated, filename10Minute)
-    smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filenameBigDataSet)
-    smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filenameBigDataSet)
+    # smallDataSetTestedAgainstBigDataSet(locations, filenameUpdated, filename5Minute)
+    # smallDataSetTestedAgainstBigDataSet(locations, filenameUpdated, filename10Minute)
+    # smallDataSetTestedAgainstBigDataSet(locations, filenameUpdated, filenameBigDataSet)
+    # smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filenameBigDataSet)
+    # smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filenameBigDataSet)
+    smallDataSetTestedAgainstBigDataSet(locations, filename15Minute, filename5Minute)
+    smallDataSetTestedAgainstBigDataSet(locations, filename15Minute, filename10Minute)
+    smallDataSetTestedAgainstBigDataSet(locations, filename15Minute, filenameUpdated)
+    smallDataSetTestedAgainstBigDataSet(locations, filename15Minute, filenameBigDataSet)
     
     # bigDataSetSVMSeparateFloors(groundFloor, firstFloor, locations)
     # smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations)
@@ -90,7 +97,10 @@ def smallDataSetTestedAgainstBigDataSet(locations, filename, filenameTest):
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
     distinctBSSIDTest, dataPointsTest = extractDistinctBSSIDAndNumberOfDataPoints(filenameTest, distinctBSSID)
 
-    
+    # print(f"Distinct BSSID in {filename}: {distinctBSSID}")
+    # print('Length of distinct BSSID: ', len(distinctBSSID))
+    # print(f"Distinct BSSID in {filenameTest}: {distinctBSSIDTest}")
+    # print('Length of distinct BSSID test: ', len(distinctBSSIDTest))
 
     trainingSamples, trainingLabels = extractDataCombined(filename, distinctBSSID, dataPoints, locations)
 

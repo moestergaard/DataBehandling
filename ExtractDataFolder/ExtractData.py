@@ -4,11 +4,11 @@ import numpy as np
 # Makes an array consisting of the distinct BSSID.
 #
 def extractDistinctBSSIDAndNumberOfDataPoints(filename, distinctBSSIDTraining = []):
-    print("distinctbssidtraining: ", len(distinctBSSIDTraining))
+    # print("distinctbssidtraining: ", len(distinctBSSIDTraining))
     if(distinctBSSIDTraining != []):
         distinctBSSID = [0] * len(distinctBSSIDTraining)
     else: distinctBSSID = []
-    print("distinctbssid: ", len(distinctBSSID))
+    # print("distinctbssid: ", len(distinctBSSID))
     dataPoints = 0
 
     with open(filename) as f:
@@ -129,6 +129,9 @@ def extractDataCombined(filename, distinctBSSID, numberOfSamples, locations):
     samples = np.zeros((numberOfSamples, len(distinctBSSID)))
     labels = np.zeros((numberOfSamples, ))
     
+    # print("samples: ", samples.shape)
+    # print("labels: ", labels.shape)
+        
     index = 0
 
     currentBSSID = ""
@@ -148,15 +151,24 @@ def extractDataCombined(filename, distinctBSSID, numberOfSamples, locations):
                         if locations[i].__eq__(location): labels[index] = i
             if line.__contains__("ResultLevel"):
                 resultLevel = line.split(": ")[1].split()
+                # print('samples: ', samples)
                 samples = changeMatrice(samples, index, distinctBSSID, currentBSSID[0], resultLevel[0])
 
     return samples, labels
 
 def changeMatrice(matrice, index, distinctBSSID, currentBSSID, resultLevel):
+    # if(matrice.any() == None):
+    #     print('**************')
+    # print('samples: ', matrice)
+    # print('index: ', index)
+    # print('distinctBSSID: ', distinctBSSID)
+    # print('currentBSSID: ', currentBSSID)
+    # print('resultLevel: ', resultLevel)
     for i in range(0, len(distinctBSSID)):
         if distinctBSSID[i] == currentBSSID:
             matrice[index, i] = resultLevel
-            return matrice    
+            return matrice  
+    return matrice  
 
 
 def changeDataFile(filename):

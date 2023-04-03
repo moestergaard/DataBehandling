@@ -12,16 +12,31 @@ def main():
     filename10Minute = "10MinuteDataSet.txt"
     filenameNoSpeakers = "NoSpeakers.txt"
     filenameUpdated = "WifiData230324.txt"
+    filename15Minute = "15MinuteDataSet(1845-2045).txt"
 
-    DataSet(locations, filename5Minute)
-    DataSet(locations, filename10Minute)
-    DataSet(locations, filenameUpdated)
+    # DataSet(locations, filename5Minute)
+    # DataSet(locations, filename10Minute)
+    DataSet(locations, filename15Minute)
+    # DataSet(locations, filenameUpdated)
 
     
-    smallDataSetTestedAgainstBigDataSet(locations, filenameUpdated, filenameBigDataSet)
-    smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filenameBigDataSet)
-    smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filenameBigDataSet)
-    smallDataSetTestedAgainstBigDataSet(locations, filenameBigDataSet, filename10Minute)
+    # smallDataSetTestedAgainstBigDataSet(locations, filenameUpdated, filename5Minute)
+    # smallDataSetTestedAgainstBigDataSet(locations, filenameUpdated, filename10Minute)
+    # smallDataSetTestedAgainstBigDataSet(locations, filenameUpdated, filenameBigDataSet)
+    # smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filenameUpdated)
+    # smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filename10Minute)
+    # smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filenameBigDataSet)
+    # smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filename5Minute)
+    # smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filenameUpdated)
+    # smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filenameBigDataSet)
+    # smallDataSetTestedAgainstBigDataSet(locations, filename15Minute, filename5Minute)
+    # smallDataSetTestedAgainstBigDataSet(locations, filename15Minute, filename10Minute)
+    # smallDataSetTestedAgainstBigDataSet(locations, filename15Minute, filenameUpdated)
+    smallDataSetTestedAgainstBigDataSet(locations, filename15Minute, filenameBigDataSet)
+    
+    # smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filenameBigDataSet)
+    # smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filenameBigDataSet)
+    # smallDataSetTestedAgainstBigDataSet(locations, filenameBigDataSet, filename10Minute)
     
     # smallDataSetTestedAgainstBigDataSet(locations, filenameBigDataSet, filenameNoSpeakers)
     # smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filenameNoSpeakers)
@@ -96,7 +111,7 @@ def smallDataSetTestedAgainstBigDataSet(locations, filename, filenameTest):
     distin = ""
     for i in range(len(distinctBSSID)):
         distin += "\"" + distinctBSSID[i] + "\", "
-    print(distin)
+    # print(distin)
     print("************")
     distinctBSSIDTest, dataPointsTest = extractDistinctBSSIDAndNumberOfDataPoints(filenameTest, distinctBSSID)
 
@@ -141,10 +156,10 @@ def DataSet(locations, filename):
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
     trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples = extractData(filename, distinctBSSID, dataPoints, locations)
 
-    print("Training Samples: ", trainingSamples)
-    print("Labels Training Samples: ", labelsTrainingSamples)
-    print("Test Samples: ", testSamples)
-    print("Labels Test Samples: ", labelsTestSamples)
+    # print("Training Samples: ", trainingSamples)
+    # print("Labels Training Samples: ", labelsTrainingSamples)
+    # print("Test Samples: ", testSamples)
+    # print("Labels Test Samples: ", labelsTestSamples)
     
     wh, bh, wo, bo, error_cost_list, error_cost = calculationsNN(trainingSamples, labelsTrainingSamples, testSamples)
     

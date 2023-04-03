@@ -31,7 +31,7 @@ def calculationsNN(trainingSamples, labelsTrainingSamples, testSamples):
     wo_list = []
     bo_list = []
 
-    for epoch in range(5000):
+    for epoch in range(500000):
     ############# feedforward
 
         # Phase 1
@@ -142,7 +142,7 @@ def accuracyNN(testSamples, labelsTestSamples, wh, bh, wo, bo, error_cost_list, 
         # if predictedLabels[i] == labelsTestSamples[i]:
         percentageSure.append(np.max(ah[i]))
 
-    print("\n", error_cost_list)
+    # print("\n", error_cost_list)
 
     printAccuracy(labelsTestSamples, predictedLabels, wh, bh, wo, bo, error_cost, percentageSure)
 
@@ -204,41 +204,43 @@ def printAccuracy(labelsTestSamples, predictedLabels, wh, bh, wo, bo, error_cost
     print()
     print("RESULT NEURAL NETWORK")
     print()
-    temp = "{"
-    for i in range(len(bh)-1):
-        temp +=  str(bh[i]) + ", "
-    temp += str(bh[len(bh)-1]) + "}"
-    print("bh: \n", temp)
-    print()
-    temp = "{"
-    for i in range(wh.shape[0]):
-        temp += "{"
-        for j in range(wh.shape[1]-1):
-            temp +=  str(wh[i][j]) + ", "
-        temp += str(wh[i][wh.shape[1]-1]) + "}, "
-    temp += "}"
-    print("wh: \n", temp)
-    print()
-    temp = "{"
-    for i in range(len(bo)-1):
-        temp +=  str(bo[i]) + ", "
-    temp += str(bo[len(bo)-1]) + "}"
-    print("bo: \n", temp)
-    print()
-    temp = "{"
-    for i in range(wo.shape[0]):
-        temp += "{"
-        for j in range(wo.shape[1]-1):
-            temp +=  str(wo[i][j]) + ", "
-        temp += str(wh[i][wo.shape[1]-1]) + "}, "
-    temp += "}"
-    print("wo: \n", temp)
+    # temp = "{"
+    # for i in range(len(bh)-1):
+    #     temp +=  str(bh[i]) + ", "
+    # temp += str(bh[len(bh)-1]) + "}"
+    # print("bh: \n", temp)
+    # print()
+    # temp = "{"
+    # for i in range(wh.shape[0]):
+    #     temp += "{"
+    #     for j in range(wh.shape[1]-1):
+    #         temp +=  str(wh[i][j]) + ", "
+    #     temp += str(wh[i][wh.shape[1]-1]) + "}, "
+    # temp += "}"
+    # print("wh: \n", temp)
+    # print()
+    # temp = "{"
+    # for i in range(len(bo)-1):
+    #     temp +=  str(bo[i]) + ", "
+    # temp += str(bo[len(bo)-1]) + "}"
+    # print("bo: \n", temp)
+    # print()
+    # temp = "{"
+    # for i in range(wo.shape[0]):
+    #     temp += "{"
+    #     for j in range(wo.shape[1]-1):
+    #         temp +=  str(wo[i][j]) + ", "
+    #     temp += str(wh[i][wo.shape[1]-1]) + "}, "
+    # temp += "}"
+    # print("wo: \n", temp)
     print()
     print("error cost: ", error_cost)
     print()
     print("The 25-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 25)*100))
     print("The 50-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 50)*100))
     print("The 75-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 75)*100))
+    print("The 95-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 95)*100))
+    print("The 99-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 99)*100))
     print()
     print("Overall accuracy NN is %2.2f percentage of %d tested data points." % (accuracy*100, len(labelsTestSamples)))
     print()
