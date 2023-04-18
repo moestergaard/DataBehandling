@@ -91,7 +91,7 @@ def calculationsNN(trainingSamples, labelsTrainingSamples, testSamples):
             # print('ao: ', ao)
             
             # loss = -(np.sum(one_hot_labels * zo - one_hot_labels * np.sum(zo)))
-            loss = np.sum(-one_hot_labels * np.log(ao))
+            loss = -np.sum(one_hot_labels * np.log(ao))
             # print('Loss function value: ', loss)
             error_cost.append(loss)
             wh_list.append(wh.copy())
