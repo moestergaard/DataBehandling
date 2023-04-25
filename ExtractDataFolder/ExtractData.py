@@ -141,6 +141,22 @@ def extractDataCombined(filename, distinctBSSID, numberOfSamples, locations):
     return samples, labels
 
 
+def extractDataFromMultipleFiles(filenameTests, locations, distinctBSSID):
+    listOfTestSamples = []
+    listOfTestLabels = []
+    for filenameTest in filenameTests:
+        distinctBSSIDTest, dataPointsTest = extractDistinctBSSIDAndNumberOfDataPoints(filenameTest, locations, distinctBSSID)
+        testSamples, testLabels = extractDataCombined(filenameTest, distinctBSSID, dataPointsTest, locations)
+        
+        listOfTestSamples.append(testSamples)
+        listOfTestLabels.append(testLabels)
+        
+    allTestSamples = np.concatenate(listOfTestSamples)
+    allTestLabels = np.concatenate(listOfTestLabels)
+    
+    return allTestSamples, allTestLabels
+
+
 
 
 

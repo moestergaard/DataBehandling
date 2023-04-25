@@ -1,0 +1,150 @@
+****************** SVM3 ******************
+Antal minutter:  45
+
+Nøjagtighed egen dataindsamling
+Morgen: 90.02 procent
+Aften: 89.60 procent
+
+Nøjagtighed anden dag
+Morgen: 76.63 procent
+Aften: 81.36 procent
+
+Nøjagtighed andet tidspunkt
+Morgen: 78.54 procent
+Aften: 77.44 procent
+
+****************** SVM3 ******************
+Antal minutter:  30
+
+Nøjagtighed egen dataindsamling
+Morgen: 86.75 procent
+Aften: 86.87 procent
+
+Nøjagtighed anden dag
+Morgen: 79.83 procent
+Aften: 82.23 procent
+
+Nøjagtighed andet tidspunkt
+Morgen: 81.02 procent
+Aften: 78.57 procent
+
+****************** SVM3 ******************
+Antal minutter:  15
+
+Nøjagtighed egen dataindsamling
+Morgen: 84.90 procent
+Aften: 85.35 procent
+
+Nøjagtighed anden dag
+Morgen: 78.56 procent
+Aften: 83.80 procent
+
+Nøjagtighed andet tidspunkt
+Morgen: 80.19 procent
+Aften: 78.31 procent
+
+****************** SVM3 ******************
+Antal minutter:  10
+
+Nøjagtighed egen dataindsamling
+Morgen: 84.10 procent
+Aften: 84.44 procent
+
+Nøjagtighed anden dag
+Morgen: 78.34 procent
+Aften: 79.94 procent
+
+Nøjagtighed andet tidspunkt
+Morgen: 79.46 procent
+Aften: 78.50 procent
+
+****************** SVM3 ******************
+Antal minutter:  5
+
+Nøjagtighed egen dataindsamling
+Morgen: 80.93 procent
+Aften: 84.03 procent
+
+Nøjagtighed anden dag
+Morgen: 72.97 procent
+Aften: 78.36 procent
+
+Nøjagtighed andet tidspunkt
+Morgen: 80.15 procent
+Aften: 73.73 procent
+
+****************** SVM4 ******************
+Antal minutter:  45
+
+Nøjagtighed egen dataindsamling
+Morgen: 79.40 procent
+Aften: 79.21 procent
+
+Nøjagtighed anden dag
+Morgen: 61.75 procent
+Aften: 63.71 procent
+
+Nøjagtighed andet tidspunkt
+Morgen: 63.03 procent
+Aften: 64.31 procent
+
+****************** SVM4 ******************
+Antal minutter:  30
+
+Nøjagtighed egen dataindsamling
+Morgen: 79.28 procent
+Aften: 74.76 procent
+
+Nøjagtighed anden dag
+Morgen: 64.46 procent
+Aften: 66.06 procent
+
+Nøjagtighed andet tidspunkt
+Morgen: 63.45 procent
+Aften: 63.94 procent
+
+****************** SVM4 ******************
+Antal minutter:  15
+
+Nøjagtighed egen dataindsamling
+Morgen: 74.75 procent
+Aften: 71.90 procent
+
+Nøjagtighed anden dag
+Morgen: 63.79 procent
+Aften: 65.41 procent
+
+Nøjagtighed andet tidspunkt
+Morgen: 62.11 procent
+Aften: 62.77 procent
+
+****************** SVM4 ******************
+Antal minutter:  10
+
+Nøjagtighed egen dataindsamling
+Morgen: 72.02 procent
+Aften: 71.60 procent
+
+Nøjagtighed anden dag
+Morgen: 62.34 procent
+Aften: 63.87 procent
+
+Nøjagtighed andet tidspunkt
+Morgen: 64.58 procent
+Aften: 59.41 procent
+
+****************** SVM4 ******************
+Antal minutter:  5
+
+Nøjagtighed egen dataindsamling
+Morgen: 69.18 procent
+Aften: 65.67 procent
+
+Nøjagtighed anden dag
+Morgen: 62.06 procent
+Aften: 61.80 procent
+
+Nøjagtighed andet tidspunkt
+Morgen: 61.80 procent
+Aften: 60.41 procent
+

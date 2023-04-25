@@ -1,6 +1,6 @@
 import numpy as np
 from sklearn import svm
-from TestingSupportVectorMachine import SVMOwnDataSet, datasetTestedAgainstAnotherDatasetSVM
+from TestingSupportVectorMachine import SVMOwnDataSet, datasetTestedAgainstAnotherDatasetSVM, SVMAgainstOtherDatasets
 from TestingNeuralNetwork import DataSet, smallDataSetTestedAgainstBigDataSet
 
 def main():
@@ -15,40 +15,51 @@ def main():
     fileSecondEvening = "WifiData230423_17-21.txt"
     fileThirdEvening = "WifiData230424_17-21.txt"
     
+    partOfData = [1, 2/3, 1/3, 2/9, 1/9]
+    minutes = [45, 30, 15, 10, 5]
+    
     """ SVM three rooms """
     
-    ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, 1)
-    printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, 45, "SVM3")
+    for i in range(len(partOfData)):
+        ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i])
+        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM3")
     
-    ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, 2/3)
-    printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, 30, "SVM3")
+    # ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, 1)
+    # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, 45, "SVM3")
     
-    ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, 1/3)
-    printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, 15, "SVM3")
+    # ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, 2/3)
+    # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, 30, "SVM3")
     
-    ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, 2/9)
-    printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, 10, "SVM3")
+    # ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, 1/3)
+    # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, 15, "SVM3")
     
-    ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, 1/9)
-    printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, 5, "SVM3")
+    # ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, 2/9)
+    # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, 10, "SVM3")
+    
+    # ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, 1/9)
+    # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, 5, "SVM3")
     
     
     """ SVM four rooms """
     
-    ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, 1)
-    printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, 45, "SVM4")
+    for i in range(len(partOfData)):
+        ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i])
+        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM4")
     
-    ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, 2/3)
-    printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, 30, "SVM4")
+    # ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, 1)
+    # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, 45, "SVM4")
     
-    ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, 1/3)
-    printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, 15, "SVM4")
+    # ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, 2/3)
+    # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, 30, "SVM4")
     
-    ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, 2/9)
-    printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, 10, "SVM4")
+    # ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, 1/3)
+    # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, 15, "SVM4")
     
-    ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, 1/9)
-    printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, 5, "SVM4")
+    # ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, 2/9)
+    # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, 10, "SVM4")
+    
+    # ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, 1/9)
+    # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, 5, "SVM4")
     
     
     # predictionsSVM3(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations)
@@ -69,7 +80,7 @@ def main():
     # SVMOwnDataSet(locationsFull, fileSecondMorning)
     
 def predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfFile):
-    ownDsM = ownDsE = otherDayM = OtherDayE = otherTimeM = otherTimeE = 0
+    ownDsM = ownDsE = otherDayM = otherDayE = otherTimeM = otherTimeE = 0
     
     """ Morning own dataset """
     
@@ -90,65 +101,83 @@ def predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFo
     
     """ Morning other dataset """
     
-    otherDayM12 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstMorning, fileSecondMorning, partOfFile)
-    otherDayM13 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstMorning, fileThirdMorning, partOfFile)
-    otherDayM14 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstMorning, fileFourthMorning, partOfFile)
-    otherDayM21 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondMorning, fileFirstMorning, partOfFile)
-    otherDayM23 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondMorning, fileThirdMorning, partOfFile)
-    otherDayM24 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondMorning, fileFourthMorning, partOfFile)
-    otherDayM31 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdMorning, fileFirstMorning, partOfFile)
-    otherDayM32 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdMorning, fileSecondMorning, partOfFile)
-    otherDayM34 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdMorning, fileFourthMorning, partOfFile)
-    otherDayM41 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFourthMorning, fileFirstMorning, partOfFile)
-    otherDayM42 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFourthMorning, fileSecondMorning, partOfFile)
-    otherDayM43 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFourthMorning, fileThirdMorning, partOfFile)
+    otherDayM1 = SVMAgainstOtherDatasets(locations, fileFirstMorning, [fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfFile)
+    otherDayM2 = SVMAgainstOtherDatasets(locations, fileSecondMorning, [fileFirstMorning, fileThirdMorning, fileFourthMorning], partOfFile)
+    otherDayM3 = SVMAgainstOtherDatasets(locations, fileThirdMorning, [fileFirstMorning, fileSecondMorning, fileFourthMorning], partOfFile)
+    otherDayM4 = SVMAgainstOtherDatasets(locations, fileFourthMorning, [fileFirstMorning, fileSecondMorning, fileThirdMorning], partOfFile)
     
-    otherDayM = (otherDayM12 + otherDayM13 + otherDayM14 + otherDayM21 + otherDayM23 + otherDayM24 + otherDayM31 + otherDayM32 + otherDayM34 + otherDayM41 + otherDayM42 + otherDayM43) / 12
+    # otherDayM12 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstMorning, fileSecondMorning, partOfFile)
+    # otherDayM13 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstMorning, fileThirdMorning, partOfFile)
+    # otherDayM14 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstMorning, fileFourthMorning, partOfFile)
+    # otherDayM21 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondMorning, fileFirstMorning, partOfFile)
+    # otherDayM23 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondMorning, fileThirdMorning, partOfFile)
+    # otherDayM24 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondMorning, fileFourthMorning, partOfFile)
+    # otherDayM31 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdMorning, fileFirstMorning, partOfFile)
+    # otherDayM32 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdMorning, fileSecondMorning, partOfFile)
+    # otherDayM34 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdMorning, fileFourthMorning, partOfFile)
+    # otherDayM41 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFourthMorning, fileFirstMorning, partOfFile)
+    # otherDayM42 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFourthMorning, fileSecondMorning, partOfFile)
+    # otherDayM43 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFourthMorning, fileThirdMorning, partOfFile)
+    
+    otherDayM = (otherDayM1 + otherDayM2 + otherDayM3 + otherDayM4) / 4
     
     """ Evening other dataset """
     
-    otherDayE12 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstEvening, fileSecondEvening, partOfFile)
-    otherDayE13 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstEvening, fileThirdEvening, partOfFile)
-    otherDayE21 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondEvening, fileFirstEvening, partOfFile)
-    otherDayE23 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondEvening, fileThirdEvening, partOfFile)
-    otherDayE31 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdEvening, fileFirstEvening, partOfFile)
-    otherDayE32 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdEvening, fileSecondEvening, partOfFile)
+    otherDayE1 = SVMAgainstOtherDatasets(locations, fileFirstEvening, [fileSecondEvening, fileThirdEvening], partOfFile)
+    otherDayE2 = SVMAgainstOtherDatasets(locations, fileSecondEvening, [fileFirstEvening, fileThirdEvening], partOfFile)
+    otherDayE3 = SVMAgainstOtherDatasets(locations, fileThirdEvening, [fileFirstEvening, fileSecondEvening], partOfFile)
     
-    otherDayE = (otherDayE12 + otherDayE13 + otherDayE21 + otherDayE23 + otherDayE31 + otherDayE32) / 6
+    # otherDayE12 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstEvening, fileSecondEvening, partOfFile)
+    # otherDayE13 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstEvening, fileThirdEvening, partOfFile)
+    # otherDayE21 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondEvening, fileFirstEvening, partOfFile)
+    # otherDayE23 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondEvening, fileThirdEvening, partOfFile)
+    # otherDayE31 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdEvening, fileFirstEvening, partOfFile)
+    # otherDayE32 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdEvening, fileSecondEvening, partOfFile)
+    
+    otherDayE = (otherDayE1 + otherDayE2 + otherDayE3) / 3
     
     """ Morning other time """
     
-    otherTimeM11 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstMorning, fileFirstEvening, partOfFile)
-    otherTimeM12 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstMorning, fileSecondEvening, partOfFile)
-    otherTimeM13 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstMorning, fileThirdEvening, partOfFile)
-    otherTimeM21 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondMorning, fileFirstEvening, partOfFile)
-    otherTimeM22 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondMorning, fileSecondEvening, partOfFile)
-    otherTimeM23 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondMorning, fileThirdEvening, partOfFile)
-    otherTimeM31 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdMorning, fileFirstEvening, partOfFile)
-    otherTimeM32 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdMorning, fileSecondEvening, partOfFile)
-    otherTimeM33 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdMorning, fileThirdEvening, partOfFile)
-    otherTimeM41 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFourthMorning, fileFirstEvening, partOfFile)
-    otherTimeM42 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFourthMorning, fileSecondEvening, partOfFile)
-    otherTimeM43 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFourthMorning, fileThirdEvening, partOfFile)
+    otherTimeM1 = SVMAgainstOtherDatasets(locations, fileFirstMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfFile)
+    otherTimeM2 = SVMAgainstOtherDatasets(locations, fileSecondMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfFile)
+    otherTimeM3 = SVMAgainstOtherDatasets(locations, fileThirdMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfFile)
+    otherTimeM4 = SVMAgainstOtherDatasets(locations, fileFourthMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfFile)
+    
+    # otherTimeM11 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstMorning, fileFirstEvening, partOfFile)
+    # otherTimeM12 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstMorning, fileSecondEvening, partOfFile)
+    # otherTimeM13 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstMorning, fileThirdEvening, partOfFile)
+    # otherTimeM21 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondMorning, fileFirstEvening, partOfFile)
+    # otherTimeM22 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondMorning, fileSecondEvening, partOfFile)
+    # otherTimeM23 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondMorning, fileThirdEvening, partOfFile)
+    # otherTimeM31 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdMorning, fileFirstEvening, partOfFile)
+    # otherTimeM32 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdMorning, fileSecondEvening, partOfFile)
+    # otherTimeM33 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdMorning, fileThirdEvening, partOfFile)
+    # otherTimeM41 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFourthMorning, fileFirstEvening, partOfFile)
+    # otherTimeM42 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFourthMorning, fileSecondEvening, partOfFile)
+    # otherTimeM43 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFourthMorning, fileThirdEvening, partOfFile)
 
-    otherTimeM = (otherTimeM11 + otherTimeM12 + otherTimeM13 + otherTimeM21 + otherTimeM22 + otherTimeM23 + otherTimeM31 + otherTimeM32 + otherTimeM33 + otherTimeM41 + otherTimeM42 + otherTimeM43) / 12
+    otherTimeM = (otherTimeM1 + otherTimeM2 + otherTimeM3 + otherTimeM4) / 4
     
     """ Evening other time """
     
-    otherTimeE11 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstEvening, fileFirstMorning, partOfFile)
-    otherTimeE12 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstEvening, fileSecondMorning, partOfFile)
-    otherTimeE13 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstEvening, fileThirdMorning, partOfFile)
-    otherTimeE14 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstEvening, fileFourthMorning, partOfFile)
-    otherTimeE21 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondEvening, fileFirstMorning, partOfFile)
-    otherTimeE22 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondEvening, fileSecondMorning, partOfFile)
-    otherTimeE23 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondEvening, fileThirdMorning, partOfFile)
-    otherTimeE24 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondEvening, fileFourthMorning, partOfFile)
-    otherTimeE31 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdEvening, fileFirstMorning, partOfFile)
-    otherTimeE32 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdEvening, fileSecondMorning, partOfFile)
-    otherTimeE33 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdEvening, fileThirdMorning, partOfFile)
-    otherTimeE34 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdEvening, fileFourthMorning, partOfFile)
+    otherTimeE1 = SVMAgainstOtherDatasets(locations, fileFirstEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfFile)
+    otherTimeE2 = SVMAgainstOtherDatasets(locations, fileSecondEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfFile)
+    otherTimeE3 = SVMAgainstOtherDatasets(locations, fileThirdEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfFile)
     
-    otherTimeE = (otherTimeE11 + otherTimeE12 + otherTimeE13 + otherTimeE14 + otherTimeE21 + otherTimeE22 + otherTimeE23 + otherTimeE24 + otherTimeE31 + otherTimeE32 + otherTimeE33 + otherTimeE34) / 12
+    # otherTimeE11 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstEvening, fileFirstMorning, partOfFile)
+    # otherTimeE12 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstEvening, fileSecondMorning, partOfFile)
+    # otherTimeE13 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstEvening, fileThirdMorning, partOfFile)
+    # otherTimeE14 = datasetTestedAgainstAnotherDatasetSVM(locations, fileFirstEvening, fileFourthMorning, partOfFile)
+    # otherTimeE21 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondEvening, fileFirstMorning, partOfFile)
+    # otherTimeE22 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondEvening, fileSecondMorning, partOfFile)
+    # otherTimeE23 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondEvening, fileThirdMorning, partOfFile)
+    # otherTimeE24 = datasetTestedAgainstAnotherDatasetSVM(locations, fileSecondEvening, fileFourthMorning, partOfFile)
+    # otherTimeE31 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdEvening, fileFirstMorning, partOfFile)
+    # otherTimeE32 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdEvening, fileSecondMorning, partOfFile)
+    # otherTimeE33 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdEvening, fileThirdMorning, partOfFile)
+    # otherTimeE34 = datasetTestedAgainstAnotherDatasetSVM(locations, fileThirdEvening, fileFourthMorning, partOfFile)
+    
+    otherTimeE = (otherTimeE1 + otherTimeE2 + otherTimeE3) / 3
     
     return ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE
     
