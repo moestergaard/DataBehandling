@@ -1,0 +1,34 @@
+1397
+45
+1377
+52
+*** SVM3 ***
+Antal minutter:  45
+
+Nøjagtighed egen dataindsamling
+Morgen: 90.84 procent
+Aften: 0.00 procent
+Nøjagtighed anden dag
+Morgen:  0
+Aften:  0
+Nøjagtighed andet tidspunkt
+Morgen:  0
+Aften:  0
+
+1866
+45
+1858
+52
+*** SVM4 ***
+Antal minutter:  45
+
+Nøjagtighed egen dataindsamling
+Morgen: 83.25 procent
+Aften: 0.00 procent
+Nøjagtighed anden dag
+Morgen:  0
+Aften:  0
+Nøjagtighed andet tidspunkt
+Morgen:  0
+Aften:  0
+

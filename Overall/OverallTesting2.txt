@@ -1,0 +1,219 @@
+
+********************************************************************************************
+
+WifiData230418_9-12.txt
+
+
+RESULT NEURAL NETWORK
+
+
+error cost:  370.5881375585676
+
+The 5-fractile of the percentage sure is 77.92
+The 25-fractile of the percentage sure is 77.92
+The 50-fractile of the percentage sure is 97.30
+The 75-fractile of the percentage sure is 99.85
+The 95-fractile of the percentage sure is 99.97
+The 99-fractile of the percentage sure is 99.97
+
+Overall accuracy NN is 89.57 percentage of 374 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  39
+Should be office but predicted kitchen 9 corresponds to 23.08 percentage of wrongs.
+Should be office but predicted living room 0 corresponds to 0.00 percentage of wrongs.
+Should be kitchen but predicted office 1 corresponds to 2.56 percentage of wrongs.
+Should be kitchen but predicted living room 6 corresponds to 15.38 percentage of wrongs.
+Should be living room but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be living room but predicted kitchen 23 corresponds to 58.97 percentage of wrongs.
+
+********************************************************************************************
+
+********************************************************************************************
+
+WifiData230418_9-12.txt
+
+
+RESULT SUPPORT VECTOR MACHINE
+
+Overall accuracy SVM is 91.98 percentage of 374 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  30
+Should be office but predicted kitchen 10 corresponds to 33.33 percentage of wrongs.
+Should be office but predicted living room 0 corresponds to 0.00 percentage of wrongs.
+Should be kitchen but predicted office 2 corresponds to 6.67 percentage of wrongs.
+Should be kitchen but predicted living room 9 corresponds to 30.00 percentage of wrongs.
+Should be living room but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be living room but predicted kitchen 9 corresponds to 30.00 percentage of wrongs.
+
+********************************************************************************************
+
+********************************************************************************************
+
+WifiData230420_9-12.txt
+
+
+RESULT NEURAL NETWORK
+
+
+error cost:  273.017828608381
+
+The 5-fractile of the percentage sure is 80.56
+The 25-fractile of the percentage sure is 80.56
+The 50-fractile of the percentage sure is 99.77
+The 75-fractile of the percentage sure is 99.83
+The 95-fractile of the percentage sure is 99.85
+The 99-fractile of the percentage sure is 99.85
+
+Overall accuracy NN is 91.40 percentage of 372 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  32
+Should be office but predicted kitchen 6 corresponds to 18.75 percentage of wrongs.
+Should be office but predicted living room 0 corresponds to 0.00 percentage of wrongs.
+Should be kitchen but predicted office 1 corresponds to 3.12 percentage of wrongs.
+Should be kitchen but predicted living room 4 corresponds to 12.50 percentage of wrongs.
+Should be living room but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be living room but predicted kitchen 21 corresponds to 65.62 percentage of wrongs.
+
+********************************************************************************************
+
+********************************************************************************************
+
+WifiData230420_9-12.txt
+
+
+RESULT SUPPORT VECTOR MACHINE
+
+Overall accuracy SVM is 97.58 percentage of 372 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  9
+Should be office but predicted kitchen 3 corresponds to 33.33 percentage of wrongs.
+Should be office but predicted living room 0 corresponds to 0.00 percentage of wrongs.
+Should be kitchen but predicted office 1 corresponds to 11.11 percentage of wrongs.
+Should be kitchen but predicted living room 0 corresponds to 0.00 percentage of wrongs.
+Should be living room but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be living room but predicted kitchen 5 corresponds to 55.56 percentage of wrongs.
+
+********************************************************************************************
+
+*************** FIRE RUM ***************
+
+
+********************************************************************************************
+
+WifiData230418_9-12.txt
+
+
+RESULT NEURAL NETWORK
+
+
+error cost:  886.2473869219915
+
+The 5-fractile of the percentage sure is 58.96
+The 25-fractile of the percentage sure is 58.96
+The 50-fractile of the percentage sure is 67.75
+The 75-fractile of the percentage sure is 87.18
+The 95-fractile of the percentage sure is 97.77
+The 99-fractile of the percentage sure is 99.06
+
+Overall accuracy NN is 72.19 percentage of 374 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  104
+Should be office but predicted kitchen 10 corresponds to 9.62 percentage of wrongs.
+Should be office but predicted living room 4 corresponds to 3.85 percentage of wrongs.
+Should be kitchen but predicted office 1 corresponds to 0.96 percentage of wrongs.
+Should be kitchen but predicted living room 38 corresponds to 36.54 percentage of wrongs.
+Should be living room but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be living room but predicted kitchen 39 corresponds to 37.50 percentage of wrongs.
+
+********************************************************************************************
+
+********************************************************************************************
+
+WifiData230418_9-12.txt
+
+
+RESULT SUPPORT VECTOR MACHINE
+
+Overall accuracy SVM is 79.95 percentage of 374 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  75
+Should be office but predicted kitchen 25 corresponds to 33.33 percentage of wrongs.
+Should be office but predicted living room 0 corresponds to 0.00 percentage of wrongs.
+Should be kitchen but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be kitchen but predicted living room 39 corresponds to 52.00 percentage of wrongs.
+Should be living room but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be living room but predicted kitchen 11 corresponds to 14.67 percentage of wrongs.
+
+********************************************************************************************
+
+********************************************************************************************
+
+WifiData230420_9-12.txt
+
+
+RESULT NEURAL NETWORK
+
+
+error cost:  708.4525776309106
+
+The 5-fractile of the percentage sure is 54.17
+The 25-fractile of the percentage sure is 54.59
+The 50-fractile of the percentage sure is 87.39
+The 75-fractile of the percentage sure is 94.66
+The 95-fractile of the percentage sure is 95.79
+The 99-fractile of the percentage sure is 95.79
+
+Overall accuracy NN is 78.23 percentage of 372 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  81
+Should be office but predicted kitchen 4 corresponds to 4.94 percentage of wrongs.
+Should be office but predicted living room 1 corresponds to 1.23 percentage of wrongs.
+Should be kitchen but predicted office 5 corresponds to 6.17 percentage of wrongs.
+Should be kitchen but predicted living room 44 corresponds to 54.32 percentage of wrongs.
+Should be living room but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be living room but predicted kitchen 10 corresponds to 12.35 percentage of wrongs.
+
+********************************************************************************************
+
+********************************************************************************************
+
+WifiData230420_9-12.txt
+
+
+RESULT SUPPORT VECTOR MACHINE
+
+Overall accuracy SVM is 86.56 percentage of 372 tested data points.
+
+
+Details for the wrong predictions
+
+Wrong predicitions in total:  50
+Should be office but predicted kitchen 21 corresponds to 42.00 percentage of wrongs.
+Should be office but predicted living room 3 corresponds to 6.00 percentage of wrongs.
+Should be kitchen but predicted office 2 corresponds to 4.00 percentage of wrongs.
+Should be kitchen but predicted living room 17 corresponds to 34.00 percentage of wrongs.
+Should be living room but predicted office 0 corresponds to 0.00 percentage of wrongs.
+Should be living room but predicted kitchen 7 corresponds to 14.00 percentage of wrongs.
+
+********************************************************************************************

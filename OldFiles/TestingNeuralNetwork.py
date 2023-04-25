@@ -1,5 +1,5 @@
 import numpy as np
-from ExtractData import extractDistinctBSSIDAndNumberOfDataPoints, extractData, extractDataCombined
+from ExtractData import changeDataFile, extractDistinctBSSIDAndNumberOfDataPoints, extractData, extractDataSeparateFloors, extractDataCombined
 from NeuralNetwork import calculationsNN, accuracyNN
 
 def main():
