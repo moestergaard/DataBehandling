@@ -1,14 +1,9 @@
-import numpy as np
 from sklearn import svm
-from ExtractData import extractDistinctBSSIDAndNumberOfDataPoints, extractData, getSamplesAndLabelsFromOneFile, getSamplesAndLabelsFromMultipleFiles
-from MatrixManipulation import randomSplitSamplesAndLabels, deterministicSplitMatrix
+from ExtractData import getSamplesAndLabelsFromOneFile, getSamplesAndLabelsFromMultipleFiles
+from MatrixManipulation import deterministicSplitMatrix
 
 
 def SVMOwnDataSet(locations, filename, partOfData):
-    # distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename, locations)
-    # samples, labels = extractData(filename, distinctBSSID, dataPoints, locations)
-    
-    # trainingSamplesOverall, testSamplesOverall, trainingLabelsOverall, testLabelsOverall = randomSplitSamplesAndLabels(samples, labels, partOfData)
     
     trainingSamplesOverall, testSamplesOverall, trainingLabelsOverall, testLabelsOverall = getSamplesAndLabelsFromOneFile(locations, filename, partOfData)
     
@@ -22,17 +17,7 @@ def SVMOwnDataSet(locations, filename, partOfData):
 
 def SVMAgainstOtherDatasets(locations, filename, filenameTests, partOfData):
 
-    # distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename, locations)
-    # trainingSamples, trainingLabels = extractData(filename, distinctBSSID, dataPoints, locations)
-    
-    # testSamples, testLabels = extractDataFromMultipleFiles(filenameTests, locations, distinctBSSID)
-    
-    # trainingSamplesOverall, testSamplesOverall, trainingLabelsOverall, testLabelsOverall = randomSplitSamplesAndLabels(trainingSamples, trainingLabels, partOfData)
-    
     trainingSamples, testSamplesOverall, trainingLabels, testLabelsOverall = getSamplesAndLabelsFromMultipleFiles(locations, filename, filenameTests, partOfData)
-    
-    # testSamples = np.concatenate((testSamples, testSamplesOverall))
-    # testLabels = np.concatenate((testLabels, testLabelsOverall))
     
     bestModel, _ = bestModelSVM(trainingSamples, trainingLabels)
     

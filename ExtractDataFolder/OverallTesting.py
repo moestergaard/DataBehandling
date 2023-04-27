@@ -1,5 +1,5 @@
 from SupportVectorMachine import SVMOwnDataSet, SVMAgainstOtherDatasets
-from TestingNeuralNetwork import NNOwnDataSet, NNAgainstOtherDatasets
+from NeuralNetwork import NNOwnDataSet, NNAgainstOtherDatasets
 
 def main():
     locations = ["Kontor", "Stue", "Køkken"]

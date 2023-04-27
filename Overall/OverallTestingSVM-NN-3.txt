@@ -1,0 +1,15 @@
+****************** SVM3 ******************
+Antal minutter:  45
+
+Nøjagtighed egen dataindsamling
+Morgen: 88.83 procent
+Aften: 89.52 procent
+
+Nøjagtighed anden dag
+Morgen: 76.68 procent
+Aften: 81.92 procent
+
+Nøjagtighed andet tidspunkt
+Morgen: 80.41 procent
+Aften: 78.97 procent
+

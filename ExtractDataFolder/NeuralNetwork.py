@@ -1,19 +1,73 @@
 import numpy as np
+from ExtractData import getSamplesAndLabelsFromOneFile, getSamplesAndLabelsFromMultipleFiles
+from MatrixManipulation import deterministicSplitMatrix
 
+def NNOwnDataSet(locations, filename, partOfData, bias):
+    
+    trainingSamplesOverall, testSamplesOverall, trainingLabelsOverall, testLabelsOverall = getSamplesAndLabelsFromOneFile(locations, filename, partOfData)
+    
+    wh, bh, wo, bo, percentageSure, accuracy = bestModelNN(trainingSamplesOverall, trainingLabelsOverall, bias, numberOfClasses=len(locations))
+    
+    fiveFractile = np.percentile(percentageSure, 5)*100
+    
+    if partOfData == 1: return accuracy, fiveFractile
+    
+    predictedLabels, percentageSure = getPredictedLabelsNN(testSamplesOverall, wh, bh, wo, bo)
+    accuracy = testingNN(testLabelsOverall, predictedLabels)
+    
+    fiveFractile = np.percentile(percentageSure, 5)*100
+    
+    return accuracy, fiveFractile
+    
+
+def NNAgainstOtherDatasets(locations, filename, filenameTests, partOfData, bias):
+
+    trainingSamples, testSamplesOverall, trainingLabels, testLabelsOverall = getSamplesAndLabelsFromMultipleFiles(locations, filename, filenameTests, partOfData)
+    
+    wh, bh, wo, bo, _, _ = bestModelNN(trainingSamples, trainingLabels, bias, numberOfClasses=len(locations))
+    
+    predictedLabels, percentageSure = getPredictedLabelsNN(testSamplesOverall, wh, bh, wo, bo)
+    accuracy = testingNN(testLabelsOverall, predictedLabels)
+    
+    fiveFractile = np.percentile(percentageSure, 5)*100
+    
+    return accuracy, fiveFractile
+
+
+def bestModelNN(samples, labels, bias, numberOfClasses):
+    bestAccuracy = float('-inf')
+    bestwh = None
+    bestbh = None
+    bestwo = None
+    bestbo = None
+    bestPercentageSure = None
+    
+    for i in range(1,6):
+        trainingSamples, testSamples, trainingLabels, testLabels = deterministicSplitMatrix(samples, labels, 1/5, i)
+        wh, bh, wo, bo = trainingModelNN(trainingSamples, trainingLabels, bias, numberOfClasses)
+        
+        predictedLabels, percentageSure = getPredictedLabelsNN(testSamples, wh, bh, wo, bo)
+        accuracy = testingNN(testLabels, predictedLabels)
+        
+        if accuracy > bestAccuracy:
+            bestAccuracy = accuracy
+            bestwh = wh
+            bestbh = bh
+            bestwo = wo
+            bestbo = bo
+            bestPercentageSure = percentageSure
+    
+    return bestwh, bestbh, bestwo, bestbo, bestPercentageSure, bestAccuracy
+    
 def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasses):
     one_hot_labels = np.zeros((len(labelsTrainingSamples), numberOfClasses))
 
     for i in range(len(labelsTrainingSamples)):
         one_hot_labels[i, labelsTrainingSamples[i].astype(int)] = 1
 
-    # print(one_hot_labels)
-
-    instances = trainingSamples.shape[0]
     attributes = trainingSamples.shape[1]
     hidden_nodes = 4
     output_labels = numberOfClasses
-
-    # wh = np.random.randint(-1, 1, size=(attributes,hidden_nodes), dtype=np.float64)
 
     np.random.seed(42)
 
@@ -22,7 +76,6 @@ def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasse
         bh = np.random.randn(hidden_nodes)
     else: bh = np.zeros(hidden_nodes)
 
-    # wo = np.random.randint(-1,1, size=(hidden_nodes,output_labels), dtype = np.float64)
     wo = np.random.randn(hidden_nodes,output_labels)
     if (bias):
         bo = np.random.randn(output_labels)
@@ -66,18 +119,6 @@ def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasse
         dzo_dah = wo
         dcost_dah = np.dot(dcost_dzo , dzo_dah.T)
         dah_dzh = sigmoid_der(zh)
-        # print()
-        # print()
-        # print(zh.shape)
-        # print()
-        # print()
-        # dah_dzh = np.ones((zh.shape[0], zh.shape[1]))
-        # print(dah_dzh.shape)
-        # print(dah_dzh)
-        # print()
-        # print()
-        # print()
-        # dah_dzh = 1
         dzh_dwh = trainingSamples
         dcost_wh = np.dot(dzh_dwh.T, dah_dzh * dcost_dah)
 
@@ -93,54 +134,24 @@ def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasse
         wo -= lr * dcost_wo
         if (bias):
             bo -= lr * dcost_bo.sum(axis=0)
-        # print('bos ændring: ', lr * dcost_bo.sum(axis=0))
-        # print('den nye bo: ', bo)
         
         if epoch % 200 == 0:
-            # print('ao: ', ao)
-            
-            # loss = -(np.sum(one_hot_labels * zo - one_hot_labels * np.sum(zo)))
             loss = -np.sum(one_hot_labels * np.log(ao))
-            # print('Loss function value: ', loss)
             error_cost.append(loss)
             wh_list.append(wh.copy())
             wo_list.append(wo.copy())
             bh_list.append(bh.copy())
             bo_list.append(bo.copy())
         
-            # print('bo hver gang der bliver appendes: ', bo)
-        
-        
-
-    # print('one_hot_labels: ', one_hot_labels)
-    # print('ao: ', ao)
     i = np.argmin(error_cost)
     
-    # print('i: ', i)
-    # print('Error Cost: ', error_cost[i])
-    # print('Error Cost: ', error_cost[len(error_cost)-1])
-    # # print('wh_i: ', wh_list[i])
-    # # print('wh:', wh)
-    # print('bh_i: ', bh_list[i])
-    # print('bh:', bh)
-    # # print('wo_i: ', wo_list[i])
-    # # print('wo:', wo)
-    # print('bo_i: ', bo_list[i])
-    # print('bo:', bo)
-    # print('bo listen: ', bo_list)
-    
-    #return wh, bh, wo, bo, error_cost, error_cost[len(error_cost)-1]
-    return wh_list[i], bh_list[i], wo_list[i], bo_list[i], error_cost, error_cost[i]
+    return wh_list[i], bh_list[i], wo_list[i], bo_list[i]
 
-def getPredictedLabelsNN(testSamples, labelsTestSamples, wh, bh, wo, bo, error_cost_list, error_cost):
+def getPredictedLabelsNN(testSamples, wh, bh, wo, bo):
     predictedLabels = []
     percentageSure = []
 
     zh = np.dot(testSamples, wh) + bh
-    # print("shape of test samples: ", testSamples.shape)
-    # print("shape of zh: ", wh.shape)
-    # print("shape of bh: ", bh.shape)
-    # print("shape of zh: ", zh.shape)
     ah = sigmoid(zh)
 
     z0 = np.dot(ah, wo) + bo
@@ -148,26 +159,11 @@ def getPredictedLabelsNN(testSamples, labelsTestSamples, wh, bh, wo, bo, error_c
 
     for i in range(len(ah)):
         predictedLabels.append(np.argmax(ah[i]))
-        # if predictedLabels[i] == labelsTestSamples[i]:
         percentageSure.append(np.max(ah[i]))
-
-    # print("\n", error_cost_list)
 
     return predictedLabels, percentageSure
     
-    accuracy = accuracyNN(labelsTestSamples, predictedLabels, wh, bh, wo, bo, error_cost, percentageSure)
-
-    # correct = 0
-
-    # for i in range(len(labelsTestSamples)):
-    #     if (labelsTestSamples[i] == predictedLabels[i]):
-    #         correct += 1
-        
-    # print("*****************************************************************")
-    # print('Error Cost: ', error_cost)
-    # print('Accuracy: ', correct/len(labelsTestSamples))
-    # print("*****************************************************************")
-
+    
 def softmax(A):
     expA = np.exp(A)
     return expA / expA.sum(axis=1, keepdims=True)
@@ -176,12 +172,10 @@ def softmax(A):
 def sigmoid(x):
     return 1/(1+np.exp(-x))
 
+
 def sigmoid_der(x):
     return sigmoid(x) *(1-sigmoid (x))
 
-# def softmax(x):
-#     e_x = np.exp(x - np.max(x))
-#     return e_x / e_x.sum(axis=0)
 
 def testingNN(labelsTestSamples, predictedLabels):
     correct = 0
@@ -194,82 +188,3 @@ def testingNN(labelsTestSamples, predictedLabels):
     
     return accuracy        
     
-
-    # # shouldBeKitchenPredictsLivingRoom = 0
-    # # shouldBeKitchenPredictsOffice = 0
-    # # shouldBeLivingRoomPredictsKitchen = 0
-    # # shouldBeLivingRoomPredictsOffice = 0
-    # # shouldBeOfficePredictsKitchen = 0
-    # # shouldBeOfficePredictsLivingRoom = 0
-
-    
-    #     # else:
-    #     #     wrong += 1
-    #     #     if labelsTestSamples[i] == 2:
-    #     #         if predictedLabels[i] == 0: shouldBeKitchenPredictsOffice += 1
-    #     #         else: shouldBeKitchenPredictsLivingRoom += 1
-    #     #     elif labelsTestSamples[i] == 1:
-    #     #         if predictedLabels[i] == 0: shouldBeLivingRoomPredictsOffice += 1
-    #     #         else: shouldBeLivingRoomPredictsKitchen += 1
-    #     #     elif labelsTestSamples[i] == 0:
-    #     #         if predictedLabels[i] == 1: shouldBeOfficePredictsLivingRoom += 1
-    #     #         else: shouldBeOfficePredictsKitchen += 1
-                
-
-    # print()
-    # print()
-    # print("RESULT NEURAL NETWORK")
-    # print()
-    # # temp = "{"
-    # # for i in range(len(bh)-1):
-    # #     temp +=  str(bh[i]) + ", "
-    # # temp += str(bh[len(bh)-1]) + "}"
-    # # print("bh: \n", temp)
-    # # print()
-    # # temp = "{"
-    # # for i in range(wh.shape[0]):
-    # #     temp += "{"
-    # #     for j in range(wh.shape[1]-1):
-    # #         temp +=  str(wh[i][j]) + ", "
-    # #     temp += str(wh[i][wh.shape[1]-1]) + "}, "
-    # # temp += "}"
-    # # print("wh: \n", temp)
-    # # print()
-    # # temp = "{"
-    # # for i in range(len(bo)-1):
-    # #     temp +=  str(bo[i]) + ", "
-    # # temp += str(bo[len(bo)-1]) + "}"
-    # # print("bo: \n", temp)
-    # # print()
-    # # temp = "{"
-    # # for i in range(wo.shape[0]):
-    # #     temp += "{"
-    # #     for j in range(wo.shape[1]-1):
-    # #         temp +=  str(wo[i][j]) + ", "
-    # #     temp += str(wh[i][wo.shape[1]-1]) + "}, "
-    # # temp += "}"
-    # # print("wo: \n", temp)
-    # print()
-    # print("error cost: ", error_cost)
-    # print()
-    # print("The 5-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 5)*100))
-    # print("The 25-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 25)*100))
-    # print("The 50-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 50)*100))
-    # print("The 75-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 75)*100))
-    # print("The 95-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 95)*100))
-    # print("The 99-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 99)*100))
-    # print()
-    # print("Overall accuracy NN is %2.2f percentage of %d tested data points." % (accuracy*100, len(labelsTestSamples)))
-    # print()
-    # print()
-    # print("Details for the wrong predictions")
-    # print()
-    # print("Wrong predicitions in total: ", wrong)
-    # print("Should be office but predicted kitchen %d corresponds to %2.2f percentage of wrongs." % (shouldBeOfficePredictsKitchen, shouldBeOfficePredictsKitchen/wrong*100))
-    # print("Should be office but predicted living room %d corresponds to %2.2f percentage of wrongs." % (shouldBeOfficePredictsLivingRoom, shouldBeOfficePredictsLivingRoom/wrong*100))
-    # print("Should be kitchen but predicted office %d corresponds to %2.2f percentage of wrongs." % (shouldBeKitchenPredictsOffice, shouldBeKitchenPredictsOffice/wrong*100))
-    # print("Should be kitchen but predicted living room %d corresponds to %2.2f percentage of wrongs." % (shouldBeKitchenPredictsLivingRoom, shouldBeKitchenPredictsLivingRoom/wrong*100))
-    # print("Should be living room but predicted office %d corresponds to %2.2f percentage of wrongs." % (shouldBeLivingRoomPredictsOffice, shouldBeLivingRoomPredictsOffice/wrong*100))
-    # print("Should be living room but predicted kitchen %d corresponds to %2.2f percentage of wrongs." % (shouldBeLivingRoomPredictsKitchen, shouldBeLivingRoomPredictsKitchen/wrong*100))
-    # print()
-    # print("********************************************************************************************")
