@@ -1,15 +1,13 @@
 import numpy as np
 from sklearn import svm
-from ExtractData import parseWifiData, extractDistinctBSSIDAndNumberOfDataPoints, extractData, extractDataCombined, extractDataFromMultipleFiles
+from ExtractData import extractDistinctBSSIDAndNumberOfDataPoints, extractData, extractDataFromMultipleFiles
 from MatrixManipulation import randomSplitSamplesAndLabels, deterministicSplitMatrix
 
 
 def SVMAgainstOtherDatasets(locations, filename, filenameTests, partOfData):
 
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename, locations)
-    trainingSamples, trainingLabels = extractDataCombined(filename, distinctBSSID, dataPoints, locations)
-    
-    # samples, labels, distinctBSSID = parseWifiData(filename, locations)
+    trainingSamples, trainingLabels = extractData(filename, distinctBSSID, dataPoints, locations)
     
     testSamples, testLabels = extractDataFromMultipleFiles(filenameTests, locations, distinctBSSID)
     
@@ -25,10 +23,8 @@ def SVMAgainstOtherDatasets(locations, filename, filenameTests, partOfData):
         
 
 def SVMOwnDataSet(locations, filename, partOfData):
-    # distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename, locations)
-    # samples, labels = extractDataCombined(filename, distinctBSSID, dataPoints, locations)
-    
-    samples, labels, distinctBSSID = parseWifiData(filename, locations)
+    distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename, locations)
+    samples, labels = extractData(filename, distinctBSSID, dataPoints, locations)
     
     trainingSamplesOverall, testSamplesOverall, trainingLabelsOverall, testLabelsOverall = randomSplitSamplesAndLabels(samples, labels, partOfData)
     

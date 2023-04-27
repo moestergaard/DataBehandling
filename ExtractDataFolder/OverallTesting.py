@@ -28,23 +28,23 @@ def main():
         ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, partOfData[i])
         printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM4")
         
-    """ NN three rooms with bias """
+    # """ NN three rooms with bias """
 
-    for i in range(len(partOfData)):
-        ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], True)
-        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-B")
+    # for i in range(len(partOfData)):
+    #     ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], True)
+    #     printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-B")
     
-    """ NN three rooms without bias """
+    # """ NN three rooms without bias """
 
-    for i in range(len(partOfData)):
-        ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], False)
-        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-UB")
+    # for i in range(len(partOfData)):
+    #     ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], False)
+    #     printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-UB")
         
-    """ NN four rooms without bias """
+    # """ NN four rooms without bias """
 
-    for i in range(len(partOfData)):
-        ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, partOfData[i], False)
-        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN4-UB")
+    # for i in range(len(partOfData)):
+    #     ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, partOfData[i], False)
+    #     printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN4-UB")
     
 def predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfFile):
     ownDsM = ownDsE = otherDayM = otherDayE = otherTimeM = otherTimeE = 0

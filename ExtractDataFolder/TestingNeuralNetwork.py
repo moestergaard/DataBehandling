@@ -1,5 +1,5 @@
 import numpy as np
-from ExtractData import extractDistinctBSSIDAndNumberOfDataPoints, extractData, extractDataCombined
+from ExtractData import extractDistinctBSSIDAndNumberOfDataPoints, extractData, extractDataFromMultipleFiles
 from NeuralNetwork import calculationsNN, accuracyNN
 
 def main():
@@ -70,9 +70,9 @@ def smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations, filename, fi
 
     
 
-    trainingSamples, trainingLabels = extractDataCombined(filename, distinctBSSID, dataPoints, locations)
+    trainingSamples, trainingLabels = extractData(filename, distinctBSSID, dataPoints, locations)
     
-    testSamples, testLabels = extractDataCombined(filenameTest, distinctBSSIDTest, dataPointsTest, locations)
+    testSamples, testLabels = extractData(filenameTest, distinctBSSIDTest, dataPointsTest, locations)
 
     #
     # Removes all new BSSID that were not present at origianl syncronising
@@ -117,10 +117,10 @@ def smallDataSetTestedAgainstBigDataSet(locations, filename, filenameTest):
 
     
 
-    trainingSamples, trainingLabels = extractDataCombined(filename, distinctBSSID, dataPoints, locations)
+    trainingSamples, trainingLabels = extractData(filename, distinctBSSID, dataPoints, locations)
     # print("labels training: ", trainingLabels)
 
-    testSamples, testLabels = extractDataCombined(filenameTest, distinctBSSIDTest, dataPointsTest, locations)
+    testSamples, testLabels = extractData(filenameTest, distinctBSSIDTest, dataPointsTest, locations)
     # print("labels test: ", testLabels)
 
     #
