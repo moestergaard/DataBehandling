@@ -1,62 +1,64 @@
+import numpy as np
 from sklearn import svm
+from ExtractData import parseWifiData, extractDistinctBSSIDAndNumberOfDataPoints, extractData, extractDataCombined, extractDataFromMultipleFiles
+from MatrixManipulation import randomSplitSamplesAndLabels, deterministicSplitMatrix
 
-def calculationsSVM(trainingSamples, labelsTrainingSamples, testSamples):
-    #clf = svm.SVC(kernel='poly', degree=3, C=1)
-    #clf = svm.SVC(kernel='rbf', gamma=0.5, C=0.1)
+
+def SVMAgainstOtherDatasets(locations, filename, filenameTests, partOfData):
+
+    distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename, locations)
+    trainingSamples, trainingLabels = extractDataCombined(filename, distinctBSSID, dataPoints, locations)
     
+    # samples, labels, distinctBSSID = parseWifiData(filename, locations)
+    
+    testSamples, testLabels = extractDataFromMultipleFiles(filenameTests, locations, distinctBSSID)
+    
+    trainingSamplesOverall, testSamplesOverall, trainingLabelsOverall, testLabelsOverall = randomSplitSamplesAndLabels(trainingSamples, trainingLabels, partOfData)
+    
+    testSamples = np.concatenate((testSamples, testSamplesOverall))
+    testLabels = np.concatenate((testLabels, testLabelsOverall))
+    
+    bestModel, _ = bestModelSVM(trainingSamplesOverall, trainingLabelsOverall)
+    
+    score = bestModel.score(testSamples, testLabels)    
+    return score
+        
+
+def SVMOwnDataSet(locations, filename, partOfData):
+    # distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename, locations)
+    # samples, labels = extractDataCombined(filename, distinctBSSID, dataPoints, locations)
+    
+    samples, labels, distinctBSSID = parseWifiData(filename, locations)
+    
+    trainingSamplesOverall, testSamplesOverall, trainingLabelsOverall, testLabelsOverall = randomSplitSamplesAndLabels(samples, labels, partOfData)
+    
+    bestModel, score = bestModelSVM(trainingSamplesOverall, trainingLabelsOverall)
+    
+    if( partOfData == 1): return score
+
+    score = bestModel.score(testSamplesOverall, testLabelsOverall)    
+    return score
+   
+        
+def bestModelSVM(samples, labels):
+    bestScore = float('-inf')
+    bestModel = None
+    
+    for i in range(1,6):
+        trainingSamples, testSamples, trainingLabels, testLabels = deterministicSplitMatrix(samples, labels, 1/5, i)
+        model = fitModel(trainingSamples, trainingLabels)
+        
+        score = model.score(testSamples, testLabels)
+        
+        if score > bestScore:
+            bestScore = score
+            bestModel = model
+    
+    return bestModel, bestScore
+        
+        
+def fitModel(trainingSamples, labelsTrainingSamples):
     clf = svm.SVC(cache_size = 1000, class_weight='balanced')
-    # print("Training SVM", clf)
-    # print("Training samples: ", trainingSamples)
-    # print("Test samples: ", labelsTrainingSamples)
     clf.fit(trainingSamples, labelsTrainingSamples)
-    prediction = clf.predict(testSamples)
 
-    return prediction
-
-    
-def accuracySVM(labelsTestSamples, predictionSVM, numberOfClasses):
-    correct = 0
-    wrong = 0
-
-    shouldBeKitchenPredictsLivingRoom = 0
-    shouldBeKitchenPredictsOffice = 0
-    shouldBeLivingRoomPredictsKitchen = 0
-    shouldBeLivingRoomPredictsOffice = 0
-    shouldBeOfficePredictsKitchen = 0
-    shouldBeOfficePredictsLivingRoom = 0
-
-    for i in range(0, len(labelsTestSamples)):
-        if labelsTestSamples[i] == predictionSVM[i]:
-            correct += 1
-        else:
-            wrong += 1
-            if labelsTestSamples[i] == 2:
-                if predictionSVM[i] == 0: shouldBeKitchenPredictsOffice += 1
-                else: shouldBeKitchenPredictsLivingRoom += 1
-            elif labelsTestSamples[i] == 1:
-                if predictionSVM[i] == 0: shouldBeLivingRoomPredictsOffice += 1
-                else: shouldBeLivingRoomPredictsKitchen += 1
-            else: 
-                if predictionSVM[i] == 1: shouldBeOfficePredictsLivingRoom += 1
-                else: shouldBeOfficePredictsKitchen += 1
-
-    accuracy = correct/len(labelsTestSamples)
-    return accuracy
-    print()
-    print()
-    print("RESULT SUPPORT VECTOR MACHINE")
-    print()
-    print("Overall accuracy SVM is %2.2f percentage of %d tested data points." % (accuracy*100, len(labelsTestSamples)))
-    print()
-    print()
-    print("Details for the wrong predictions")
-    print()
-    print("Wrong predicitions in total: ", wrong)
-    print("Should be office but predicted kitchen %d corresponds to %2.2f percentage of wrongs." % (shouldBeOfficePredictsKitchen, shouldBeOfficePredictsKitchen/wrong*100))
-    print("Should be office but predicted living room %d corresponds to %2.2f percentage of wrongs." % (shouldBeOfficePredictsLivingRoom, shouldBeOfficePredictsLivingRoom/wrong*100))
-    print("Should be kitchen but predicted office %d corresponds to %2.2f percentage of wrongs." % (shouldBeKitchenPredictsOffice, shouldBeKitchenPredictsOffice/wrong*100))
-    print("Should be kitchen but predicted living room %d corresponds to %2.2f percentage of wrongs." % (shouldBeKitchenPredictsLivingRoom, shouldBeKitchenPredictsLivingRoom/wrong*100))
-    print("Should be living room but predicted office %d corresponds to %2.2f percentage of wrongs." % (shouldBeLivingRoomPredictsOffice, shouldBeLivingRoomPredictsOffice/wrong*100))
-    print("Should be living room but predicted kitchen %d corresponds to %2.2f percentage of wrongs." % (shouldBeLivingRoomPredictsKitchen, shouldBeLivingRoomPredictsKitchen/wrong*100))
-    print()
-    print("********************************************************************************************")
+    return clf

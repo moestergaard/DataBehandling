@@ -11,6 +11,7 @@ def randomSplitSamplesAndLabels(samples, labels, ratio):
     
     return trainingSamples, testSamples, trainingLabels, testLabels
 
+
 def deterministicSplitMatrix(samples, labels, ratio, splitNumber):
     m, n = samples.shape
     trainingSize = int(np.ceil(m * ratio))
@@ -24,6 +25,7 @@ def deterministicSplitMatrix(samples, labels, ratio, splitNumber):
     testLabels = np.delete(labels, np.s_[startIndex:endIndex], axis=0)
     
     return trainingSamples, testSamples, trainingLabels, testLabels
+
 
 def changeMatrice(matrice, index, distinctBSSID, currentBSSID, resultLevel):
     for i in range(0, len(distinctBSSID)):
