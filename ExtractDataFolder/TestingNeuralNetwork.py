@@ -1,109 +1,80 @@
 import numpy as np
 from ExtractData import extractDistinctBSSIDAndNumberOfDataPoints, extractData, extractDataFromMultipleFiles
-from NeuralNetwork import calculationsNN, accuracyNN
+from NeuralNetwork import trainingModelNN, getPredictedLabelsNN, testingNN
+from MatrixManipulation import randomSplitSamplesAndLabels, deterministicSplitMatrix
 
-def main():
-    locations = ["Kontor", "Stue", "Køkken", "Entre"]
-    groundFloor = ["Stue, Køkken"]
-    firstFloor = ["Kontor"]
+def NNOwnDataSet(locations, filename, partOfData, bias = True):
     
-    filenameBigDataSet = "BigDataSet.txt"
-    filename5Minute = "5MinuteDataSet.txt"
-    filename10Minute = "10MinuteDataSet.txt"
-    filenameNoSpeakers = "NoSpeakers.txt"
-    filenameUpdated = "WifiData230324.txt"
-    filename15Minute = "15MinuteDataSet(1845-2045).txt"
-
-    # DataSet(locations, filename5Minute)
-    # DataSet(locations, filename10Minute)
-    DataSet(locations, filename15Minute)
-    # DataSet(locations, filenameUpdated)
-
+    distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename, locations)
+    samples, labels = extractData(filename, distinctBSSID, dataPoints, locations)
     
-    # smallDataSetTestedAgainstBigDataSet(locations, filenameUpdated, filename5Minute)
-    # smallDataSetTestedAgainstBigDataSet(locations, filenameUpdated, filename10Minute)
-    # smallDataSetTestedAgainstBigDataSet(locations, filenameUpdated, filenameBigDataSet)
-    # smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filenameUpdated)
-    # smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filename10Minute)
-    # smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filenameBigDataSet)
-    # smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filename5Minute)
-    # smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filenameUpdated)
-    # smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filenameBigDataSet)
-    # smallDataSetTestedAgainstBigDataSet(locations, filename15Minute, filename5Minute)
-    # smallDataSetTestedAgainstBigDataSet(locations, filename15Minute, filename10Minute)
-    # smallDataSetTestedAgainstBigDataSet(locations, filename15Minute, filenameUpdated)
-    smallDataSetTestedAgainstBigDataSet(locations, filename15Minute, filenameBigDataSet)
+    trainingSamplesOverall, testSamplesOverall, trainingLabelsOverall, testLabelsOverall = randomSplitSamplesAndLabels(samples, labels, partOfData)
     
-    # smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filenameBigDataSet)
-    # smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filenameBigDataSet)
-    # smallDataSetTestedAgainstBigDataSet(locations, filenameBigDataSet, filename10Minute)
+    wh, bh, wo, bo, error_cost_list, error_cost, percentageSure, accuracy = bestModelNN(trainingSamplesOverall, trainingLabelsOverall, bias, numberOfClasses=len(locations))
     
-    # smallDataSetTestedAgainstBigDataSet(locations, filenameBigDataSet, filenameNoSpeakers)
-    # smallDataSetTestedAgainstBigDataSet(locations, filename5Minute, filenameNoSpeakers)
-    # smallDataSetTestedAgainstBigDataSet(locations, filename10Minute, filenameNoSpeakers)
-
-    # bigDataSetSVMSeparateFloors(groundFloor, firstFloor, locations)
-    # smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations)
+    fiveFractile = np.percentile(percentageSure, 5)*100
     
-    # filename = "WifiData2303222123.txt"
+    if partOfData == 1: return accuracy, fiveFractile
     
-    # changeDataFile(filename)
+    predictedLabels, percentageSure = getPredictedLabelsNN(testSamplesOverall, testLabelsOverall, wh, bh, wo, bo, error_cost_list, error_cost)
+    accuracy = testingNN(testLabelsOverall, predictedLabels)
     
-def bigDataSetSVMSeparateFloors(groundFloor, firstFloor, locations, filename):
-    distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
-
-    trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples = extractData(filename, distinctBSSID, dataPoints, locations)
-    trainingSamplesFloors, trainingSamplesGroundFloor, labelsTrainingFloors, labelsTrainingGroundFloor, testSamplesFloors, testSamplesGroundFloor, labelsTestFloors,labelsTestGroundFloor = extractDataSeparateFloors(trainingSamples, labelsTrainingSamples, testSamples, labelsTestSamples)
-
-    wh, bh, wo, bo, error_cost = calculationsNN(trainingSamplesFloors, labelsTrainingFloors, testSamplesFloors)
-    print("*** BigDataSetSeparateFloors ***")
-    accuracyNN(testSamplesFloors, labelsTestFloors, wh, bh, wo, bo, error_cost)
-
-    wh, bh, wo, bo, error_cost = calculationsNN(trainingSamplesGroundFloor, labelsTrainingGroundFloor, testSamplesGroundFloor)
-    print("*** BigDataSetSeparateFloors Ground Floor ***")
-    accuracyNN(testSamplesGroundFloor, labelsTestGroundFloor, wh, bh, wo, bo, error_cost)
-
-def smallDataSetTestedAgainstBigDataSetSVMSeparateFloors(locations, filename, filenameTest):
-
-    distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
-    distinctBSSIDTest, dataPointsTest = extractDistinctBSSIDAndNumberOfDataPoints(filenameTest)
-
+    fiveFractile = np.percentile(percentageSure, 5)*100
     
-
-    trainingSamples, trainingLabels = extractData(filename, distinctBSSID, dataPoints, locations)
+    return accuracy, fiveFractile
     
-    testSamples, testLabels = extractData(filenameTest, distinctBSSIDTest, dataPointsTest, locations)
-
-    #
-    # Removes all new BSSID that were not present at origianl syncronising
-    #
-    for i in range(0, len(distinctBSSIDTest)):
-        for i in range(0, len(distinctBSSIDTest)):
-            if not distinctBSSID.__contains__(distinctBSSIDTest[i]):
-                testSamples = np.delete(testSamples, i, 1)
-                distinctBSSIDTest.remove(distinctBSSIDTest[i])
-                break
-
-    #
-    # Add rows of zeroes to testSample for all BSSID from syncroized data not present in tests
-    #
-    for i in range(0, len(distinctBSSID)):
-        if not distinctBSSIDTest.__contains__(distinctBSSID[i]):
-            distinctBSSIDTest.append(distinctBSSID[i])
-            testSamples = np.append(testSamples, np.zeros((testSamples.shape[0],1)), 1)
-
-    trainingSamplesFloors, trainingSamplesGroundFloor, labelsTrainingFloors, labelsTrainingGroundFloor, testSamplesFloors, testSamplesGroundFloor, labelsTestFloors,labelsTestGroundFloor = extractDataSeparateFloors(trainingSamples, trainingLabels, testSamples, testLabels)
-                
-    wh, bh, wo, bo, error_cost = calculationsNN(trainingSamplesFloors, labelsTrainingFloors, testSamplesFloors)
-    print("*** SmallDataSetTestedAgainstBigDataSetSeparateFloors ***")
-    accuracyNN(testSamplesFloors, labelsTestFloors, wh, bh, wo, bo, error_cost)
-
-    wh, bh, wo, bo, error_cost = calculationsNN(trainingSamplesGroundFloor, labelsTrainingGroundFloor, testSamplesGroundFloor)
-    print("*** SmallDataSetTestedAgainstBigDataSetSeparateFloors Ground Floor ***")
-    accuracyNN(testSamplesGroundFloor, labelsTestGroundFloor, wh, bh, wo, bo, error_cost)
+    
+    # print("Training Samples: ", trainingSamples)
+    # print("Labels Training Samples: ", labelsTrainingSamples)
+    # print("Test Samples: ", testSamples)
+    # print("Labels Test Samples: ", labelsTestSamples)
+    
+    wh, bh, wo, bo, error_cost_list, error_cost = trainingModelNN(trainingSamples, labelsTrainingSamples, testSamples, bias, numberOfClasses=len(locations))
+    
+    # print()
+    # print("********************************************************************************************")
+    # print()
+    # print(filename)
+    
+    # testingNN(testSamples, labelsTestSamples, wh, bh, wo, bo, error_cost_list, error_cost)
+    predictedLabels, percentageSure = getPredictedLabelsNN(testSamples, labelsTestSamples, wh, bh, wo, bo, error_cost_list, error_cost)
+    accuracy = testingNN(labelsTestSamples, predictedLabels, wh, bh, wo, bo, error_cost, percentageSure)
+    
+    
+    
+    return accuracy, fiveFractile
 
 
-def smallDataSetTestedAgainstBigDataSet(locations, filename, filenameTest):
+def bestModelNN(samples, labels, bias, numberOfClasses):
+    bestAccuracy = float('-inf')
+    bestwh = None
+    bestbh = None
+    bestwo = None
+    bestbo = None
+    bestError_cost_list = None
+    bestError_cost = None
+    bestPercentageSure = None
+    
+    for i in range(1,6):
+        trainingSamples, testSamples, trainingLabels, testLabels = deterministicSplitMatrix(samples, labels, 1/5, i)
+        wh, bh, wo, bo, error_cost_list, error_cost = trainingModelNN(trainingSamples, trainingLabels, bias, numberOfClasses)
+        
+        predictedLabels, percentageSure = getPredictedLabelsNN(testSamples, testLabels, wh, bh, wo, bo, error_cost_list, error_cost)
+        accuracy = testingNN(testLabels, predictedLabels)
+        
+        if accuracy > bestAccuracy:
+            bestAccuracy = accuracy
+            bestwh = wh
+            bestbh = bh
+            bestwo = wo
+            bestbo = bo
+            bestError_cost_list = error_cost_list
+            bestError_cost = error_cost
+            bestPercentageSure = percentageSure
+    
+    return bestwh, bestbh, bestwo, bestbo, bestError_cost_list, bestError_cost, bestPercentageSure, bestAccuracy
+    
+def NNAgainstOtherDatasets(locations, filename, filenameTest):
 
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
     # print("************")
@@ -169,6 +140,3 @@ def DataSet(locations, filename):
     print(filename)
     
     accuracyNN(testSamples, labelsTestSamples, wh, bh, wo, bo, error_cost_list, error_cost)
-
-if __name__ == '__main__':
-    main()

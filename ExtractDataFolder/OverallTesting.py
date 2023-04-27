@@ -1,5 +1,5 @@
 from SupportVectorMachine import SVMOwnDataSet, SVMAgainstOtherDatasets
-from TestingNeuralNetwork import DataSet, smallDataSetTestedAgainstBigDataSet
+from TestingNeuralNetwork import NNOwnDataSet, NNAgainstOtherDatasets
 
 def main():
     locations = ["Kontor", "Stue", "Køkken"]
@@ -16,23 +16,23 @@ def main():
     partOfData = [1, 2/3, 1/3, 2/9, 1/9]
     minutes = [45, 30, 15, 10, 5]
     
-    """ SVM three rooms """
+    # """ SVM three rooms """
     
-    for i in range(len(partOfData)):
-        ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i])
-        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM3")
-    
-    """ SVM four rooms """
-    
-    for i in range(len(partOfData)):
-        ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, partOfData[i])
-        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM4")
-        
-    # """ NN three rooms with bias """
-
     # for i in range(len(partOfData)):
-    #     ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], True)
-    #     printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-B")
+    #     ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i])
+    #     printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM3")
+    
+    # """ SVM four rooms """
+    
+    # for i in range(len(partOfData)):
+    #     ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, partOfData[i])
+    #     printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM4")
+        
+    """ NN three rooms with bias """
+
+    for i in range(len(partOfData)):
+        ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], True)
+        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-B")
     
     # """ NN three rooms without bias """
 
@@ -107,54 +107,54 @@ def predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFou
     
     """ Morning own dataset """
     
-    ownDsM1 = SVMOwnDataSet(locations, fileFirstMorning, partOfFile)
-    ownDsM2 = SVMOwnDataSet(locations, fileSecondMorning, partOfFile)
-    ownDsM3 = SVMOwnDataSet(locations, fileThirdMorning, partOfFile)
-    ownDsM4 = SVMOwnDataSet(locations, fileFourthMorning, partOfFile)
+    ownDsM1, fiveFractile = NNOwnDataSet(locations, fileFirstMorning, partOfFile, bias)
+    ownDsM2, fiveFractile = NNOwnDataSet(locations, fileSecondMorning, partOfFile, bias)
+    ownDsM3, fiveFractile = NNOwnDataSet(locations, fileThirdMorning, partOfFile, bias)
+    ownDsM4, fiveFractile = NNOwnDataSet(locations, fileFourthMorning, partOfFile, bias)
 
     ownDsM = (ownDsM1 + ownDsM2 + ownDsM3 + ownDsM4) / 4
     
-    """ Evening own dataset """
+    # """ Evening own dataset """
     
-    ownDsE1 = SVMOwnDataSet(locations, fileFirstEvening, partOfFile)
-    ownDsE2 = SVMOwnDataSet(locations, fileSecondEvening, partOfFile)
-    ownDsE3 = SVMOwnDataSet(locations, fileThirdEvening, partOfFile)
+    # ownDsE1 = NNOwnDataSet(locations, fileFirstEvening, partOfFile)
+    # ownDsE2 = NNOwnDataSet(locations, fileSecondEvening, partOfFile)
+    # ownDsE3 = NNOwnDataSet(locations, fileThirdEvening, partOfFile)
 
-    ownDsE = (ownDsE1 + ownDsE2 + ownDsE3) / 3
+    # ownDsE = (ownDsE1 + ownDsE2 + ownDsE3) / 3
     
-    """ Morning other dataset """
+    # """ Morning other dataset """
     
-    otherDayM1 = SVMAgainstOtherDatasets(locations, fileFirstMorning, [fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfFile)
-    otherDayM2 = SVMAgainstOtherDatasets(locations, fileSecondMorning, [fileFirstMorning, fileThirdMorning, fileFourthMorning], partOfFile)
-    otherDayM3 = SVMAgainstOtherDatasets(locations, fileThirdMorning, [fileFirstMorning, fileSecondMorning, fileFourthMorning], partOfFile)
-    otherDayM4 = SVMAgainstOtherDatasets(locations, fileFourthMorning, [fileFirstMorning, fileSecondMorning, fileThirdMorning], partOfFile)
+    # otherDayM1 = NNAgainstOtherDatasets(locations, fileFirstMorning, [fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfFile)
+    # otherDayM2 = NNAgainstOtherDatasets(locations, fileSecondMorning, [fileFirstMorning, fileThirdMorning, fileFourthMorning], partOfFile)
+    # otherDayM3 = NNAgainstOtherDatasets(locations, fileThirdMorning, [fileFirstMorning, fileSecondMorning, fileFourthMorning], partOfFile)
+    # otherDayM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileFirstMorning, fileSecondMorning, fileThirdMorning], partOfFile)
     
-    otherDayM = (otherDayM1 + otherDayM2 + otherDayM3 + otherDayM4) / 4
+    # otherDayM = (otherDayM1 + otherDayM2 + otherDayM3 + otherDayM4) / 4
     
-    """ Evening other dataset """
+    # """ Evening other dataset """
     
-    otherDayE1 = SVMAgainstOtherDatasets(locations, fileFirstEvening, [fileSecondEvening, fileThirdEvening], partOfFile)
-    otherDayE2 = SVMAgainstOtherDatasets(locations, fileSecondEvening, [fileFirstEvening, fileThirdEvening], partOfFile)
-    otherDayE3 = SVMAgainstOtherDatasets(locations, fileThirdEvening, [fileFirstEvening, fileSecondEvening], partOfFile)
+    # otherDayE1 = NNAgainstOtherDatasets(locations, fileFirstEvening, [fileSecondEvening, fileThirdEvening], partOfFile)
+    # otherDayE2 = NNAgainstOtherDatasets(locations, fileSecondEvening, [fileFirstEvening, fileThirdEvening], partOfFile)
+    # otherDayE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileFirstEvening, fileSecondEvening], partOfFile)
     
-    otherDayE = (otherDayE1 + otherDayE2 + otherDayE3) / 3
+    # otherDayE = (otherDayE1 + otherDayE2 + otherDayE3) / 3
     
-    """ Morning other time """
+    # """ Morning other time """
     
-    otherTimeM1 = SVMAgainstOtherDatasets(locations, fileFirstMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfFile)
-    otherTimeM2 = SVMAgainstOtherDatasets(locations, fileSecondMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfFile)
-    otherTimeM3 = SVMAgainstOtherDatasets(locations, fileThirdMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfFile)
-    otherTimeM4 = SVMAgainstOtherDatasets(locations, fileFourthMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfFile)
+    # otherTimeM1 = NNAgainstOtherDatasets(locations, fileFirstMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfFile)
+    # otherTimeM2 = NNAgainstOtherDatasets(locations, fileSecondMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfFile)
+    # otherTimeM3 = NNAgainstOtherDatasets(locations, fileThirdMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfFile)
+    # otherTimeM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfFile)
     
-    otherTimeM = (otherTimeM1 + otherTimeM2 + otherTimeM3 + otherTimeM4) / 4
+    # otherTimeM = (otherTimeM1 + otherTimeM2 + otherTimeM3 + otherTimeM4) / 4
     
-    """ Evening other time """
+    # """ Evening other time """
     
-    otherTimeE1 = SVMAgainstOtherDatasets(locations, fileFirstEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfFile)
-    otherTimeE2 = SVMAgainstOtherDatasets(locations, fileSecondEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfFile)
-    otherTimeE3 = SVMAgainstOtherDatasets(locations, fileThirdEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfFile)
+    # otherTimeE1 = NNAgainstOtherDatasets(locations, fileFirstEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfFile)
+    # otherTimeE2 = NNAgainstOtherDatasets(locations, fileSecondEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfFile)
+    # otherTimeE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfFile)
     
-    otherTimeE = (otherTimeE1 + otherTimeE2 + otherTimeE3) / 3
+    # otherTimeE = (otherTimeE1 + otherTimeE2 + otherTimeE3) / 3
     
     return ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE
     

@@ -1,6 +1,6 @@
 import numpy as np
 
-def calculationsNN(trainingSamples, labelsTrainingSamples, testSamples, numberOfClasses):
+def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasses):
     one_hot_labels = np.zeros((len(labelsTrainingSamples), numberOfClasses))
 
     for i in range(len(labelsTrainingSamples)):
@@ -18,17 +18,22 @@ def calculationsNN(trainingSamples, labelsTrainingSamples, testSamples, numberOf
     np.random.seed(42)
 
     wh = np.random.randn(attributes,hidden_nodes)
-    bh = np.random.randn(hidden_nodes)
+    if (bias):
+        bh = np.random.randn(hidden_nodes)
+    else: bh = np.zeros(hidden_nodes)
 
     # wo = np.random.randint(-1,1, size=(hidden_nodes,output_labels), dtype = np.float64)
     wo = np.random.randn(hidden_nodes,output_labels)
-    bo = np.random.randn(output_labels)
+    if (bias):
+        bo = np.random.randn(output_labels)
+    else: bo = np.zeros(output_labels)
+    
     lr = 10e-4
 
     error_cost = []
-    wh_list = []
-    bh_list = []
+    wh_list = []   
     wo_list = []
+    bh_list = []
     bo_list = []
 
     for epoch in range(5000):
@@ -53,7 +58,8 @@ def calculationsNN(trainingSamples, labelsTrainingSamples, testSamples, numberOf
 
         dcost_wo = np.dot(dzo_dwo.T, dcost_dzo)
 
-        dcost_bo = dcost_dzo
+        if (bias):
+            dcost_bo = dcost_dzo
 
     ########## Phases 2
 
@@ -75,15 +81,18 @@ def calculationsNN(trainingSamples, labelsTrainingSamples, testSamples, numberOf
         dzh_dwh = trainingSamples
         dcost_wh = np.dot(dzh_dwh.T, dah_dzh * dcost_dah)
 
-        dcost_bh = dcost_dah * dah_dzh
+        if (bias):
+            dcost_bh = dcost_dah * dah_dzh
 
         # Update Weights ================
 
         wh -= lr * dcost_wh
-        bh -= lr * dcost_bh.sum(axis=0)
+        if (bias):
+            bh -= lr * dcost_bh.sum(axis=0)
 
         wo -= lr * dcost_wo
-        bo -= lr * dcost_bo.sum(axis=0)
+        if (bias):
+            bo -= lr * dcost_bo.sum(axis=0)
         # print('bos ændring: ', lr * dcost_bo.sum(axis=0))
         # print('den nye bo: ', bo)
         
@@ -95,10 +104,10 @@ def calculationsNN(trainingSamples, labelsTrainingSamples, testSamples, numberOf
             # print('Loss function value: ', loss)
             error_cost.append(loss)
             wh_list.append(wh.copy())
-            bh_list.append(bh.copy())
             wo_list.append(wo.copy())
+            bh_list.append(bh.copy())
             bo_list.append(bo.copy())
-            
+        
             # print('bo hver gang der bliver appendes: ', bo)
         
         
@@ -123,7 +132,7 @@ def calculationsNN(trainingSamples, labelsTrainingSamples, testSamples, numberOf
     #return wh, bh, wo, bo, error_cost, error_cost[len(error_cost)-1]
     return wh_list[i], bh_list[i], wo_list[i], bo_list[i], error_cost, error_cost[i]
 
-def accuracyNN(testSamples, labelsTestSamples, wh, bh, wo, bo, error_cost_list, error_cost):
+def getPredictedLabelsNN(testSamples, labelsTestSamples, wh, bh, wo, bo, error_cost_list, error_cost):
     predictedLabels = []
     percentageSure = []
 
@@ -144,7 +153,9 @@ def accuracyNN(testSamples, labelsTestSamples, wh, bh, wo, bo, error_cost_list, 
 
     # print("\n", error_cost_list)
 
-    printAccuracy(labelsTestSamples, predictedLabels, wh, bh, wo, bo, error_cost, percentageSure)
+    return predictedLabels, percentageSure
+    
+    accuracy = accuracyNN(labelsTestSamples, predictedLabels, wh, bh, wo, bo, error_cost, percentageSure)
 
     # correct = 0
 
@@ -172,88 +183,93 @@ def sigmoid_der(x):
 #     e_x = np.exp(x - np.max(x))
 #     return e_x / e_x.sum(axis=0)
 
-def printAccuracy(labelsTestSamples, predictedLabels, wh, bh, wo, bo, error_cost, percentageSure):
+def testingNN(labelsTestSamples, predictedLabels):
     correct = 0
-    wrong = 0
-
-    shouldBeKitchenPredictsLivingRoom = 0
-    shouldBeKitchenPredictsOffice = 0
-    shouldBeLivingRoomPredictsKitchen = 0
-    shouldBeLivingRoomPredictsOffice = 0
-    shouldBeOfficePredictsKitchen = 0
-    shouldBeOfficePredictsLivingRoom = 0
-
+    
     for i in range(0, len(labelsTestSamples)):
         if labelsTestSamples[i] == predictedLabels[i]:
             correct += 1
-        else:
-            wrong += 1
-            if labelsTestSamples[i] == 2:
-                if predictedLabels[i] == 0: shouldBeKitchenPredictsOffice += 1
-                else: shouldBeKitchenPredictsLivingRoom += 1
-            elif labelsTestSamples[i] == 1:
-                if predictedLabels[i] == 0: shouldBeLivingRoomPredictsOffice += 1
-                else: shouldBeLivingRoomPredictsKitchen += 1
-            elif labelsTestSamples[i] == 0:
-                if predictedLabels[i] == 1: shouldBeOfficePredictsLivingRoom += 1
-                else: shouldBeOfficePredictsKitchen += 1
+    
+    accuracy = correct/len(labelsTestSamples)
+    
+    return accuracy        
+    
+
+    # # shouldBeKitchenPredictsLivingRoom = 0
+    # # shouldBeKitchenPredictsOffice = 0
+    # # shouldBeLivingRoomPredictsKitchen = 0
+    # # shouldBeLivingRoomPredictsOffice = 0
+    # # shouldBeOfficePredictsKitchen = 0
+    # # shouldBeOfficePredictsLivingRoom = 0
+
+    
+    #     # else:
+    #     #     wrong += 1
+    #     #     if labelsTestSamples[i] == 2:
+    #     #         if predictedLabels[i] == 0: shouldBeKitchenPredictsOffice += 1
+    #     #         else: shouldBeKitchenPredictsLivingRoom += 1
+    #     #     elif labelsTestSamples[i] == 1:
+    #     #         if predictedLabels[i] == 0: shouldBeLivingRoomPredictsOffice += 1
+    #     #         else: shouldBeLivingRoomPredictsKitchen += 1
+    #     #     elif labelsTestSamples[i] == 0:
+    #     #         if predictedLabels[i] == 1: shouldBeOfficePredictsLivingRoom += 1
+    #     #         else: shouldBeOfficePredictsKitchen += 1
                 
 
-    accuracy = correct/len(labelsTestSamples)
-    print()
-    print()
-    print("RESULT NEURAL NETWORK")
-    print()
-    # temp = "{"
-    # for i in range(len(bh)-1):
-    #     temp +=  str(bh[i]) + ", "
-    # temp += str(bh[len(bh)-1]) + "}"
-    # print("bh: \n", temp)
     # print()
-    # temp = "{"
-    # for i in range(wh.shape[0]):
-    #     temp += "{"
-    #     for j in range(wh.shape[1]-1):
-    #         temp +=  str(wh[i][j]) + ", "
-    #     temp += str(wh[i][wh.shape[1]-1]) + "}, "
-    # temp += "}"
-    # print("wh: \n", temp)
     # print()
-    # temp = "{"
-    # for i in range(len(bo)-1):
-    #     temp +=  str(bo[i]) + ", "
-    # temp += str(bo[len(bo)-1]) + "}"
-    # print("bo: \n", temp)
+    # print("RESULT NEURAL NETWORK")
     # print()
-    # temp = "{"
-    # for i in range(wo.shape[0]):
-    #     temp += "{"
-    #     for j in range(wo.shape[1]-1):
-    #         temp +=  str(wo[i][j]) + ", "
-    #     temp += str(wh[i][wo.shape[1]-1]) + "}, "
-    # temp += "}"
-    # print("wo: \n", temp)
-    print()
-    print("error cost: ", error_cost)
-    print()
-    print("The 5-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 5)*100))
-    print("The 25-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 25)*100))
-    print("The 50-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 50)*100))
-    print("The 75-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 75)*100))
-    print("The 95-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 95)*100))
-    print("The 99-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 99)*100))
-    print()
-    print("Overall accuracy NN is %2.2f percentage of %d tested data points." % (accuracy*100, len(labelsTestSamples)))
-    print()
-    print()
-    print("Details for the wrong predictions")
-    print()
-    print("Wrong predicitions in total: ", wrong)
-    print("Should be office but predicted kitchen %d corresponds to %2.2f percentage of wrongs." % (shouldBeOfficePredictsKitchen, shouldBeOfficePredictsKitchen/wrong*100))
-    print("Should be office but predicted living room %d corresponds to %2.2f percentage of wrongs." % (shouldBeOfficePredictsLivingRoom, shouldBeOfficePredictsLivingRoom/wrong*100))
-    print("Should be kitchen but predicted office %d corresponds to %2.2f percentage of wrongs." % (shouldBeKitchenPredictsOffice, shouldBeKitchenPredictsOffice/wrong*100))
-    print("Should be kitchen but predicted living room %d corresponds to %2.2f percentage of wrongs." % (shouldBeKitchenPredictsLivingRoom, shouldBeKitchenPredictsLivingRoom/wrong*100))
-    print("Should be living room but predicted office %d corresponds to %2.2f percentage of wrongs." % (shouldBeLivingRoomPredictsOffice, shouldBeLivingRoomPredictsOffice/wrong*100))
-    print("Should be living room but predicted kitchen %d corresponds to %2.2f percentage of wrongs." % (shouldBeLivingRoomPredictsKitchen, shouldBeLivingRoomPredictsKitchen/wrong*100))
-    print()
-    print("********************************************************************************************")
+    # # temp = "{"
+    # # for i in range(len(bh)-1):
+    # #     temp +=  str(bh[i]) + ", "
+    # # temp += str(bh[len(bh)-1]) + "}"
+    # # print("bh: \n", temp)
+    # # print()
+    # # temp = "{"
+    # # for i in range(wh.shape[0]):
+    # #     temp += "{"
+    # #     for j in range(wh.shape[1]-1):
+    # #         temp +=  str(wh[i][j]) + ", "
+    # #     temp += str(wh[i][wh.shape[1]-1]) + "}, "
+    # # temp += "}"
+    # # print("wh: \n", temp)
+    # # print()
+    # # temp = "{"
+    # # for i in range(len(bo)-1):
+    # #     temp +=  str(bo[i]) + ", "
+    # # temp += str(bo[len(bo)-1]) + "}"
+    # # print("bo: \n", temp)
+    # # print()
+    # # temp = "{"
+    # # for i in range(wo.shape[0]):
+    # #     temp += "{"
+    # #     for j in range(wo.shape[1]-1):
+    # #         temp +=  str(wo[i][j]) + ", "
+    # #     temp += str(wh[i][wo.shape[1]-1]) + "}, "
+    # # temp += "}"
+    # # print("wo: \n", temp)
+    # print()
+    # print("error cost: ", error_cost)
+    # print()
+    # print("The 5-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 5)*100))
+    # print("The 25-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 25)*100))
+    # print("The 50-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 50)*100))
+    # print("The 75-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 75)*100))
+    # print("The 95-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 95)*100))
+    # print("The 99-fractile of the percentage sure is %2.2f" % (np.percentile(percentageSure, 99)*100))
+    # print()
+    # print("Overall accuracy NN is %2.2f percentage of %d tested data points." % (accuracy*100, len(labelsTestSamples)))
+    # print()
+    # print()
+    # print("Details for the wrong predictions")
+    # print()
+    # print("Wrong predicitions in total: ", wrong)
+    # print("Should be office but predicted kitchen %d corresponds to %2.2f percentage of wrongs." % (shouldBeOfficePredictsKitchen, shouldBeOfficePredictsKitchen/wrong*100))
+    # print("Should be office but predicted living room %d corresponds to %2.2f percentage of wrongs." % (shouldBeOfficePredictsLivingRoom, shouldBeOfficePredictsLivingRoom/wrong*100))
+    # print("Should be kitchen but predicted office %d corresponds to %2.2f percentage of wrongs." % (shouldBeKitchenPredictsOffice, shouldBeKitchenPredictsOffice/wrong*100))
+    # print("Should be kitchen but predicted living room %d corresponds to %2.2f percentage of wrongs." % (shouldBeKitchenPredictsLivingRoom, shouldBeKitchenPredictsLivingRoom/wrong*100))
+    # print("Should be living room but predicted office %d corresponds to %2.2f percentage of wrongs." % (shouldBeLivingRoomPredictsOffice, shouldBeLivingRoomPredictsOffice/wrong*100))
+    # print("Should be living room but predicted kitchen %d corresponds to %2.2f percentage of wrongs." % (shouldBeLivingRoomPredictsKitchen, shouldBeLivingRoomPredictsKitchen/wrong*100))
+    # print()
+    # print("********************************************************************************************")
