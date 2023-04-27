@@ -1,14 +1,16 @@
 import numpy as np
-from ExtractData import extractDistinctBSSIDAndNumberOfDataPoints, extractData, extractDataFromMultipleFiles
+from ExtractData import extractDistinctBSSIDAndNumberOfDataPoints, extractData, extractDataFromMultipleFiles, getSamplesAndLabelsFromOneFile, getSamplesAndLabelsFromMultipleFiles
 from NeuralNetwork import trainingModelNN, getPredictedLabelsNN, testingNN
 from MatrixManipulation import randomSplitSamplesAndLabels, deterministicSplitMatrix
 
-def NNOwnDataSet(locations, filename, partOfData, bias = True):
+def NNOwnDataSet(locations, filename, partOfData, bias):
     
-    distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename, locations)
-    samples, labels = extractData(filename, distinctBSSID, dataPoints, locations)
+    # distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename, locations)
+    # samples, labels = extractData(filename, distinctBSSID, dataPoints, locations)
     
-    trainingSamplesOverall, testSamplesOverall, trainingLabelsOverall, testLabelsOverall = randomSplitSamplesAndLabels(samples, labels, partOfData)
+    # trainingSamplesOverall, testSamplesOverall, trainingLabelsOverall, testLabelsOverall = randomSplitSamplesAndLabels(samples, labels, partOfData)
+    
+    trainingSamplesOverall, testSamplesOverall, trainingLabelsOverall, testLabelsOverall = getSamplesAndLabelsFromOneFile(locations, filename, partOfData)
     
     wh, bh, wo, bo, error_cost_list, error_cost, percentageSure, accuracy = bestModelNN(trainingSamplesOverall, trainingLabelsOverall, bias, numberOfClasses=len(locations))
     
@@ -23,60 +25,30 @@ def NNOwnDataSet(locations, filename, partOfData, bias = True):
     
     return accuracy, fiveFractile
     
+
+def NNAgainstOtherDatasets(locations, filename, filenameTests, partOfData, bias):
+
+    # distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename, locations)
+    # trainingSamples, trainingLabels = extractData(filename, distinctBSSID, dataPoints, locations)
     
-    # print("Training Samples: ", trainingSamples)
-    # print("Labels Training Samples: ", labelsTrainingSamples)
-    # print("Test Samples: ", testSamples)
-    # print("Labels Test Samples: ", labelsTestSamples)
+    # testSamples, testLabels = extractDataFromMultipleFiles(filenameTests, locations, distinctBSSID)
     
-    wh, bh, wo, bo, error_cost_list, error_cost = trainingModelNN(trainingSamples, labelsTrainingSamples, testSamples, bias, numberOfClasses=len(locations))
+    # trainingSamplesOverall, testSamplesOverall, trainingLabelsOverall, testLabelsOverall = randomSplitSamplesAndLabels(trainingSamples, trainingLabels, partOfData)
     
-    # print()
-    # print("********************************************************************************************")
-    # print()
-    # print(filename)
+    # testSamples = np.concatenate((testSamples, testSamplesOverall))
+    # testLabels = np.concatenate((testLabels, testLabelsOverall))
     
-    # testingNN(testSamples, labelsTestSamples, wh, bh, wo, bo, error_cost_list, error_cost)
-    predictedLabels, percentageSure = getPredictedLabelsNN(testSamples, labelsTestSamples, wh, bh, wo, bo, error_cost_list, error_cost)
-    accuracy = testingNN(labelsTestSamples, predictedLabels, wh, bh, wo, bo, error_cost, percentageSure)
+    trainingSamples, testSamplesOverall, trainingLabels, testLabelsOverall = getSamplesAndLabelsFromMultipleFiles(locations, filename, filenameTests, partOfData)
     
+    wh, bh, wo, bo, error_cost_list, error_cost, _, _ = bestModelNN(trainingSamples, trainingLabels, bias, numberOfClasses=len(locations))
     
+    predictedLabels, percentageSure = getPredictedLabelsNN(testSamplesOverall, testLabelsOverall, wh, bh, wo, bo, error_cost_list, error_cost)
+    accuracy = testingNN(testLabelsOverall, predictedLabels)
+    
+    fiveFractile = np.percentile(percentageSure, 5)*100
     
     return accuracy, fiveFractile
-
-
-def bestModelNN(samples, labels, bias, numberOfClasses):
-    bestAccuracy = float('-inf')
-    bestwh = None
-    bestbh = None
-    bestwo = None
-    bestbo = None
-    bestError_cost_list = None
-    bestError_cost = None
-    bestPercentageSure = None
     
-    for i in range(1,6):
-        trainingSamples, testSamples, trainingLabels, testLabels = deterministicSplitMatrix(samples, labels, 1/5, i)
-        wh, bh, wo, bo, error_cost_list, error_cost = trainingModelNN(trainingSamples, trainingLabels, bias, numberOfClasses)
-        
-        predictedLabels, percentageSure = getPredictedLabelsNN(testSamples, testLabels, wh, bh, wo, bo, error_cost_list, error_cost)
-        accuracy = testingNN(testLabels, predictedLabels)
-        
-        if accuracy > bestAccuracy:
-            bestAccuracy = accuracy
-            bestwh = wh
-            bestbh = bh
-            bestwo = wo
-            bestbo = bo
-            bestError_cost_list = error_cost_list
-            bestError_cost = error_cost
-            bestPercentageSure = percentageSure
-    
-    return bestwh, bestbh, bestwo, bestbo, bestError_cost_list, bestError_cost, bestPercentageSure, bestAccuracy
-    
-def NNAgainstOtherDatasets(locations, filename, filenameTest):
-
-    distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename)
     # print("************")
     
     distin = ""
@@ -121,6 +93,36 @@ def NNAgainstOtherDatasets(locations, filename, filenameTest):
     
     accuracyNN(testSamples, testLabels, wh, bh, wo, bo, error_cost_list, error_cost)
 
+
+def bestModelNN(samples, labels, bias, numberOfClasses):
+    bestAccuracy = float('-inf')
+    bestwh = None
+    bestbh = None
+    bestwo = None
+    bestbo = None
+    bestError_cost_list = None
+    bestError_cost = None
+    bestPercentageSure = None
+    
+    for i in range(1,6):
+        trainingSamples, testSamples, trainingLabels, testLabels = deterministicSplitMatrix(samples, labels, 1/5, i)
+        wh, bh, wo, bo, error_cost_list, error_cost = trainingModelNN(trainingSamples, trainingLabels, bias, numberOfClasses)
+        
+        predictedLabels, percentageSure = getPredictedLabelsNN(testSamples, testLabels, wh, bh, wo, bo, error_cost_list, error_cost)
+        accuracy = testingNN(testLabels, predictedLabels)
+        
+        if accuracy > bestAccuracy:
+            bestAccuracy = accuracy
+            bestwh = wh
+            bestbh = bh
+            bestwo = wo
+            bestbo = bo
+            bestError_cost_list = error_cost_list
+            bestError_cost = error_cost
+            bestPercentageSure = percentageSure
+    
+    return bestwh, bestbh, bestwo, bestbo, bestError_cost_list, bestError_cost, bestPercentageSure, bestAccuracy
+    
 
 def DataSet(locations, filename):
     

@@ -1,5 +1,30 @@
 import numpy as np
-from MatrixManipulation import changeMatrice
+from MatrixManipulation import changeMatrice, randomSplitSamplesAndLabels
+
+def getSamplesAndLabelsFromOneFile(locations, filename, partOfData):
+    
+    distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename, locations)
+    samples, labels = extractData(filename, distinctBSSID, dataPoints, locations)
+    
+    trainingSamplesOverall, testSamplesOverall, trainingLabelsOverall, testLabelsOverall = randomSplitSamplesAndLabels(samples, labels, partOfData)
+    
+    return trainingSamplesOverall, testSamplesOverall, trainingLabelsOverall, testLabelsOverall
+
+
+def getSamplesAndLabelsFromMultipleFiles(locations, filename, filenameTests, partOfData):
+    
+    distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(filename, locations)
+    trainingSamples, trainingLabels = extractData(filename, distinctBSSID, dataPoints, locations)
+    
+    testSamplesOverall, testLabelsOverall = extractDataFromMultipleFiles(filenameTests, locations, distinctBSSID)
+    
+    trainingSamples, testSamples, trainingLabels, testLabels = randomSplitSamplesAndLabels(trainingSamples, trainingLabels, partOfData)
+    
+    testSamplesOverall = np.concatenate((testSamples, testSamplesOverall))
+    testLabelsOverall = np.concatenate((testLabels, testLabelsOverall))
+    
+    return trainingSamples, testSamplesOverall, trainingLabels, testLabelsOverall
+
 
 def extractDistinctBSSIDAndNumberOfDataPoints(filename, locations, distinctBSSIDTraining = []):
     if(distinctBSSIDTraining != []):

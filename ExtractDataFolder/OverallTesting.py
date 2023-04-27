@@ -16,164 +16,182 @@ def main():
     partOfData = [1, 2/3, 1/3, 2/9, 1/9]
     minutes = [45, 30, 15, 10, 5]
     
-    # """ SVM three rooms """
+    """ SVM three rooms """
     
-    # for i in range(len(partOfData)):
-    #     ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i])
-    #     printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM3")
+    for i in range(len(partOfData)):
+        ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i])
+        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM3")
     
-    # """ SVM four rooms """
+    """ SVM four rooms """
     
-    # for i in range(len(partOfData)):
-    #     ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, partOfData[i])
-    #     printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM4")
+    for i in range(len(partOfData)):
+        ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, partOfData[i])
+        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM4")
         
     """ NN three rooms with bias """
 
     for i in range(len(partOfData)):
-        ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], True)
-        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-B")
+        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], True)
+        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-B", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
     
-    # """ NN three rooms without bias """
+    """ NN three rooms without bias """
 
-    # for i in range(len(partOfData)):
-    #     ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], False)
-    #     printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-UB")
+    for i in range(len(partOfData)):
+        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], False)
+        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-UB", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
         
-    # """ NN four rooms without bias """
+    """ NN four rooms without bias """
 
-    # for i in range(len(partOfData)):
-    #     ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, partOfData[i], False)
-    #     printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN4-UB")
+    for i in range(len(partOfData)):
+        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, partOfData[i], False)
+        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN4-UB", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
     
-def predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfFile):
+def predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData):
     ownDsM = ownDsE = otherDayM = otherDayE = otherTimeM = otherTimeE = 0
     
     """ Morning own dataset """
     
-    ownDsM1 = SVMOwnDataSet(locations, fileFirstMorning, partOfFile)
-    ownDsM2 = SVMOwnDataSet(locations, fileSecondMorning, partOfFile)
-    ownDsM3 = SVMOwnDataSet(locations, fileThirdMorning, partOfFile)
-    ownDsM4 = SVMOwnDataSet(locations, fileFourthMorning, partOfFile)
+    ownDsM1 = SVMOwnDataSet(locations, fileFirstMorning, partOfData)
+    ownDsM2 = SVMOwnDataSet(locations, fileSecondMorning, partOfData)
+    ownDsM3 = SVMOwnDataSet(locations, fileThirdMorning, partOfData)
+    ownDsM4 = SVMOwnDataSet(locations, fileFourthMorning, partOfData)
 
     ownDsM = (ownDsM1 + ownDsM2 + ownDsM3 + ownDsM4) / 4
     
     """ Evening own dataset """
     
-    ownDsE1 = SVMOwnDataSet(locations, fileFirstEvening, partOfFile)
-    ownDsE2 = SVMOwnDataSet(locations, fileSecondEvening, partOfFile)
-    ownDsE3 = SVMOwnDataSet(locations, fileThirdEvening, partOfFile)
+    ownDsE1 = SVMOwnDataSet(locations, fileFirstEvening, partOfData)
+    ownDsE2 = SVMOwnDataSet(locations, fileSecondEvening, partOfData)
+    ownDsE3 = SVMOwnDataSet(locations, fileThirdEvening, partOfData)
 
     ownDsE = (ownDsE1 + ownDsE2 + ownDsE3) / 3
     
     """ Morning other dataset """
     
-    otherDayM1 = SVMAgainstOtherDatasets(locations, fileFirstMorning, [fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfFile)
-    otherDayM2 = SVMAgainstOtherDatasets(locations, fileSecondMorning, [fileFirstMorning, fileThirdMorning, fileFourthMorning], partOfFile)
-    otherDayM3 = SVMAgainstOtherDatasets(locations, fileThirdMorning, [fileFirstMorning, fileSecondMorning, fileFourthMorning], partOfFile)
-    otherDayM4 = SVMAgainstOtherDatasets(locations, fileFourthMorning, [fileFirstMorning, fileSecondMorning, fileThirdMorning], partOfFile)
+    otherDayM1 = SVMAgainstOtherDatasets(locations, fileFirstMorning, [fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfData)
+    otherDayM2 = SVMAgainstOtherDatasets(locations, fileSecondMorning, [fileFirstMorning, fileThirdMorning, fileFourthMorning], partOfData)
+    otherDayM3 = SVMAgainstOtherDatasets(locations, fileThirdMorning, [fileFirstMorning, fileSecondMorning, fileFourthMorning], partOfData)
+    otherDayM4 = SVMAgainstOtherDatasets(locations, fileFourthMorning, [fileFirstMorning, fileSecondMorning, fileThirdMorning], partOfData)
     
     otherDayM = (otherDayM1 + otherDayM2 + otherDayM3 + otherDayM4) / 4
     
     """ Evening other dataset """
     
-    otherDayE1 = SVMAgainstOtherDatasets(locations, fileFirstEvening, [fileSecondEvening, fileThirdEvening], partOfFile)
-    otherDayE2 = SVMAgainstOtherDatasets(locations, fileSecondEvening, [fileFirstEvening, fileThirdEvening], partOfFile)
-    otherDayE3 = SVMAgainstOtherDatasets(locations, fileThirdEvening, [fileFirstEvening, fileSecondEvening], partOfFile)
+    otherDayE1 = SVMAgainstOtherDatasets(locations, fileFirstEvening, [fileSecondEvening, fileThirdEvening], partOfData)
+    otherDayE2 = SVMAgainstOtherDatasets(locations, fileSecondEvening, [fileFirstEvening, fileThirdEvening], partOfData)
+    otherDayE3 = SVMAgainstOtherDatasets(locations, fileThirdEvening, [fileFirstEvening, fileSecondEvening], partOfData)
     
     otherDayE = (otherDayE1 + otherDayE2 + otherDayE3) / 3
     
     """ Morning other time """
     
-    otherTimeM1 = SVMAgainstOtherDatasets(locations, fileFirstMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfFile)
-    otherTimeM2 = SVMAgainstOtherDatasets(locations, fileSecondMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfFile)
-    otherTimeM3 = SVMAgainstOtherDatasets(locations, fileThirdMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfFile)
-    otherTimeM4 = SVMAgainstOtherDatasets(locations, fileFourthMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfFile)
+    otherTimeM1 = SVMAgainstOtherDatasets(locations, fileFirstMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfData)
+    otherTimeM2 = SVMAgainstOtherDatasets(locations, fileSecondMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfData)
+    otherTimeM3 = SVMAgainstOtherDatasets(locations, fileThirdMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfData)
+    otherTimeM4 = SVMAgainstOtherDatasets(locations, fileFourthMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfData)
     
     otherTimeM = (otherTimeM1 + otherTimeM2 + otherTimeM3 + otherTimeM4) / 4
     
     """ Evening other time """
     
-    otherTimeE1 = SVMAgainstOtherDatasets(locations, fileFirstEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfFile)
-    otherTimeE2 = SVMAgainstOtherDatasets(locations, fileSecondEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfFile)
-    otherTimeE3 = SVMAgainstOtherDatasets(locations, fileThirdEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfFile)
+    otherTimeE1 = SVMAgainstOtherDatasets(locations, fileFirstEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfData)
+    otherTimeE2 = SVMAgainstOtherDatasets(locations, fileSecondEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfData)
+    otherTimeE3 = SVMAgainstOtherDatasets(locations, fileThirdEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfData)
     
     otherTimeE = (otherTimeE1 + otherTimeE2 + otherTimeE3) / 3
     
     return ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE
 
-def predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfFile, bias):
-    ownDsM = ownDsE = otherDayM = otherDayE = otherTimeM = otherTimeE = 0
+def predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData, bias):
+    ownDsM = ownDsE = otherDayM = otherDayE = otherTimeM = otherTimeE = ownFiveFractileM = ownFiveFractileE = 0
     
     """ Morning own dataset """
     
-    ownDsM1, fiveFractile = NNOwnDataSet(locations, fileFirstMorning, partOfFile, bias)
-    ownDsM2, fiveFractile = NNOwnDataSet(locations, fileSecondMorning, partOfFile, bias)
-    ownDsM3, fiveFractile = NNOwnDataSet(locations, fileThirdMorning, partOfFile, bias)
-    ownDsM4, fiveFractile = NNOwnDataSet(locations, fileFourthMorning, partOfFile, bias)
+    ownDsM1, ownFiveFractileM1 = NNOwnDataSet(locations, fileFirstMorning, partOfData, bias)
+    ownDsM2, ownFiveFractileM2 = NNOwnDataSet(locations, fileSecondMorning, partOfData, bias)
+    ownDsM3, ownFiveFractileM3 = NNOwnDataSet(locations, fileThirdMorning, partOfData, bias)
+    ownDsM4, ownFiveFractileM4 = NNOwnDataSet(locations, fileFourthMorning, partOfData, bias)
 
     ownDsM = (ownDsM1 + ownDsM2 + ownDsM3 + ownDsM4) / 4
+    ownFiveFractileM = (ownFiveFractileM1 + ownFiveFractileM2 + ownFiveFractileM3 + ownFiveFractileM4) / 4
     
-    # """ Evening own dataset """
+    """ Evening own dataset """
     
-    # ownDsE1 = NNOwnDataSet(locations, fileFirstEvening, partOfFile)
-    # ownDsE2 = NNOwnDataSet(locations, fileSecondEvening, partOfFile)
-    # ownDsE3 = NNOwnDataSet(locations, fileThirdEvening, partOfFile)
+    ownDsE1, ownFiveFractileE1 = NNOwnDataSet(locations, fileFirstEvening, partOfData, bias)
+    ownDsE2, ownFiveFractileE2 = NNOwnDataSet(locations, fileSecondEvening, partOfData, bias)
+    ownDsE3, ownFiveFractileE3 = NNOwnDataSet(locations, fileThirdEvening, partOfData, bias)
 
-    # ownDsE = (ownDsE1 + ownDsE2 + ownDsE3) / 3
+    ownDsE = (ownDsE1 + ownDsE2 + ownDsE3) / 3
+    ownFiveFractileE = (ownFiveFractileE1 + ownFiveFractileE2 + ownFiveFractileE3) / 3
     
-    # """ Morning other dataset """
+    """ Morning other dataset """
     
-    # otherDayM1 = NNAgainstOtherDatasets(locations, fileFirstMorning, [fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfFile)
-    # otherDayM2 = NNAgainstOtherDatasets(locations, fileSecondMorning, [fileFirstMorning, fileThirdMorning, fileFourthMorning], partOfFile)
-    # otherDayM3 = NNAgainstOtherDatasets(locations, fileThirdMorning, [fileFirstMorning, fileSecondMorning, fileFourthMorning], partOfFile)
-    # otherDayM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileFirstMorning, fileSecondMorning, fileThirdMorning], partOfFile)
+    otherDayM1, otherDayFiveFractileM1 = NNAgainstOtherDatasets(locations, fileFirstMorning, [fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfData, bias)
+    otherDayM2, otherDayFiveFractileM2 = NNAgainstOtherDatasets(locations, fileSecondMorning, [fileFirstMorning, fileThirdMorning, fileFourthMorning], partOfData, bias)
+    otherDayM3, otherDayFiveFractileM3 = NNAgainstOtherDatasets(locations, fileThirdMorning, [fileFirstMorning, fileSecondMorning, fileFourthMorning], partOfData, bias)
+    otherDayM4, otherDayFiveFractileM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileFirstMorning, fileSecondMorning, fileThirdMorning], partOfData, bias)
     
-    # otherDayM = (otherDayM1 + otherDayM2 + otherDayM3 + otherDayM4) / 4
+    otherDayM = (otherDayM1 + otherDayM2 + otherDayM3 + otherDayM4) / 4
+    otherDayFiveFractileM = (otherDayFiveFractileM1 + otherDayFiveFractileM2 + otherDayFiveFractileM3 + otherDayFiveFractileM4) / 4
     
-    # """ Evening other dataset """
+    """ Evening other dataset """
     
-    # otherDayE1 = NNAgainstOtherDatasets(locations, fileFirstEvening, [fileSecondEvening, fileThirdEvening], partOfFile)
-    # otherDayE2 = NNAgainstOtherDatasets(locations, fileSecondEvening, [fileFirstEvening, fileThirdEvening], partOfFile)
-    # otherDayE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileFirstEvening, fileSecondEvening], partOfFile)
+    otherDayE1, otherDayFiveFractileE1 = NNAgainstOtherDatasets(locations, fileFirstEvening, [fileSecondEvening, fileThirdEvening], partOfData, bias)
+    otherDayE2, otherDayFiveFractileE2 = NNAgainstOtherDatasets(locations, fileSecondEvening, [fileFirstEvening, fileThirdEvening], partOfData, bias)
+    otherDayE3, otherDayFiveFractileE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileFirstEvening, fileSecondEvening], partOfData, bias)
     
-    # otherDayE = (otherDayE1 + otherDayE2 + otherDayE3) / 3
+    otherDayE = (otherDayE1 + otherDayE2 + otherDayE3) / 3
+    otherDayFiveFractileE = (otherDayFiveFractileE1 + otherDayFiveFractileE2 + otherDayFiveFractileE3) / 3
     
-    # """ Morning other time """
+    """ Morning other time """
     
-    # otherTimeM1 = NNAgainstOtherDatasets(locations, fileFirstMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfFile)
-    # otherTimeM2 = NNAgainstOtherDatasets(locations, fileSecondMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfFile)
-    # otherTimeM3 = NNAgainstOtherDatasets(locations, fileThirdMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfFile)
-    # otherTimeM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfFile)
+    otherTimeM1, otherTimeFiveFractileM1 = NNAgainstOtherDatasets(locations, fileFirstMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfData, bias)
+    otherTimeM2, otherTimeFiveFractileM2 = NNAgainstOtherDatasets(locations, fileSecondMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfData, bias)
+    otherTimeM3, otherTimeFiveFractileM3 = NNAgainstOtherDatasets(locations, fileThirdMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfData, bias)
+    otherTimeM4, otherTimeFiveFractileM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileFirstEvening, fileSecondEvening, fileThirdEvening], partOfData, bias)
     
-    # otherTimeM = (otherTimeM1 + otherTimeM2 + otherTimeM3 + otherTimeM4) / 4
+    otherTimeM = (otherTimeM1 + otherTimeM2 + otherTimeM3 + otherTimeM4) / 4
+    otherTimeFiveFractileM = (otherTimeFiveFractileM1 + otherTimeFiveFractileM2 + otherTimeFiveFractileM3 + otherTimeFiveFractileM4) / 4
     
-    # """ Evening other time """
+    """ Evening other time """
     
-    # otherTimeE1 = NNAgainstOtherDatasets(locations, fileFirstEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfFile)
-    # otherTimeE2 = NNAgainstOtherDatasets(locations, fileSecondEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfFile)
-    # otherTimeE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfFile)
+    otherTimeE1, otherTimeFiveFractileE1 = NNAgainstOtherDatasets(locations, fileFirstEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfData, bias)
+    otherTimeE2, otherTimeFiveFractileE2 = NNAgainstOtherDatasets(locations, fileSecondEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfData, bias)
+    otherTimeE3, otherTimeFiveFractileE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning], partOfData, bias)
     
-    # otherTimeE = (otherTimeE1 + otherTimeE2 + otherTimeE3) / 3
+    otherTimeE = (otherTimeE1 + otherTimeE2 + otherTimeE3) / 3
+    otherTimeFiveFractileE = (otherTimeFiveFractileE1 + otherTimeFiveFractileE2 + otherTimeFiveFractileE3) / 3
     
-    return ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE
+    return ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE
     
 
-def printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes, modelType):
+def printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes, modelType, ownFiveFractileM = 0, ownFiveFractileE = 0, otherDayFiveFractileM = 0, otherDayFiveFractileE = 0, otherTimeFiveFractileM = 0, otherTimeFiveFractileE = 0):
     print(f"****************** {modelType} ******************")
     print("Antal minutter: ", minutes)
     print()
     print("Nøjagtighed egen dataindsamling")
     print("Morgen: %2.2f procent" % (ownDsM*100))
+    if (ownFiveFractileM != 0):
+        print("5-fraktil morgen: %2.2f procent" % (ownFiveFractileM))
     print("Aften: %2.2f procent" % (ownDsE*100))
+    if (ownFiveFractileE != 0):
+        print("5-fraktil aften: %2.2f procent" % (ownFiveFractileE))
     print()
     print("Nøjagtighed anden dag")
     print("Morgen: %2.2f procent" % (otherDayM*100))
+    if (otherDayFiveFractileM != 0):
+        print("5-fraktil morgen: %2.2f procent" % (otherDayFiveFractileM))
     print("Aften: %2.2f procent" % (otherDayE*100))
+    if (otherDayFiveFractileE != 0):
+        print("5-fraktil aften: %2.2f procent" % (otherDayFiveFractileE))
     print()
     print("Nøjagtighed andet tidspunkt")
     print("Morgen: %2.2f procent" % (otherTimeM*100))
+    if (otherTimeFiveFractileM != 0):
+        print("5-fraktil morgen: %2.2f procent" % (otherTimeFiveFractileM))
     print("Aften: %2.2f procent" % (otherTimeE*100))
+    if (otherTimeFiveFractileE != 0):
+        print("5-fraktil aften: %2.2f procent" % (otherTimeFiveFractileE))
     print()
     
 if __name__ == '__main__':
