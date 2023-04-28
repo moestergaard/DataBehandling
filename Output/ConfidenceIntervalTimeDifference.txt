@@ -1,0 +1,111 @@
+****************** SVM3 ******************
+Antal minutter:  45
+
+Nøjagtighed egen dataindsamling
+Morgen: 89.51 procent
+Aften: 89.43 procent
+
+Nøjagtighed anden dag
+Morgen: 76.37 procent
+Aften: 82.83 procent
+
+Nøjagtighed andet tidspunkt
+Morgen: 79.52 procent
+Aften: 78.33 procent
+
+****************** SVM4 ******************
+Antal minutter:  45
+
+Nøjagtighed egen dataindsamling
+Morgen: 79.78 procent
+Aften: 79.61 procent
+
+Nøjagtighed anden dag
+Morgen: 62.89 procent
+Aften: 64.30 procent
+
+Nøjagtighed andet tidspunkt
+Morgen: 62.79 procent
+Aften: 63.60 procent
+
+0.7851387645478961 0.776566757493188 0.6802480070859167 0.8318264014466547
+0.7633451957295374 0.7648648648648648 0.8074204946996466
+0.612895493767977 0.6226145038167938 0.610777002646139 0.767797419971333
+0.7242240456653586 0.6790780141843972 0.7547440028643037
+0.5736692015209125 0.6337927756653993 0.685361216730038 0.7789923954372624
+0.6803734961393428 0.549470281917759 0.6656491291075597
+****************** NN3-B ******************
+Antal minutter:  45
+
+Nøjagtighed egen dataindsamling
+Morgen: 76.84 procent
+5-fraktil morgen: 59.22 procent
+Aften: 77.85 procent
+5-fraktil aften: 69.81 procent
+
+Nøjagtighed anden dag
+Morgen: 65.35 procent
+5-fraktil morgen: 56.43 procent
+Aften: 71.93 procent
+5-fraktil aften: 64.74 procent
+
+Nøjagtighed andet tidspunkt
+Morgen: 66.80 procent
+5-fraktil morgen: 54.17 procent
+Aften: 63.18 procent
+5-fraktil aften: 67.02 procent
+
+0.6911369740376008 0.7465940054495913 0.704162976085031 0.7332730560578662
+0.7001779359430605 0.745945945945946 0.7667844522968198
+0.636385426653883 0.6414599236641222 0.6410873225884051 0.6710463449593884
+0.6621476988940421 0.6297872340425532 0.7590404582885786
+0.6200095057034221 0.6668250950570342 0.7255228136882129 0.684648288973384
+0.6229125516250673 0.4938049919195547 0.7069491829771952
+****************** NN3-UB ******************
+Antal minutter:  45
+
+Nøjagtighed egen dataindsamling
+Morgen: 71.88 procent
+5-fraktil morgen: 56.84 procent
+Aften: 73.76 procent
+5-fraktil aften: 60.70 procent
+
+Nøjagtighed anden dag
+Morgen: 64.75 procent
+5-fraktil morgen: 56.99 procent
+Aften: 68.37 procent
+5-fraktil aften: 56.80 procent
+
+Nøjagtighed andet tidspunkt
+Morgen: 67.43 procent
+5-fraktil morgen: 55.59 procent
+Aften: 60.79 procent
+5-fraktil aften: 59.89 procent
+
+0.7198391420911529 0.6256720430107527 0.5722811671087533 0.5414699932569117
+0.6183155080213903 0.6608695652173913 0.7675350701402806
+0.46729807005003576 0.4942897930049964 0.5048404446038006 0.4791369472182596
+0.5690991713445602 0.5093532870122929 0.43942230542925914
+0.4410978435216539 0.4713954731776867 0.5360898235608625 0.4808412047763322
+0.5534709193245778 0.45537389439828463 0.5171535781291879
+****************** NN4-UB ******************
+Antal minutter:  45
+
+Nøjagtighed egen dataindsamling
+Morgen: 61.48 procent
+5-fraktil morgen: 45.04 procent
+Aften: 68.22 procent
+5-fraktil aften: 58.69 procent
+
+Nøjagtighed anden dag
+Morgen: 48.64 procent
+5-fraktil morgen: 44.20 procent
+Aften: 50.60 procent
+5-fraktil aften: 58.69 procent
+
+Nøjagtighed andet tidspunkt
+Morgen: 48.24 procent
+5-fraktil morgen: 44.20 procent
+Aften: 50.87 procent
+5-fraktil aften: 56.95 procent
+
