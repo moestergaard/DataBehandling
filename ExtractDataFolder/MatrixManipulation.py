@@ -1,6 +1,9 @@
 import numpy as np
 
 def randomSplitSamplesAndLabels(samples, labels, ratio):
+    
+    np.random.seed(43)
+    
     m, n = samples.shape
     trainingRows = int(np.ceil(m * ratio))
     trainingIndices = np.random.choice(m, trainingRows, replace=False)

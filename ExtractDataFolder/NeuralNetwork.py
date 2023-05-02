@@ -1,38 +1,114 @@
 import numpy as np
-from ExtractData import getSamplesAndLabelsFromOneFile, getSamplesAndLabelsFromMultipleFiles
-from MatrixManipulation import deterministicSplitMatrix
+from ExtractData import getSamplesAndLabelsFromOneFile, getSamplesAndLabelsFromMultipleFiles, extractData, extractDistinctBSSIDAndNumberOfDataPoints, extractDataFromMultipleFiles
+from MatrixManipulation import deterministicSplitMatrix, randomSplitSamplesAndLabels
 
-def NNOwnDataSet(locations, filename, partOfData, bias):
+def NNOwnDataSet(locations, filename, partOfData, bias, predictsFourthRoom):
     
     trainingSamplesOverall, testSamplesOverall, trainingLabelsOverall, testLabelsOverall = getSamplesAndLabelsFromOneFile(locations, filename, partOfData)
     
     wh, bh, wo, bo, percentageSure, accuracy = bestModelNN(trainingSamplesOverall, trainingLabelsOverall, bias, numberOfClasses=len(locations))
     
-    fiveFractile = np.percentile(percentageSure, 5)*100
+    fiveFractile = np.percentile(percentageSure, 5)
+        
+    if (predictsFourthRoom):
+        accuracyFourthRoom, numberOfTestPointsFourthRoom = getAccuracyFourthRoom(locations, filename, partOfData, wh, bh, wo, bo, fiveFractile)    
     
-    if partOfData == 1: return accuracy, fiveFractile
+    if partOfData == 1: 
+        if (predictsFourthRoom):
+            numberOfTestPoints = int(np.floor(trainingLabelsOverall.shape[0] * 0.2))
+            numberOfTestPointsTotal = numberOfTestPoints + numberOfTestPointsFourthRoom
+            accuracy = accuracy * numberOfTestPoints / (numberOfTestPointsTotal) + accuracyFourthRoom * numberOfTestPointsFourthRoom / numberOfTestPointsTotal
+        
+        return accuracy, fiveFractile
     
-    predictedLabels, percentageSure = getPredictedLabelsNN(testSamplesOverall, wh, bh, wo, bo)
+    predictedLabels, _ = getPredictedLabelsNN(testSamplesOverall, wh, bh, wo, bo, fiveFractile)
     accuracy = testingNN(testLabelsOverall, predictedLabels)
     
-    fiveFractile = np.percentile(percentageSure, 5)*100
+    if (predictsFourthRoom):
+        numberOfTestPoints = (trainingLabelsOverall.shape[0] - int(np.ceil(trainingLabelsOverall.shape[0] * partOfData))) * 0.2
+        numberOfTestPointsTotal = numberOfTestPoints + numberOfTestPointsFourthRoom
+        accuracy = accuracy * numberOfTestPoints / (numberOfTestPointsTotal) + accuracyFourthRoom * numberOfTestPointsFourthRoom / numberOfTestPointsTotal
+    
+    # fiveFractile = np.percentile(percentageSure, 5)*100
     
     return accuracy, fiveFractile
     
 
-def NNAgainstOtherDatasets(locations, filename, filenameTests, partOfData, bias):
+def NNAgainstOtherDatasets(locations, filename, filenameTests, partOfData, bias, predictsFourthRoom):
 
     trainingSamples, testSamplesOverall, trainingLabels, testLabelsOverall = getSamplesAndLabelsFromMultipleFiles(locations, filename, filenameTests, partOfData)
     
-    wh, bh, wo, bo, _, _ = bestModelNN(trainingSamples, trainingLabels, bias, numberOfClasses=len(locations))
+    wh, bh, wo, bo, percentageSure, _ = bestModelNN(trainingSamples, trainingLabels, bias, numberOfClasses=len(locations))
     
-    predictedLabels, percentageSure = getPredictedLabelsNN(testSamplesOverall, wh, bh, wo, bo)
+    fiveFractile = np.percentile(percentageSure, 5)
+    
+    predictedLabels, _ = getPredictedLabelsNN(testSamplesOverall, wh, bh, wo, bo, fiveFractile)
+    
     accuracy = testingNN(testLabelsOverall, predictedLabels)
     
-    fiveFractile = np.percentile(percentageSure, 5)*100
+    if (predictsFourthRoom):
+        accuracyFourthRoom, numberOfTestPointsFourthRoom = getAccuracyFourthRoomTestFile(locations, filename, filenameTests, partOfData, wh, bh, wo, bo, fiveFractile)    
+        if (partOfData == 1):
+            numberOfTestPoints = int(np.floor(testLabelsOverall.shape[0] * 0.2))
+        else:
+            numberOfTestPoints = (testLabelsOverall.shape[0] - int(np.ceil(testLabelsOverall.shape[0] * partOfData))) * 0.2
+        numberOfTestPointsTotal = numberOfTestPoints + numberOfTestPointsFourthRoom
+        accuracy = accuracy * numberOfTestPoints / (numberOfTestPointsTotal) + accuracyFourthRoom * numberOfTestPointsFourthRoom / numberOfTestPointsTotal
     
     return accuracy, fiveFractile
 
+
+def getAccuracyFourthRoom(locations, filename, partOfData, wh, bh, wo, bo, fiveFractile):
+    distinctBSSID, _ = extractDistinctBSSIDAndNumberOfDataPoints(locations, filename)
+    distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(["___", "___", "___", "Entré"], filename, distinctBSSID)
+    samples, labels = extractData(["___", "___", "___", "Entré"], filename, distinctBSSID, dataPoints)
+
+    trainingSamples, _, trainingLabels, _ = randomSplitSamplesAndLabels(samples, labels, partOfData)
+    
+    predictedLabels, _ = getPredictedLabelsNN(trainingSamples, wh, bh, wo, bo, fiveFractile)
+    accuracyFourthRoom = testingNN(trainingLabels, predictedLabels)
+    
+    # if partOfData == 1:
+    #     numberOfTestPoints = int(np.floor(trainingLabelsOverall.shape[0] * 0.2))
+    # else: 
+    #     numberOfTestPoints = (trainingLabelsOverall.shape[0] - int(np.ceil(trainingLabelsOverall.shape[0] * partOfData))) * 0.2
+        
+    numberOfTestPointsFourthRoom = int(np.floor(trainingLabels.shape[0] * 0.2))
+    
+    # numberOfTestPointsTotal = numberOfTestPoints + numberOfTestPointsFourthRoom
+    
+    # accuracy = accuracy * numberOfTestPoints / (numberOfTestPointsTotal) + accuracyFourthRoom * numberOfTestPointsFourthRoom / numberOfTestPointsTotal
+    
+    return accuracyFourthRoom, numberOfTestPointsFourthRoom
+
+def getAccuracyFourthRoomTestFile(locations, filename, filenameTests, partOfData, wh, bh, wo, bo, fiveFractile):
+    
+    distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(locations, filename)
+    trainingSamples, trainingLabels = extractData(locations, filename, distinctBSSID, dataPoints)
+    
+    testSamplesOverall, testLabelsOverall = extractDataFromMultipleFiles(["___", "___", "___", "Entré"], filenameTests, distinctBSSID)
+    
+    # distinctBSSID, _ = extractDistinctBSSIDAndNumberOfDataPoints(locations, filename)
+    # distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(["___", "___", "___", "Entré"], filename, distinctBSSID)
+    # samples, labels = extractData(["___", "___", "___", "Entré"], filename, distinctBSSID, dataPoints)
+
+    trainingSamples, _, trainingLabels, _ = randomSplitSamplesAndLabels(testSamplesOverall, testLabelsOverall, partOfData)
+    
+    predictedLabels, _ = getPredictedLabelsNN(trainingSamples, wh, bh, wo, bo, fiveFractile)
+    accuracyFourthRoom = testingNN(trainingLabels, predictedLabels)
+    
+    # if partOfData == 1:
+    #     numberOfTestPoints = int(np.floor(trainingLabelsOverall.shape[0] * 0.2))
+    # else: 
+    #     numberOfTestPoints = (trainingLabelsOverall.shape[0] - int(np.ceil(trainingLabelsOverall.shape[0] * partOfData))) * 0.2
+        
+    numberOfTestPointsFourthRoom = int(np.floor(trainingLabels.shape[0] * 0.2))
+    
+    # numberOfTestPointsTotal = numberOfTestPoints + numberOfTestPointsFourthRoom
+    
+    # accuracy = accuracy * numberOfTestPoints / (numberOfTestPointsTotal) + accuracyFourthRoom * numberOfTestPointsFourthRoom / numberOfTestPointsTotal
+    
+    return accuracyFourthRoom, numberOfTestPointsFourthRoom
 
 def bestModelNN(samples, labels, bias, numberOfClasses):
     bestAccuracy = float('-inf')
@@ -147,7 +223,7 @@ def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasse
     
     return wh_list[i], bh_list[i], wo_list[i], bo_list[i]
 
-def getPredictedLabelsNN(testSamples, wh, bh, wo, bo):
+def getPredictedLabelsNN(testSamples, wh, bh, wo, bo, fiveFractile = 0):
     predictedLabels = []
     percentageSure = []
 
@@ -158,8 +234,12 @@ def getPredictedLabelsNN(testSamples, wh, bh, wo, bo):
     ah = softmax(z0)
 
     for i in range(len(ah)):
-        predictedLabels.append(np.argmax(ah[i]))
-        percentageSure.append(np.max(ah[i]))
+        maxPercentage = np.max(ah[i])
+        if (maxPercentage < fiveFractile):
+            predictedLabels.append(3)
+        else:
+            predictedLabels.append(np.argmax(ah[i]))
+            percentageSure.append(maxPercentage)
 
     return predictedLabels, percentageSure
     
@@ -170,7 +250,17 @@ def softmax(A):
 
 
 def sigmoid(x):
-    return 1/(1+np.exp(-x))
+    # for i in range (x.shape[0]):
+    #     for j in range (x.shape[1]):
+    #         if x[i,j] >= 0:
+    #             x[i,j] = 1 / (1 + np.exp(-x[i,j]))
+    #         else:
+    #             x[i,j] = np.exp(x[i,j]) / (1 + np.exp(x[i,j]))
+    
+    # return x
+    x = 1/(1+np.exp(-x))
+    return x
+    
 
 
 def sigmoid_der(x):
