@@ -18,8 +18,8 @@ def main():
     
     partOfData = [1, 2/3, 1/3, 2/9, 1/9]
     minutes = [45, 30, 15, 10, 5]
-    # partOfData = [1]
-    # minutes = [45]
+    # partOfData = [2/3]
+    # minutes = [30]
     
     # """ SVM three rooms """
     
@@ -52,17 +52,17 @@ def main():
     
     # printMethod(overallPredictions, "SVM4")
         
-    # # """ NN three rooms with bias """
+    """ NN three rooms with bias """
     
-    # # overallPredictions = []
+    overallPredictions = []
 
-    # # for i in range(len(partOfData)): 
-    # #     predictions = predictionsNN(fileNameTests, fileNotARoom, locations, partOfData[i], True, False)
-    # #     # predictionsUpdated = changePredictions(predictions)
-    # #     overallPredictions.append(predictions)
-    # #     # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-B", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
+    for i in range(len(partOfData)): 
+        predictions = predictionsNN(fileNameTests, fileNotARoom, locations, partOfData[i], True, False)
+        # predictionsUpdated = changePredictions(predictions)
+        overallPredictions.append(predictions)
+        # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-B", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
     
-    # # printMethod(overallPredictions, "NN3-B")
+    printMethod(overallPredictions, "NN3-B")
     
     # """ NN three rooms with bias - predicts fourth room """
     
@@ -217,7 +217,7 @@ def predictionsNN(fileNameTests, fileNotARoom, locations, partOfData, bias, pred
     predictions = []
     
     for fileName in fileNameTests:
-        predict, _ = NNAgainstOtherDatasets(locations, fileName, [fileNotARoom], partOfData, bias, predictedFourthRoom)
+        predict, _ = NNAgainstOtherDatasets(locations, fileName, [fileNotARoom], partOfData, bias, predictedFourthRoom, True)
         predictions.append(predict)
         
     return predictions

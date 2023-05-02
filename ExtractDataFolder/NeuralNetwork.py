@@ -34,13 +34,14 @@ def NNOwnDataSet(locations, filename, partOfData, bias, predictsFourthRoom):
     return accuracy, fiveFractile
     
 
-def NNAgainstOtherDatasets(locations, filename, filenameTests, partOfData, bias, predictsFourthRoom):
+def NNAgainstOtherDatasets(locations, filename, filenameTests, partOfData, bias, predictsFourthRoom, testNotARoom = False):
 
-    trainingSamples, testSamplesOverall, trainingLabels, testLabelsOverall = getSamplesAndLabelsFromMultipleFiles(locations, filename, filenameTests, partOfData)
+    trainingSamples, testSamplesOverall, trainingLabels, testLabelsOverall = getSamplesAndLabelsFromMultipleFiles(locations, filename, filenameTests, partOfData, testNotARoom)
     
     wh, bh, wo, bo, percentageSure, _ = bestModelNN(trainingSamples, trainingLabels, bias, numberOfClasses=len(locations))
     
-    fiveFractile = np.percentile(percentageSure, 5)
+    # fiveFractile = np.percentile(percentageSure, 5)
+    fiveFractile = 0.5
     
     predictedLabels, _ = getPredictedLabelsNN(testSamplesOverall, wh, bh, wo, bo, fiveFractile, predictsFourthRoom)
     
@@ -137,10 +138,8 @@ def bestModelNN(samples, labels, bias, numberOfClasses):
 
 
 def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasses):
+    # one_hot_labels = np.eye(numberOfClasses)[labelsTrainingSamples]
     one_hot_labels = np.zeros((len(labelsTrainingSamples), numberOfClasses))
-
-    for i in range(len(labelsTrainingSamples)):
-        one_hot_labels[i, labelsTrainingSamples[i].astype(int)] = 1
 
     attributes = trainingSamples.shape[1]
     hidden_nodes = 4
@@ -160,7 +159,7 @@ def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasse
     else:
         bo = np.zeros(output_labels)
 
-    lr = 10e-5
+    lr = 0.001
 
     error_cost = []
     wh_list = []
@@ -169,53 +168,53 @@ def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasse
     bo_list = []
 
     for epoch in range(5000):
-        # Feedforward
-        # Phase 1
+        # feedforward
         zh = np.dot(trainingSamples, wh) + bh
-        ah = zh  # Use identity activation function instead of sigmoid
-        # Phase 2
+        ah = zh  # identity activation function
         zo = np.dot(ah, wo) + bo
-        ao = softmax(zo)
+        ao = zo
 
-        # Backpropagation
-        # Phase 1
-        dcost_dzo = ao - one_hot_labels
+        # cross-entropy loss
+        loss = -np.sum(one_hot_labels * (ao - np.max(ao, axis=1, keepdims=True)))
+        loss += np.sum(np.log(np.sum(np.exp(ao - np.max(ao, axis=1, keepdims=True)), axis=1)))
+        loss /= len(labelsTrainingSamples)
+        error_cost.append(loss)
+
+        # backpropagation
+        dzo_dao = np.ones_like(ao)
+        dzo_dao /= np.sum(np.exp(ao - np.max(ao, axis=1, keepdims=True)), axis=1, keepdims=True)
+        dzo_dao *= np.exp(ao - np.max(ao, axis=1, keepdims=True))
+        dcost_dao = -(one_hot_labels - dzo_dao)
+
         dzo_dwo = ah
-        dcost_wo = np.dot(dzo_dwo.T, dcost_dzo)
+        dcost_wo = np.dot(dzo_dwo.T, dcost_dao)
 
-        if bias:
-            dcost_bo = dcost_dzo
-
-        # Phases 2
         dzo_dah = wo
-        dcost_dah = np.dot(dcost_dzo, dzo_dah.T)
-        dah_dzh = np.ones_like(zh)  # Derivative of identity function is 1
+        dcost_dah = np.dot(dcost_dao, dzo_dah.T)
+        dcost_dah *= 1.0  # identity activation function
         dzh_dwh = trainingSamples
-        dcost_wh = np.dot(dzh_dwh.T, dah_dzh * dcost_dah)
+        dcost_wh = np.dot(dzh_dwh.T, dcost_dah)
 
         if bias:
-            dcost_bh = dcost_dah * dah_dzh
+            dcost_bo = dcost_dao.sum(axis=0)
 
-        # Update Weights
+        # update weights
         wh -= lr * dcost_wh
         if bias:
-            bh -= lr * dcost_bh.sum(axis=0)
+            bh -= lr * dcost_dah.sum(axis=0)
+            bo -= lr * dcost_bo
 
-        wo -= lr * dcost_wo
-        if bias:
-            bo -= lr * dcost_bo.sum(axis=0)
+        # store weights
+        wh_list.append(wh.copy())
+        wo_list.append(wo.copy())
+        bh_list.append(bh.copy())
+        bo_list.append(bo.copy())
 
-        if epoch % 200 == 0:
-            loss = -np.sum(one_hot_labels * np.log(ao))
-            error_cost.append(loss)
-            wh_list.append(wh.copy())
-            wo_list.append(wo.copy())
-            bh_list.append(bh.copy())
-            bo_list.append(bo.copy())
-
+    # select the best weights based on the lowest error cost
     i = np.argmin(error_cost)
 
     return wh_list[i], bh_list[i], wo_list[i], bo_list[i]
+
 
     
 # def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasses):
@@ -331,8 +330,11 @@ def getPredictedLabelsNN(testSamples, wh, bh, wo, bo, fiveFractile = 0, predicts
     
     
 def softmax(A):
+    A -= np.max(A, axis=1, keepdims=True)
     expA = np.exp(A)
-    return expA / expA.sum(axis=1, keepdims=True)
+    return expA / np.sum(expA, axis=1, keepdims=True)
+    # expA = np.exp(A)
+    # return expA / expA.sum(axis=1, keepdims=True)
 
 
 def sigmoid(x):

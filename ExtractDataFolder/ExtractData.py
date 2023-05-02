@@ -11,19 +11,20 @@ def getSamplesAndLabelsFromOneFile(locations, filename, partOfData):
     return trainingSamplesOverall, testSamplesOverall, trainingLabelsOverall, testLabelsOverall
 
 
-def getSamplesAndLabelsFromMultipleFiles(locations, filename, filenameTests, partOfData):
+def getSamplesAndLabelsFromMultipleFiles(locations, filename, filenameTests, partOfData, testNotARoom = False):
     
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(locations, filename)
     trainingSamples, trainingLabels = extractData(locations, filename, distinctBSSID, dataPoints)
     
     testSamplesOverall, testLabelsOverall = extractDataFromMultipleFiles(locations, filenameTests, distinctBSSID)
     
-    trainingSamples, testSamples, trainingLabels, testLabels = randomSplitSamplesAndLabels(trainingSamples, trainingLabels, partOfData)
+    newTrainingSamples, newTestSamples, newTrainingLabels, newTestLabels = randomSplitSamplesAndLabels(trainingSamples, trainingLabels, partOfData)
     
-    testSamplesOverall = np.concatenate((testSamples, testSamplesOverall))
-    testLabelsOverall = np.concatenate((testLabels, testLabelsOverall))
+    if not testNotARoom:
+        testSamplesOverall = np.concatenate((newTestSamples, testSamplesOverall))
+        testLabelsOverall = np.concatenate((newTestLabels, testLabelsOverall))
     
-    return trainingSamples, testSamplesOverall, trainingLabels, testLabelsOverall
+    return newTrainingSamples, testSamplesOverall, newTrainingLabels, testLabelsOverall
 
 
 def extractDataFromMultipleFiles(locations, filenameTests, distinctBSSID):
