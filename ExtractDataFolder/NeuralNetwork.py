@@ -42,7 +42,7 @@ def NNAgainstOtherDatasets(locations, filename, filenameTests, partOfData, bias,
     
     fiveFractile = np.percentile(percentageSure, 5)
     
-    predictedLabels, _ = getPredictedLabelsNN(testSamplesOverall, wh, bh, wo, bo, fiveFractile)
+    predictedLabels, _ = getPredictedLabelsNN(testSamplesOverall, wh, bh, wo, bo, fiveFractile, predictsFourthRoom)
     
     accuracy = testingNN(testLabelsOverall, predictedLabels)
     
@@ -60,8 +60,8 @@ def NNAgainstOtherDatasets(locations, filename, filenameTests, partOfData, bias,
 
 def getAccuracyFourthRoom(locations, filename, partOfData, wh, bh, wo, bo, fiveFractile):
     distinctBSSID, _ = extractDistinctBSSIDAndNumberOfDataPoints(locations, filename)
-    distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(["___", "___", "___", "Entré"], filename, distinctBSSID)
-    samples, labels = extractData(["___", "___", "___", "Entré"], filename, distinctBSSID, dataPoints)
+    distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(["___", "___", "___", "___", "Entré"], filename, distinctBSSID)
+    samples, labels = extractData(["___", "___", "___", "___", "Entré"], filename, distinctBSSID, dataPoints)
 
     trainingSamples, _, trainingLabels, _ = randomSplitSamplesAndLabels(samples, labels, partOfData)
     
@@ -86,7 +86,7 @@ def getAccuracyFourthRoomTestFile(locations, filename, filenameTests, partOfData
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(locations, filename)
     trainingSamples, trainingLabels = extractData(locations, filename, distinctBSSID, dataPoints)
     
-    testSamplesOverall, testLabelsOverall = extractDataFromMultipleFiles(["___", "___", "___", "Entré"], filenameTests, distinctBSSID)
+    testSamplesOverall, testLabelsOverall = extractDataFromMultipleFiles(["___", "___", "___",  "___", "Entré"], filenameTests, distinctBSSID)
     
     # distinctBSSID, _ = extractDistinctBSSIDAndNumberOfDataPoints(locations, filename)
     # distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(["___", "___", "___", "Entré"], filename, distinctBSSID)
@@ -134,7 +134,8 @@ def bestModelNN(samples, labels, bias, numberOfClasses):
             bestPercentageSure = percentageSure
     
     return bestwh, bestbh, bestwo, bestbo, bestPercentageSure, bestAccuracy
-    
+
+
 def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasses):
     one_hot_labels = np.zeros((len(labelsTrainingSamples), numberOfClasses))
 
@@ -147,70 +148,63 @@ def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasse
 
     np.random.seed(42)
 
-    wh = np.random.randn(attributes,hidden_nodes)
-    if (bias):
+    wh = np.random.randn(attributes, hidden_nodes)
+    if bias:
         bh = np.random.randn(hidden_nodes)
-    else: bh = np.zeros(hidden_nodes)
+    else:
+        bh = np.zeros(hidden_nodes)
 
-    wo = np.random.randn(hidden_nodes,output_labels)
-    if (bias):
+    wo = np.random.randn(hidden_nodes, output_labels)
+    if bias:
         bo = np.random.randn(output_labels)
-    else: bo = np.zeros(output_labels)
-    
-    lr = 10e-4
+    else:
+        bo = np.zeros(output_labels)
+
+    lr = 10e-5
 
     error_cost = []
-    wh_list = []   
+    wh_list = []
     wo_list = []
     bh_list = []
     bo_list = []
 
     for epoch in range(5000):
-    ############# feedforward
-
+        # Feedforward
         # Phase 1
         zh = np.dot(trainingSamples, wh) + bh
-        ah = sigmoid(zh)
-        # ah = zh
-
+        ah = zh  # Use identity activation function instead of sigmoid
         # Phase 2
         zo = np.dot(ah, wo) + bo
         ao = softmax(zo)
-        # ao = zo
 
-    ########## Back Propagation
-
-    ########## Phase 1
-
+        # Backpropagation
+        # Phase 1
         dcost_dzo = ao - one_hot_labels
         dzo_dwo = ah
-
         dcost_wo = np.dot(dzo_dwo.T, dcost_dzo)
 
-        if (bias):
+        if bias:
             dcost_bo = dcost_dzo
 
-    ########## Phases 2
-
+        # Phases 2
         dzo_dah = wo
-        dcost_dah = np.dot(dcost_dzo , dzo_dah.T)
-        dah_dzh = sigmoid_der(zh)
+        dcost_dah = np.dot(dcost_dzo, dzo_dah.T)
+        dah_dzh = np.ones_like(zh)  # Derivative of identity function is 1
         dzh_dwh = trainingSamples
         dcost_wh = np.dot(dzh_dwh.T, dah_dzh * dcost_dah)
 
-        if (bias):
+        if bias:
             dcost_bh = dcost_dah * dah_dzh
 
-        # Update Weights ================
-
+        # Update Weights
         wh -= lr * dcost_wh
-        if (bias):
+        if bias:
             bh -= lr * dcost_bh.sum(axis=0)
 
         wo -= lr * dcost_wo
-        if (bias):
+        if bias:
             bo -= lr * dcost_bo.sum(axis=0)
-        
+
         if epoch % 200 == 0:
             loss = -np.sum(one_hot_labels * np.log(ao))
             error_cost.append(loss)
@@ -218,17 +212,107 @@ def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasse
             wo_list.append(wo.copy())
             bh_list.append(bh.copy())
             bo_list.append(bo.copy())
-        
+
     i = np.argmin(error_cost)
-    
+
     return wh_list[i], bh_list[i], wo_list[i], bo_list[i]
 
-def getPredictedLabelsNN(testSamples, wh, bh, wo, bo, fiveFractile = 0):
+    
+# def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasses):
+#     one_hot_labels = np.zeros((len(labelsTrainingSamples), numberOfClasses))
+
+#     for i in range(len(labelsTrainingSamples)):
+#         one_hot_labels[i, labelsTrainingSamples[i].astype(int)] = 1
+
+#     attributes = trainingSamples.shape[1]
+#     hidden_nodes = 4
+#     output_labels = numberOfClasses
+
+#     np.random.seed(42)
+
+#     wh = np.random.randn(attributes,hidden_nodes)
+#     if (bias):
+#         bh = np.random.randn(hidden_nodes)
+#     else: bh = np.zeros(hidden_nodes)
+
+#     wo = np.random.randn(hidden_nodes,output_labels)
+#     if (bias):
+#         bo = np.random.randn(output_labels)
+#     else: bo = np.zeros(output_labels)
+    
+#     lr = 10e-4
+
+#     error_cost = []
+#     wh_list = []   
+#     wo_list = []
+#     bh_list = []
+#     bo_list = []
+
+#     for epoch in range(5000):
+#     ############# feedforward
+
+#         # Phase 1
+#         zh = np.dot(trainingSamples, wh) + bh
+#         ah = sigmoid(zh)
+#         # ah = zh
+
+#         # Phase 2
+#         zo = np.dot(ah, wo) + bo
+#         ao = softmax(zo)
+#         # ao = zo
+
+#     ########## Back Propagation
+
+#     ########## Phase 1
+
+#         dcost_dzo = ao - one_hot_labels
+#         dzo_dwo = ah
+
+#         dcost_wo = np.dot(dzo_dwo.T, dcost_dzo)
+
+#         if (bias):
+#             dcost_bo = dcost_dzo
+
+#     ########## Phases 2
+
+#         dzo_dah = wo
+#         dcost_dah = np.dot(dcost_dzo , dzo_dah.T)
+#         dah_dzh = sigmoid_der(zh)
+#         dzh_dwh = trainingSamples
+#         dcost_wh = np.dot(dzh_dwh.T, dah_dzh * dcost_dah)
+
+#         if (bias):
+#             dcost_bh = dcost_dah * dah_dzh
+
+#         # Update Weights ================
+
+#         wh -= lr * dcost_wh
+#         if (bias):
+#             bh -= lr * dcost_bh.sum(axis=0)
+
+#         wo -= lr * dcost_wo
+#         if (bias):
+#             bo -= lr * dcost_bo.sum(axis=0)
+        
+#         if epoch % 200 == 0:
+#             loss = -np.sum(one_hot_labels * np.log(ao))
+#             error_cost.append(loss)
+#             wh_list.append(wh.copy())
+#             wo_list.append(wo.copy())
+#             bh_list.append(bh.copy())
+#             bo_list.append(bo.copy())
+        
+#     i = np.argmin(error_cost)
+    
+#     return wh_list[i], bh_list[i], wo_list[i], bo_list[i]
+
+def getPredictedLabelsNN(testSamples, wh, bh, wo, bo, fiveFractile = 0, predictsFourthRoom = False):
     predictedLabels = []
     percentageSure = []
 
     zh = np.dot(testSamples, wh) + bh
-    ah = sigmoid(zh)
+    # ah = sigmoid(zh)
+    ah = zh
 
     z0 = np.dot(ah, wo) + bo
     ah = softmax(z0)
@@ -236,7 +320,9 @@ def getPredictedLabelsNN(testSamples, wh, bh, wo, bo, fiveFractile = 0):
     for i in range(len(ah)):
         maxPercentage = np.max(ah[i])
         if (maxPercentage < fiveFractile):
-            predictedLabels.append(3)
+            if (predictsFourthRoom):
+                predictedLabels.append(4)
+            else: predictedLabels.append(3)
         else:
             predictedLabels.append(np.argmax(ah[i]))
             percentageSure.append(maxPercentage)

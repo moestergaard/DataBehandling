@@ -66,7 +66,12 @@ def plot_confidence_intervals(data_sets, labels, title):
     
     # colors = ['blue', 'orange', 'green', 'red', 'purple', 'brown', 'teal']
     # colors = ['red', 'green', 'blue', 'orange', 'purple', 'teal', 'brown']
-    colors = ['blue', 'orange', 'green', 'red', 'purple', 'pink', 'gray']
+    # colors = ['blue', 'orange', 'green', 'red', 'purple', 'pink', 'gray']
+    # colors = ['red', 'green', 'blue', 'orange', 'magenta', 'brown', 'gray']
+    # colors = ['red', 'green', 'blue', 'orange', 'purple', 'brown', 'darkgray']
+    # colors = ["#B7F0B1", "#2EBD4F", "#B4E1E7", "#2471A3", "#BDADEA", "#6A5ACD", "#FFC0CB"]
+    colors = ["#9ACD32", "#FFA500", "#ADD8E6", "#4B0082", "#FF69B4", "#FF0000", "#A9A9A9"]
+
 
     for j, data_set in enumerate(data_sets):
         for i, data in enumerate(data_set):
@@ -313,7 +318,7 @@ dataNN4UB = [
 
 
 # Define data matrices and labels
-data_sets = [dataSVM3, dataSVM4, dataNN3B, dataNN3BP, dataNN3UB, dataNN3UB, dataNN4UB]
+data_sets = [dataSVM3, dataSVM4, dataNN3B, dataNN3BP, dataNN3UB, dataNN3UBP, dataNN4UB]
 labels = ['SVM3', 'SVM4', 'NN3-B', 'NN3-B-P', 'NN3-UB', 'NN3-UB-P', 'NN4-UB']
 # labels = ['SVM3', 'SVM4', 'NN3-B', 'NN3-UB', 'NN4-UB']
 

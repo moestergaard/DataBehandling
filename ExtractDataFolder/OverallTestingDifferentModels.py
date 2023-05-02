@@ -13,54 +13,104 @@ def main():
     fileSecondEvening = "Data/WifiData230423_17-21.txt"
     fileThirdEvening = "Data/WifiData230424_17-21.txt"
     
-    # partOfData = [1, 2/3, 1/3, 2/9, 1/9]
-    # minutes = [45, 30, 15, 10, 5]
-    partOfData = [1]
-    minutes = [45]
+    partOfData = [1, 2/3, 1/3, 2/9, 1/9]
+    minutes = [45, 30, 15, 10, 5]
+    # partOfData = [1]
+    # minutes = [45]
     
     """ SVM three rooms """
     
+    overallPredictions = []
+    
     for i in range(len(partOfData)):
-        ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i])
-        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM3")
+        ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, predictions = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i])
+        predictionsUpdated = changePredictions(predictions)
+        overallPredictions.append(predictionsUpdated)
+        #printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM3")
+    
+    printMethod(overallPredictions, "SVM3")
+    # print(f"****************** SVM3 ******************")
+    # print()
+    # print(overallPredictions)
+    # # print(overallPredictions[0])
+    # # for predictions in overallPredictions:
+    # #     print(predictions[0])
+    # print()
     
     """ SVM four rooms """
     
+    overallPredictions = []
+    
     for i in range(len(partOfData)):
-        ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, partOfData[i])
-        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM4")
+        ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, predictions = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, partOfData[i])
+        predictionsUpdated = changePredictions(predictions)
+        overallPredictions.append(predictionsUpdated)
+        # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM4")
+    
+    printMethod(overallPredictions, "SVM4")
         
     """ NN three rooms with bias """
+    
+    overallPredictions = []
 
     for i in range(len(partOfData)):
-        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], True, False)
-        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-B", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
+        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE, predictions = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], True, False)
+        predictionsUpdated = changePredictions(predictions)
+        overallPredictions.append(predictionsUpdated)
+        # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-B", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
+    
+    printMethod(overallPredictions, "NN3-B")
     
     """ NN three rooms with bias - predicts fourth room """
+    
+    overallPredictions = []
 
     for i in range(len(partOfData)):
-        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], True, True)
-        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-B-Predicts", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
+        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE, predictions = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], True, True)
+        predictionsUpdated = changePredictions(predictions)
+        overallPredictions.append(predictionsUpdated)
+        # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-B-Predicts", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
+    
+    printMethod(overallPredictions, "NN3-B-P")
     
     """ NN three rooms without bias """
+    
+    overallPredictions = []
 
     for i in range(len(partOfData)):
-        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], False, False)
-        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-UB", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
+        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE, predictions = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], False, False)
+        predictionsUpdated = changePredictions(predictions)
+        overallPredictions.append(predictionsUpdated)
+        # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-UB", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
         
+    printMethod(overallPredictions, "NN3-UB")
+    
     """ NN three rooms without bias - predicts fourth room """
+    
+    overallPredictions = []
 
     for i in range(len(partOfData)):
-        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], False, True)
-        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-UB-Predicts", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
+        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE, predictions = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], False, True)
+        predictionsUpdated = changePredictions(predictions)
+        overallPredictions.append(predictionsUpdated)
+        # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-UB-Predicts", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
         
+    printMethod(overallPredictions, "NN3-UB-P")
+    
     """ NN four rooms without bias """
+    
+    overallPredictions = []
 
     for i in range(len(partOfData)):
-        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, partOfData[i], False, False)
-        printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN4-UB", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
+        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE, predictions = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, partOfData[i], False, False)
+        predictionsUpdated = changePredictions(predictions)
+        overallPredictions.append(predictionsUpdated)
+        # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN4-UB", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
+    
+    printMethod(overallPredictions, "NN4-UB")
     
 def predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData):
+    predictions = []
     ownDsM = ownDsE = otherDayM = otherDayE = otherTimeM = otherTimeE = 0
     
     """ Morning own dataset """
@@ -70,7 +120,10 @@ def predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFo
     ownDsM3 = SVMOwnDataSet(locations, fileThirdMorning, partOfData)
     ownDsM4 = SVMOwnDataSet(locations, fileFourthMorning, partOfData)
 
-    print([ownDsM1, ownDsM2, ownDsM3, ownDsM4])
+    # Append all ownDsM to predictions
+    predictions.append([ownDsM1, ownDsM2, ownDsM3, ownDsM4])
+    
+    # print([ownDsM1, ownDsM2, ownDsM3, ownDsM4])
     ownDsM = (ownDsM1 + ownDsM2 + ownDsM3 + ownDsM4) / 4
     
     """ Evening own dataset """
@@ -79,7 +132,8 @@ def predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFo
     ownDsE2 = SVMOwnDataSet(locations, fileSecondEvening, partOfData)
     ownDsE3 = SVMOwnDataSet(locations, fileThirdEvening, partOfData)
 
-    print([ownDsE1, ownDsE2, ownDsE3])
+    predictions.append([ownDsE1, ownDsE2, ownDsE3])
+    # print([ownDsE1, ownDsE2, ownDsE3])
     ownDsE = (ownDsE1 + ownDsE2 + ownDsE3) / 3
     
     """ Morning other dataset """
@@ -97,7 +151,8 @@ def predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFo
     otherDayM42 = SVMAgainstOtherDatasets(locations, fileFourthMorning, [fileSecondMorning], partOfData)
     otherDayM43 = SVMAgainstOtherDatasets(locations, fileFourthMorning, [fileThirdMorning], partOfData)
     
-    print([otherDayM11, otherDayM12, otherDayM13, otherDayM21, otherDayM22, otherDayM23, otherDayM31, otherDayM32, otherDayM33, otherDayM41, otherDayM42, otherDayM43])
+    
+    predictions.append([otherDayM11, otherDayM12, otherDayM13, otherDayM21, otherDayM22, otherDayM23, otherDayM31, otherDayM32, otherDayM33, otherDayM41, otherDayM42, otherDayM43])
     otherDayM = (otherDayM11 + otherDayM12 + otherDayM13 + otherDayM21 + otherDayM22 + otherDayM23 + otherDayM31 + otherDayM32 + otherDayM33 + otherDayM41 + otherDayM42 + otherDayM43) / 12
     
     """ Morning other time """
@@ -115,7 +170,7 @@ def predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFo
     otherTimeM42 = SVMAgainstOtherDatasets(locations, fileFourthMorning, [fileSecondEvening], partOfData)
     otherTimeM43 = SVMAgainstOtherDatasets(locations, fileFourthMorning, [fileThirdEvening], partOfData)
     
-    print([otherTimeM11, otherTimeM12, otherTimeM13, otherTimeM21, otherTimeM22, otherTimeM23, otherTimeM31, otherTimeM32, otherTimeM33, otherTimeM41, otherTimeM42, otherTimeM43])
+    predictions.append([otherTimeM11, otherTimeM12, otherTimeM13, otherTimeM21, otherTimeM22, otherTimeM23, otherTimeM31, otherTimeM32, otherTimeM33, otherTimeM41, otherTimeM42, otherTimeM43])
     otherTimeM = (otherTimeM11 + otherTimeM12 + otherTimeM13 + otherTimeM21 + otherTimeM22 + otherTimeM23 + otherTimeM31 + otherTimeM32 + otherTimeM33 + otherTimeM41 + otherTimeM42 + otherTimeM43) / 12
     
     """ Evening other dataset """
@@ -127,7 +182,7 @@ def predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFo
     otherDayE31 = SVMAgainstOtherDatasets(locations, fileThirdEvening, [fileFirstEvening], partOfData)
     otherDayE32 = SVMAgainstOtherDatasets(locations, fileThirdEvening, [fileSecondEvening], partOfData)
     
-    print([otherDayE11, otherDayE12, otherDayE21, otherDayE22, otherDayE31, otherDayE32])
+    predictions.append([otherDayE11, otherDayE12, otherDayE21, otherDayE22, otherDayE31, otherDayE32])
     otherDayE = (otherDayE11 + otherDayE12 + otherDayE21 + otherDayE22 + otherDayE31 + otherDayE32) / 6
     
     
@@ -146,12 +201,13 @@ def predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFo
     otherTimeE33 = SVMAgainstOtherDatasets(locations, fileThirdEvening, [fileThirdMorning], partOfData)
     otherTimeE34 = SVMAgainstOtherDatasets(locations, fileThirdEvening, [fileFourthMorning], partOfData)
     
-    print([otherTimeE11, otherTimeE12, otherTimeE13, otherTimeE14, otherTimeE21, otherTimeE22, otherTimeE23, otherTimeE24, otherTimeE31, otherTimeE32, otherTimeE33, otherTimeE34])
+    predictions.append([otherTimeE11, otherTimeE12, otherTimeE13, otherTimeE14, otherTimeE21, otherTimeE22, otherTimeE23, otherTimeE24, otherTimeE31, otherTimeE32, otherTimeE33, otherTimeE34])
     otherTimeE = (otherTimeE11 + otherTimeE12 + otherTimeE13 + otherTimeE14 + otherTimeE21 + otherTimeE22 + otherTimeE23 + otherTimeE24 + otherTimeE31 + otherTimeE32 + otherTimeE33 + otherTimeE34) / 12
     
-    return ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE
+    return ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, predictions
 
 def predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData, bias, predictedFourthRoom):
+    predictions = []
     ownDsM = ownDsE = otherDayM = otherDayE = otherTimeM = otherTimeE = ownFiveFractileM = ownFiveFractileE = 0
     
     """ Morning own dataset """
@@ -161,7 +217,7 @@ def predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFou
     ownDsM3, ownFiveFractileM3 = NNOwnDataSet(locations, fileThirdMorning, partOfData, bias, predictedFourthRoom)
     ownDsM4, ownFiveFractileM4 = NNOwnDataSet(locations, fileFourthMorning, partOfData, bias, predictedFourthRoom)
 
-    print([ownDsM1, ownDsM2, ownDsM3, ownDsM4])
+    predictions.append([ownDsM1, ownDsM2, ownDsM3, ownDsM4])
     ownDsM = (ownDsM1 + ownDsM2 + ownDsM3 + ownDsM4) / 4
     ownFiveFractileM = (ownFiveFractileM1 + ownFiveFractileM2 + ownFiveFractileM3 + ownFiveFractileM4) / 4
     
@@ -171,7 +227,7 @@ def predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFou
     ownDsE2, ownFiveFractileE2 = NNOwnDataSet(locations, fileSecondEvening, partOfData, bias, predictedFourthRoom)
     ownDsE3, ownFiveFractileE3 = NNOwnDataSet(locations, fileThirdEvening, partOfData, bias, predictedFourthRoom)
 
-    print([ownDsE1, ownDsE2, ownDsE3])
+    predictions.append([ownDsE1, ownDsE2, ownDsE3])
     ownDsE = (ownDsE1 + ownDsE2 + ownDsE3) / 3
     ownFiveFractileE = (ownFiveFractileE1 + ownFiveFractileE2 + ownFiveFractileE3) / 3
     
@@ -190,7 +246,7 @@ def predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFou
     otherDayM42, otherDayFiveFractileM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileSecondMorning], partOfData, bias, predictedFourthRoom)
     otherDayM43, otherDayFiveFractileM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileThirdMorning], partOfData, bias, predictedFourthRoom)
     
-    print([otherDayM11, otherDayM12, otherDayM13, otherDayM21, otherDayM22, otherDayM23, otherDayM31, otherDayM32, otherDayM33, otherDayM41, otherDayM42, otherDayM43])
+    predictions.append([otherDayM11, otherDayM12, otherDayM13, otherDayM21, otherDayM22, otherDayM23, otherDayM31, otherDayM32, otherDayM33, otherDayM41, otherDayM42, otherDayM43])
     otherDayM = (otherDayM11 + otherDayM12 + otherDayM13 + otherDayM21 + otherDayM22 + otherDayM23 + otherDayM31 + otherDayM32 + otherDayM33 + otherDayM41 + otherDayM42 + otherDayM43) / 12
     otherDayFiveFractileM = (otherDayFiveFractileM1 + otherDayFiveFractileM2 + otherDayFiveFractileM3 + otherDayFiveFractileM4) / 4
     
@@ -209,7 +265,7 @@ def predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFou
     otherTimeM42, otherTimeFiveFractileM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileSecondEvening], partOfData, bias, predictedFourthRoom)
     otherTimeM43, otherTimeFiveFractileM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileThirdEvening], partOfData, bias, predictedFourthRoom)
     
-    print([otherTimeM11, otherTimeM12, otherTimeM13, otherTimeM21, otherTimeM22, otherTimeM23, otherTimeM31, otherTimeM32, otherTimeM33, otherTimeM41, otherTimeM42, otherTimeM43])
+    predictions.append([otherTimeM11, otherTimeM12, otherTimeM13, otherTimeM21, otherTimeM22, otherTimeM23, otherTimeM31, otherTimeM32, otherTimeM33, otherTimeM41, otherTimeM42, otherTimeM43])
     otherTimeM = (otherTimeM11 + otherTimeM12 + otherTimeM13 + otherTimeM21 + otherTimeM22 + otherTimeM23 + otherTimeM31 + otherTimeM32 + otherTimeM33 + otherTimeM41 + otherTimeM42 + otherTimeM43) / 12
     otherTimeFiveFractileM = (otherTimeFiveFractileM1 + otherTimeFiveFractileM2 + otherTimeFiveFractileM3 + otherTimeFiveFractileM4) / 4
     
@@ -222,7 +278,7 @@ def predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFou
     otherDayE31, otherDayFiveFractileE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileFirstEvening], partOfData, bias, predictedFourthRoom)
     otherDayE32, otherDayFiveFractileE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileSecondEvening], partOfData, bias, predictedFourthRoom)
     
-    print([otherDayE11, otherDayE12, otherDayE21, otherDayE22, otherDayE31, otherDayE32])
+    predictions.append([otherDayE11, otherDayE12, otherDayE21, otherDayE22, otherDayE31, otherDayE32])
     otherDayE = (otherDayE11 + otherDayE12 + otherDayE21 + otherDayE22 + otherDayE31 + otherDayE32) / 6
     otherDayFiveFractileE = (otherDayFiveFractileE1 + otherDayFiveFractileE2 + otherDayFiveFractileE3) / 3
     
@@ -241,41 +297,55 @@ def predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFou
     otherTimeE33, otherTimeFiveFractileE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileThirdMorning], partOfData, bias, predictedFourthRoom)
     otherTimeE34, otherTimeFiveFractileE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileFourthMorning], partOfData, bias, predictedFourthRoom)
     
-    print([otherTimeE11, otherTimeE12, otherTimeE13, otherTimeE14, otherTimeE21, otherTimeE22, otherTimeE23, otherTimeE24, otherTimeE31, otherTimeE32, otherTimeE33, otherTimeE34])
+    predictions.append([otherTimeE11, otherTimeE12, otherTimeE13, otherTimeE14, otherTimeE21, otherTimeE22, otherTimeE23, otherTimeE24, otherTimeE31, otherTimeE32, otherTimeE33, otherTimeE34])
     otherTimeE = (otherTimeE11 + otherTimeE12 + otherTimeE13 + otherTimeE14 + otherTimeE21 + otherTimeE22 + otherTimeE23 + otherTimeE24 + otherTimeE31 + otherTimeE32 + otherTimeE33 + otherTimeE34) / 12
     otherTimeFiveFractileE = (otherTimeFiveFractileE1 + otherTimeFiveFractileE2 + otherTimeFiveFractileE3) / 3
     
-    return ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE
+    return ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE, predictions
     
 
-def printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes, modelType, ownFiveFractileM = 0, ownFiveFractileE = 0, otherDayFiveFractileM = 0, otherDayFiveFractileE = 0, otherTimeFiveFractileM = 0, otherTimeFiveFractileE = 0):
+def changePredictions(predictions):
+    predictionsUpdated = []
+    for predict in predictions:
+        for p in predict:
+            predictionsUpdated.append(p)
+    return predictionsUpdated
+
+def printMethod(predictions, modelType):
     print(f"****************** {modelType} ******************")
-    print("Antal minutter: ", minutes)
     print()
-    print("Nøjagtighed egen dataindsamling")
-    print("Morgen: %2.2f procent" % (ownDsM*100))
-    if (ownFiveFractileM != 0):
-        print("5-fraktil morgen: %2.2f procent" % (ownFiveFractileM*100))
-    print("Aften: %2.2f procent" % (ownDsE*100))
-    if (ownFiveFractileE != 0):
-        print("5-fraktil aften: %2.2f procent" % (ownFiveFractileE*100))
+    print(predictions)
     print()
-    print("Nøjagtighed anden dag")
-    print("Morgen: %2.2f procent" % (otherDayM*100))
-    if (otherDayFiveFractileM != 0):
-        print("5-fraktil morgen: %2.2f procent" % (otherDayFiveFractileM*100))
-    print("Aften: %2.2f procent" % (otherDayE*100))
-    if (otherDayFiveFractileE != 0):
-        print("5-fraktil aften: %2.2f procent" % (otherDayFiveFractileE*100))
-    print()
-    print("Nøjagtighed andet tidspunkt")
-    print("Morgen: %2.2f procent" % (otherTimeM*100))
-    if (otherTimeFiveFractileM != 0):
-        print("5-fraktil morgen: %2.2f procent" % (otherTimeFiveFractileM*100))
-    print("Aften: %2.2f procent" % (otherTimeE*100))
-    if (otherTimeFiveFractileE != 0):
-        print("5-fraktil aften: %2.2f procent" % (otherTimeFiveFractileE*100))
-    print()
+    
+
+# def printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes, modelType, ownFiveFractileM = 0, ownFiveFractileE = 0, otherDayFiveFractileM = 0, otherDayFiveFractileE = 0, otherTimeFiveFractileM = 0, otherTimeFiveFractileE = 0):
+#     print(f"****************** {modelType} ******************")
+#     print("Antal minutter: ", minutes)
+#     print()
+#     print("Nøjagtighed egen dataindsamling")
+#     print("Morgen: %2.2f procent" % (ownDsM*100))
+#     if (ownFiveFractileM != 0):
+#         print("5-fraktil morgen: %2.2f procent" % (ownFiveFractileM*100))
+#     print("Aften: %2.2f procent" % (ownDsE*100))
+#     if (ownFiveFractileE != 0):
+#         print("5-fraktil aften: %2.2f procent" % (ownFiveFractileE*100))
+#     print()
+#     print("Nøjagtighed anden dag")
+#     print("Morgen: %2.2f procent" % (otherDayM*100))
+#     if (otherDayFiveFractileM != 0):
+#         print("5-fraktil morgen: %2.2f procent" % (otherDayFiveFractileM*100))
+#     print("Aften: %2.2f procent" % (otherDayE*100))
+#     if (otherDayFiveFractileE != 0):
+#         print("5-fraktil aften: %2.2f procent" % (otherDayFiveFractileE*100))
+#     print()
+#     print("Nøjagtighed andet tidspunkt")
+#     print("Morgen: %2.2f procent" % (otherTimeM*100))
+#     if (otherTimeFiveFractileM != 0):
+#         print("5-fraktil morgen: %2.2f procent" % (otherTimeFiveFractileM*100))
+#     print("Aften: %2.2f procent" % (otherTimeE*100))
+#     if (otherTimeFiveFractileE != 0):
+#         print("5-fraktil aften: %2.2f procent" % (otherTimeFiveFractileE*100))
+#     print()
     
 if __name__ == '__main__':
     main()
