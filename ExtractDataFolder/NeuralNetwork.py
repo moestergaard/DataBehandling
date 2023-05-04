@@ -40,7 +40,7 @@ def NNAgainstOtherDatasets(locations, filename, filenameTests, partOfData, bias,
     
     wh, bh, wo, bo, percentageSure, _ = bestModelNN(trainingSamples, trainingLabels, bias, activationFunction, numberOfClasses=len(locations))
     
-    # fiveFractile = np.percentile(percentageSure, 5)
+    fiveFractile = np.percentile(percentageSure, 5)
     fiveFractile = 0.5
     
     predictedLabels, _ = getPredictedLabelsNN(testSamplesOverall, wh, bh, wo, bo, activationFunction, fiveFractile, predictsFourthRoom)
@@ -175,50 +175,105 @@ def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, activationFunc
         else:
             ah = zh  # identity activation function
         zo = np.dot(ah, wo) + bo
-        ao = zo
+        ao = softmax(zo)
+        # ao = zo
 
-        # cross-entropy loss
-        loss = -np.sum(one_hot_labels * (ao - np.max(ao, axis=1, keepdims=True)))
-        loss += np.sum(np.log(np.sum(np.exp(ao - np.max(ao, axis=1, keepdims=True)), axis=1)))
-        loss /= len(labelsTrainingSamples)
-        error_cost.append(loss)
+        # # cross-entropy loss
+        # loss = -np.sum(one_hot_labels * (ao - np.max(ao, axis=1, keepdims=True)))
+        # loss += np.sum(np.log(np.sum(np.exp(ao - np.max(ao, axis=1, keepdims=True)), axis=1)))
+        # loss /= len(labelsTrainingSamples)
+        # error_cost.append(loss)
+
+########## Phase 1
+
+#         dcost_dzo = ao - one_hot_labels
+#         dzo_dwo = ah
+
+#         dcost_wo = np.dot(dzo_dwo.T, dcost_dzo)
+
+#         if (bias):
+#             dcost_bo = dcost_dzo
+
+#     ########## Phases 2
+
+#         dzo_dah = wo
+#         dcost_dah = np.dot(dcost_dzo , dzo_dah.T)
+#         dah_dzh = sigmoid_der(zh)
+#         dzh_dwh = trainingSamples
+#         dcost_wh = np.dot(dzh_dwh.T, dah_dzh * dcost_dah)
 
         # backpropagation
-        dzo_dao = np.ones_like(ao)
-        dzo_dao /= np.sum(np.exp(ao - np.max(ao, axis=1, keepdims=True)), axis=1, keepdims=True)
-        dzo_dao *= np.exp(ao - np.max(ao, axis=1, keepdims=True))
-        dcost_dao = -(one_hot_labels - dzo_dao)
-
+        dcost_dzo = ao - one_hot_labels
         dzo_dwo = ah
-        dcost_wo = np.dot(dzo_dwo.T, dcost_dao)
+        dcost_wo = np.dot(dzo_dwo.T, dcost_dzo)
 
+        if (bias):
+            dcost_bo = dcost_dzo
+            
         dzo_dah = wo
-        dcost_dah = np.dot(dcost_dao, dzo_dah.T)
+        dcost_dah = np.dot(dcost_dzo , dzo_dah.T)
         dzh_dwh = trainingSamples
-
+        
         if (activationFunction == 'sigmoid'):
             dah_dzh = sigmoid_der(zh)
             dcost_wh = np.dot(dzh_dwh.T, dah_dzh * dcost_dah)
         
         else:
-            dcost_dah *= 1.0  # identity activation function
-            dcost_wh = np.dot(dzh_dwh.T, dcost_dah)
+            # dcost_dah *= 1.0  # identity activation function
+            dah_dzh = 1.0  # identity activation function
+            dcost_wh = np.dot(dzh_dwh.T, dah_dzh * dcost_dah)
+        
+        if (bias):
+            dcost_bh = dcost_dah * dah_dzh
 
-        if bias:
-            dcost_bo = dcost_dao.sum(axis=0)
+        # # backpropagation
+        # dcost_dzo = ao - one_hot_labels
+        # dzo_dwo = ah
+        
+        # dzo_dao = np.ones_like(ao)
+        # dzo_dao /= np.sum(np.exp(ao - np.max(ao, axis=1, keepdims=True)), axis=1, keepdims=True)
+        # dzo_dao *= np.exp(ao - np.max(ao, axis=1, keepdims=True))
+        # dcost_dao = -(one_hot_labels - dzo_dao)
+
+        # dzo_dwo = ah
+        # dcost_wo = np.dot(dzo_dwo.T, dcost_dao)
+
+        # dzo_dah = wo
+        # dcost_dah = np.dot(dcost_dao, dzo_dah.T)
+        # dzh_dwh = trainingSamples
+
+        # if (activationFunction == 'sigmoid'):
+        #     dah_dzh = sigmoid_der(zh)
+        #     dcost_wh = np.dot(dzh_dwh.T, dah_dzh * dcost_dah)
+        
+        # else:
+        #     dcost_dah *= 1.0  # identity activation function
+        #     dcost_wh = np.dot(dzh_dwh.T, dcost_dah)
+
+        # if bias:
+        #     dcost_bo = dcost_dao.sum(axis=0)
 
         # update weights
         wh -= lr * dcost_wh
         wo -= lr * dcost_wo
         if bias:
-            bh -= lr * dcost_dah.sum(axis=0)
-            bo -= lr * dcost_bo
+            # bh -= lr * dcost_dah.sum(axis=0)
+            bh -= lr * dcost_bh.sum(axis=0)
+            bo -= lr * dcost_bo.sum(axis=0)
 
         # store weights
-        wh_list.append(wh.copy())
-        wo_list.append(wo.copy())
-        bh_list.append(bh.copy())
-        bo_list.append(bo.copy())
+        if epoch % 200 == 0:
+            loss = -np.sum(one_hot_labels * np.log(ao))
+            error_cost.append(loss)
+#             wh_list.append(wh.copy())
+#             wo_list.append(wo.copy())
+#             bh_list.append(bh.copy())
+#             bo_list.append(bo.copy())
+        
+            wh_list.append(wh.copy())
+            wo_list.append(wo.copy())
+            bh_list.append(bh.copy())
+            bo_list.append(bo.copy())
 
     # select the best weights based on the lowest error cost
     i = np.argmin(error_cost)
