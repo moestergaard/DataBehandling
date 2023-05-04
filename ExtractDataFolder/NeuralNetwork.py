@@ -2,16 +2,16 @@ import numpy as np
 from ExtractData import getSamplesAndLabelsFromOneFile, getSamplesAndLabelsFromMultipleFiles, extractData, extractDistinctBSSIDAndNumberOfDataPoints, extractDataFromMultipleFiles
 from MatrixManipulation import deterministicSplitMatrix, randomSplitSamplesAndLabels
 
-def NNOwnDataSet(locations, filename, partOfData, bias, predictsFourthRoom):
+def NNOwnDataSet(locations, filename, partOfData, bias, predictsFourthRoom, activationFunction):
     
     trainingSamplesOverall, testSamplesOverall, trainingLabelsOverall, testLabelsOverall = getSamplesAndLabelsFromOneFile(locations, filename, partOfData)
     
-    wh, bh, wo, bo, percentageSure, accuracy = bestModelNN(trainingSamplesOverall, trainingLabelsOverall, bias, numberOfClasses=len(locations))
+    wh, bh, wo, bo, percentageSure, accuracy = bestModelNN(trainingSamplesOverall, trainingLabelsOverall, bias, activationFunction, numberOfClasses=len(locations))
     
     fiveFractile = np.percentile(percentageSure, 5)
         
     if (predictsFourthRoom):
-        accuracyFourthRoom, numberOfTestPointsFourthRoom = getAccuracyFourthRoom(locations, filename, partOfData, wh, bh, wo, bo, fiveFractile)    
+        accuracyFourthRoom, numberOfTestPointsFourthRoom = getAccuracyFourthRoom(locations, filename, partOfData, wh, bh, wo, bo, activationFunction, fiveFractile)    
     
     if partOfData == 1: 
         if (predictsFourthRoom):
@@ -21,7 +21,7 @@ def NNOwnDataSet(locations, filename, partOfData, bias, predictsFourthRoom):
         
         return accuracy, fiveFractile
     
-    predictedLabels, _ = getPredictedLabelsNN(testSamplesOverall, wh, bh, wo, bo, fiveFractile)
+    predictedLabels, _ = getPredictedLabelsNN(testSamplesOverall, wh, bh, wo, bo, activationFunction, fiveFractile)
     accuracy = testingNN(testLabelsOverall, predictedLabels)
     
     if (predictsFourthRoom):
@@ -34,21 +34,21 @@ def NNOwnDataSet(locations, filename, partOfData, bias, predictsFourthRoom):
     return accuracy, fiveFractile
     
 
-def NNAgainstOtherDatasets(locations, filename, filenameTests, partOfData, bias, predictsFourthRoom, testNotARoom = False):
+def NNAgainstOtherDatasets(locations, filename, filenameTests, partOfData, bias, predictsFourthRoom, activationFunction, testNotARoom = False):
 
     trainingSamples, testSamplesOverall, trainingLabels, testLabelsOverall = getSamplesAndLabelsFromMultipleFiles(locations, filename, filenameTests, partOfData, testNotARoom)
     
-    wh, bh, wo, bo, percentageSure, _ = bestModelNN(trainingSamples, trainingLabels, bias, numberOfClasses=len(locations))
+    wh, bh, wo, bo, percentageSure, _ = bestModelNN(trainingSamples, trainingLabels, bias, activationFunction, numberOfClasses=len(locations))
     
     # fiveFractile = np.percentile(percentageSure, 5)
     fiveFractile = 0.5
     
-    predictedLabels, _ = getPredictedLabelsNN(testSamplesOverall, wh, bh, wo, bo, fiveFractile, predictsFourthRoom)
+    predictedLabels, _ = getPredictedLabelsNN(testSamplesOverall, wh, bh, wo, bo, activationFunction, fiveFractile, predictsFourthRoom)
     
     accuracy = testingNN(testLabelsOverall, predictedLabels)
     
     if (predictsFourthRoom):
-        accuracyFourthRoom, numberOfTestPointsFourthRoom = getAccuracyFourthRoomTestFile(locations, filename, filenameTests, partOfData, wh, bh, wo, bo, fiveFractile)    
+        accuracyFourthRoom, numberOfTestPointsFourthRoom = getAccuracyFourthRoomTestFile(locations, filename, filenameTests, partOfData, wh, bh, wo, bo, activationFunction, fiveFractile)    
         if (partOfData == 1):
             numberOfTestPoints = int(np.floor(testLabelsOverall.shape[0] * 0.2))
         else:
@@ -59,14 +59,14 @@ def NNAgainstOtherDatasets(locations, filename, filenameTests, partOfData, bias,
     return accuracy, fiveFractile
 
 
-def getAccuracyFourthRoom(locations, filename, partOfData, wh, bh, wo, bo, fiveFractile):
+def getAccuracyFourthRoom(locations, filename, partOfData, wh, bh, wo, bo, activationFunction, fiveFractile):
     distinctBSSID, _ = extractDistinctBSSIDAndNumberOfDataPoints(locations, filename)
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(["___", "___", "___", "___", "Entré"], filename, distinctBSSID)
     samples, labels = extractData(["___", "___", "___", "___", "Entré"], filename, distinctBSSID, dataPoints)
 
     trainingSamples, _, trainingLabels, _ = randomSplitSamplesAndLabels(samples, labels, partOfData)
     
-    predictedLabels, _ = getPredictedLabelsNN(trainingSamples, wh, bh, wo, bo, fiveFractile)
+    predictedLabels, _ = getPredictedLabelsNN(trainingSamples, wh, bh, wo, bo, activationFunction, fiveFractile)
     accuracyFourthRoom = testingNN(trainingLabels, predictedLabels)
     
     # if partOfData == 1:
@@ -82,7 +82,7 @@ def getAccuracyFourthRoom(locations, filename, partOfData, wh, bh, wo, bo, fiveF
     
     return accuracyFourthRoom, numberOfTestPointsFourthRoom
 
-def getAccuracyFourthRoomTestFile(locations, filename, filenameTests, partOfData, wh, bh, wo, bo, fiveFractile):
+def getAccuracyFourthRoomTestFile(locations, filename, filenameTests, partOfData, wh, bh, wo, bo, activationFunction, fiveFractile):
     
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(locations, filename)
     trainingSamples, trainingLabels = extractData(locations, filename, distinctBSSID, dataPoints)
@@ -95,7 +95,7 @@ def getAccuracyFourthRoomTestFile(locations, filename, filenameTests, partOfData
 
     trainingSamples, _, trainingLabels, _ = randomSplitSamplesAndLabels(testSamplesOverall, testLabelsOverall, partOfData)
     
-    predictedLabels, _ = getPredictedLabelsNN(trainingSamples, wh, bh, wo, bo, fiveFractile)
+    predictedLabels, _ = getPredictedLabelsNN(trainingSamples, wh, bh, wo, bo, activationFunction, fiveFractile)
     accuracyFourthRoom = testingNN(trainingLabels, predictedLabels)
     
     # if partOfData == 1:
@@ -111,7 +111,7 @@ def getAccuracyFourthRoomTestFile(locations, filename, filenameTests, partOfData
     
     return accuracyFourthRoom, numberOfTestPointsFourthRoom
 
-def bestModelNN(samples, labels, bias, numberOfClasses):
+def bestModelNN(samples, labels, bias, activationFunction, numberOfClasses):
     bestAccuracy = float('-inf')
     bestwh = None
     bestbh = None
@@ -121,9 +121,9 @@ def bestModelNN(samples, labels, bias, numberOfClasses):
     
     for i in range(1,6):
         trainingSamples, testSamples, trainingLabels, testLabels = deterministicSplitMatrix(samples, labels, 1/5, i)
-        wh, bh, wo, bo = trainingModelNN(trainingSamples, trainingLabels, bias, numberOfClasses)
+        wh, bh, wo, bo = trainingModelNN(trainingSamples, trainingLabels, bias, activationFunction, numberOfClasses)    
         
-        predictedLabels, percentageSure = getPredictedLabelsNN(testSamples, wh, bh, wo, bo)
+        predictedLabels, percentageSure = getPredictedLabelsNN(testSamples, wh, bh, wo, bo, activationFunction)
         accuracy = testingNN(testLabels, predictedLabels)
         
         if accuracy > bestAccuracy:
@@ -137,7 +137,7 @@ def bestModelNN(samples, labels, bias, numberOfClasses):
     return bestwh, bestbh, bestwo, bestbo, bestPercentageSure, bestAccuracy
 
 
-def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasses):
+def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, activationFunction, numberOfClasses):
     # one_hot_labels = np.eye(numberOfClasses)[labelsTrainingSamples]
     one_hot_labels = np.zeros((len(labelsTrainingSamples), numberOfClasses))
 
@@ -159,7 +159,7 @@ def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasse
     else:
         bo = np.zeros(output_labels)
 
-    lr = 0.001
+    lr = 10e-4
 
     error_cost = []
     wh_list = []
@@ -170,7 +170,10 @@ def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasse
     for epoch in range(5000):
         # feedforward
         zh = np.dot(trainingSamples, wh) + bh
-        ah = zh  # identity activation function
+        if (activationFunction == 'sigmoid'):
+            ah = sigmoid(zh)
+        else:
+            ah = zh  # identity activation function
         zo = np.dot(ah, wo) + bo
         ao = zo
 
@@ -191,15 +194,22 @@ def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasse
 
         dzo_dah = wo
         dcost_dah = np.dot(dcost_dao, dzo_dah.T)
-        dcost_dah *= 1.0  # identity activation function
         dzh_dwh = trainingSamples
-        dcost_wh = np.dot(dzh_dwh.T, dcost_dah)
+
+        if (activationFunction == 'sigmoid'):
+            dah_dzh = sigmoid_der(zh)
+            dcost_wh = np.dot(dzh_dwh.T, dah_dzh * dcost_dah)
+        
+        else:
+            dcost_dah *= 1.0  # identity activation function
+            dcost_wh = np.dot(dzh_dwh.T, dcost_dah)
 
         if bias:
             dcost_bo = dcost_dao.sum(axis=0)
 
         # update weights
         wh -= lr * dcost_wh
+        wo -= lr * dcost_wo
         if bias:
             bh -= lr * dcost_dah.sum(axis=0)
             bo -= lr * dcost_bo
@@ -217,7 +227,7 @@ def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasse
 
 
     
-# def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasses):
+# def trainingModelSigmoidNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasses):
 #     one_hot_labels = np.zeros((len(labelsTrainingSamples), numberOfClasses))
 
 #     for i in range(len(labelsTrainingSamples)):
@@ -305,13 +315,15 @@ def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, numberOfClasse
     
 #     return wh_list[i], bh_list[i], wo_list[i], bo_list[i]
 
-def getPredictedLabelsNN(testSamples, wh, bh, wo, bo, fiveFractile = 0, predictsFourthRoom = False):
+def getPredictedLabelsNN(testSamples, wh, bh, wo, bo, activationFunction, fiveFractile = 0, predictsFourthRoom = False):
     predictedLabels = []
     percentageSure = []
 
     zh = np.dot(testSamples, wh) + bh
-    # ah = sigmoid(zh)
-    ah = zh
+    if (activationFunction == "sigmoid"):
+        ah = sigmoid(zh)
+    else:
+        ah = zh
 
     z0 = np.dot(ah, wo) + bo
     ah = softmax(z0)
