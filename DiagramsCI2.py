@@ -323,4 +323,4 @@ labels = ['SVM3', 'SVM4', 'NN3-B', 'NN3-B-P', 'NN3-UB', 'NN3-UB-P', 'NN4-UB']
 # labels = ['SVM3', 'SVM4', 'NN3-B', 'NN3-UB', 'NN4-UB']
 
 # Plot confidence intervals
-plot_confidence_intervals(data_sets, labels, 'Konfidensintervaler for forskellige modeller')
+plot_confidence_intervals(data_sets, labels, 'Konfidensintervaler for forskellige tidspunkter')

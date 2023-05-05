@@ -5,6 +5,9 @@ def main():
     locations = ["Kontor", "Stue", "Køkken"]
     locationsFull = ["Kontor", "Stue", "Køkken", "Entré"]
     
+    activationFunction = ["sigmoid", "identity"]
+    j = 0
+    
     fileFirstMorning = "Data/WifiData230418_9-12.txt"
     fileSecondMorning = "Data/WifiData230420_9-12.txt"
     fileThirdMorning = "Data/WifiData230421_9-12.txt"
@@ -33,31 +36,31 @@ def main():
     """ NN three rooms with bias """
 
     for i in range(len(partOfData)):
-        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], True, False)
+        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], True, False, activationFunction[j])
         printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-B", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
     
     """ NN three rooms with bias - predicts fourth room """
 
     for i in range(len(partOfData)):
-        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], True, True)
+        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], True, True, activationFunction[j])
         printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-B-Predicts", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
     
     """ NN three rooms without bias """
 
     for i in range(len(partOfData)):
-        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], False, False)
+        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], False, False, activationFunction[j])
         printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-UB", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
         
     """ NN three rooms without bias - predicts fourth room """
 
     for i in range(len(partOfData)):
-        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], False, True)
+        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], False, True, activationFunction[j])
         printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-UB-Predicts", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
         
     """ NN four rooms without bias """
 
     for i in range(len(partOfData)):
-        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, partOfData[i], False, False)
+        ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, partOfData[i], False, False, activationFunction[j])
         printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN4-UB", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
     
 def predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData):
@@ -151,15 +154,15 @@ def predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFo
     
     return ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE
 
-def predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData, bias, predictedFourthRoom):
+def predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData, bias, predictedFourthRoom, activationFunction):
     ownDsM = ownDsE = otherDayM = otherDayE = otherTimeM = otherTimeE = ownFiveFractileM = ownFiveFractileE = 0
     
     """ Morning own dataset """
     
-    ownDsM1, ownFiveFractileM1 = NNOwnDataSet(locations, fileFirstMorning, partOfData, bias, predictedFourthRoom)
-    ownDsM2, ownFiveFractileM2 = NNOwnDataSet(locations, fileSecondMorning, partOfData, bias, predictedFourthRoom)
-    ownDsM3, ownFiveFractileM3 = NNOwnDataSet(locations, fileThirdMorning, partOfData, bias, predictedFourthRoom)
-    ownDsM4, ownFiveFractileM4 = NNOwnDataSet(locations, fileFourthMorning, partOfData, bias, predictedFourthRoom)
+    ownDsM1, ownFiveFractileM1 = NNOwnDataSet(locations, fileFirstMorning, partOfData, bias, predictedFourthRoom, activationFunction)
+    ownDsM2, ownFiveFractileM2 = NNOwnDataSet(locations, fileSecondMorning, partOfData, bias, predictedFourthRoom, activationFunction)
+    ownDsM3, ownFiveFractileM3 = NNOwnDataSet(locations, fileThirdMorning, partOfData, bias, predictedFourthRoom, activationFunction)
+    ownDsM4, ownFiveFractileM4 = NNOwnDataSet(locations, fileFourthMorning, partOfData, bias, predictedFourthRoom, activationFunction)
 
     print([ownDsM1, ownDsM2, ownDsM3, ownDsM4])
     ownDsM = (ownDsM1 + ownDsM2 + ownDsM3 + ownDsM4) / 4
@@ -167,9 +170,9 @@ def predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFou
     
     """ Evening own dataset """
     
-    ownDsE1, ownFiveFractileE1 = NNOwnDataSet(locations, fileFirstEvening, partOfData, bias, predictedFourthRoom)
-    ownDsE2, ownFiveFractileE2 = NNOwnDataSet(locations, fileSecondEvening, partOfData, bias, predictedFourthRoom)
-    ownDsE3, ownFiveFractileE3 = NNOwnDataSet(locations, fileThirdEvening, partOfData, bias, predictedFourthRoom)
+    ownDsE1, ownFiveFractileE1 = NNOwnDataSet(locations, fileFirstEvening, partOfData, bias, predictedFourthRoom, activationFunction)
+    ownDsE2, ownFiveFractileE2 = NNOwnDataSet(locations, fileSecondEvening, partOfData, bias, predictedFourthRoom, activationFunction)
+    ownDsE3, ownFiveFractileE3 = NNOwnDataSet(locations, fileThirdEvening, partOfData, bias, predictedFourthRoom, activationFunction)
 
     print([ownDsE1, ownDsE2, ownDsE3])
     ownDsE = (ownDsE1 + ownDsE2 + ownDsE3) / 3
@@ -177,18 +180,18 @@ def predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFou
     
     """ Morning other dataset """
     
-    otherDayM11, otherDayFiveFractileM1 = NNAgainstOtherDatasets(locations, fileFirstMorning, [fileSecondMorning], partOfData, bias, predictedFourthRoom)
-    otherDayM12, otherDayFiveFractileM1 = NNAgainstOtherDatasets(locations, fileFirstMorning, [fileThirdMorning], partOfData, bias, predictedFourthRoom)
-    otherDayM13, otherDayFiveFractileM1 = NNAgainstOtherDatasets(locations, fileFirstMorning, [fileFourthMorning], partOfData, bias, predictedFourthRoom)
-    otherDayM21, otherDayFiveFractileM2 = NNAgainstOtherDatasets(locations, fileSecondMorning, [fileFirstMorning], partOfData, bias, predictedFourthRoom)
-    otherDayM22, otherDayFiveFractileM2 = NNAgainstOtherDatasets(locations, fileSecondMorning, [fileThirdMorning], partOfData, bias, predictedFourthRoom)
-    otherDayM23, otherDayFiveFractileM2 = NNAgainstOtherDatasets(locations, fileSecondMorning, [fileFourthMorning], partOfData, bias, predictedFourthRoom)
-    otherDayM31, otherDayFiveFractileM3 = NNAgainstOtherDatasets(locations, fileThirdMorning, [fileFirstMorning], partOfData, bias, predictedFourthRoom)
-    otherDayM32, otherDayFiveFractileM3 = NNAgainstOtherDatasets(locations, fileThirdMorning, [fileSecondMorning], partOfData, bias, predictedFourthRoom)
-    otherDayM33, otherDayFiveFractileM3 = NNAgainstOtherDatasets(locations, fileThirdMorning, [fileFourthMorning], partOfData, bias, predictedFourthRoom)
-    otherDayM41, otherDayFiveFractileM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileFirstMorning], partOfData, bias, predictedFourthRoom)
-    otherDayM42, otherDayFiveFractileM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileSecondMorning], partOfData, bias, predictedFourthRoom)
-    otherDayM43, otherDayFiveFractileM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileThirdMorning], partOfData, bias, predictedFourthRoom)
+    otherDayM11, otherDayFiveFractileM1 = NNAgainstOtherDatasets(locations, fileFirstMorning, [fileSecondMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherDayM12, otherDayFiveFractileM1 = NNAgainstOtherDatasets(locations, fileFirstMorning, [fileThirdMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherDayM13, otherDayFiveFractileM1 = NNAgainstOtherDatasets(locations, fileFirstMorning, [fileFourthMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherDayM21, otherDayFiveFractileM2 = NNAgainstOtherDatasets(locations, fileSecondMorning, [fileFirstMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherDayM22, otherDayFiveFractileM2 = NNAgainstOtherDatasets(locations, fileSecondMorning, [fileThirdMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherDayM23, otherDayFiveFractileM2 = NNAgainstOtherDatasets(locations, fileSecondMorning, [fileFourthMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherDayM31, otherDayFiveFractileM3 = NNAgainstOtherDatasets(locations, fileThirdMorning, [fileFirstMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherDayM32, otherDayFiveFractileM3 = NNAgainstOtherDatasets(locations, fileThirdMorning, [fileSecondMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherDayM33, otherDayFiveFractileM3 = NNAgainstOtherDatasets(locations, fileThirdMorning, [fileFourthMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherDayM41, otherDayFiveFractileM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileFirstMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherDayM42, otherDayFiveFractileM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileSecondMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherDayM43, otherDayFiveFractileM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileThirdMorning], partOfData, bias, predictedFourthRoom, activationFunction)
     
     print([otherDayM11, otherDayM12, otherDayM13, otherDayM21, otherDayM22, otherDayM23, otherDayM31, otherDayM32, otherDayM33, otherDayM41, otherDayM42, otherDayM43])
     otherDayM = (otherDayM11 + otherDayM12 + otherDayM13 + otherDayM21 + otherDayM22 + otherDayM23 + otherDayM31 + otherDayM32 + otherDayM33 + otherDayM41 + otherDayM42 + otherDayM43) / 12
@@ -196,18 +199,18 @@ def predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFou
     
     """ Morning other time """
     
-    otherTimeM11, otherTimeFiveFractileM1 = NNAgainstOtherDatasets(locations, fileFirstMorning, [fileFirstEvening], partOfData, bias, predictedFourthRoom)
-    otherTimeM12, otherTimeFiveFractileM1 = NNAgainstOtherDatasets(locations, fileFirstMorning, [fileSecondEvening], partOfData, bias, predictedFourthRoom)
-    otherTimeM13, otherTimeFiveFractileM1 = NNAgainstOtherDatasets(locations, fileFirstMorning, [fileThirdEvening], partOfData, bias, predictedFourthRoom)
-    otherTimeM21, otherTimeFiveFractileM2 = NNAgainstOtherDatasets(locations, fileSecondMorning, [fileFirstEvening], partOfData, bias, predictedFourthRoom)
-    otherTimeM22, otherTimeFiveFractileM2 = NNAgainstOtherDatasets(locations, fileSecondMorning, [fileSecondEvening], partOfData, bias, predictedFourthRoom)
-    otherTimeM23, otherTimeFiveFractileM2 = NNAgainstOtherDatasets(locations, fileSecondMorning, [fileThirdEvening], partOfData, bias, predictedFourthRoom)
-    otherTimeM31, otherTimeFiveFractileM3 = NNAgainstOtherDatasets(locations, fileThirdMorning, [fileFirstEvening], partOfData, bias, predictedFourthRoom)
-    otherTimeM32, otherTimeFiveFractileM3 = NNAgainstOtherDatasets(locations, fileThirdMorning, [fileFirstEvening], partOfData, bias, predictedFourthRoom)
-    otherTimeM33, otherTimeFiveFractileM3 = NNAgainstOtherDatasets(locations, fileThirdMorning, [fileThirdEvening], partOfData, bias, predictedFourthRoom)
-    otherTimeM41, otherTimeFiveFractileM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileFirstEvening], partOfData, bias, predictedFourthRoom)
-    otherTimeM42, otherTimeFiveFractileM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileSecondEvening], partOfData, bias, predictedFourthRoom)
-    otherTimeM43, otherTimeFiveFractileM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileThirdEvening], partOfData, bias, predictedFourthRoom)
+    otherTimeM11, otherTimeFiveFractileM1 = NNAgainstOtherDatasets(locations, fileFirstMorning, [fileFirstEvening], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeM12, otherTimeFiveFractileM1 = NNAgainstOtherDatasets(locations, fileFirstMorning, [fileSecondEvening], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeM13, otherTimeFiveFractileM1 = NNAgainstOtherDatasets(locations, fileFirstMorning, [fileThirdEvening], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeM21, otherTimeFiveFractileM2 = NNAgainstOtherDatasets(locations, fileSecondMorning, [fileFirstEvening], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeM22, otherTimeFiveFractileM2 = NNAgainstOtherDatasets(locations, fileSecondMorning, [fileSecondEvening], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeM23, otherTimeFiveFractileM2 = NNAgainstOtherDatasets(locations, fileSecondMorning, [fileThirdEvening], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeM31, otherTimeFiveFractileM3 = NNAgainstOtherDatasets(locations, fileThirdMorning, [fileFirstEvening], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeM32, otherTimeFiveFractileM3 = NNAgainstOtherDatasets(locations, fileThirdMorning, [fileFirstEvening], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeM33, otherTimeFiveFractileM3 = NNAgainstOtherDatasets(locations, fileThirdMorning, [fileThirdEvening], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeM41, otherTimeFiveFractileM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileFirstEvening], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeM42, otherTimeFiveFractileM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileSecondEvening], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeM43, otherTimeFiveFractileM4 = NNAgainstOtherDatasets(locations, fileFourthMorning, [fileThirdEvening], partOfData, bias, predictedFourthRoom, activationFunction)
     
     print([otherTimeM11, otherTimeM12, otherTimeM13, otherTimeM21, otherTimeM22, otherTimeM23, otherTimeM31, otherTimeM32, otherTimeM33, otherTimeM41, otherTimeM42, otherTimeM43])
     otherTimeM = (otherTimeM11 + otherTimeM12 + otherTimeM13 + otherTimeM21 + otherTimeM22 + otherTimeM23 + otherTimeM31 + otherTimeM32 + otherTimeM33 + otherTimeM41 + otherTimeM42 + otherTimeM43) / 12
@@ -215,12 +218,12 @@ def predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFou
     
     """ Evening other dataset """
     
-    otherDayE11, otherDayFiveFractileE1 = NNAgainstOtherDatasets(locations, fileFirstEvening, [fileSecondEvening], partOfData, bias, predictedFourthRoom)
-    otherDayE12, otherDayFiveFractileE1 = NNAgainstOtherDatasets(locations, fileFirstEvening, [fileThirdEvening], partOfData, bias, predictedFourthRoom)
-    otherDayE21, otherDayFiveFractileE2 = NNAgainstOtherDatasets(locations, fileSecondEvening, [fileFirstEvening], partOfData, bias, predictedFourthRoom)
-    otherDayE22, otherDayFiveFractileE2 = NNAgainstOtherDatasets(locations, fileSecondEvening, [fileThirdEvening], partOfData, bias, predictedFourthRoom)
-    otherDayE31, otherDayFiveFractileE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileFirstEvening], partOfData, bias, predictedFourthRoom)
-    otherDayE32, otherDayFiveFractileE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileSecondEvening], partOfData, bias, predictedFourthRoom)
+    otherDayE11, otherDayFiveFractileE1 = NNAgainstOtherDatasets(locations, fileFirstEvening, [fileSecondEvening], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherDayE12, otherDayFiveFractileE1 = NNAgainstOtherDatasets(locations, fileFirstEvening, [fileThirdEvening], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherDayE21, otherDayFiveFractileE2 = NNAgainstOtherDatasets(locations, fileSecondEvening, [fileFirstEvening], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherDayE22, otherDayFiveFractileE2 = NNAgainstOtherDatasets(locations, fileSecondEvening, [fileThirdEvening], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherDayE31, otherDayFiveFractileE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileFirstEvening], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherDayE32, otherDayFiveFractileE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileSecondEvening], partOfData, bias, predictedFourthRoom, activationFunction)
     
     print([otherDayE11, otherDayE12, otherDayE21, otherDayE22, otherDayE31, otherDayE32])
     otherDayE = (otherDayE11 + otherDayE12 + otherDayE21 + otherDayE22 + otherDayE31 + otherDayE32) / 6
@@ -228,18 +231,18 @@ def predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFou
     
     """ Evening other time """
     
-    otherTimeE11, otherTimeFiveFractileE1 = NNAgainstOtherDatasets(locations, fileFirstEvening, [fileFirstMorning], partOfData, bias, predictedFourthRoom)
-    otherTimeE12, otherTimeFiveFractileE1 = NNAgainstOtherDatasets(locations, fileFirstEvening, [fileSecondMorning], partOfData, bias, predictedFourthRoom)
-    otherTimeE13, otherTimeFiveFractileE1 = NNAgainstOtherDatasets(locations, fileFirstEvening, [fileThirdMorning], partOfData, bias, predictedFourthRoom)
-    otherTimeE14, otherTimeFiveFractileE1 = NNAgainstOtherDatasets(locations, fileFirstEvening, [fileFourthMorning], partOfData, bias, predictedFourthRoom)
-    otherTimeE21, otherTimeFiveFractileE2 = NNAgainstOtherDatasets(locations, fileSecondEvening, [fileFirstMorning], partOfData, bias, predictedFourthRoom)
-    otherTimeE22, otherTimeFiveFractileE2 = NNAgainstOtherDatasets(locations, fileSecondEvening, [fileSecondMorning], partOfData, bias, predictedFourthRoom)
-    otherTimeE23, otherTimeFiveFractileE2 = NNAgainstOtherDatasets(locations, fileSecondEvening, [fileThirdMorning], partOfData, bias, predictedFourthRoom)
-    otherTimeE24, otherTimeFiveFractileE2 = NNAgainstOtherDatasets(locations, fileSecondEvening, [fileFourthMorning], partOfData, bias, predictedFourthRoom)
-    otherTimeE31, otherTimeFiveFractileE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileFirstMorning], partOfData, bias, predictedFourthRoom)
-    otherTimeE32, otherTimeFiveFractileE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileSecondMorning], partOfData, bias, predictedFourthRoom)
-    otherTimeE33, otherTimeFiveFractileE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileThirdMorning], partOfData, bias, predictedFourthRoom)
-    otherTimeE34, otherTimeFiveFractileE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileFourthMorning], partOfData, bias, predictedFourthRoom)
+    otherTimeE11, otherTimeFiveFractileE1 = NNAgainstOtherDatasets(locations, fileFirstEvening, [fileFirstMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeE12, otherTimeFiveFractileE1 = NNAgainstOtherDatasets(locations, fileFirstEvening, [fileSecondMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeE13, otherTimeFiveFractileE1 = NNAgainstOtherDatasets(locations, fileFirstEvening, [fileThirdMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeE14, otherTimeFiveFractileE1 = NNAgainstOtherDatasets(locations, fileFirstEvening, [fileFourthMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeE21, otherTimeFiveFractileE2 = NNAgainstOtherDatasets(locations, fileSecondEvening, [fileFirstMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeE22, otherTimeFiveFractileE2 = NNAgainstOtherDatasets(locations, fileSecondEvening, [fileSecondMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeE23, otherTimeFiveFractileE2 = NNAgainstOtherDatasets(locations, fileSecondEvening, [fileThirdMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeE24, otherTimeFiveFractileE2 = NNAgainstOtherDatasets(locations, fileSecondEvening, [fileFourthMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeE31, otherTimeFiveFractileE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileFirstMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeE32, otherTimeFiveFractileE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileSecondMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeE33, otherTimeFiveFractileE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileThirdMorning], partOfData, bias, predictedFourthRoom, activationFunction)
+    otherTimeE34, otherTimeFiveFractileE3 = NNAgainstOtherDatasets(locations, fileThirdEvening, [fileFourthMorning], partOfData, bias, predictedFourthRoom, activationFunction)
     
     print([otherTimeE11, otherTimeE12, otherTimeE13, otherTimeE14, otherTimeE21, otherTimeE22, otherTimeE23, otherTimeE24, otherTimeE31, otherTimeE32, otherTimeE33, otherTimeE34])
     otherTimeE = (otherTimeE11 + otherTimeE12 + otherTimeE13 + otherTimeE14 + otherTimeE21 + otherTimeE22 + otherTimeE23 + otherTimeE24 + otherTimeE31 + otherTimeE32 + otherTimeE33 + otherTimeE34) / 12

@@ -40,8 +40,10 @@ def NNAgainstOtherDatasets(locations, filename, filenameTests, partOfData, bias,
     
     wh, bh, wo, bo, percentageSure, _ = bestModelNN(trainingSamples, trainingLabels, bias, activationFunction, numberOfClasses=len(locations))
     
-    fiveFractile = np.percentile(percentageSure, 5)
-    fiveFractile = 0.5
+    if (activationFunction == 'sigmoid'):
+        fiveFractile = np.percentile(percentageSure, 5)
+    else:
+        fiveFractile = 0.5
     
     predictedLabels, _ = getPredictedLabelsNN(testSamplesOverall, wh, bh, wo, bo, activationFunction, fiveFractile, predictsFourthRoom)
     
@@ -87,7 +89,7 @@ def getAccuracyFourthRoomTestFile(locations, filename, filenameTests, partOfData
     distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(locations, filename)
     trainingSamples, trainingLabels = extractData(locations, filename, distinctBSSID, dataPoints)
     
-    testSamplesOverall, testLabelsOverall = extractDataFromMultipleFiles(["___", "___", "___",  "___", "Entré"], filenameTests, distinctBSSID)
+    testSamplesOverall, testLabelsOverall = extractDataFromMultipleFiles(["___", "___", "___",  "Intet rum", "Entré"], filenameTests, distinctBSSID)
     
     # distinctBSSID, _ = extractDistinctBSSIDAndNumberOfDataPoints(locations, filename)
     # distinctBSSID, dataPoints = extractDistinctBSSIDAndNumberOfDataPoints(["___", "___", "___", "Entré"], filename, distinctBSSID)
@@ -387,7 +389,7 @@ def getPredictedLabelsNN(testSamples, wh, bh, wo, bo, activationFunction, fiveFr
         maxPercentage = np.max(ah[i])
         if (maxPercentage < fiveFractile):
             if (predictsFourthRoom):
-                predictedLabels.append(4)
+                predictedLabels.append(4)           #Change to 3 if you want to test not a room
             else: predictedLabels.append(3)
         else:
             predictedLabels.append(np.argmax(ah[i]))

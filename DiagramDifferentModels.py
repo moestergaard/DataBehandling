@@ -1,6 +1,16 @@
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
+# import tikzplotlib
+
+# matplotlib.use("pgf")
+# matplotlib.rcParams.update({
+#     "pgf.texsystem": "pdflatex",
+#     'font.family': 'serif',
+#     'text.usetex': True,
+#     'pgf.rcfonts': False,
+# })
 
 
 def plot_confidence_intervals(data_sets, labels, title):
@@ -49,8 +59,13 @@ def plot_confidence_intervals(data_sets, labels, title):
     handles = [Line2D([0], [0], color=color, linewidth=2) for color in colors]
     ax.legend(handles=handles, labels=labels, loc='center left', bbox_to_anchor=(1, 0.5))
 
+    # plt.savefig('DifferentModels.pgf')
+    
+    # tikzplotlib.save("differentModels.tex")
+    
     # Show plot
     plt.show()
+    
 
 
 # """ NEW DATA ONLY FROM 45 MINUTES"""
