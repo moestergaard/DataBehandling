@@ -6,6 +6,7 @@ from matplotlib.lines import Line2D
 def plot_confidence_intervals(data_sets, labels, title):
     fig, ax = plt.subplots()
     x = np.arange(len(data_sets[0]))
+    # print(x)
     width = 0.10
 
     confidence_level = 0.95
@@ -19,8 +20,8 @@ def plot_confidence_intervals(data_sets, labels, title):
     # group1 = ['red', 'orange', 'yellow', 'palegreen', 'lightblue']
     # group2 = ['maroon', 'navy', 'teal', 'sienna', 'olive']
     # group1 = ['red', 'orange', 'yellow']
-    group1 = ['red', 'orange', 'green']
-    group2 = ['navy', 'teal', 'lightblue']
+    group1 = ['#74c476', '#31a354', '#006d2c']
+    group2 = ['#6baed6', '#3182bd', '#08519c']
     colors = group1 + group2
     # colors = ["#B7F0B1", "#2EBD4F", "#B4E1E7", "#2471A3", "#BDADEA", "#6A5ACD", "#FFC0CB", 'blue', 'brown', 'orange']
     # colors = ["#ADD8E6", "#FF69B4", "#A9A9A9"]
@@ -35,20 +36,45 @@ def plot_confidence_intervals(data_sets, labels, title):
             upper_bound = mean + margin_of_error
 
             # Plot data points
-            ax.plot(x[i]+j*width, mean, marker='o', color=colors[j], label=labels[j] if i == 0 else "")
+            ax.plot(x[i]+j*width, mean, marker='o', markersize = 5, color=colors[j], label=labels[j] if i == 0 else "")
 
             # Plot error bars
             ax.errorbar(x[i]+j*width, mean, yerr=margin_of_error, fmt='none', ecolor=colors[j], capsize=3)
 
+
+    # Set the x-axis limits
+    # ax.set_xlim([0, 1])
     # Set axis labels and title
-    ax.set_xticks(x+2.5*width)
+    # ax.set_xticks(x+2.5*width)
+    # ax.set_xticks(0.75*x+5.75*width)
+    # ax.set_xticks(x-0.2)
+    ax.set_xticks([0.275, 1.225])
+    # print(x)
+    # print()
+    # print(x+3*width)
+    # print()
+    # print(0.75*x+5.75*width)
+    # ax.set_xticks([])
     # ax.set_xticklabels(['Formiddag: Eget dataset', 'Aften: Eget dataset', 'Formiddag: Anden dag', 'Formiddag: Andet tidspunkt', 'Aften: Anden dag', 'Aften: Andet tidspunkt'], rotation=45)
     # ax.set_xticklabels(['45 minutter', 'Formiddag: Andet tidspunkt', 'Aften: Anden dag', 'Aften: Andet tidspunkt'], rotation=45)
-    ax.set_xticklabels(['Inden for \ntrænet område', 'Uden for \ntrænet område'], rotation=45, fontsize=9)
+    # ax.set_xticklabels([])
+    ax.set_xticklabels(['Testet inden for\ntrænet område', 'Testet uden for\ntrænet område'], fontsize=9)
+    
+    # Set background color of plot
+    # ax.set_facecolor('#f0f0f0')  
+    
+    # Add tick at the center of the x-axis
+    ax.axvline(x=0.75, color='#d9d9d9', linewidth=1.5)
+
+    # Add labels on either side of the x-axis
+    # ax.text(-0.5, -0.1, 'Inden for', fontsize=12, ha='center')
+    # ax.text(4.5, -0.1, 'Inden for', fontsize=9, ha='center')
+    # ax.text(1.5, -0.1, 'Uden for', fontsize=9, ha='center')
+    
     fig.subplots_adjust(bottom=0.22)
     fig.subplots_adjust(right=0.7)
-    # ax.set_xlabel('Data set')
-    ax.set_ylabel('Nøjagtighed', fontsize=9)
+    # ax.set_xlabel('Trænet område', fontsize=10)
+    ax.set_ylabel('Nøjagtighed', fontsize=10)
     ax.set_title(title, fontsize=12)
 
     # Add legend
@@ -94,7 +120,7 @@ data_sets = [IdataNN3BP, IdataNN3UBP, IdataNN4UB, SdataNN3BP, SdataNN3UBP, Sdata
 # data_sets = [IdataNN3B, IdataNN3BP, IdataNN3UB, IdataNN3UBP, IdataNN4UB, SdataNN3B, SdataNN3BP, SdataNN3UB, SdataNN3UBP, SdataNN4UB]
 # labels = ['Identity-NN3-B', 'Identity-NN3-UB', 'Identity-NN4-UB', 'Sigmoid-NN3-B', 'Sigmoid-NN3-UB', 'Sigmoid-NN4-UB']
 # labels = ['Identity-NN3-B', 'Identity-NN3-B-P', 'Identity-NN3-UB', 'Identity-NN3-UB-P', 'Identity-NN4-UB', 'Sigmoid-NN3-B', 'Sigmoid-NN3-B-P', 'Sigmoid-NN3-UB', 'Sigmoid-NN3-UB-P', 'Sigmoid-NN4-UB']
-labels = ['Identity-NN3-B-P', 'Identity-NN3-UB-P', 'Identity-NN4-UB', 'Sigmoid-NN3-B-P', 'Sigmoid-NN3-UB-P', 'Sigmoid-NN4-UB']
+labels = ['Identitet-NN3-B-P', 'Identitet-NN3-UB-P', 'Identitet-NN4-UB', 'Sigmoid-NN3-B-P', 'Sigmoid-NN3-UB-P', 'Sigmoid-NN4-UB']
 # labels = ['SVM3', 'SVM4', 'NN3-B', 'NN3-UB', 'NN4-UB']
  
 # Plot confidence intervals
