@@ -5,8 +5,8 @@ def main():
     locations = ["Kontor", "Stue", "Køkken", "Intet rum"]
     locationsFull = ["Kontor", "Stue", "Køkken", "Intet rum", "Entré" ]
     
-    activationFunction = ["sigmoid", "identity"]
-    # activationFunction = ["identity"]
+    # activationFunction = ["sigmoid", "identity"]
+    activationFunction = ["identity"]
     
     fileFirstMorning = "Data/WifiData230418_9-12.txt"
     fileSecondMorning = "Data/WifiData230420_9-12.txt"
@@ -26,55 +26,55 @@ def main():
     
     for j in range(len(activationFunction)):
         print("Activation function: " + activationFunction[j])
-        # """ NN three rooms with bias """
-        
-        # overallPredictions = []
-
-        # for i in range(len(partOfData)): 
-        #     predictions = predictionsNN(fileNameTests, fileNotARoom, locations, partOfData[i], True, False, activationFunction[j])
-        #     overallPredictions.append(predictions)
-        
-        # printMethod(overallPredictions, "NN3-B")
-        
-        """ NN three rooms with bias - predicts fourth room """
+        """ NN three rooms with bias """
         
         overallPredictions = []
 
         for i in range(len(partOfData)): 
-            predictions = predictionsNN(fileNameTests, fileNotARoom, locationsFull, partOfData[i], True, True, activationFunction[j])
+            predictions = predictionsNN(fileNameTests, fileNotARoom, locations, partOfData[i], True, False, activationFunction[j])
             overallPredictions.append(predictions)
         
-        printMethod(overallPredictions, "NN3-B-P")
+        printMethod(overallPredictions, "NN3-B")
         
-        # """ NN three rooms without bias """
+        # """ NN three rooms with bias - predicts fourth room """
         
         # overallPredictions = []
 
-        # for i in range(len(partOfData)):
-        #     predictions = predictionsNN(fileNameTests, fileNotARoom, locations, partOfData[i], False, False, activationFunction[j])
+        # for i in range(len(partOfData)): 
+        #     predictions = predictionsNN(fileNameTests, fileNotARoom, locationsFull, partOfData[i], True, True, activationFunction[j])
         #     overallPredictions.append(predictions)
-            
-        # printMethod(overallPredictions, "NN3-UB")
         
-        """ NN three rooms without bias - predicts fourth room """
+        # printMethod(overallPredictions, "NN3-B-P")
+        
+        """ NN three rooms without bias """
         
         overallPredictions = []
 
         for i in range(len(partOfData)):
-            predictions = predictionsNN(fileNameTests, fileNotARoom, locationsFull, partOfData[i], False, True, activationFunction[j])
+            predictions = predictionsNN(fileNameTests, fileNotARoom, locations, partOfData[i], False, False, activationFunction[j])
             overallPredictions.append(predictions)
             
-        printMethod(overallPredictions, "NN3-UB-P")
+        printMethod(overallPredictions, "NN3-UB")
         
-        # """ NN four rooms without bias """
+        # """ NN three rooms without bias - predicts fourth room """
         
         # overallPredictions = []
 
         # for i in range(len(partOfData)):
-        #     predictions = predictionsNN(fileNameTests, fileNotARoom, locationsFull, partOfData[i], False, False, activationFunction[j])
+        #     predictions = predictionsNN(fileNameTests, fileNotARoom, locationsFull, partOfData[i], False, True, activationFunction[j])
         #     overallPredictions.append(predictions)
+            
+        # printMethod(overallPredictions, "NN3-UB-P")
         
-        # printMethod(overallPredictions, "NN4-UB")
+        """ NN four rooms without bias """
+        
+        overallPredictions = []
+
+        for i in range(len(partOfData)):
+            predictions = predictionsNN(fileNameTests, fileNotARoom, locationsFull, partOfData[i], False, False, activationFunction[j])
+            overallPredictions.append(predictions)
+        
+        printMethod(overallPredictions, "NN4-UB")
         
 
 def predictionsNN(fileNameTests, fileNotARoom, locations, partOfData, bias, predictedFourthRoom, activationFunction):

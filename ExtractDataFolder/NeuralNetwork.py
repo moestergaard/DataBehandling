@@ -43,7 +43,7 @@ def NNAgainstOtherDatasets(locations, filename, filenameTests, partOfData, bias,
     if (activationFunction == 'sigmoid'):
         fiveFractile = np.percentile(percentageSure, 5)
     else:
-        fiveFractile = 0.5
+        fiveFractile = 1/3+np.finfo(float).eps
     
     predictedLabels, _ = getPredictedLabelsNN(testSamplesOverall, wh, bh, wo, bo, activationFunction, fiveFractile, predictsFourthRoom)
     

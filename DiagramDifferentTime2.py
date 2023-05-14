@@ -36,16 +36,18 @@ def plot_confidence_intervals(data_sets, labels, title):
             lower_bound = mean - margin_of_error
             upper_bound = mean + margin_of_error
             
-            print(lower_bound)
-            print(mean)
-            print(upper_bound)
-            print()
+            print(f"{(lower_bound*100).__round__(1)} & {(mean*100).__round__(1)} & {(upper_bound*100).__round__(1)} &")
+            
+            # print(lower_bound)
+            # print(mean)
+            # print(upper_bound)
+            # print()
 
             # Plot data points
-            ax.plot(x[i]+j*width, mean, marker='o', markersize = 5, color=colors[j], label=labels[j] if i == 0 else "")
+            ax.plot(x[i]+j*width, mean*100, marker='o', markersize = 5, color=colors[j], label=labels[j] if i == 0 else "")
 
             # Plot error bars
-            ax.errorbar(x[i]+j*width, mean, yerr=margin_of_error, fmt='none', ecolor=colors[j], capsize=3)
+            ax.errorbar(x[i]+j*width, mean*100, yerr=margin_of_error*100, fmt='none', ecolor=colors[j], capsize=3)
             
             # Plot the values for the lower bound and upper bound
             # ax.text(x[i]+j*width, upper_bound+0.02, f"{upper_bound:.3f}", ha='center', va='bottom', fontsize=8)
@@ -62,7 +64,7 @@ def plot_confidence_intervals(data_sets, labels, title):
     #     tick.set_pad(2)
     fig.subplots_adjust(bottom=0.25)
     fig.subplots_adjust(right=0.8)
-    ax.set_ylabel('Nøjagtighed', fontsize=10)
+    ax.set_ylabel('Nøjagtighed, %', fontsize=10)
     # ax.set_yticklabels(fontsize = 9)
     ax.set_title(title, fontsize=12)
 
@@ -72,7 +74,7 @@ def plot_confidence_intervals(data_sets, labels, title):
     # tikzplotlib.save("differentTime.tex")
 
     # Show plot
-    plt.show()
+    # plt.show()
     
 """ NEW DATA ONLY FROM 45 MINUTES"""
 

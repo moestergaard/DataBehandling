@@ -36,10 +36,10 @@ def plot_confidence_intervals(data_sets, labels, title):
             upper_bound = mean + margin_of_error
 
             # Plot data points
-            ax.plot(x[i]+j*width, mean, marker='o', markersize = 5, color=colors[j], label=labels[j] if i == 0 else "")
+            ax.plot(x[i]+j*width, mean*100, marker='o', markersize = 5, color=colors[j], label=labels[j] if i == 0 else "")
 
             # Plot error bars
-            ax.errorbar(x[i]+j*width, mean, yerr=margin_of_error, fmt='none', ecolor=colors[j], capsize=3)
+            ax.errorbar(x[i]+j*width, mean*100, yerr=margin_of_error*100, fmt='none', ecolor=colors[j], capsize=3)
 
 
     # Set the x-axis limits
@@ -58,7 +58,7 @@ def plot_confidence_intervals(data_sets, labels, title):
     # ax.set_xticklabels(['Formiddag: Eget dataset', 'Aften: Eget dataset', 'Formiddag: Anden dag', 'Formiddag: Andet tidspunkt', 'Aften: Anden dag', 'Aften: Andet tidspunkt'], rotation=45)
     # ax.set_xticklabels(['45 minutter', 'Formiddag: Andet tidspunkt', 'Aften: Anden dag', 'Aften: Andet tidspunkt'], rotation=45)
     # ax.set_xticklabels([])
-    ax.set_xticklabels(['Testet inden for\ntrænet område', 'Testet uden for\ntrænet område'], fontsize=9)
+    ax.set_xticklabels(['Testet i hjemmet', 'Testet udenfor\nhjemmet'], fontsize=9)
     
     # Set background color of plot
     # ax.set_facecolor('#f0f0f0')  
@@ -74,7 +74,7 @@ def plot_confidence_intervals(data_sets, labels, title):
     fig.subplots_adjust(bottom=0.22)
     fig.subplots_adjust(right=0.7)
     # ax.set_xlabel('Trænet område', fontsize=10)
-    ax.set_ylabel('Nøjagtighed', fontsize=10)
+    ax.set_ylabel('Nøjagtighed, %', fontsize=10)
     ax.set_title(title, fontsize=12)
 
     # Add legend
