@@ -6,6 +6,8 @@ from SupportVectorMachine import bestModelSVM, fitModel
 from NeuralNetwork import bestModelNN
 import libsvm.svmutil as svmutil
 from sklearn.datasets import dump_svmlight_file
+import json
+import numpy as np
 # import svmutil
 
 def main():
@@ -101,7 +103,105 @@ def main():
     
     print(labels)
     
+    result = bestModel.score(trainingSamplesOverall, trainingLabelsOverall)
+    print("Accuracy: " + str(result))
     
+    
+    storeModel(bestModel, 'svm_model.json', bestSamples, bestLabels)
+
+def storeModel2(model, filename):
+    with open(filename, 'w') as f:
+        json.dump(model, f)
+    
+def storeModel(model, filename, bestSamples, bestLabels):
+    
+    # calculate rho
+    # rho = model.intercept_[0]
+    # for i in range(len(model.support_)):
+    #     rho -= model.dual_coef_[0][i] * model._gamma(bestSamples[model.support_[i]], bestSamples[model.support_[0]])
+        
+    # rho = model.intercept_[0]
+
+    # for i in range(len(model.support_)):
+    #     print(model.support_[i])
+    #     print(bestSamples[model.support_[i]])
+    #     print(bestSamples[model.support_[0]])
+    #     print(model._gamma)
+    #     gamma = model._gamma(bestSamples[model.support_[i]], bestSamples[model.support_[0]])
+    #     dual_coef = model.dual_coef_[0][i]
+    #     rho -= dual_coef * gamma
+    
+    # rho = [1]
+    # rho[0] = model.intercept_[0]
+    # for i in range(len(model.support_)):
+    #     rho[0] -= model.dual_coef_[0][i] * model._gamma
+        
+    # Compute the rho array
+    # rho = model.decision_function(model.support_vectors_).mean()
+    # print(rho)
+    
+    # for i in range (len(model.support_vectors_)):
+    #     print(model.decision_function(model.support_vectors_))
+        
+    rho = []
+    for j in range(3):
+        temp = 0
+        for i in range(len(model.support_vectors_)):
+            temp += model.decision_function([model.support_vectors_[i]])[0][j]
+            print(model.decision_function([model.support_vectors_[i]]))
+            print(model.decision_function([model.support_vectors_[i]])[0][1])
+        rho.append(temp/len(model.support_vectors_))
+    
+    print("***")
+    print(rho)
+    print("***")
+    
+    # print(len(model.support_vectors_).shape())
+    # print(bestSamples.shape[1])
+    # rho = []
+    # for i in range(bestSamples.shape[1]):
+    #     rho_i = model.decision_function(model.support_vectors_[:, i]).mean()
+    #     rho.append(rho_i)
+    # rho = np.array(rho)
+
+    # print(rho)
+    # print(len(model.support_vectors_))
+    
+        
+    # Extract the relevant parameters of the SVC object
+    params = {
+        "C": model.C,
+        "kernel": model.kernel,
+        "gamma": model._gamma,
+        "coef0": model.coef0,
+        "degree": model.degree,
+        "class_weight": model.class_weight,
+        "decision_function_shape": model.decision_function_shape,
+        "tol": model.tol,
+        "max_iter": model.max_iter,
+        "random_state": model.random_state,
+        "verbose": model.verbose,
+        "cache_size": model.cache_size,
+        #"svm_type": model.svm_type,
+        "svm_nu": model.nu
+    }
+    
+    
+    
+    # Create a dictionary containing the parameters and the support vectors and coefficients
+    data = {
+        "params": params,
+        "support_vectors": model.support_vectors_.tolist(),
+        "coefficients": model.dual_coef_.tolist(),
+        "classIndices": model.classes_.tolist(),
+        "nSV": model.n_support_.tolist(),
+        # "rho": rho
+        "rho": model.intercept_.tolist()
+        
+    }
+    # Serialize the dictionary as JSON and store it in the specified file
+    with open(filename, 'w') as f:
+        json.dump(data, f)
 
 def printMatrice(matrice):
     return ''.join([f'{{{", ".join([f"{col:.15f}" for col in row])}}}' for row in matrice])
