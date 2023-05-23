@@ -48,7 +48,9 @@ def main():
     score = bestModel.score(testSamplesOverall, testLabelsOverall)
     
     print(score)
+    print("distinctBSSID: ")
     print(distinctBSSID)
+    print("len(distinctBSSID)" + str(len(distinctBSSID)))
     print()
     
     samples = ""
@@ -107,7 +109,7 @@ def main():
     print("Accuracy: " + str(result))
     
     
-    storeModel(bestModel, 'svm_model.json', bestSamples, bestLabels)
+    storeModel(bestModel, 'svm_model1.json', bestSamples, bestLabels)
 
 def storeModel2(model, filename):
     with open(filename, 'w') as f:

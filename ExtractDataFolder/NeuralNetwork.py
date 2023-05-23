@@ -144,7 +144,8 @@ def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, activationFunc
     one_hot_labels = np.zeros((len(labelsTrainingSamples), numberOfClasses))
 
     attributes = trainingSamples.shape[1]
-    hidden_nodes = 4
+    # hidden_nodes = 4
+    hidden_nodes = 40
     output_labels = numberOfClasses
 
     np.random.seed(42)

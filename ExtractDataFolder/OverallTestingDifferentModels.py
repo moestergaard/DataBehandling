@@ -1,11 +1,13 @@
 from SupportVectorMachine import SVMOwnDataSet, SVMAgainstOtherDatasets
 from NeuralNetwork import NNOwnDataSet, NNAgainstOtherDatasets
+import numpy as np
 
 def main():
     locations = ["Kontor", "Stue", "Køkken"]
     locationsFull = ["Kontor", "Stue", "Køkken", "Entré"]
     
-    activationFunction = ["identity"]
+    # activationFunction = ["identity"]
+    activationFunction = ["sigmoid"]
     
     fileFirstMorning = "Data/WifiData230418_9-12.txt"
     fileSecondMorning = "Data/WifiData230420_9-12.txt"
@@ -15,30 +17,31 @@ def main():
     fileSecondEvening = "Data/WifiData230423_17-21.txt"
     fileThirdEvening = "Data/WifiData230424_17-21.txt"
     
-    partOfData = [1, 2/3, 1/3, 2/9, 1/9]
-    minutes = [45, 30, 15, 10, 5]
-    # partOfData = [1]
-    # minutes = [45]
+    # partOfData = [1, 2/3, 1/3, 2/9, 1/9]
+    # minutes = [45, 30, 15, 10, 5]
+    partOfData = [1/9]
+    minutes = [5]
     
     
-    # """ SVM three rooms """
+    """ SVM three rooms """
     
-    # overallPredictions = []
+    overallPredictions = []
     
-    # for i in range(len(partOfData)):
-    #     ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, predictions = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i])
-    #     predictionsUpdated = changePredictions(predictions)
-    #     overallPredictions.append(predictionsUpdated)
-    #     #printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM3")
+    for i in range(len(partOfData)):
+        ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, predictions = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i])
+        predictionsUpdated = changePredictions(predictions)
+        overallPredictions.append(predictionsUpdated)
+        #printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM3")
     
-    # printMethod(overallPredictions, "SVM3")
-    # # print(f"****************** SVM3 ******************")
-    # # print()
-    # # print(overallPredictions)
-    # # # print(overallPredictions[0])
-    # # # for predictions in overallPredictions:
-    # # #     print(predictions[0])
-    # # print()
+    printMethod(overallPredictions, "SVM3")
+    confidenceInterval(overallPredictions[0])
+    # print(f"****************** SVM3 ******************")
+    # print()
+    # print(overallPredictions)
+    # # print(overallPredictions[0])
+    # # for predictions in overallPredictions:
+    # #     print(predictions[0])
+    # print()
     
     # """ SVM four rooms """
     
@@ -52,67 +55,67 @@ def main():
     
     # printMethod(overallPredictions, "SVM4")
         
-    for j in range(len(activationFunction)):
-        print(f"****************** {activationFunction[j]} ******************")
-        """ NN three rooms with bias """
+    # for j in range(len(activationFunction)):
+    #     print(f"****************** {activationFunction[j]} ******************")
+    #     """ NN three rooms with bias """
         
-        overallPredictions = []
+    #     overallPredictions = []
 
-        for i in range(len(partOfData)):
-            ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE, predictions = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], True, False, activationFunction[j])
-            predictionsUpdated = changePredictions(predictions)
-            overallPredictions.append(predictionsUpdated)
-            # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-B", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
+    #     for i in range(len(partOfData)):
+    #         ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE, predictions = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], True, False, activationFunction[j])
+    #         predictionsUpdated = changePredictions(predictions)
+    #         overallPredictions.append(predictionsUpdated)
+    #         # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-B", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
         
-        printMethod(overallPredictions, "NN3-B")
+    #     printMethod(overallPredictions, "NN3-B")
         
-        """ NN three rooms with bias - predicts fourth room """
+        # """ NN three rooms with bias - predicts fourth room """
         
-        overallPredictions = []
+        # overallPredictions = []
 
-        for i in range(len(partOfData)):
-            ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE, predictions = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], True, True, activationFunction[j])
-            predictionsUpdated = changePredictions(predictions)
-            overallPredictions.append(predictionsUpdated)
-            # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-B-Predicts", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
+        # for i in range(len(partOfData)):
+        #     ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE, predictions = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], True, True, activationFunction[j])
+        #     predictionsUpdated = changePredictions(predictions)
+        #     overallPredictions.append(predictionsUpdated)
+        #     # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-B-Predicts", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
         
-        printMethod(overallPredictions, "NN3-B-P")
+        # printMethod(overallPredictions, "NN3-B-P")
         
-        """ NN three rooms without bias """
+        # """ NN three rooms without bias """
         
-        overallPredictions = []
+        # overallPredictions = []
 
-        for i in range(len(partOfData)):
-            ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE, predictions = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], False, False, activationFunction[j])
-            predictionsUpdated = changePredictions(predictions)
-            overallPredictions.append(predictionsUpdated)
-            # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-UB", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
+        # for i in range(len(partOfData)):
+        #     ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE, predictions = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], False, False, activationFunction[j])
+        #     predictionsUpdated = changePredictions(predictions)
+        #     overallPredictions.append(predictionsUpdated)
+        #     # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-UB", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
             
-        printMethod(overallPredictions, "NN3-UB")
+        # printMethod(overallPredictions, "NN3-UB")
         
-        """ NN three rooms without bias - predicts fourth room """
+        # """ NN three rooms without bias - predicts fourth room """
         
-        overallPredictions = []
+        # overallPredictions = []
 
-        for i in range(len(partOfData)):
-            ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE, predictions = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], False, True, activationFunction[j])
-            predictionsUpdated = changePredictions(predictions)
-            overallPredictions.append(predictionsUpdated)
-            # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-UB-Predicts", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
+        # for i in range(len(partOfData)):
+        #     ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE, predictions = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i], False, True, activationFunction[j])
+        #     predictionsUpdated = changePredictions(predictions)
+        #     overallPredictions.append(predictionsUpdated)
+        #     # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN3-UB-Predicts", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
             
-        printMethod(overallPredictions, "NN3-UB-P")
+        # printMethod(overallPredictions, "NN3-UB-P")
         
-        """ NN four rooms without bias """
+        # """ NN four rooms without bias """
         
-        overallPredictions = []
+        # overallPredictions = []
 
-        for i in range(len(partOfData)):
-            ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE, predictions = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, partOfData[i], False, False, activationFunction[j])
-            predictionsUpdated = changePredictions(predictions)
-            overallPredictions.append(predictionsUpdated)
-            # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN4-UB", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
+        # for i in range(len(partOfData)):
+        #     ownDsM, ownFiveFractileM, ownDsE, ownFiveFractileE, otherDayM, otherDayFiveFractileM, otherDayE, otherDayFiveFractileE, otherTimeM, otherTimeFiveFractileM, otherTimeE, otherTimeFiveFractileE, predictions = predictionsNN(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, partOfData[i], False, False, activationFunction[j])
+        #     predictionsUpdated = changePredictions(predictions)
+        #     overallPredictions.append(predictionsUpdated)
+        #     # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "NN4-UB", ownFiveFractileM, ownFiveFractileE, otherDayFiveFractileM, otherDayFiveFractileE, otherTimeFiveFractileM, otherTimeFiveFractileE)
         
-        printMethod(overallPredictions, "NN4-UB")
+        # printMethod(overallPredictions, "NN4-UB")
     
 def predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData):
     predictions = []
@@ -321,6 +324,21 @@ def printMethod(predictions, modelType):
     print()
     print(predictions)
     print()
+    
+def confidenceInterval(data):
+    
+    z_score = {2: 4.303, 3: 3.182, 4: 2.776, 5: 2.571, 6: 2.447, 7: 2.365, 8: 2.306, 9: 2.262, 10: 2.228, 11: 2.201, 12: 2.179, 13: 2.160, 14: 2.145, 15: 2.131, 16: 2.120, 17: 2.567, 47: 2.014, 48: 2.014, 49: 2.014, 50: 2.009}
+    
+    mean = np.mean(data)
+    std = np.sqrt(np.sum((data-mean)**2)/(len(data)-1))
+    margin_of_error = z_score[len(data)-1] * (std / np.sqrt(len(data)))
+    lower_bound = mean - margin_of_error
+    upper_bound = mean + margin_of_error
+    
+    print("Mean: ", mean)
+    print("Margin of error: ", margin_of_error)
+    print("Lower bound: ", lower_bound)
+    print("Upper bound: ", upper_bound)
     
 
 # def printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes, modelType, ownFiveFractileM = 0, ownFiveFractileE = 0, otherDayFiveFractileM = 0, otherDayFiveFractileE = 0, otherTimeFiveFractileM = 0, otherTimeFiveFractileE = 0):
