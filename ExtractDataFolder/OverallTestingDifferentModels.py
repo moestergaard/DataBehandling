@@ -17,10 +17,10 @@ def main():
     fileSecondEvening = "Data/WifiData230423_17-21.txt"
     fileThirdEvening = "Data/WifiData230424_17-21.txt"
     
-    # partOfData = [1, 2/3, 1/3, 2/9, 1/9]
-    # minutes = [45, 30, 15, 10, 5]
-    partOfData = [1/9]
-    minutes = [5]
+    partOfData = [1, 2/3, 1/3, 2/9, 1/9]
+    minutes = [45, 30, 15, 10, 5]
+    # partOfData = [1/9]
+    # minutes = [5]
     
     
     """ SVM three rooms """
@@ -34,7 +34,8 @@ def main():
         #printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM3")
     
     printMethod(overallPredictions, "SVM3")
-    confidenceInterval(overallPredictions[0])
+    for i in range(len(partOfData)):
+        confidenceInterval(overallPredictions[i])
     # print(f"****************** SVM3 ******************")
     # print()
     # print(overallPredictions)
@@ -43,17 +44,19 @@ def main():
     # #     print(predictions[0])
     # print()
     
-    # """ SVM four rooms """
+    """ SVM four rooms """
     
-    # overallPredictions = []
+    overallPredictions = []
     
-    # for i in range(len(partOfData)):
-    #     ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, predictions = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, partOfData[i])
-    #     predictionsUpdated = changePredictions(predictions)
-    #     overallPredictions.append(predictionsUpdated)
-    #     # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM4")
+    for i in range(len(partOfData)):
+        ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, predictions = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locationsFull, partOfData[i])
+        predictionsUpdated = changePredictions(predictions)
+        overallPredictions.append(predictionsUpdated)
+        # printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM4")
     
-    # printMethod(overallPredictions, "SVM4")
+    printMethod(overallPredictions, "SVM4")
+    for i in range(len(partOfData)):
+        confidenceInterval(overallPredictions[i])
         
     # for j in range(len(activationFunction)):
     #     print(f"****************** {activationFunction[j]} ******************")
