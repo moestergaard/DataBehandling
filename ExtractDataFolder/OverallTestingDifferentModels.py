@@ -19,23 +19,27 @@ def main():
     
     partOfData = [1, 2/3, 1/3, 2/9, 1/9]
     minutes = [45, 30, 15, 10, 5]
-    # partOfData = [1/9]
-    # minutes = [5]
+    # partOfData = [2/3, 1/3, 2/9, 1/9]
+    # minutes = [30, 15, 10, 5]
+    # partOfData = [1]
+    # minutes = [45]
     
     
-    """ SVM three rooms """
+    # """ SVM three rooms """
     
-    overallPredictions = []
+    # overallPredictions = []
     
-    for i in range(len(partOfData)):
-        ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, predictions = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i])
-        predictionsUpdated = changePredictions(predictions)
-        overallPredictions.append(predictionsUpdated)
-        #printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM3")
+    # for i in range(len(partOfData)):
+    #     ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, predictions = predictionsSVM(fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening, locations, partOfData[i])
+    #     predictionsUpdated = changePredictions(predictions)
+    #     overallPredictions.append(predictionsUpdated)
+    #     #printMethod(ownDsM, ownDsE, otherDayM, otherDayE, otherTimeM, otherTimeE, minutes[i], "SVM3")
     
-    printMethod(overallPredictions, "SVM3")
-    for i in range(len(partOfData)):
-        confidenceInterval(overallPredictions[i])
+    # printMethod(overallPredictions, "SVM3")
+    # for i in range(len(partOfData)):
+    #     print("Minutes: ", minutes[i])
+    #     confidenceInterval(overallPredictions[i])
+    #     print()
     # print(f"****************** SVM3 ******************")
     # print()
     # print(overallPredictions)

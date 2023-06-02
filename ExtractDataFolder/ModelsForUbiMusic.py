@@ -27,7 +27,7 @@ def main():
     
     # trainingSamplesOverall, testSamplesOverall, trainingLabelsOverall, testLabelsOverall = getSamplesAndLabelsFromOneFile(locations, dataSet, partOfData)
 
-    # bestModel, _ = bestModelSVM(trainingSamplesOverall, trainingLabelsOverall)
+    bestModel, _ = bestModelSVM(trainingSamplesOverall, trainingLabelsOverall)
     
     bestScore = float('-inf')
     bestSamples = None

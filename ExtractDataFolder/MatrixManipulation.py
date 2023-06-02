@@ -37,3 +37,10 @@ def changeMatrice(matrice, index, distinctBSSID, currentBSSID, resultLevel):
             return matrice  
         
     return matrice  
+
+def shuffleMatrices(matrix1, matrix2):
+    combined_matrix = np.column_stack((matrix1, matrix2))
+    np.random.shuffle(combined_matrix)
+    shuffled_matrix1 = combined_matrix[:, :matrix1.shape[1]]
+    shuffled_matrix2 = combined_matrix[:, matrix1.shape[1]:]
+    return shuffled_matrix1, shuffled_matrix2

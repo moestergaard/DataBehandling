@@ -1,0 +1,759 @@
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8903743315508021
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.9059139784946236
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9310344827586207
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9245283018867925
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8743315508021391
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9278074866310161
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9173333333333333
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8903743315508021
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8903743315508021
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8903743315508021
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.9059139784946236
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.9059139784946236
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.9059139784946236
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9310344827586207
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9310344827586207
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9310344827586207
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9245283018867925
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9245283018867925
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9245283018867925
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8903743315508021
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8903743315508021
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8903743315508021
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.9059139784946236
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.9059139784946236
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.9059139784946236
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9310344827586207
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9310344827586207
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9310344827586207
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9245283018867925
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9245283018867925
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9245283018867925
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8743315508021391
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8743315508021391
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9278074866310161
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9278074866310161
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9173333333333333
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9173333333333333
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8743315508021391
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8743315508021391
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8743315508021391
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8743315508021391
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9278074866310161
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9278074866310161
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9278074866310161
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9278074866310161
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9173333333333333
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9173333333333333
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9173333333333333
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.9173333333333333
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8674698795180723
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.9153225806451613
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8888888888888888
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.907258064516129
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.78
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.952
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.92
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8674698795180723
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8674698795180723
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8674698795180723
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.9153225806451613
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.9153225806451613
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.9153225806451613
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8888888888888888
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8888888888888888
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8888888888888888
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.907258064516129
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.907258064516129
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.907258064516129
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8674698795180723
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8674698795180723
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8674698795180723
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.9153225806451613
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.9153225806451613
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.9153225806451613
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8888888888888888
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8888888888888888
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8888888888888888
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.907258064516129
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.907258064516129
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.907258064516129
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.78
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.78
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.952
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.952
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.92
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.92
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.78
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.78
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.78
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.78
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.952
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.952
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.952
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.952
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.92
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.92
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.92
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.92
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.792
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8709677419354839
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8253968253968254
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8548387096774194
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.824
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.88
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.888
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.792
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.792
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.792
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8709677419354839
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8709677419354839
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8709677419354839
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8253968253968254
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8253968253968254
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8253968253968254
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8548387096774194
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8548387096774194
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8548387096774194
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.792
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.792
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.792
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8709677419354839
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8709677419354839
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8709677419354839
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8253968253968254
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8253968253968254
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8253968253968254
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8548387096774194
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8548387096774194
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.8548387096774194
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.824
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.824
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.88
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.88
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.888
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.888
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.824
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.824
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.824
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.824
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.88
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.88
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.88
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.88
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.888
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.888
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.888
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.888
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7951807228915663
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8313253012048193
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7976190476190477
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.927710843373494
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7738095238095238
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.8333333333333334
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.9285714285714286
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7951807228915663
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7951807228915663
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7951807228915663
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8313253012048193
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8313253012048193
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8313253012048193
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7976190476190477
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7976190476190477
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7976190476190477
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.927710843373494
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.927710843373494
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.927710843373494
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7951807228915663
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7951807228915663
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7951807228915663
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8313253012048193
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8313253012048193
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8313253012048193
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7976190476190477
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7976190476190477
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7976190476190477
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.927710843373494
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.927710843373494
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=0.0001)
+Accuracy:  0.927710843373494
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7738095238095238
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7738095238095238
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.8333333333333334
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.8333333333333334
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.9285714285714286
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.9285714285714286
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7738095238095238
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7738095238095238
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7738095238095238
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7738095238095238
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.8333333333333334
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.8333333333333334
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.8333333333333334
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.8333333333333334
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.9285714285714286
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.9285714285714286
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.9285714285714286
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.9285714285714286
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.6428571428571429
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.6904761904761905
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.8095238095238095
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8571428571428571
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7142857142857143
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7380952380952381
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8333333333333334
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.6428571428571429
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.6428571428571429
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.6428571428571429
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.6904761904761905
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.6904761904761905
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.6904761904761905
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.8095238095238095
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.8095238095238095
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.8095238095238095
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8571428571428571
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8571428571428571
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8571428571428571
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.6428571428571429
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.6428571428571429
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.6428571428571429
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.6904761904761905
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.6904761904761905
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.6904761904761905
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.8095238095238095
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.8095238095238095
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1e-05)
+Accuracy:  0.8095238095238095
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8571428571428571
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8571428571428571
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8571428571428571
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7142857142857143
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7142857142857143
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7380952380952381
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7380952380952381
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8333333333333334
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8333333333333334
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7142857142857143
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7142857142857143
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7142857142857143
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7142857142857143
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7380952380952381
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7380952380952381
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7380952380952381
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.7380952380952381
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8333333333333334
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8333333333333334
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8333333333333334
+Best Model:  SVC(C=10, cache_size=1000, class_weight='balanced',
+    decision_function_shape='ovo', gamma=1.5e-05)
+Accuracy:  0.8333333333333334
+****************** SVM4 ******************
+
+[[0.8903743315508021, 0.9059139784946236, 0.9310344827586207, 0.9245283018867925, 0.8743315508021391, 0.9278074866310161, 0.9173333333333333, 0.5296017222820237, 0.5477707006369427, 0.42394822006472493, 0.6881028938906752, 0.673036093418259, 0.668824163969795, 0.6655948553054662, 0.6566200215285253, 0.6693635382955772, 0.5171489817792069, 0.6528525296017222, 0.671443736730361, 0.5540106951871657, 0.45318352059925093, 0.36217948717948717, 0.7074866310160428, 0.6645264847512039, 0.6490384615384616, 0.6898395721925134, 0.6415195291599786, 0.6720085470085471, 0.6898395721925134, 0.7528089887640449, 0.7206196581196581, 0.6779026217228464, 0.6469017094017094, 0.6641711229946524, 0.7008547008547008, 0.6336898395721925, 0.6479400749063671, 0.5766345123258306, 0.6173304628632938, 0.6549893842887473, 0.6974110032362459, 0.46891747052518756, 0.56243272335845, 0.6003184713375797, 0.7508090614886731, 0.5412647374062165, 0.6749192680301399, 0.6794055201698513, 0.6699029126213593], [0.8906752411575563, 0.8966074313408724, 0.8853503184713376, 0.9061488673139159, 0.8346709470304976, 0.898876404494382, 0.8990384615384616, 0.6120967741935484, 0.620510774142059, 0.5395799676898223, 0.7267605633802817, 0.7395125848981222, 0.7193691872219976, 0.6808340016038492, 0.6971037811745776, 0.7199838839645447, 0.5905797101449275, 0.7067851373182552, 0.7358113509192646, 0.6512841091492777, 0.5588117221999197, 0.4955894145950281, 0.7549216552832463, 0.7053858520900321, 0.7189883580891209, 0.7409927942353883, 0.684020824989988, 0.7412, 0.7391479099678456, 0.7824688379573783, 0.7570281124497992, 0.7395666131621188, 0.731062124248497, 0.722422783794625, 0.7422845691382766, 0.6575781876503609, 0.6494183714400321, 0.6339895540377661, 0.7251108424022572, 0.7431192660550459, 0.7367783609204683, 0.562474889513861, 0.6424828698105602, 0.670921420023933, 0.7852240613645539, 0.6349397590361445, 0.7784045124899275, 0.7356459330143541, 0.6412429378531074], [0.8336012861736335, 0.8546042003231018, 0.839171974522293, 0.8851132686084142, 0.8170144462279294, 0.8739967897271268, 0.8669871794871795, 0.7166344294003868, 0.7055626598465473, 0.6791478373143964, 0.7132731958762887, 0.7210121716848175, 0.7189521345407504, 0.6957078795643818, 0.7312138728323699, 0.7588424437299035, 0.6482914248871696, 0.7217194570135747, 0.7483974358974359, 0.730892742453436, 0.6681657565049791, 0.6473042362002568, 0.75, 0.7145156099130995, 0.7282958199356914, 0.7444017914267435, 0.71392, 0.7493606138107417, 0.7601416613007083, 0.7706924315619967, 0.7709137709137709, 0.7579454253611557, 0.7251443232841565, 0.7198331193838254, 0.7398973701090442, 0.7180885182809493, 0.7346807828039782, 0.6654884318766067, 0.7242268041237113, 0.7338658146964856, 0.7532258064516129, 0.592866323907455, 0.654639175257732, 0.6795527156549521, 0.7612903225806451, 0.649325626204239, 0.762073406310367, 0.7429757343550447, 0.7424242424242424], [0.808407994486561, 0.8124567474048443, 0.7720136518771331, 0.8460471567267683, 0.765474552957359, 0.8265657260839642, 0.8667582417582418, 0.6977938954366878, 0.6527736131934033, 0.6783661119515885, 0.6735125339776502, 0.71462901772304, 0.697484086086693, 0.6898829180426298, 0.7396930484501956, 0.7089484784573666, 0.6396614268440145, 0.693939393939394, 0.7260974143114852, 0.701294790725685, 0.6424698795180723, 0.6530243755642492, 0.7288084464555052, 0.7063971031985516, 0.6991257160084413, 0.68095952023988, 0.6556688662267547, 0.6994306263110578, 0.7342995169082126, 0.7396556931440652, 0.7441158720579361, 0.708095094793861, 0.6894167167769092, 0.7481191694252182, 0.7395488721804512, 0.6978352375225496, 0.6959398496240602, 0.6301204819277109, 0.6932367149758454, 0.7079089275014979, 0.7282345828295043, 0.614040373606508, 0.6898218061008758, 0.6724602936769554, 0.7372240701542183, 0.6456953642384106, 0.7767048883524442, 0.7467065868263473, 0.6966767371601208], [0.7647768395657418, 0.7662023016353725, 0.7383512544802867, 0.8325242718446602, 0.7304452466907341, 0.732691149909693, 0.8143028846153846, 0.6837315130830489, 0.6894409937888198, 0.6415148063781321, 0.6647711117429628, 0.6548797736916548, 0.6630527817403709, 0.7048022598870056, 0.7086636466591166, 0.6967120181405896, 0.7342060330108139, 0.7544209925841415, 0.7536806342015855, 0.6632653061224489, 0.6382194499574709, 0.6339943342776204, 0.6694120988355581, 0.6747159090909091, 0.6514334374112972, 0.6882054176072234, 0.6373130115721141, 0.6714608009024252, 0.7345082433200683, 0.7696900767699744, 0.778125, 0.6839422259983008, 0.6675155631013017, 0.6762956669498725, 0.6861024624964619, 0.6683644595359366, 0.6835550523634305, 0.6485260770975056, 0.6775568181818182, 0.6849971799210378, 0.6757679180887372, 0.5330309044513751, 0.642512077294686, 0.6409026798307476, 0.7166429587482219, 0.6209631728045326, 0.728847245883021, 0.6961668545659526, 0.6776577600909608]]
+
+Mean:  0.6685405646484393
+Margin of error:  0.036907679451864996
+Lower bound:  0.6316328851965742
+Upper bound:  0.7054482441003043
+Mean:  0.7176082047951261
+Margin of error:  0.027421457384488
+Lower bound:  0.6901867474106381
+Upper bound:  0.7450296621796141
+Mean:  0.7374569890764353
+Margin of error:  0.017505652846309182
+Lower bound:  0.7199513362301261
+Upper bound:  0.7549626419227445
+Mean:  0.7145620853824677
+Margin of error:  0.015666649655373437
+Lower bound:  0.6988954357270942
+Upper bound:  0.7302287350378411
+Mean:  0.6928338913657371
+Margin of error:  0.015318106238344573
+Lower bound:  0.6775157851273925
+Upper bound:  0.7081519976040818
