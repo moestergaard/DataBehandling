@@ -1,12 +1,10 @@
-from SupportVectorMachine import SVMOwnDataSet, SVMAgainstOtherDatasets
-from NeuralNetwork import NNOwnDataSet, NNAgainstOtherDatasets
+from NeuralNetwork import NNAgainstOtherDatasets
 
 def main():
     locations = ["Kontor", "Stue", "Køkken", "Intet rum"]
     locationsFull = ["Kontor", "Stue", "Køkken", "Intet rum", "Entré" ]
     
-    # activationFunction = ["sigmoid", "identity"]
-    activationFunction = ["identity"]
+    activationFunction = ["sigmoid", "identity"]
     
     fileFirstMorning = "Data/WifiData230418_9-12.txt"
     fileSecondMorning = "Data/WifiData230420_9-12.txt"
@@ -20,9 +18,6 @@ def main():
     fileNameTests = [fileFirstMorning, fileSecondMorning, fileThirdMorning, fileFourthMorning, fileFirstEvening, fileSecondEvening, fileThirdEvening]
     
     partOfData = [1, 2/3, 1/3, 2/9, 1/9]
-    minutes = [45, 30, 15, 10, 5]
-    # partOfData = [1]
-    # minutes = [45]
     
     for j in range(len(activationFunction)):
         print("Activation function: " + activationFunction[j])
@@ -36,15 +31,15 @@ def main():
         
         printMethod(overallPredictions, "NN3-B")
         
-        # """ NN three rooms with bias - predicts fourth room """
+        """ NN three rooms with bias - predicts fourth room """
         
-        # overallPredictions = []
+        overallPredictions = []
 
-        # for i in range(len(partOfData)): 
-        #     predictions = predictionsNN(fileNameTests, fileNotARoom, locationsFull, partOfData[i], True, True, activationFunction[j])
-        #     overallPredictions.append(predictions)
+        for i in range(len(partOfData)): 
+            predictions = predictionsNN(fileNameTests, fileNotARoom, locationsFull, partOfData[i], True, True, activationFunction[j])
+            overallPredictions.append(predictions)
         
-        # printMethod(overallPredictions, "NN3-B-P")
+        printMethod(overallPredictions, "NN3-B-P")
         
         """ NN three rooms without bias """
         
@@ -56,15 +51,15 @@ def main():
             
         printMethod(overallPredictions, "NN3-UB")
         
-        # """ NN three rooms without bias - predicts fourth room """
+        """ NN three rooms without bias - predicts fourth room """
         
-        # overallPredictions = []
+        overallPredictions = []
 
-        # for i in range(len(partOfData)):
-        #     predictions = predictionsNN(fileNameTests, fileNotARoom, locationsFull, partOfData[i], False, True, activationFunction[j])
-        #     overallPredictions.append(predictions)
+        for i in range(len(partOfData)):
+            predictions = predictionsNN(fileNameTests, fileNotARoom, locationsFull, partOfData[i], False, True, activationFunction[j])
+            overallPredictions.append(predictions)
             
-        # printMethod(overallPredictions, "NN3-UB-P")
+        printMethod(overallPredictions, "NN3-UB-P")
         
         """ NN four rooms without bias """
         

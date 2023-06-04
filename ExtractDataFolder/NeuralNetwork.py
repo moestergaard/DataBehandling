@@ -121,10 +121,10 @@ def bestModelNN(samples, labels, bias, activationFunction, numberOfClasses):
     bestbo = None
     bestPercentageSure = None
     
-    samples, labels = shuffleMatrices(samples, labels)
+    samplesShuffled, labelsShuffled = shuffleMatrices(samples, labels)
     
     for i in range(1,6):
-        trainingSamples, testSamples, trainingLabels, testLabels = deterministicSplitMatrix(samples, labels, 1/5, i)
+        trainingSamples, testSamples, trainingLabels, testLabels = deterministicSplitMatrix(samplesShuffled, labelsShuffled, 1/5, i)
         wh, bh, wo, bo = trainingModelNN(trainingSamples, trainingLabels, bias, activationFunction, numberOfClasses)    
         
         predictedLabels, percentageSure = getPredictedLabelsNN(testSamples, wh, bh, wo, bo, activationFunction)
@@ -144,9 +144,12 @@ def bestModelNN(samples, labels, bias, activationFunction, numberOfClasses):
 def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, activationFunction, numberOfClasses):
     # one_hot_labels = np.eye(numberOfClasses)[labelsTrainingSamples]
     one_hot_labels = np.zeros((len(labelsTrainingSamples), numberOfClasses))
+    
+    for i in range(len(labelsTrainingSamples)):
+        one_hot_labels[i, labelsTrainingSamples[i].astype(int)] = 1
 
     attributes = trainingSamples.shape[1]
-    hidden_nodes = 15
+    hidden_nodes = 4
     output_labels = numberOfClasses
 
     np.random.seed(42)
@@ -171,7 +174,7 @@ def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, activationFunc
     bh_list = []
     bo_list = []
 
-    for epoch in range(50000):
+    for epoch in range(5000):
         # feedforward
         zh = np.dot(trainingSamples, wh) + bh
         if (activationFunction == 'sigmoid'):
@@ -224,7 +227,8 @@ def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, activationFunc
         
         else:
             # dcost_dah *= 1.0  # identity activation function
-            dah_dzh = 1.0  # identity activation function
+            dah_dzh = np.ones_like(zh)  # identity activation function
+            # dah_dzh = 1.0  # identity activation function
             dcost_wh = np.dot(dzh_dwh.T, dah_dzh * dcost_dah)
         
         if (bias):

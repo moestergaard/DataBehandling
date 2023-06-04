@@ -4,7 +4,7 @@ def randomSplitSamplesAndLabels(samples, labels, ratio):
     
     np.random.seed(43)
     
-    m, n = samples.shape
+    m = samples.shape[0]
     trainingRows = int(np.ceil(m * ratio))
     trainingIndices = np.random.choice(m, trainingRows, replace=False)
     trainingSamples = samples[trainingIndices]
@@ -16,7 +16,7 @@ def randomSplitSamplesAndLabels(samples, labels, ratio):
 
 
 def deterministicSplitMatrix(samples, labels, ratio, splitNumber):
-    m, n = samples.shape
+    m = samples.shape[0]
     trainingSize = int(np.ceil(m * ratio))
     startIndex = int((splitNumber - 1) * trainingSize)
     endIndex = int(splitNumber * trainingSize)
@@ -43,4 +43,4 @@ def shuffleMatrices(matrix1, matrix2):
     np.random.shuffle(combined_matrix)
     shuffled_matrix1 = combined_matrix[:, :matrix1.shape[1]]
     shuffled_matrix2 = combined_matrix[:, matrix1.shape[1]:]
-    return shuffled_matrix1, shuffled_matrix2
+    return shuffled_matrix1, shuffled_matrix2.flatten()
