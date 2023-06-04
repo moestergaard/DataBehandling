@@ -16,10 +16,6 @@ def main():
     fileSecondEvening = "Data/WifiData230423_17-21.txt"
     fileThirdEvening = "Data/WifiData230424_17-21.txt"
     
-    # partOfData = [1, 2/3, 1/3, 2/9, 1/9]
-    # minutes = [45, 30, 15, 10, 5]
-    # partOfData = [2/3, 1/3, 2/9, 1/9]
-    # minutes = [30, 15, 10, 5]
     partOfData = [1]
     minutes = [45]
     
