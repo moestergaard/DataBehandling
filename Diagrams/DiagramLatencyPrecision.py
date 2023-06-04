@@ -1,9 +1,6 @@
 import matplotlib.pyplot as plt
-import numpy as np
 from matplotlib.lines import Line2D
 
-# Define the data points for all subplots
-# colors = ['#252525', '#2171b5', '#6baed6', '#fc4e2a', '#fd8d3c']
 colorsGeneral = ['#252525', 'blue', '#2171b5', 'red', '#fc4e2a']
 
 points = [
@@ -59,12 +56,10 @@ points = [
     ]
 ]
 
-# Create a figure with seven subplots
 fig, axs = plt.subplots(1, 10, sharey=True, facecolor='w', figsize=(16, 5))
 fig.subplots_adjust(right=0.85)
 fig.subplots_adjust(left=0.05)
 fig.subplots_adjust(bottom=0.2)
-# fig.subplots_adjust(left=0.5, right=0.5, top=0.5, bottom=0.5)  # Adju
 
 # Iterate through each subplot and plot the data
 for i in range(10):
@@ -104,18 +99,12 @@ for i in range(10):
         axs[i + 1].plot((-d, +d), (-d, +d), **kwargs)
 
 
-# Set plot title and labels
-# plt.suptitle('Wi-Fi Scanninger', fontsize=12)
-# fig.text(0.4, 0.01, 'Sekunder', ha='center', fontsize=10)
 axs[0].set_ylabel('Antal på hinanden følgende\n detekteringer før skift', fontsize = 12)
 axs[4].set_xlabel('Sekunder', fontsize = 12, labelpad=10)
 axs[4].set_title('Wi-Fi Scanninger', fontsize=14, pad=15)
 
-# Add legend
-# colors = [colorsGeneral[0], colorsGeneral[2], colorsGeneral[3]]
 labels = ['Intet rum', 'Korrekt rum', 'Stadigvæk korrekt rum', 'Forkert rum', 'Stadigvæk forkert rum']
 handles = [Line2D([0], [0], marker = 'o', linestyle='none', color=color) for color in colorsGeneral]
 plt.legend(handles=handles, labels=labels, loc='center left', bbox_to_anchor=(1, 0.5), fontsize=9)
 
-# Display the plot
 plt.show()

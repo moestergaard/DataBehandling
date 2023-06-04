@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
-import tikzplotlib
 
     
 def plot_confidence_intervals(data_sets, labels, title):
@@ -10,18 +9,6 @@ def plot_confidence_intervals(data_sets, labels, title):
     width = 0.10
 
     z_score = {2: 4.303, 3: 3.182, 4: 2.776, 5: 2.571, 6: 2.447, 7: 2.365, 8: 2.306, 9: 2.262, 10: 2.228, 11: 2.201, 12: 2.179, 13: 2.160, 14: 2.145}
-    
-    # colors = ['blue', 'orange', 'green', 'red', 'purple', 'brown', 'teal']
-    # colors = ['red', 'green', 'blue', 'orange', 'purple', 'teal', 'brown']
-    # colors = ['blue', 'orange', 'green', 'red', 'purple', 'pink', 'gray']
-    # colors = ['red', 'green', 'blue', 'orange', 'magenta', 'brown', 'gray']
-    # colors = ['red', 'green', 'blue', 'orange', 'purple', 'brown', 'darkgray']
-    # colors = ["#B7F0B1", "#2EBD4F", "#B4E1E7", "#2471A3", "#BDADEA", "#6A5ACD", "#FFC0CB"]
-    # colors = ["#9ACD32", "#FFA500", "#ADD8E6", "#4B0082", "#FF69B4", "#FF0000", "#A9A9A9"]
-    # colors = ['#252525', '#737373', '#08306b', '#2171b5', '#006d2c', '#41ab5d', '#99d8c9']
-    
-    # group1 = ['#74c476', '#31a354', '#006d2c']
-    # group2 = ['#6baed6', '#3182bd', '#08519c']
     
     group1 = ['#252525', '#737373']
     group2 = ['#74c476', '#31a354', '#006d2c', '#6baed6', '#3182bd']
@@ -38,21 +25,11 @@ def plot_confidence_intervals(data_sets, labels, title):
             
             print(f"{(lower_bound*100).__round__(1)} & {(mean*100).__round__(1)} & {(upper_bound*100).__round__(1)} &")
             
-            # print(lower_bound)
-            # print(mean)
-            # print(upper_bound)
-            # print()
-
             # Plot data points
             ax.plot(x[i]+j*width, mean*100, marker='o', markersize = 5, color=colors[j], label=labels[j] if i == 0 else "")
 
             # Plot error bars
             ax.errorbar(x[i]+j*width, mean*100, yerr=margin_of_error*100, fmt='none', ecolor=colors[j], capsize=3)
-            
-            # Plot the values for the lower bound and upper bound
-            # ax.text(x[i]+j*width, upper_bound+0.02, f"{upper_bound:.3f}", ha='center', va='bottom', fontsize=8)
-            # ax.text(x[i]+j*width, lower_bound-0.02, f"{lower_bound:.3f}", ha='center', va='top', fontsize=8)
-            
             
     # Add tick at the center of the x-axis
     ax.axvline(x=1.8, color='#d9d9d9', linewidth=1.5)
@@ -60,34 +37,24 @@ def plot_confidence_intervals(data_sets, labels, title):
     # Set axis labels and title
     ax.set_xticks(x+3*width)
     ax.set_xticklabels(['Formiddag:\nSamme tidspunkt', 'Formiddag:\nAndet tidspunkt', 'Aften:\nSamme tidspunkt', 'Aften:\nAndet tidspunkt'], rotation=45, fontsize=9)
-    # for tick in ax.xaxis.get_major_ticks():
-    #     tick.set_pad(2)
     fig.subplots_adjust(bottom=0.25)
     fig.subplots_adjust(right=0.8)
     ax.set_ylabel('Nøjagtighed, %', fontsize=10)
-    # ax.set_yticklabels(fontsize = 9)
     ax.set_title(title, fontsize=12)
 
     handles = [Line2D([0], [0], color=color, linewidth=2) for color in colors]
     ax.legend(handles=handles, labels=labels, loc='center left', bbox_to_anchor=(1, 0.5), fontsize=9)
-
-    # tikzplotlib.save("differentTime.tex")
 
     # Show plot
     plt.show()
     
 """ NEW DATA ONLY FROM 45 MINUTES"""
 
-# Define data
 dataSVM3 = [
     [0.8249818445896877, 0.8080736543909348, 0.8532176428054953, 0.7959914101646385, 0.8498583569405099, 0.8148951554591468, 0.8339298496778812, 0.7719680464778504, 0.8640636297903109, 0.8267716535433071, 0.8576615831517792, 0.8548158640226629],
     [0.8348754448398576, 0.8285302593659942, 0.8148409893992933, 0.7736654804270463, 0.7377521613832853, 0.8296819787985866, 0.8348754448398576, 0.8378962536023055, 0.826148409893993, 0.890391459074733, 0.9005763688760807, 0.8678445229681979],
     [0.8623919308357348, 0.8501766784452297, 0.903202846975089, 0.8812720848056537, 0.7807829181494662, 0.7507204610951008],
     [0.698639942734431, 0.7523602033405955, 0.8236543909348442, 0.8806941431670282, 0.7129563350035791, 0.7901234567901234, 0.8519830028328612, 0.9161243673174259, 0.6929133858267716, 0.8569353667392883, 0.8548158640226629, 0.6644974692697035]
-    # [0.7828612926652142, 0.7889518413597734, 0.7917570498915402, 0.7437365783822477, 0.7046742209631728, 0.8228488792480115, 0.690050107372942, 0.8046477850399419, 0.8438177874186551, 0.807444523979957, 0.8511256354393609, 0.806657223796034],
-    # [0.795017793594306, 0.7795389048991355, 0.7469964664310954, 0.7672597864768683, 0.8321325648414986, 0.8148409893992933, 0.7814946619217081, 0.8162824207492796, 0.841696113074205, 0.8327402135231317, 0.8544668587896254, 0.8240282685512368],
-    # [0.8436599423631124, 0.8318021201413428, 0.8455516014234875, 0.8254416961130742, 0.801423487544484, 0.8328530259365994],
-    # [0.7430207587687903, 0.7857661583151779, 0.8101983002832861, 0.8228488792480115, 0.7158196134574087, 0.7516339869281046, 0.7953257790368272, 0.8373101952277657, 0.6649964209019327, 0.8235294117647058, 0.8172804532577904, 0.7758496023138105]
 ]
 
 """ SVM 4 """
@@ -96,10 +63,6 @@ dataSVM4 = [
     [0.5540106951871657, 0.45318352059925093, 0.36217948717948717, 0.7074866310160428, 0.6645264847512039, 0.6490384615384616, 0.6898395721925134, 0.6415195291599786, 0.6720085470085471, 0.6898395721925134, 0.7528089887640449, 0.7206196581196581],
     [0.6779026217228464, 0.6469017094017094, 0.6641711229946524, 0.7008547008547008, 0.6336898395721925, 0.6479400749063671],
     [0.5766345123258306, 0.6173304628632938, 0.6549893842887473, 0.6974110032362459, 0.46891747052518756, 0.56243272335845, 0.6003184713375797, 0.7508090614886731, 0.5412647374062165, 0.6749192680301399, 0.6794055201698513, 0.6699029126213593]
-    # [0.6151776103336921, 0.5753715498938429, 0.5571736785329018, 0.5535905680600214, 0.554140127388535, 0.633764832793959, 0.617363344051447, 0.6119483315392895, 0.6316073354908306, 0.6404072883172561, 0.7120559741657696, 0.6841825902335457],
-    # [0.5967914438502674, 0.5222043873729267, 0.4962606837606838, 0.586096256684492, 0.6345639379347244, 0.6260683760683761, 0.6112299465240641, 0.5987158908507223, 0.6533119658119658, 0.6310160427807486, 0.7233814874264313, 0.7136752136752137],
-    # [0.64633493846977, 0.625, 0.6422459893048128, 0.7158119658119658, 0.6149732620320856, 0.6131621187800963],
-    # [0.5878885316184351, 0.6792249730893434, 0.6459660297239915, 0.6418554476806904, 0.5482315112540193, 0.6442411194833154, 0.6130573248407644, 0.7745415318230853, 0.5493033226152197, 0.6630785791173305, 0.6539278131634819, 0.5916936353829557]
 ]
 
 """ NN3-B """
@@ -143,9 +106,7 @@ dataNN4UB = [
 ]
 
 
-# Define data matrices and labels
 data_sets = [dataSVM3, dataSVM4, dataNN3B, dataNN3BP, dataNN3UB, dataNN3UBP, dataNN4UB]
 labels = ['SVM3', 'SVM4', 'NN3-B', 'NN3-B-P', 'NN3-UB', 'NN3-UB-P', 'NN4-UB']
 
-# Plot confidence intervals
 plot_confidence_intervals(data_sets, labels, 'Konfidensintervaller for forskellige tidspunkter')
