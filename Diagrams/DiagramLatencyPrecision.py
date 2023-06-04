@@ -13,56 +13,61 @@ points = [
         (6, 3, colorsGeneral[0]), (12, 3, colorsGeneral[0]), (18, 3, colorsGeneral[0]), (24, 3, colorsGeneral[0])
     ],
     [
-        (126, 1, colorsGeneral[2]), (132, 1, colorsGeneral[2]), (138, 1, colorsGeneral[3]), (144, 1, colorsGeneral[4]),
+        (126, 1, colorsGeneral[2]), (132, 1, colorsGeneral[2]), (138, 1, colorsGeneral[2]), (144, 1, colorsGeneral[3]),
         (126, 2, colorsGeneral[2]), (132, 2, colorsGeneral[2]), (138, 2, colorsGeneral[2]), (144, 2, colorsGeneral[2]),
         (126, 3, colorsGeneral[1]), (132, 3, colorsGeneral[2]), (138, 3, colorsGeneral[2]), (144, 3, colorsGeneral[2])
     ],
     [
-        (246, 1, colorsGeneral[1]), (252, 1, colorsGeneral[2]), (258, 1, colorsGeneral[2]), (264, 1, colorsGeneral[2]),
+        (246, 1, colorsGeneral[4]), (252, 1, colorsGeneral[1]), (258, 1, colorsGeneral[2]), (264, 1, colorsGeneral[2]),
         (246, 2, colorsGeneral[2]), (252, 2, colorsGeneral[2]), (258, 2, colorsGeneral[2]), (264, 2, colorsGeneral[2]),
         (246, 3, colorsGeneral[2]), (252, 3, colorsGeneral[2]), (258, 3, colorsGeneral[2]), (264, 3, colorsGeneral[2])
     ],
     [
-        (366, 1, colorsGeneral[2]), (372, 1, colorsGeneral[3]), (378, 1, colorsGeneral[4]), (384, 1, colorsGeneral[1]),
+        (366, 1, colorsGeneral[2]), (372, 1, colorsGeneral[2]), (378, 1, colorsGeneral[2]), (384, 1, colorsGeneral[3]),
         (366, 2, colorsGeneral[2]), (372, 2, colorsGeneral[2]), (378, 2, colorsGeneral[2]), (384, 2, colorsGeneral[2]),
         (366, 3, colorsGeneral[2]), (372, 3, colorsGeneral[2]), (378, 3, colorsGeneral[2]), (384, 3, colorsGeneral[2])
     ],
     [
-        (486, 1, colorsGeneral[2]), (492, 1, colorsGeneral[2]), (498, 1, colorsGeneral[2]), (504, 1, colorsGeneral[2]),
+        (486, 1, colorsGeneral[4]), (492, 1, colorsGeneral[1]), (498, 1, colorsGeneral[2]), (504, 1, colorsGeneral[2]),
         (486, 2, colorsGeneral[2]), (492, 2, colorsGeneral[2]), (498, 2, colorsGeneral[2]), (504, 2, colorsGeneral[2]),
         (486, 3, colorsGeneral[2]), (492, 3, colorsGeneral[2]), (498, 3, colorsGeneral[2]), (504, 3, colorsGeneral[2])
     ],
     [
-        (606, 1, colorsGeneral[3]), (612, 1, colorsGeneral[4]), (618, 1, colorsGeneral[1]), (624, 1, colorsGeneral[2]),
+        (606, 1, colorsGeneral[2]), (612, 1, colorsGeneral[2]), (618, 1, colorsGeneral[2]), (624, 1, colorsGeneral[3]),
         (606, 2, colorsGeneral[2]), (612, 2, colorsGeneral[2]), (618, 2, colorsGeneral[2]), (624, 2, colorsGeneral[2]),
         (606, 3, colorsGeneral[2]), (612, 3, colorsGeneral[2]), (618, 3, colorsGeneral[2]), (624, 3, colorsGeneral[2])
     ],
     [
-        (726, 1, colorsGeneral[2]), (732, 1, colorsGeneral[2]), (738, 1, colorsGeneral[2]), (744, 1, colorsGeneral[3]),
+        (726, 1, colorsGeneral[4]), (732, 1, colorsGeneral[1]), (738, 1, colorsGeneral[2]), (744, 1, colorsGeneral[2]),
         (726, 2, colorsGeneral[2]), (732, 2, colorsGeneral[2]), (738, 2, colorsGeneral[2]), (744, 2, colorsGeneral[2]),
         (726, 3, colorsGeneral[2]), (732, 3, colorsGeneral[2]), (738, 3, colorsGeneral[2]), (744, 3, colorsGeneral[2])
     ],
     [
-        (846, 1, colorsGeneral[4]), (852, 1, colorsGeneral[1]), (858, 1, colorsGeneral[2]), (864, 1, colorsGeneral[2]),
-        (846, 2, colorsGeneral[2]), (852, 2, colorsGeneral[3]), (858, 2, colorsGeneral[4]), (864, 2, colorsGeneral[4]),
+        (846, 1, colorsGeneral[2]), (852, 1, colorsGeneral[2]), (858, 1, colorsGeneral[2]), (864, 1, colorsGeneral[3]),
+        (846, 2, colorsGeneral[2]), (852, 2, colorsGeneral[2]), (858, 2, colorsGeneral[2]), (864, 2, colorsGeneral[2]),
         (846, 3, colorsGeneral[2]), (852, 3, colorsGeneral[2]), (858, 3, colorsGeneral[2]), (864, 3, colorsGeneral[2])
     ],
     [
-        (966, 1, colorsGeneral[2]), (972, 1, colorsGeneral[2]), (978, 1, colorsGeneral[3]), (984, 1, colorsGeneral[4]),
-        (966, 2, colorsGeneral[1]), (972, 2, colorsGeneral[2]), (978, 2, colorsGeneral[2]), (984, 2, colorsGeneral[2]),
+        (966, 1, colorsGeneral[4]), (972, 1, colorsGeneral[1]), (978, 1, colorsGeneral[2]), (984, 1, colorsGeneral[2]),
+        (966, 2, colorsGeneral[2]), (972, 2, colorsGeneral[2]), (978, 2, colorsGeneral[2]), (984, 2, colorsGeneral[2]),
         (966, 3, colorsGeneral[2]), (972, 3, colorsGeneral[2]), (978, 3, colorsGeneral[2]), (984, 3, colorsGeneral[2])
+    ],
+    [
+        (1086, 1, colorsGeneral[2]), (1092, 1, colorsGeneral[2]), (1098, 1, colorsGeneral[2]), (1104, 1, colorsGeneral[3]),
+        (1086, 2, colorsGeneral[3]), (1092, 2, colorsGeneral[4]), (1098, 2, colorsGeneral[4]), (1104, 2, colorsGeneral[1]),
+        (1086, 3, colorsGeneral[2]), (1092, 3, colorsGeneral[2]), (1098, 3, colorsGeneral[2]), (1104, 3, colorsGeneral[2])
     ]
 ]
 
 # Create a figure with seven subplots
-fig, axs = plt.subplots(1, 9, sharey=True, facecolor='w', figsize=(16, 5))
+fig, axs = plt.subplots(1, 10, sharey=True, facecolor='w', figsize=(16, 5))
 fig.subplots_adjust(right=0.85)
 fig.subplots_adjust(left=0.05)
 fig.subplots_adjust(bottom=0.2)
 # fig.subplots_adjust(left=0.5, right=0.5, top=0.5, bottom=0.5)  # Adju
 
 # Iterate through each subplot and plot the data
-for i in range(9):
+for i in range(10):
     points_i = points[i]
     x_values = [point[0] for point in points_i]
     y_values = [point[1] for point in points_i]
@@ -79,7 +84,7 @@ for i in range(9):
         axs[i].spines['right'].set_visible(False)
         axs[i].tick_params(left=False)
     
-    if i == 8:
+    if i == 9:
         axs[i].spines['right'].set_visible(True)
 
     # Set y-axis labels for the first subplot
@@ -89,7 +94,7 @@ for i in range(9):
         axs[i].set_yticklabels(['1', '2', '3'])
 
     # Add diagonal lines to indicate shared y-axis
-    if i < 8:
+    if i < 9:
         d = 0.015
         kwargs = dict(transform=axs[i].transAxes, color='k', clip_on=False)
         axs[i].plot((1 - d, 1 + d), (-d, +d), **kwargs)

@@ -1,6 +1,6 @@
 import numpy as np
 from ExtractData import getSamplesAndLabelsFromOneFile, getSamplesAndLabelsFromMultipleFiles, extractData, extractDistinctBSSIDAndNumberOfDataPoints, extractDataFromMultipleFiles
-from MatrixManipulation import deterministicSplitMatrix, randomSplitSamplesAndLabels
+from MatrixManipulation import deterministicSplitMatrix, randomSplitSamplesAndLabels, shuffleMatrices
 
 def NNOwnDataSet(locations, filename, partOfData, bias, predictsFourthRoom, activationFunction):
     
@@ -121,6 +121,8 @@ def bestModelNN(samples, labels, bias, activationFunction, numberOfClasses):
     bestbo = None
     bestPercentageSure = None
     
+    samples, labels = shuffleMatrices(samples, labels)
+    
     for i in range(1,6):
         trainingSamples, testSamples, trainingLabels, testLabels = deterministicSplitMatrix(samples, labels, 1/5, i)
         wh, bh, wo, bo = trainingModelNN(trainingSamples, trainingLabels, bias, activationFunction, numberOfClasses)    
@@ -144,8 +146,7 @@ def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, activationFunc
     one_hot_labels = np.zeros((len(labelsTrainingSamples), numberOfClasses))
 
     attributes = trainingSamples.shape[1]
-    # hidden_nodes = 4
-    hidden_nodes = 40
+    hidden_nodes = 15
     output_labels = numberOfClasses
 
     np.random.seed(42)
@@ -170,7 +171,7 @@ def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, activationFunc
     bh_list = []
     bo_list = []
 
-    for epoch in range(5000):
+    for epoch in range(50000):
         # feedforward
         zh = np.dot(trainingSamples, wh) + bh
         if (activationFunction == 'sigmoid'):
