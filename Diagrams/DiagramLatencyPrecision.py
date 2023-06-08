@@ -99,7 +99,7 @@ for i in range(10):
         axs[i + 1].plot((-d, +d), (-d, +d), **kwargs)
 
 
-axs[0].set_ylabel('Antal på hinanden følgende\n prædikteringer før skift', fontsize = 12)
+axs[0].set_ylabel('Antal på hinanden følgende\n prædiktioner for samme rum før skift', fontsize = 12)
 axs[4].set_xlabel('Sekunder', fontsize = 12, labelpad=10)
 axs[4].set_title('Wi-Fi Scanninger', fontsize=14, pad=15)
 

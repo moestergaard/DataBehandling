@@ -21,15 +21,6 @@ def main():
     
     for j in range(len(activationFunction)):
         print("Activation function: " + activationFunction[j])
-        """ NN three rooms with bias """
-        
-        overallPredictions = []
-
-        for i in range(len(partOfData)): 
-            predictions = predictionsNN(fileNameTests, fileNotARoom, locations, partOfData[i], True, False, activationFunction[j])
-            overallPredictions.append(predictions)
-        
-        printMethod(overallPredictions, "NN3-B")
         
         """ NN three rooms with bias - predicts fourth room """
         
@@ -40,16 +31,6 @@ def main():
             overallPredictions.append(predictions)
         
         printMethod(overallPredictions, "NN3-B-P")
-        
-        """ NN three rooms without bias """
-        
-        overallPredictions = []
-
-        for i in range(len(partOfData)):
-            predictions = predictionsNN(fileNameTests, fileNotARoom, locations, partOfData[i], False, False, activationFunction[j])
-            overallPredictions.append(predictions)
-            
-        printMethod(overallPredictions, "NN3-UB")
         
         """ NN three rooms without bias - predicts fourth room """
         

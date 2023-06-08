@@ -141,7 +141,7 @@ def trainingModelNN(trainingSamples, labelsTrainingSamples, bias, activationFunc
     else:
         bo = np.zeros(output_labels)
 
-    lr = 10e-4
+    lr = 0.001
 
     error_cost = []
     wh_list = []
